@@ -1,0 +1,43 @@
+{
+  "nom": "Guêpes et frelons",
+  "slug": "guepes-frelons",
+  "meta_title": "Destruction nid de guêpes ou frelons en Île-de-France — intervention rapide | Deralib",
+  "meta_description": "Nid de guêpes, frelons européens ou asiatiques ? Nos techniciens équipés interviennent rapidement en Île-de-France pour détruire le nid en sécurité. Devis gratuit.",
+  "h1": "Nid de guêpes ou de frelons en Île-de-France : destruction en sécurité par nos techniciens",
+  "intro": "Un va-et-vient d'insectes sous une tuile, dans un coffre de volet roulant, un abri de jardin ou un arbre : un nid de guêpes ou de frelons à proximité d'une habitation est un vrai risque, surtout pour les enfants, les personnes allergiques et les animaux. Un nid dérangé peut déclencher des attaques groupées, et le frelon asiatique, désormais bien installé en Île-de-France, défend son nid de façon agressive. La destruction d'un nid ne s'improvise pas : nos techniciens interviennent avec équipement de protection intégral et matériel professionnel, du printemps à l'automne.",
+  "signes": [
+    { "titre": "Va-et-vient régulier", "detail": "Un flux continu d'insectes entrant et sortant d'un même point : tuile, gouttière, coffre de volet, trou de mur, cabane de jardin, arbre." },
+    { "titre": "Nid visible", "detail": "Nid en papier mâché gris : en forme de boule sous un abri ou une branche (guêpes, frelon asiatique en hauteur), ou en galettes dans un espace sombre (combles, cheminée)." },
+    { "titre": "Présence inhabituelle à l'intérieur", "detail": "Guêpes ou frelons qui apparaissent régulièrement dans une pièce : le nid est peut-être dans un mur, un conduit ou les combles." },
+    { "titre": "Bruit de bourdonnement", "detail": "Bourdonnement perceptible dans une cloison, un plafond ou un coffre de volet roulant, signe d'un nid actif." }
+  ],
+  "comprendre_espece": "En Île-de-France, on rencontre principalement la guêpe commune et la guêpe germanique, le frelon européen et, de plus en plus, le frelon asiatique. Un nid démarre au printemps avec une seule reine et peut compter plusieurs milliers d'individus à la fin de l'été — c'est pourquoi un nid repéré tôt est plus simple et moins coûteux à traiter. Le frelon asiatique niche souvent en hauteur (arbres, toitures) et représente aussi une menace pour les abeilles. Important : les abeilles sont protégées et ne se détruisent pas — si c'est un essaim d'abeilles, nous vous orientons vers un apiculteur. Détruire un nid soi-même (jet d'eau, insecticide grand public, feu) est la première cause de piqûres multiples : les insectes survivants deviennent agressifs pendant plusieurs jours.",
+  "plan_action": [
+    { "etape": "1. Identification", "detail": "Identification de l'espèce (guêpe, frelon européen, frelon asiatique, ou abeilles à préserver) et localisation précise du nid, y compris en hauteur ou dans le bâti." },
+    { "etape": "2. Sécurisation", "detail": "Mise en sécurité de la zone (occupants, voisins, animaux) avant toute action. Le technicien intervient en combinaison de protection intégrale." },
+    { "etape": "3. Destruction du nid", "detail": "Traitement adapté à la situation : poudre insecticide injectée à distance avec perche télescopique pour les nids en hauteur, traitement direct pour les nids accessibles. Produits professionnels appliqués par un technicien certifié Certibiocide." },
+    { "etape": "4. Retrait et prévention", "detail": "Quand c'est possible, retrait du nid neutralisé pour éviter la réutilisation des lieux, et conseils pour limiter les réinstallations (points d'accès, coffres de volets)." }
+  ],
+  "gestes_urgence": [
+    "Ne vous approchez pas du nid à moins de quelques mètres et n'essayez jamais de le détruire vous-même.",
+    "Ne bouchez pas le trou d'entrée d'un nid dans un mur : les insectes chercheraient une autre sortie, parfois vers l'intérieur du logement.",
+    "Fermez les fenêtres proches du nid en attendant l'intervention.",
+    "Éloignez enfants et animaux de la zone ; ne faites pas de gestes brusques près du va-et-vient.",
+    "En cas de piqûres multiples, de piqûre dans la bouche/gorge ou de réaction allergique (gonflement, difficulté à respirer) : appelez le 15 (SAMU) immédiatement."
+  ],
+  "prix": [
+    { "prestation": "Destruction nid accessible (moins de 5 m)", "fourchette": "à préciser (ex. 90-150 €)", "note": "Guêpes ou frelons, accès simple." },
+    { "prestation": "Nid en hauteur (perche télescopique)", "fourchette": "à préciser (ex. 130-250 €)", "note": "Selon hauteur et accès." },
+    { "prestation": "Nid difficile d'accès (toiture, cloison)", "fourchette": "à préciser", "note": "Sur devis après repérage." },
+    { "prestation": "Frelon asiatique", "fourchette": "à préciser", "note": "Certaines communes/départements proposent des aides — renseignez-vous en mairie." }
+  ],
+  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact dépend de la hauteur et de l'accès, confirmé au devis gratuit.",
+  "faq": [
+    { "q": "Intervenez-vous rapidement pour un nid de frelons ?", "r": "Oui, un nid actif près d'une habitation est traité en priorité, généralement sous 24 à 48 h partout en Île-de-France." },
+    { "q": "Les pompiers ne s'en occupent-ils pas gratuitement ?", "r": "Sauf danger immédiat sur la voie publique ou personnes vulnérables, les pompiers n'interviennent plus pour les nids chez les particuliers en Île-de-France : ils renvoient vers des entreprises spécialisées comme la nôtre." },
+    { "q": "Et si ce sont des abeilles ?", "r": "Les abeilles sont protégées : nous ne les détruisons pas. Si nous identifions un essaim d'abeilles, nous vous orientons vers un apiculteur qui pourra le récupérer." },
+    { "q": "Le nid peut-il revenir au même endroit ?", "r": "Un nid n'est jamais réutilisé d'une année sur l'autre, mais un emplacement favorable peut attirer une nouvelle reine. Nous retirons le nid quand c'est possible et vous conseillons pour limiter le risque." },
+    { "q": "Faut-il quitter la maison pendant l'intervention ?", "r": "Non, il suffit de rester à l'intérieur, fenêtres fermées côté nid, pendant l'intervention et les heures qui suivent." }
+  ],
+  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (communes fréquentes, hauteurs types, saison) et VOS prix réels."
+}

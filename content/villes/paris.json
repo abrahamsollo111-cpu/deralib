@@ -1,0 +1,27 @@
+{
+  "nom": "Paris",
+  "slug": "paris",
+  "departement": "75",
+  "quartiers": [
+    "Paris 1er", "Paris 2e", "Paris 3e", "Paris 4e", "Paris 5e", "Paris 6e",
+    "Paris 7e", "Paris 8e", "Paris 9e", "Paris 10e", "Paris 11e", "Paris 12e",
+    "Paris 13e", "Paris 14e", "Paris 15e", "Paris 16e", "Paris 17e", "Paris 18e",
+    "Paris 19e", "Paris 20e"
+  ],
+  "contexte_local": "Paris cumule les facteurs qui favorisent les rongeurs. Son réseau d'égouts, dense et ancien, sert d'autoroute aux rats bruns, qui remontent par les canalisations et les regards. Le bâti haussmannien, avec ses caves communicantes, ses anciens vide-ordures et ses cours intérieures, offre des passages et des abris idéaux. La densité de commerces de bouche et de restaurants (surtout dans les 1er, 2e, 9e, 10e, 11e et 18e) multiplie les sources de nourriture, tout comme les marchés, les quais de Seine et les parcs (Buttes-Chaumont, Bercy, Vincennes en lisière). Les chantiers, très nombreux, déplacent régulièrement les colonies d'un immeuble à l'autre. Résultat : à Paris, un traitement efficace suppose de raisonner à l'échelle de l'immeuble et de la copropriété, pas seulement du logement.",
+  "signalement": {
+    "espace_public": "Pour un rat ou un nuisible sur la voie publique, dans un square ou lié à la propreté, signalez-le à la Ville de Paris via l'application DansMaRue ou en appelant le 3975.",
+    "logement_insalubre": "Pour une infestation liée à l'insalubrité d'un logement, le Service technique de l'habitat / le Service communal d'hygiène et de santé peut être saisi.",
+    "prive": "Dans un logement, une cave ou une copropriété privée, la dératisation relève du propriétaire, du locataire ou du syndic selon le cas : c'est là que nous intervenons."
+  },
+  "prix_locaux": {
+    "note": "Mêmes fourchettes indicatives qu'au niveau régional, à confirmer au devis. À Paris, l'accès (étage sans ascenseur, caves multiples, parties communes) peut influer sur le temps d'intervention.",
+    "renvoi": "Voir le détail des tarifs sur la page dératisation."
+  },
+  "faq_locale": [
+    { "q": "Intervenez-vous dans tous les arrondissements de Paris ?", "r": "Oui, nos techniciens couvrent les 20 arrondissements, du centre aux quartiers périphériques." },
+    { "q": "Mon immeuble est en copropriété, qui doit gérer les rats dans les caves ?", "r": "Les caves et parties communes relèvent généralement du syndic. Nous pouvons établir un devis pour la copropriété et traiter l'ensemble de l'immeuble, plus efficace qu'un traitement logement par logement." },
+    { "q": "La Ville de Paris ne s'en occupe-t-elle pas gratuitement ?", "r": "La Ville agit sur l'espace public et les égouts (signalement via DansMaRue ou le 3975), mais pas à l'intérieur des logements et copropriétés privées, qui restent à la charge des occupants ou du syndic." }
+  ],
+  "_a_enrichir": "REMPLACER/COMPLÉTER par des observations réelles de vos techniciens à Paris : arrondissements où vous intervenez le plus, types d'immeubles, cas marquants, délais réels. Ce sont ces détails first-party qui font la différence en SEO local."
+}

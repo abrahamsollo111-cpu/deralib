@@ -1,0 +1,45 @@
+{
+  "nom": "Dératisation — rats et souris",
+  "slug": "deratisation",
+  "meta_title": "Dératisation en Île-de-France — équipe certifiée, intervention rapide | deralib",
+  "meta_description": "Rats ou souris chez vous ? Nos techniciens certifiés Certibiocide interviennent vite en Île-de-France. Diagnostic, traitement sécurisé, obturation. Devis gratuit.",
+  "h1": "Dératisation en Île-de-France : rats et souris traités par nos techniciens certifiés",
+  "intro": "Un rat dans la cave, des souris derrière les plinthes, des bruits dans les cloisons la nuit : au-delà du dégoût, les rongeurs présentent de vrais risques (contamination des aliments, transmission de maladies comme la leptospirose, dégâts sur les câbles électriques pouvant provoquer des courts-circuits). Ils se reproduisent vite, donc plus on attend, plus l'infestation s'installe. Notre équipe de techniciens certifiés Certibiocide intervient dans toute l'Île-de-France pour identifier, traiter et empêcher le retour.",
+  "signes": [
+    { "titre": "Excréments", "detail": "Petites crottes noires : en forme de grain de riz pour la souris (3-6 mm), plus grosses et en fuseau pour le rat (1-2 cm). Souvent le long des murs, dans les placards ou près des sources de nourriture." },
+    { "titre": "Bruits nocturnes", "detail": "Grattements, trottinements ou couinements dans les cloisons, faux plafonds ou combles, surtout la nuit : les rongeurs sont actifs quand la maison est calme." },
+    { "titre": "Traces de rongement", "detail": "Emballages alimentaires percés, plinthes, gaines électriques ou tuyaux entamés. Les rongeurs usent leurs dents en permanence." },
+    { "titre": "Marques de passage", "detail": "Traces de gras sombres le long des plinthes (ils longent toujours les murs), petites empreintes ou traînées dans la poussière." },
+    { "titre": "Odeur", "detail": "Odeur d'urine forte et musquée dans un espace confiné (placard, cave, vide sanitaire)." },
+    { "titre": "Nids", "detail": "Amas de papier, carton, tissu ou isolant déchiquetés, cachés dans un recoin sombre." }
+  ],
+  "comprendre_espece": "Trois espèces dominent en Île-de-France : la souris grise, le rat brun (surmulot, plutôt en sous-sol, égouts et rez-de-chaussée) et le rat noir (plus grimpeur, combles et étages). Deux réalités compliquent le traitement en amateur. D'abord la vitesse de reproduction : une souris peut avoir plusieurs portées par an, une population explose en quelques semaines. Ensuite la néophobie du rat : il se méfie de tout nouvel objet ou nouvelle nourriture dans son environnement, ce qui rend les appâts grand public souvent inefficaces s'ils sont mal placés. Un traitement professionnel s'appuie sur la connaissance de ces comportements (déplacements le long des murs, activité nocturne, points d'eau) pour être réellement efficace.",
+  "plan_action": [
+    { "etape": "1. Diagnostic", "detail": "Inspection complète du logement : repérage des points d'entrée, estimation de l'ampleur de l'infestation, identification de l'espèce et des sources (poubelles, vide-ordures, canalisations, caves)." },
+    { "etape": "2. Traitement adapté et sécurisé", "detail": "Selon le contexte : postes d'appâtage sécurisés (inaccessibles aux enfants et animaux domestiques), piégeage mécanique là où les biocides sont déconseillés (cuisines pro, présence d'enfants). Tout est réalisé en conformité avec la réglementation biocides par un technicien certifié Certibiocide." },
+    { "etape": "3. Obturation des points d'entrée", "detail": "On rebouche les accès (grilles d'aération, passages de canalisations, bas de portes) pour empêcher la recolonisation. C'est l'étape que la plupart des traitements amateurs oublient — et sans elle, les rongeurs reviennent." },
+    { "etape": "4. Suivi et contrôle", "detail": "Passage(s) de contrôle pour vérifier la disparition et ajuster si besoin. Conseils de prévention personnalisés." }
+  ],
+  "gestes_urgence": [
+    "Stockez la nourriture (y compris croquettes pour animaux) dans des contenants hermétiques en verre ou métal.",
+    "Sortez les poubelles régulièrement et gardez-les fermées ; supprimez les points d'eau stagnante.",
+    "Bouchez provisoirement les trous visibles avec de la paille de fer (les rongeurs n'aiment pas la ronger).",
+    "N'achetez pas et ne répandez pas de raticide vous-même : mal utilisé, il est dangereux pour les enfants et les animaux, et favorise la résistance des rongeurs.",
+    "Notez où vous voyez les traces (pièce, moment) : ces observations aident notre technicien à cibler l'intervention."
+  ],
+  "prix": [
+    { "prestation": "Diagnostic / déplacement", "fourchette": "à préciser", "note": "Souvent offert ou déduit si intervention." },
+    { "prestation": "Intervention ponctuelle — appartement", "fourchette": "à préciser (ex. 90-180 €)", "note": "Variable selon l'ampleur." },
+    { "prestation": "Intervention — maison / pavillon", "fourchette": "à préciser (ex. 150-300 €)", "note": "Variable selon la surface et l'accès." },
+    { "prestation": "Contrat de suivi annuel", "fourchette": "à préciser", "note": "Pour commerces, copropriétés, cabinets." }
+  ],
+  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact dépend de l'infestation et se confirme au devis gratuit.",
+  "faq": [
+    { "q": "En combien de temps se débarrasse-t-on des rongeurs ?", "r": "Selon l'ampleur, une infestation légère peut être maîtrisée en quelques jours ; un cas installé demande un traitement sur 2 à 4 semaines avec un ou plusieurs passages de contrôle." },
+    { "q": "Le traitement est-il dangereux pour mes enfants ou mes animaux ?", "r": "Nos techniciens utilisent des dispositifs sécurisés (postes d'appâtage fermés) ou du piégeage mécanique quand c'est plus prudent. La sécurité du foyer est prioritaire." },
+    { "q": "Locataire ou propriétaire : qui paie la dératisation ?", "r": "Cela dépend de l'origine et du bail. En bref, l'entretien courant peut incomber au locataire, mais une infestation liée à la vétusté ou aux parties communes relève souvent du propriétaire ou du syndic. Voir notre guide dédié." },
+    { "q": "Intervenez-vous en urgence ?", "r": "Oui, nous intervenons rapidement partout en Île-de-France. Appelez-nous pour un créneau au plus vite." },
+    { "q": "Y a-t-il une garantie ?", "r": "Oui, [À COMPLÉTER : préciser votre garantie / passages de contrôle inclus]." }
+  ],
+  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (quartiers/immeubles typiques, cas fréquents) et VOS prix réels. C'est cette matière first-party que Google valorise et que l'IA ne peut pas inventer."
+}

@@ -1,0 +1,44 @@
+{
+  "nom": "Punaises de lit",
+  "slug": "punaises-de-lit",
+  "meta_title": "Traitement punaises de lit en Île-de-France — techniciens certifiés | Deralib",
+  "meta_description": "Piqûres au réveil, traces noires sur le matelas ? Nos techniciens certifiés traitent les punaises de lit en Île-de-France : détection, traitement complet, suivi. Devis gratuit.",
+  "h1": "Punaises de lit en Île-de-France : détection et traitement par nos techniciens certifiés",
+  "intro": "Des piqûres alignées au réveil, de petites taches noires sur les coutures du matelas, des traces de sang sur les draps : les punaises de lit se sont fortement développées en Île-de-France ces dernières années, dans tous les types de logements — leur présence n'a rien à voir avec la propreté. Elles ne transmettent pas de maladie, mais leurs piqûres perturbent le sommeil et l'infestation s'aggrave vite si elle n'est pas traitée correctement. Nos techniciens certifiés Certibiocide établissent un diagnostic précis et appliquent un protocole complet pour les éliminer durablement.",
+  "signes": [
+    { "titre": "Piqûres groupées", "detail": "Boutons rouges qui démangent, souvent alignés ou groupés par 3-4, sur les zones découvertes pendant le sommeil (bras, jambes, dos, cou)." },
+    { "titre": "Taches noires", "detail": "Petits points noirs (déjections) sur les coutures du matelas, le sommier, les plinthes ou derrière la tête de lit." },
+    { "titre": "Traces de sang", "detail": "Petites traces de sang sur les draps, laissées par des punaises écrasées pendant la nuit." },
+    { "titre": "Insectes visibles", "detail": "Insecte brun, plat et ovale de 4 à 7 mm (taille d'un pépin de pomme), caché dans les coutures, fentes et recoins près du lit." },
+    { "titre": "Peaux et œufs", "detail": "Mues translucides et œufs blanchâtres d'environ 1 mm, en amas dans les cachettes (coutures, vis du sommier, fissures)." }
+  ],
+  "comprendre_espece": "La punaise de lit se nourrit exclusivement de sang, la nuit, puis se cache à proximité immédiate du dormeur : matelas, sommier, tête de lit, plinthes, prises électriques, cadres. Elle se déplace d'un logement à l'autre via les bagages, les meubles d'occasion, les vêtements — d'où sa progression dans les grandes villes et les immeubles collectifs. Une femelle pond plusieurs œufs par jour, et les œufs résistent à la plupart des insecticides grand public : c'est pourquoi les traitements amateurs échouent souvent et peuvent même disperser l'infestation vers les pièces ou logements voisins. Un traitement professionnel combine plusieurs méthodes et prévoit toujours un second passage pour éliminer les punaises écloses après le premier.",
+  "plan_action": [
+    { "etape": "1. Inspection et diagnostic", "detail": "Recherche méthodique des punaises, œufs et traces dans la chambre et les pièces adjacentes, pour confirmer l'infestation et en mesurer l'étendue." },
+    { "etape": "2. Préparation du logement", "detail": "Nous vous remettons une liste de préparation claire (linge à laver à 60 °C, désencombrement ciblé) — une bonne préparation conditionne l'efficacité du traitement." },
+    { "etape": "3. Traitement combiné", "detail": "Selon le cas : traitement mécanique (vapeur sèche haute température, aspiration), traitement insecticide ciblé appliqué par un technicien certifié Certibiocide, dans le respect de la réglementation biocides." },
+    { "etape": "4. Second passage et contrôle", "detail": "Un second traitement est planifié environ 2 semaines après pour éliminer les punaises issues des œufs, suivi d'un contrôle de résultat." }
+  ],
+  "gestes_urgence": [
+    "Ne déplacez pas votre matelas ni vos meubles dans d'autres pièces : vous disperseriez l'infestation.",
+    "Lavez le linge de lit à 60 °C minimum et enfermez-le dans des sacs fermés après lavage.",
+    "Passez l'aspirateur soigneusement (coutures, plinthes) et jetez le sac fermé dans une poubelle extérieure.",
+    "Ne pulvérisez pas d'insecticide grand public : cela disperse les punaises et complique le traitement professionnel.",
+    "Ne jetez pas votre matelas sans l'emballer : vous contamineriez les parties communes et il est souvent récupérable après traitement."
+  ],
+  "prix": [
+    { "prestation": "Diagnostic / inspection", "fourchette": "à préciser", "note": "Souvent déduit si intervention." },
+    { "prestation": "Traitement studio / 2 pièces (2 passages)", "fourchette": "à préciser (ex. 250-450 €)", "note": "Variable selon l'infestation." },
+    { "prestation": "Traitement appartement 3 pièces et + (2 passages)", "fourchette": "à préciser (ex. 350-600 €)", "note": "Variable selon la surface." },
+    { "prestation": "Traitement vapeur complémentaire", "fourchette": "à préciser", "note": "Recommandé chambres d'enfants / personnes sensibles." }
+  ],
+  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact dépend de la surface et de l'ampleur, confirmé au devis gratuit.",
+  "faq": [
+    { "q": "Les punaises de lit sont-elles un signe de manque d'hygiène ?", "r": "Non. Elles se propagent par les transports, les voyages et les meubles d'occasion, et touchent tous les types de logements, même impeccables." },
+    { "q": "Pourquoi deux passages sont-ils nécessaires ?", "r": "Les œufs résistent à la plupart des traitements. Le second passage, environ 2 semaines après, élimine les punaises écloses entre-temps, avant qu'elles ne pondent à leur tour." },
+    { "q": "Dois-je jeter mon matelas ?", "r": "Dans la plupart des cas, non : le traitement (vapeur, insecticide ciblé, housse anti-punaises) permet de le conserver. Jeter un matelas non emballé propage l'infestation." },
+    { "q": "Combien de temps avant de dormir à nouveau tranquillement ?", "r": "Le protocole complet s'étale généralement sur 2 à 4 semaines (deux passages). Les piqûres diminuent nettement dès le premier traitement." },
+    { "q": "Faut-il traiter les logements voisins ?", "r": "En immeuble, c'est parfois nécessaire : les punaises circulent par les gaines et les cloisons. Nous le vérifions au diagnostic et pouvons proposer un devis à la copropriété." }
+  ],
+  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (types de logements, cas fréquents en IDF) et VOS prix réels."
+}
