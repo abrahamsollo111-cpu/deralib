@@ -144,6 +144,46 @@ export function IconWasp({ size = 26 }: P) {
   );
 }
 
+export function IconHome({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+      <path d="M9 22V12h6v10" />
+    </svg>
+  );
+}
+
+export function IconBuilding({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="5" y="2" width="14" height="20" rx="2" />
+      <path d="M9 6h1M14 6h1M9 10h1M14 10h1M9 14h1M14 14h1" />
+      <path d="M10 22v-4h4v4" />
+    </svg>
+  );
+}
+
+export function IconStore({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M3 9 4.5 3h15L21 9" />
+      <path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0" />
+      <path d="M5 12v9h14v-9" />
+      <path d="M9 21v-6h6v6" />
+    </svg>
+  );
+}
+
+export function IconQuestion({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
+    </svg>
+  );
+}
+
 export const NUISIBLE_ICONS: Record<string, (p: P) => React.ReactElement> = {
   deratisation: IconRat,
   "punaises-de-lit": IconBedbug,

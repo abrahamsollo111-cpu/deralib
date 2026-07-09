@@ -1117,6 +1117,113 @@ a.card:hover .card-link { gap: 10px; }
   gap: 10px;
 }
 
+/* ---------- Devis express (formulaire pas-à-pas de l'accueil) ---------- */
+
+.qq-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow-lg);
+  padding: 28px 30px 30px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 560px) { .qq-card { padding: 22px 18px 24px; } }
+
+.qq-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 26px;
+}
+.qq-kicker {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bleu);
+}
+.qq-count { font-size: 0.8rem; font-weight: 700; color: var(--text-light); }
+.qq-back {
+  background: none;
+  border: none;
+  font-family: inherit;
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  padding: 2px 0;
+}
+.qq-back:hover { color: var(--bleu); }
+
+.qq-progress { display: flex; gap: 6px; margin: 12px 0 22px; }
+.qq-progress span {
+  height: 5px;
+  flex: 1;
+  border-radius: 3px;
+  background: var(--azur-deep);
+  transition: background 0.35s ease;
+}
+.qq-progress span.done { background: var(--grad); }
+
+.qq-question { font-weight: 800; color: var(--marine); font-size: 1.16rem; margin-bottom: 18px; }
+
+.qq-step { animation: qq-in 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+@keyframes qq-in {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: none; }
+}
+
+.qq-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 480px) { .qq-options { grid-template-columns: 1fr; } }
+
+.qq-option {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 15px;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.93rem;
+  color: var(--marine);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.qq-option:hover { border-color: var(--bleu); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.qq-option:focus-visible { outline: 3px solid rgba(21, 119, 219, 0.35); outline-offset: 2px; }
+.qq-option.selected { border-color: var(--bleu); background: #e8f2fe; }
+.qq-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.qq-note { margin-top: 13px; font-size: 0.8rem; color: var(--text-light); text-align: center; }
+
+.qq-done { text-align: center; padding: 18px 6px; }
+.qq-done-ico {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-bleu);
+}
+.qq-done h3 { margin-bottom: 10px; }
+.qq-done p { font-size: 0.93rem; color: var(--text); }
+
 /* ---------- Formulaire devis ---------- */
 
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }

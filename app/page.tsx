@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reassurance from "@/components/Reassurance";
+import QuickQuote from "@/components/QuickQuote";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import HeroDecor from "@/components/HeroDecor";
@@ -90,9 +91,9 @@ export default function Home() {
               <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
                 <IconPhone /> {site.telephone}
               </a>
-              <Link href="/devis" className="btn btn-outline btn-lg">
-                Devis gratuit en ligne
-              </Link>
+              <a href="#devis-express" className="btn btn-outline btn-lg">
+                Devis gratuit en 30 s
+              </a>
             </div>
             <p className="dispo" style={{ marginBottom: 22 }}>
               <span className="dot" />
@@ -164,6 +165,51 @@ export default function Home() {
       </section>
 
       <Reassurance />
+
+      {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
+      <section id="devis-express" style={{ overflow: "hidden" }}>
+        <div className="fx-layer" aria-hidden>
+          <span
+            className="deco-plus deco-plus-cyan"
+            data-parallax="0.4"
+            style={{ top: "14%", right: "8%", fontSize: 34 }}
+          >
+            +
+          </span>
+          <div
+            className="deco deco-ring"
+            data-parallax="0.25"
+            style={{ width: 260, height: 260, bottom: -90, left: "-5%" }}
+          />
+        </div>
+        <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
+          <div data-reveal="left">
+            <span className="kicker">Devis express</span>
+            <h2>
+              Pas envie d&apos;appeler ?{" "}
+              <span className="grad-text">Décrivez, on vous rappelle.</span>
+            </h2>
+            <p style={{ marginTop: 16 }}>
+              Répondez à 4 questions — 30 secondes chrono — et un technicien
+              vous rappelle avec un premier diagnostic et un prix indicatif.
+            </p>
+            <ul className="checklist" style={{ marginTop: 22 }} data-stagger>
+              <li data-reveal="left">
+                <IconCheck /> Réponse rapide d&apos;un technicien, pas d&apos;un robot
+              </li>
+              <li data-reveal="left">
+                <IconCheck /> Gratuit et sans engagement
+              </li>
+              <li data-reveal="left">
+                <IconCheck /> Vos coordonnées ne sont jamais revendues
+              </li>
+            </ul>
+          </div>
+          <div data-reveal="right">
+            <QuickQuote />
+          </div>
+        </div>
+      </section>
 
       {/* ===== SERVICES ===== */}
       <section style={{ overflow: "hidden" }}>
