@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reassurance from "@/components/Reassurance";
+import Avis from "@/components/Avis";
 import QuickQuote from "@/components/QuickQuote";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
@@ -403,6 +404,9 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {/* ===== AVIS CLIENTS (rien tant que content/avis.json est vide) ===== */}
+      <Avis />
 
       {/* ===== FAQ ===== */}
       <section className="section-azur">
