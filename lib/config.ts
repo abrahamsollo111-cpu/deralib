@@ -1,37 +1,74 @@
 // ============================================================
 // CONFIGURATION CENTRALE DU SITE
 // Toutes les infos de l'entreprise sont ici, à un seul endroit.
-// Les valeurs marquées "À COMPLÉTER" sont provisoires :
-// les remplacer ici met à jour tout le site d'un coup.
+//
+// ⚠️⚠️⚠️ TODO AVANT MISE EN LIGNE — DONNÉES RÉELLES MANQUANTES ⚠️⚠️⚠️
+// Chaque champ marqué « TODO » ci-dessous contient une valeur
+// provisoire. Les remplacer ici met à jour TOUT le site d'un coup
+// (header, footer, pages, données structurées, mentions légales).
+// Le NAP (nom, adresse, téléphone) doit être identique au caractère
+// près à celui de la fiche Google Business Profile.
 // ============================================================
 
 export const site = {
-  // Marque (issue de la charte graphique)
+  // Marque
   marque: "Deralib",
-  slogan: "Experts anti-nuisibles",
+  slogan: "Dératisation & anti-nuisibles",
 
-  // Société — À COMPLÉTER avec les vraies informations légales
-  raisonSociale: "Deralib [forme juridique à compléter]",
-  siren: "000 000 000", // À COMPLÉTER
-  adresse: "Adresse à compléter, 75000 Paris", // À COMPLÉTER
-  dirigeant: "Prénom Nom", // À COMPLÉTER (nom du dirigeant expert)
-  dirigeantTitre: "Dirigeant fondateur, expert certifié en lutte anti-nuisibles", // À COMPLÉTER (diplômes)
+  // ⚠️ TODO : raison sociale complète (ex. « Deralib SARL »)
+  raisonSociale: "Deralib [TODO : forme juridique]",
+  // ⚠️ TODO : SIRET réel (14 chiffres) — affiché au footer et aux mentions légales
+  siret: "TODO — SIRET à compléter",
+  // ⚠️ TODO : adresse réelle du siège — identique à la fiche Google Business Profile
+  adresse: "TODO — adresse du siège à compléter",
+  codePostal: "TODO",
+  villeSiege: "TODO",
+  // ⚠️ TODO : année de création réelle de l'entreprise (affichée « Depuis XXXX »)
+  anneeCreation: "TODO",
+  // ⚠️ TODO : prénom et nom réels du dirigeant
+  dirigeant: "TODO — Prénom Nom du dirigeant",
+  dirigeantTitre: "Dirigeant fondateur", // TODO : compléter avec diplômes/certifications réels
+  // ⚠️ TODO : nombre réel de techniciens (utilisé sur la page À propos)
+  nbTechniciens: "TODO",
 
-  // Contact — À COMPLÉTER
-  telephone: "01 23 45 67 89", // À COMPLÉTER : numéro unique de l'entreprise
-  telephoneHref: "tel:+33123456789", // À COMPLÉTER : même numéro au format international
-  email: "contact@deralib.com", // À COMPLÉTER
+  // Contact
+  // ⚠️ TODO : numéro réel de l'entreprise — remplace le placeholder partout
+  telephone: "01 23 45 67 89",
+  // ⚠️ TODO : même numéro au format international (tel:+33...)
+  telephoneHref: "tel:+33123456789",
+  // ⚠️ TODO : adresse email réelle de contact
+  email: "contact@deralib.com",
 
   // Web
   url: "https://www.deralib.com",
 
   // Zone d'intervention
   zone: "Île-de-France",
-  horaires: "7j/7 — 8h à 20h", // À COMPLÉTER
+  horaires: "7j/7 — 8h à 20h", // TODO : confirmer les horaires réels
+  // Horaires au format schema.org (openingHoursSpecification)
+  horairesSchema: { jours: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ouverture: "08:00", fermeture: "20:00" },
 
-  // Preuves de confiance (ne pas afficher de nombre de techniciens sur le site)
+  // Assurance et certification
   certification: "Certibiocide",
+  // ⚠️ TODO : numéro de certificat Certibiocide (ne rien afficher tant qu'il manque)
+  certibiocideNumero: "",
+  // ⚠️ TODO : assureur RC pro + n° de contrat (ne rien afficher tant qu'il manque)
+  rcProAssureur: "",
+  rcProContrat: "",
 } as const;
+
+// Les 8 départements d'Île-de-France couverts (utilisés pour le
+// maillage interne et le champ areaServed des données structurées)
+export const DEPARTEMENTS = [
+  { slug: "paris", nom: "Paris", code: "75" },
+  { slug: "hauts-de-seine", nom: "Hauts-de-Seine", code: "92" },
+  { slug: "seine-saint-denis", nom: "Seine-Saint-Denis", code: "93" },
+  { slug: "val-de-marne", nom: "Val-de-Marne", code: "94" },
+  { slug: "seine-et-marne", nom: "Seine-et-Marne", code: "77" },
+  { slug: "yvelines", nom: "Yvelines", code: "78" },
+  { slug: "essonne", nom: "Essonne", code: "91" },
+  { slug: "val-d-oise", nom: "Val-d'Oise", code: "95" },
+] as const;
 
 export const couleurs = {
   marine: "#0D2440",

@@ -9,7 +9,7 @@ import { site } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "À propos — l'équipe et l'expert derrière l'entreprise",
-  description: `Découvrez ${site.marque} : un dirigeant expert certifié et une équipe de techniciens salariés certifiés ${site.certification} qui réalisent eux-mêmes les interventions en ${site.zone}.`,
+  description: `Qui est derrière ${site.marque} : le parcours du dirigeant, l'équipe de techniciens salariés certifiés ${site.certification} et la façon dont nous travaillons en ${site.zone}.`,
   alternates: { canonical: "/a-propos" },
 };
 
@@ -22,49 +22,96 @@ export default function Page() {
         <HeroDecor />
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <h1 style={{ maxWidth: 860 }}>
-            Une vraie entreprise de terrain, dirigée par un expert du métier
+            Qui est derrière {site.marque}
           </h1>
           <p className="lead" style={{ maxWidth: 740, marginTop: 20 }}>
-            {site.marque} n&apos;est pas un annuaire ni une plateforme de mise en
-            relation : c&apos;est une entreprise de dératisation et de lutte
-            anti-nuisibles dont les techniciens salariés réalisent eux-mêmes
-            chaque intervention, partout en {site.zone}.
+            {site.marque} est une entreprise de dératisation et de lutte
+            anti-nuisibles basée en {site.zone}. Pas un annuaire, pas une
+            plateforme de mise en relation : les techniciens qui se déplacent
+            chez vous sont salariés de l&apos;entreprise.
           </p>
         </div>
       </section>
 
       <Reassurance />
 
-      {/* ===== LE DIRIGEANT ===== */}
+      {/* ===== L'HISTOIRE =====
+          TODO : cette section attend les faits réels de l'entreprise.
+          Remplacer chaque [TODO ...] par les vraies dates et le vrai
+          parcours — c'est ce qui différencie cette page de celle d'un
+          concurrent générique. Ne rien inventer. */}
       <section>
+        <div className="container prose" data-reveal>
+          <span className="kicker">L&apos;histoire</span>
+          <h2 style={{ marginTop: 0 }}>Comment l&apos;entreprise s&apos;est construite</h2>
+          <p>
+            [TODO : année de création — « {site.marque} a été créée en XXXX
+            par {site.dirigeant} »]. Avant de créer l&apos;entreprise, [TODO :
+            parcours réel du dirigeant — formation, années passées chez un
+            autre acteur du secteur, première spécialité (3D : dératisation,
+            désinsectisation, désinfection)].
+          </p>
+          <p>
+            [TODO : pourquoi ce métier — la vraie raison, même simple. Un
+            passage chez un client marquant, une opportunité de reprise, une
+            formation initiale en hygiène. Les lecteurs comme Google repèrent
+            les histoires plaquées ; une explication courte et vraie vaut
+            mieux qu&apos;un paragraphe romancé.]
+          </p>
+          <p>
+            [TODO : comment l&apos;équipe s&apos;est construite — première
+            embauche en XXXX, arrivée du deuxième véhicule, spécialisation
+            punaises de lit, etc. Aujourd&apos;hui l&apos;équipe compte{" "}
+            {site.nbTechniciens} techniciens.]
+          </p>
+          <p>
+            Ce qui n&apos;a pas changé depuis le début : les interventions sont
+            réalisées par nos propres techniciens, certifiés{" "}
+            {site.certification}, jamais sous-traitées. C&apos;est plus exigeant
+            à faire tourner qu&apos;une plateforme, mais c&apos;est la seule façon
+            de répondre du résultat.
+          </p>
+        </div>
+      </section>
+
+      {/* ===== LE DIRIGEANT ===== */}
+      <section className="section-azur">
         <div className="container two-col">
           <div data-reveal>
             <span className="kicker">Le dirigeant</span>
+            {/* TODO : remplacer par le vrai nom dans lib/config.ts */}
             <h2>{site.dirigeant}</h2>
             <p style={{ marginTop: 6, color: "var(--bleu)", fontWeight: 700 }}>
               {site.dirigeantTitre}
             </p>
+            {/* TODO PHOTO : ajouter ici une vraie photo du dirigeant.
+                Fichier : /public/images/dirigeant-deralib.jpg
+                Alt : « [Prénom Nom], dirigeant de Deralib, devant un véhicule
+                d'intervention » */}
             <p style={{ marginTop: 16 }}>
-              [À COMPLÉTER : parcours du dirigeant — diplômes, années
-              d&apos;expérience, spécialités. C&apos;est cette expertise nommée et
-              vérifiable qui inspire confiance aux clients comme à Google
-              (E-E-A-T). Ajouter ici une vraie photo.]
+              [TODO : 5 à 10 lignes factuelles sur le dirigeant — diplômes,
+              certificat {site.certification} et son numéro, années
+              d&apos;expérience, types d&apos;interventions qu&apos;il
+              connaît le mieux. C&apos;est cette expertise nommée et vérifiable
+              qui compte, pour les clients comme pour Google.]
             </p>
           </div>
           <div data-reveal>
             <ul className="checklist" data-stagger>
               <li>
-                <IconShield /> Certification {site.certification} —
-                obligatoire pour l&apos;usage professionnel des biocides
+                <IconShield /> Certificat {site.certification} — obligatoire
+                pour l&apos;usage professionnel des produits biocides (types
+                TP14 rodenticides et TP18 insecticides)
               </li>
               <li>
-                <IconCheck /> [À COMPLÉTER : diplômes et formations]
+                <IconCheck /> [TODO : diplômes et formations du dirigeant]
               </li>
               <li>
-                <IconCheck /> [À COMPLÉTER : années d&apos;expérience]
+                <IconCheck /> [TODO : années d&apos;expérience]
               </li>
               <li>
                 <IconCheck /> Assurance responsabilité civile professionnelle
+                {/* TODO : assureur + n° de contrat dans lib/config.ts */}
               </li>
             </ul>
           </div>
@@ -72,29 +119,36 @@ export default function Page() {
       </section>
 
       {/* ===== L'ÉQUIPE ===== */}
-      <section className="section-azur">
+      <section>
         <div className="container two-col">
           <div data-reveal>
             <span className="kicker">L&apos;équipe</span>
-            <h2>Une équipe de techniciens salariés et certifiés</h2>
+            <h2>Des techniciens salariés, formés et certifiés</h2>
             <p style={{ marginTop: 16 }}>
-              Chaque technicien de l&apos;équipe est salarié de l&apos;entreprise,
-              certifié {site.certification}, et formé en continu : biologie des
-              nuisibles, protocoles de traitement, sécurité des occupants,
-              réglementation. Quand vous appelez {site.marque}, c&apos;est l&apos;un
-              d&apos;eux qui vient — pas un sous-traitant inconnu.
+              Chaque technicien est salarié de l&apos;entreprise et titulaire du
+              certificat {site.certification}. La formation continue porte sur
+              la biologie des espèces, les protocoles de traitement, la
+              sécurité des occupants et la réglementation biocides — qui évolue
+              régulièrement, notamment sur les rodenticides anticoagulants.
             </p>
             <p style={{ marginTop: 14 }}>
-              [À COMPLÉTER : vraies photos de l&apos;équipe et des interventions —
-              elles remplaceront ce texte. Les photos authentiques comptent
-              énormément pour la confiance et pour la fiche Google Business
-              Profile.]
+              Concrètement : celui qui vous répond au téléphone sait de quoi il
+              parle, et celui qui vient chez vous a déjà traité des dizaines de
+              cas comme le vôtre.
             </p>
+            {/* TODO PHOTOS : remplacer ce bloc par de vraies photos.
+                - /public/images/equipe-deralib-techniciens.jpg
+                  Alt : « L'équipe de techniciens Deralib en tenue d'intervention »
+                - /public/images/vehicule-intervention-deralib.jpg
+                  Alt : « Véhicule d'intervention Deralib siglé »
+                Les photos authentiques comptent énormément pour la confiance
+                et pour la fiche Google Business Profile. */}
           </div>
           <div data-reveal>
             <ul className="checklist" data-stagger>
               <li>
-                <IconTeam /> Des techniciens répartis sur toute l&apos;{site.zone}
+                <IconTeam /> [TODO : nombre] techniciens répartis sur toute
+                l&apos;{site.zone}
               </li>
               <li>
                 <IconCheck /> 100 % certifiés {site.certification}
@@ -111,7 +165,7 @@ export default function Page() {
       </section>
 
       {/* ===== ENGAGEMENTS ===== */}
-      <section>
+      <section className="section-azur">
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Nos engagements</span>
@@ -120,28 +174,28 @@ export default function Page() {
           <div className="signs-grid" data-stagger>
             {[
               [
-                "Honnêteté",
-                "Diagnostic sincère : si une intervention n'est pas nécessaire, on vous le dit. Le prix est confirmé avant de commencer, jamais après.",
+                "Diagnostic honnête",
+                "Si une intervention n'est pas nécessaire, on vous le dit. Un couple de guêpes qui butine n'est pas un nid ; une crotte isolée n'est pas une infestation.",
               ],
               [
-                "Sécurité",
-                "Produits professionnels appliqués selon la réglementation biocides, avec des dispositifs adaptés aux enfants et aux animaux.",
+                "Sécurité du foyer",
+                "Postes d'appâtage verrouillés, gel appliqué hors de portée, piégeage mécanique quand des enfants ou des animaux vivent sur place. La réglementation biocides est respectée à la lettre.",
               ],
               [
-                "Efficacité durable",
-                "On ne se contente pas de traiter : on bouche les accès et on vous explique comment éviter le retour des nuisibles.",
+                "Traitement de la cause",
+                "Traiter sans obturer les points d'entrée, c'est recommencer dans trois mois. L'obturation grillagée et les conseils de prévention font partie de l'intervention.",
               ],
               [
                 "Disponibilité",
-                `Intervention rapide partout en ${site.zone}, y compris pour les urgences, ${site.horaires}.`,
+                `Intervention généralement sous 24 à 48 h partout en ${site.zone}, en priorité pour les urgences (nids de frelons, infestations importantes).`,
               ],
               [
-                "Transparence",
-                "Fourchettes de prix publiées sur le site, devis gratuit et détaillé, rapport d'intervention remis au client.",
+                "Prix annoncé avant",
+                "Fourchettes publiées sur le site, devis gratuit et détaillé, prix confirmé avant de commencer. Jamais de supplément découvert en fin d'intervention.",
               ],
               [
                 "Respect des lieux",
-                "Interventions discrètes et soignées, chez les particuliers comme dans les commerces et les copropriétés.",
+                "Interventions discrètes et soignées, chez les particuliers comme dans les commerces de bouche, où la discrétion compte double.",
               ],
             ].map(([t, d]) => (
               <div key={t} className="sign" data-reveal>
@@ -156,7 +210,7 @@ export default function Page() {
       </section>
 
       {/* ===== INFOS ENTREPRISE ===== */}
-      <section className="section-azur">
+      <section>
         <div className="container prose" data-reveal>
           <span className="kicker">L&apos;entreprise</span>
           <h2 style={{ marginTop: 0 }}>Informations</h2>
@@ -165,7 +219,8 @@ export default function Page() {
               <strong>Société :</strong> {site.raisonSociale}
             </li>
             <li>
-              <strong>Zone d&apos;intervention :</strong> {site.zone}
+              <strong>Zone d&apos;intervention :</strong> {site.zone} — les 8
+              départements (75, 77, 78, 91, 92, 93, 94, 95)
             </li>
             <li>
               <strong>Téléphone :</strong>{" "}
@@ -177,7 +232,8 @@ export default function Page() {
             </li>
           </ul>
           <p>
-            Voir aussi nos <Link href="/mentions-legales">mentions légales</Link>.
+            Voir aussi notre <Link href="/contact">page contact</Link> et nos{" "}
+            <Link href="/mentions-legales">mentions légales</Link>.
           </p>
         </div>
       </section>

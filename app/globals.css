@@ -495,6 +495,10 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- Hero ---------- */
 
+/* TODO PHOTO : /fond-technicien.jpg et /fond-technicien-mobile.jpg sont des
+   images génériques. Les remplacer par une VRAIE photo d'équipe ou
+   d'intervention (technicien en tenue devant le véhicule siglé), renommée
+   en SEO, ex. /images/equipe-deralib-intervention-paris.jpg */
 /* photo d'équipe en fond, voilée par un dégradé clair pour rester discrète */
 .hero {
   position: relative;

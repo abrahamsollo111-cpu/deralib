@@ -27,7 +27,7 @@ export default function Page() {
               <strong>Dénomination :</strong> {site.raisonSociale}
             </li>
             <li>
-              <strong>SIREN :</strong> {site.siren}
+              <strong>SIRET :</strong> {site.siret}
             </li>
             <li>
               <strong>Siège social :</strong> {site.adresse}
