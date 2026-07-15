@@ -59,15 +59,16 @@ export default function Page() {
                       <strong>Siège</strong>
                       {estRenseigne(site.adresse) ? (
                         <span>
-                          {site.raisonSociale} — {site.adresse},{" "}
-                          {site.codePostal} {site.villeSiege}
+                          {estRenseigne(site.raisonSociale) ? site.raisonSociale : site.marque}{" "}
+                          — {site.adresse}, {site.codePostal} {site.villeSiege}
                         </span>
                       ) : (
                         // ⚠️ TODO : renseigner l'adresse du siège dans
                         // lib/config.ts — identique à la fiche Google
                         // Business Profile (NAP)
                         <span>
-                          {site.raisonSociale} — {site.zone}
+                          {estRenseigne(site.raisonSociale) ? site.raisonSociale : site.marque}{" "}
+                          — {site.zone}
                         </span>
                       )}
                       <span className="contact-note">
