@@ -2,6 +2,7 @@ import Link from "next/link";
 import Breadcrumbs from "./Breadcrumbs";
 import HeroDecor from "./HeroDecor";
 import Reassurance from "./Reassurance";
+import Avis from "./Avis";
 import PriceTable from "./PriceTable";
 import Faq from "./Faq";
 import CtaBand from "./CtaBand";
@@ -131,6 +132,9 @@ export default function NuisiblePage({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+
+      {/* ===== AVIS CLIENTS (rien tant que content/avis.json est vide) ===== */}
+      <Avis />
 
       {/* ===== FAQ ===== */}
       <section className="section-azur">

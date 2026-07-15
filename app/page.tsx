@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reassurance from "@/components/Reassurance";
+import Avis from "@/components/Avis";
 import QuickQuote from "@/components/QuickQuote";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
@@ -27,25 +28,25 @@ const SERVICES = [
     slug: "deratisation",
     titre: "Dératisation",
     tile: "tile-bleu",
-    desc: "Rats et souris : diagnostic, traitement sécurisé et obturation des points d'entrée pour empêcher le retour.",
+    desc: "Rats et souris : postes d'appâtage sécurisés, piégeage mécanique quand les biocides sont déconseillés, puis obturation grillagée des points d'entrée. Sans cette dernière étape, ils reviennent.",
   },
   {
     slug: "punaises-de-lit",
     titre: "Punaises de lit",
     tile: "tile-indigo",
-    desc: "Détection, protocole complet en deux passages et contrôle de résultat, pour dormir tranquille à nouveau.",
+    desc: "Détection pièce par pièce, traitement combiné vapeur sèche + insecticide rémanent, second passage à J+15 pour les œufs éclos entre-temps. Contrôle de résultat inclus.",
   },
   {
     slug: "cafards",
     titre: "Cafards & blattes",
     tile: "tile-cyan",
-    desc: "Gel appât professionnel, discret et efficace, sans quitter votre logement. Traitement à la source.",
+    desc: "Gel anti-blattes appliqué dans les charnières, fentes et arrières d'électroménager. Effet cascade sur la colonie, sans évacuation du logement.",
   },
   {
     slug: "guepes-frelons",
     titre: "Guêpes & frelons",
     tile: "tile-teal",
-    desc: "Destruction de nids en sécurité, y compris en hauteur, avec équipement de protection professionnel.",
+    desc: "Poudre insecticide injectée dans le nid, à la perche télescopique pour les nids en hauteur. Combinaison intégrale, retrait du nid quand c'est possible.",
   },
 ];
 
@@ -78,14 +79,14 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="enter-left">
             <h1>
-              Nuisibles chez vous ?{" "}
-              <em className="grad-text">On intervient. Vite.</em>
+              Dératisation et lutte anti-nuisibles{" "}
+              <em className="grad-text">en {site.zone}</em>
             </h1>
             <p className="hero-sub">
-              Rats, souris, punaises de lit, cafards, guêpes et frelons : nos
-              techniciens certifiés {site.certification} traitent chaque
-              infestation partout en {site.zone} — prix confirmé avant
-              d&apos;intervenir.
+              Rats, souris, punaises de lit, cafards, guêpes et frelons. Nos
+              techniciens certifiés {site.certification} interviennent sous 24
+              à 48 h dans les 8 départements franciliens. Le prix est confirmé
+              par devis avant l&apos;intervention, pas après.
             </p>
             <div className="hero-actions">
               <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
@@ -120,17 +121,17 @@ export default function Home() {
             </div>
             <div className="hero-card" data-depth="5">
               <div className="hero-card-title">
-                <span className="pulse" /> Protocole {site.marque}
+                <span className="pulse" /> Déroulé d&apos;une intervention
               </div>
               <p className="hero-card-sub">
-                Le même parcours rigoureux pour chaque intervention
+                Les 4 étapes, de l&apos;appel au contrôle de résultat
               </p>
               <div className="hero-card-steps">
                 {[
-                  ["Diagnostic sur place", "Inspection complète, identification du nuisible"],
-                  ["Traitement sécurisé", "Produits professionnels, foyer protégé"],
-                  ["Prévention du retour", "Obturation des accès, conseils personnalisés"],
-                  ["Suivi & contrôle", "On vérifie le résultat avec vous"],
+                  ["Diagnostic sur place", "Identification de l'espèce et des points d'entrée"],
+                  ["Traitement adapté", "Postes d'appâtage, gel ou insecticide selon le nuisible"],
+                  ["Prévention du retour", "Obturation grillagée des accès, conseils concrets"],
+                  ["Suivi & contrôle", "Passage de contrôle, ajustement si nécessaire"],
                 ].map(([t, s], i) => (
                   <div key={t} className="hero-card-step">
                     <span className="num">{i + 1}</span>
@@ -221,11 +222,12 @@ export default function Home() {
             <span className="kicker">Nos interventions</span>
             <h2>
               Quatre familles de nuisibles,{" "}
-              <span className="grad-text">un même niveau d&apos;exigence</span>
+              <span className="grad-text">quatre protocoles différents</span>
             </h2>
             <p>
-              Chaque nuisible a son protocole. Nos techniciens sont formés et
-              équipés pour chacun d&apos;eux.
+              On ne traite pas une colonie de blattes germaniques comme un nid
+              de frelons asiatiques. Chaque intervention suit le protocole de
+              l&apos;espèce concernée, avec le matériel qui va avec.
             </p>
           </div>
           <div className="cards-grid" data-stagger>
@@ -317,10 +319,13 @@ export default function Home() {
               Toute l&apos;{site.zone}, <span className="grad-text">Paris en tête</span>
             </h2>
             <p style={{ marginTop: 16 }}>
-              Nos équipes sont réparties sur toute la région pour intervenir
-              vite, de Paris intra-muros à la grande couronne. À Paris, nous
-              connaissons bien les réalités du terrain : caves haussmanniennes,
-              copropriétés, commerces de bouche.
+              Nos techniciens sont répartis sur toute la région, de Paris
+              intra-muros à la grande couronne. Chaque secteur a ses
+              particularités : dans les caves haussmanniennes du 11e, les rats
+              passent le plus souvent par les gaines techniques des colonnes
+              d&apos;eaux usées ; en pavillonnaire dans le 77 ou le 78, ce sont
+              plutôt les nids de guêpes sous les tuiles et les souris dans les
+              combles. On adapte le traitement au bâti, pas l&apos;inverse.
             </p>
             <div className="chip-list" style={{ marginTop: 24 }} data-stagger>
               {["Paris (75)", "Hauts-de-Seine (92)", "Seine-Saint-Denis (93)", "Val-de-Marne (94)", "Seine-et-Marne (77)", "Yvelines (78)", "Essonne (91)", "Val-d'Oise (95)"].map(
@@ -363,14 +368,17 @@ export default function Home() {
           <div data-reveal="left">
             <span className="kicker">Qui sommes-nous</span>
             <h2>
-              Une entreprise dirigée par{" "}
-              <span className="grad-text">un expert du métier</span>
+              Une entreprise de terrain,{" "}
+              <span className="grad-text">pas une plateforme</span>
             </h2>
+            {/* TODO : une fois le nom du dirigeant fourni dans lib/config.ts,
+                le citer ici avec son parcours (E-E-A-T) */}
             <p style={{ marginTop: 16 }}>
-              {site.marque} est dirigée par {site.dirigeant},{" "}
-              {site.dirigeantTitre.toLowerCase()}. Autour de lui, une équipe de
-              techniciens salariés, tous certifiés {site.certification}, formés
-              en continu aux méthodes et à la réglementation biocides.
+              Quand vous appelez {site.marque}, vous parlez à quelqu&apos;un qui
+              fait ce métier tous les jours — pas à un centre d&apos;appels qui
+              revend votre demande. Nos techniciens sont salariés de
+              l&apos;entreprise, certifiés {site.certification}, et formés en
+              continu à la réglementation biocides.
             </p>
             <div style={{ marginTop: 24 }}>
               <Link href="/a-propos" className="btn btn-outline">
@@ -396,6 +404,9 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {/* ===== AVIS CLIENTS (rien tant que content/avis.json est vide) ===== */}
+      <Avis />
 
       {/* ===== FAQ ===== */}
       <section className="section-azur">
