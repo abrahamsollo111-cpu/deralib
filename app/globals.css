@@ -525,12 +525,30 @@ body.menu-open { overflow: hidden; }
    images génériques. Les remplacer par une VRAIE photo d'équipe ou
    d'intervention (technicien en tenue devant le véhicule siglé), renommée
    en SEO, ex. /images/equipe-deralib-intervention-paris.jpg */
-/* fond sobre, sans photo générique ni dégradé décoratif */
+/* fond sobre ; pages internes : beige uni */
 .hero {
   position: relative;
   overflow: hidden;
   background: var(--azur);
   border-bottom: 1px solid var(--line);
+}
+/* accueil : photo des techniciens en intervention, voilée d'un filtre
+   blanc cassé (plus dense côté texte pour la lisibilité).
+   Fichier attendu : /public/images/techniciens-deratisation-entrepot.jpg
+   — tant qu'il n'existe pas, seul le fond beige s'affiche. */
+.hero-home {
+  background:
+    linear-gradient(90deg, rgba(251, 249, 244, 0.96) 0%, rgba(251, 249, 244, 0.86) 48%, rgba(243, 239, 230, 0.55) 100%),
+    url("/images/techniciens-deratisation-entrepot.jpg") center 30% / cover no-repeat,
+    var(--azur);
+}
+@media (max-width: 900px) {
+  .hero-home {
+    background:
+      linear-gradient(180deg, rgba(251, 249, 244, 0.94) 0%, rgba(251, 249, 244, 0.88) 100%),
+      url("/images/techniciens-deratisation-entrepot.jpg") center / cover no-repeat,
+      var(--azur);
+  }
 }
 .hero-home { padding: 52px 0 96px; }
 .hero-page { padding: 36px 0 84px; }

@@ -35,7 +35,7 @@ export default function Header() {
               <IconPhone />
               <span className="header-phone-bloc">
                 <span>{site.telephone}</span>
-                <span className="header-phone-note">7j/7 — 8h à 20h</span>
+                <span className="header-phone-note">{site.horaires}</span>
               </span>
             </a>
             <Link href="/devis" className="btn btn-primary header-devis">

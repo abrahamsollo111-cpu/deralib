@@ -49,9 +49,9 @@ export const site = {
 
   // Zone d'intervention
   zone: "Île-de-France",
-  horaires: "7j/7 — 8h à 20h", // TODO : confirmer les horaires réels
+  horaires: "7j/7 — 24h/24",
   // Horaires au format schema.org (openingHoursSpecification)
-  horairesSchema: { jours: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ouverture: "08:00", fermeture: "20:00" },
+  horairesSchema: { jours: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], ouverture: "00:00", fermeture: "23:59" },
 
   // Assurance et certification
   certification: "Certibiocide",
