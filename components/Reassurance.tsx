@@ -5,26 +5,26 @@ import { site } from "@/lib/config";
 export default function Reassurance() {
   const items = [
     {
-      icon: <IconShield />,
+      icon: <IconTeam />,
       tile: "tile-bleu",
+      strong: `${site.anneesMetier} ans de métier`,
+      sub: "Techniciens salariés, jamais de sous-traitance",
+    },
+    {
+      icon: <IconShield />,
+      tile: "tile-teal",
       strong: `Certifiés ${site.certification}`,
       sub: "Réglementation biocides respectée",
     },
     {
       icon: <IconClock />,
       tile: "tile-cyan",
-      strong: "Intervention rapide",
+      strong: "Intervention 24-48 h",
       sub: `Partout en ${site.zone}`,
     },
     {
-      icon: <IconTeam />,
-      tile: "tile-indigo",
-      strong: "Techniciens salariés",
-      sub: "Jamais de sous-traitance",
-    },
-    {
       icon: <IconDoc />,
-      tile: "tile-teal",
+      tile: "tile-indigo",
       strong: "Devis gratuit",
       sub: "Prix confirmé avant intervention",
     },

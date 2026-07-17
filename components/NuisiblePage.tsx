@@ -55,8 +55,8 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Diagnostic</span>
-            <h2>Les signes qui ne trompent pas</h2>
-            <p>Vous reconnaissez un ou plusieurs de ces signes ? Il est temps d&apos;agir.</p>
+            <h2>Les signes</h2>
+            <p>Un seul de ces signes suffit pour agir.</p>
           </div>
           <div className="signs-grid" data-stagger>
             {n.signes.map((s) => (
@@ -76,7 +76,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         <div className="container two-col">
           <div data-reveal="left">
             <span className="kicker">Comprendre</span>
-            <h2>Pourquoi un traitement professionnel fait la différence</h2>
+            <h2>Pourquoi un professionnel</h2>
           </div>
           <p className="lead" data-reveal="right">
             {n.comprendre_espece}
@@ -89,7 +89,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Notre protocole</span>
-            <h2>Comment nos techniciens interviennent</h2>
+            <h2>Le déroulé</h2>
           </div>
           <div className="steps-grid" data-stagger>
             {n.plan_action.map((e, i) => (
@@ -108,7 +108,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">En attendant notre passage</span>
-            <h2>Les bons gestes immédiats</h2>
+            <h2>Les bons gestes</h2>
           </div>
           <ul className="checklist" data-stagger>
             {n.gestes_urgence.map((g, i) => (
@@ -125,7 +125,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Tarifs</span>
-            <h2>Des prix transparents, confirmés au devis</h2>
+            <h2>Nos tarifs</h2>
           </div>
           <div data-reveal>
             <PriceTable prix={n.prix} note={n.prix_note} />
@@ -140,8 +140,8 @@ export default function NuisiblePage({ slug }: { slug: string }) {
       <section className="section-azur">
         <div className="container">
           <div className="section-head" data-reveal>
-            <span className="kicker">Questions fréquentes</span>
-            <h2>{NUISIBLES_LABELS[slug]} : vos questions</h2>
+            <span className="kicker">FAQ</span>
+            <h2>Questions fréquentes</h2>
           </div>
           <Faq items={n.faq} />
         </div>
@@ -152,7 +152,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Nos autres services</span>
-            <h2>Un autre nuisible vous concerne ?</h2>
+            <h2>Autres nuisibles</h2>
           </div>
           <div className="cards-grid cards-grid-3" data-stagger>
             {autres.map((s) => {

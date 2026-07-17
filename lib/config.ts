@@ -23,8 +23,13 @@ export const site = {
   adresse: "TODO — adresse du siège à compléter",
   codePostal: "TODO",
   villeSiege: "TODO",
-  // ⚠️ TODO : année de création réelle de l'entreprise (affichée « Depuis XXXX »)
+  // ⚠️ TODO : année de création réelle de la société ACTUELLE (pour le
+  // footer et les mentions légales). Ne pas confondre avec l'expérience.
   anneeCreation: "TODO",
+  // Expérience personnelle du dirigeant dans le métier (fait réel fourni
+  // par le client). On affiche « 20 ans de métier », jamais « entreprise
+  // fondée il y a 20 ans » : la société actuelle est récente.
+  anneesMetier: "20",
   // ⚠️ TODO : prénom et nom réels du dirigeant
   dirigeant: "TODO — Prénom Nom du dirigeant",
   dirigeantTitre: "Dirigeant fondateur", // TODO : compléter avec diplômes/certifications réels

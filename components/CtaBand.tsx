@@ -3,8 +3,8 @@ import { IconPhone } from "./Icons";
 import { site } from "@/lib/config";
 
 export default function CtaBand({
-  title = "Besoin d'une intervention rapide ?",
-  text = `Un technicien vous répond, comprend la situation et vous donne un prix clair — généralement une intervention sous 24 à 48 h partout en ${site.zone}.`,
+  title = "Un nuisible ? Appelez.",
+  text = `Un technicien vous répond et vous donne un prix clair. Intervention généralement sous 24 à 48 h partout en ${site.zone}.`,
 }: {
   title?: string;
   text?: string;

@@ -19,7 +19,7 @@ export default function Page() {
         <HeroDecor />
         <div className="container two-col two-col-top" style={{ position: "relative", zIndex: 2 }}>
           <div>
-            <h1>Votre devis gratuit en 2 minutes</h1>
+            <h1>Devis gratuit en 2 minutes</h1>
             <p className="lead" style={{ margin: "18px 0 24px" }}>
               Décrivez la situation, un technicien vous rappelle rapidement
               avec un diagnostic et un prix clair — sans engagement.

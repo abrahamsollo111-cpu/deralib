@@ -78,15 +78,19 @@ export default function Home() {
 
         <div className="container hero-grid">
           <div className="enter-left">
+            <span className="kicker">
+              {site.anneesMetier} ans de métier — {site.zone}
+            </span>
             <h1>
-              Dératisation et lutte anti-nuisibles{" "}
-              <em className="grad-text">en {site.zone}</em>
+              Nuisibles éliminés.{" "}
+              <em className="grad-text">Maison assainie.</em>
             </h1>
             <p className="hero-sub">
-              Rats, souris, punaises de lit, cafards, guêpes et frelons. Nos
-              techniciens certifiés {site.certification} interviennent sous 24
-              à 48 h dans les 8 départements franciliens. Le prix est confirmé
-              par devis avant l&apos;intervention, pas après.
+              Rats, souris, punaises de lit, cafards, guêpes et frelons : nos
+              techniciens certifiés {site.certification} éliminent
+              l&apos;infestation, assainissent les lieux et bouchent les accès.
+              Intervention sous 24 à 48 h dans les 8 départements franciliens,
+              prix confirmé par devis avant de commencer.
             </p>
             <div className="hero-actions">
               <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
@@ -187,12 +191,11 @@ export default function Home() {
           <div data-reveal="left">
             <span className="kicker">Devis express</span>
             <h2>
-              Pas envie d&apos;appeler ?{" "}
-              <span className="grad-text">Décrivez, on vous rappelle.</span>
+              Décrivez. <span className="grad-text">On vous rappelle.</span>
             </h2>
             <p style={{ marginTop: 16 }}>
-              Répondez à 4 questions — 30 secondes chrono — et un technicien
-              vous rappelle avec un premier diagnostic et un prix indicatif.
+              4 questions, 30 secondes. Un technicien vous rappelle avec un
+              premier diagnostic et un prix indicatif.
             </p>
             <ul className="checklist" style={{ marginTop: 22 }} data-stagger>
               <li data-reveal="left">
@@ -221,13 +224,11 @@ export default function Home() {
           <div className="section-head" data-reveal>
             <span className="kicker">Nos interventions</span>
             <h2>
-              Quatre familles de nuisibles,{" "}
-              <span className="grad-text">quatre protocoles différents</span>
+              Un nuisible, <span className="grad-text">un protocole</span>
             </h2>
             <p>
-              On ne traite pas une colonie de blattes germaniques comme un nid
-              de frelons asiatiques. Chaque intervention suit le protocole de
-              l&apos;espèce concernée, avec le matériel qui va avec.
+              On ne traite pas une colonie de blattes comme un nid de frelons.
+              Chaque espèce a son protocole et son matériel.
             </p>
           </div>
           <div className="cards-grid" data-stagger>
@@ -270,19 +271,22 @@ export default function Home() {
           </span>
         </div>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <span className="kicker" style={{ color: "#3fd6e8" }}>
+          <span className="kicker" style={{ color: "#8fd0b0" }}>
             Une vraie entreprise, pas un annuaire
           </span>
-          <h2 data-reveal>
-            Ce sont <em className="grad-text">nos techniciens</em> qui
-            interviennent chez vous — pas des sous-traitants.
+          <h2 data-reveal style={{ color: "#fff" }}>
+            Nos techniciens. Personne d&apos;autre.
           </h2>
           <div className="stats-grid" data-stagger>
             {/* valeurs finales rendues côté serveur (lecteurs d'écran, robots) ;
                 ScrollFx anime de 0 vers la valeur à l'entrée dans l'écran */}
             <div className="stat" data-reveal="left">
+              <strong data-count="20" data-count-suffix=" ans">20 ans</strong>
+              <span>de métier sur le terrain, en {site.zone}</span>
+            </div>
+            <div className="stat" data-reveal="left">
               <strong data-count="48" data-count-suffix="h">48h</strong>
-              <span>intervention généralement sous 24 à 48 h en {site.zone}</span>
+              <span>délai maximum d&apos;intervention en général</span>
             </div>
             <div className="stat" data-reveal="left">
               <strong data-count="7" data-count-suffix="j/7">7j/7</strong>
@@ -316,7 +320,7 @@ export default function Home() {
           <div data-reveal="left">
             <span className="kicker">Zone d&apos;intervention</span>
             <h2>
-              Toute l&apos;{site.zone}, <span className="grad-text">Paris en tête</span>
+              Toute l&apos;<span className="grad-text">{site.zone}</span>
             </h2>
             <p style={{ marginTop: 16 }}>
               Nos techniciens sont répartis sur toute la région, de Paris
@@ -343,18 +347,26 @@ export default function Home() {
             </div>
           </div>
           <div data-reveal="right">
-            <div className="radar" data-parallax="0.06" aria-hidden>
-              <div className="radar-ring" />
-              <div className="radar-ring" />
-              <div className="radar-ring" />
-              <div className="radar-sweep" />
-              <span className="radar-blip" style={{ top: "26%", left: "60%" }} />
-              <span className="radar-blip" style={{ top: "62%", left: "24%", animationDelay: "0.9s" }} />
-              <span className="radar-blip" style={{ top: "70%", left: "70%", animationDelay: "1.6s" }} />
-              <div className="radar-center">
-                <IconPin size={26} />
-              </div>
-            </div>
+            {/* contenu utile plutôt qu'un décor : ce que couvre chaque
+                type de secteur */}
+            <ul className="checklist" data-stagger>
+              <li data-reveal>
+                <IconCheck /> Paris intra-muros : caves, copropriétés,
+                commerces de bouche
+              </li>
+              <li data-reveal>
+                <IconCheck /> Petite couronne (92, 93, 94) : immeubles
+                collectifs, entrepôts, bords de Seine et de Marne
+              </li>
+              <li data-reveal>
+                <IconCheck /> Grande couronne (77, 78, 91, 95) : pavillons,
+                corps de ferme, locaux d&apos;activité
+              </li>
+              <li data-reveal>
+                <IconCheck /> Urgences 7j/7 : nids de guêpes et frelons,
+                infestations importantes
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -368,17 +380,17 @@ export default function Home() {
           <div data-reveal="left">
             <span className="kicker">Qui sommes-nous</span>
             <h2>
-              Une entreprise de terrain,{" "}
-              <span className="grad-text">pas une plateforme</span>
+              {site.anneesMetier} ans de métier.{" "}
+              <span className="grad-text">Sur le terrain.</span>
             </h2>
             {/* TODO : une fois le nom du dirigeant fourni dans lib/config.ts,
                 le citer ici avec son parcours (E-E-A-T) */}
             <p style={{ marginTop: 16 }}>
-              Quand vous appelez {site.marque}, vous parlez à quelqu&apos;un qui
-              fait ce métier tous les jours — pas à un centre d&apos;appels qui
-              revend votre demande. Nos techniciens sont salariés de
-              l&apos;entreprise, certifiés {site.certification}, et formés en
-              continu à la réglementation biocides.
+              Vingt ans de caves, de combles, de cuisines de restaurant et de
+              chambres infestées : quand vous appelez {site.marque}, vous
+              parlez à quelqu&apos;un qui fait ce métier tous les jours — pas à
+              un centre d&apos;appels qui revend votre demande. Techniciens
+              salariés, certifiés {site.certification}.
             </p>
             <div style={{ marginTop: 24 }}>
               <Link href="/a-propos" className="btn btn-outline">
@@ -412,8 +424,8 @@ export default function Home() {
       <section className="section-azur">
         <div className="container">
           <div className="section-head" data-reveal>
-            <span className="kicker">Questions fréquentes</span>
-            <h2>Vos questions, nos réponses</h2>
+            <span className="kicker">FAQ</span>
+            <h2>Questions fréquentes</h2>
           </div>
           <Faq items={FAQ_HOME} />
         </div>

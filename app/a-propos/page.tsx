@@ -22,7 +22,7 @@ export default function Page() {
         <HeroDecor />
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <h1 style={{ maxWidth: 860 }}>
-            Qui est derrière {site.marque}
+            {site.anneesMetier} ans de métier
           </h1>
           <p className="lead" style={{ maxWidth: 740, marginTop: 20 }}>
             {site.marque} est une entreprise de dératisation et de lutte
@@ -42,8 +42,8 @@ export default function Page() {
           concurrent générique. Ne rien inventer. */}
       <section>
         <div className="container prose" data-reveal>
-          <span className="kicker">L&apos;histoire</span>
-          <h2 style={{ marginTop: 0 }}>Comment l&apos;entreprise s&apos;est construite</h2>
+          <span className="kicker">L&apos;entreprise</span>
+          <h2 style={{ marginTop: 0 }}>L&apos;histoire</h2>
           <p>
             [TODO : année de création — « {site.marque} a été créée en XXXX
             par {site.dirigeant} »]. Avant de créer l&apos;entreprise, [TODO :
@@ -123,7 +123,7 @@ export default function Page() {
         <div className="container two-col">
           <div data-reveal>
             <span className="kicker">L&apos;équipe</span>
-            <h2>Des techniciens salariés, formés et certifiés</h2>
+            <h2>Salariés, formés, certifiés</h2>
             <p style={{ marginTop: 16 }}>
               Chaque technicien est salarié de l&apos;entreprise et titulaire du
               certificat {site.certification}. La formation continue porte sur
@@ -169,7 +169,7 @@ export default function Page() {
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Nos engagements</span>
-            <h2>Ce que nous vous garantissons</h2>
+            <h2>Nos garanties</h2>
           </div>
           <div className="signs-grid" data-stagger>
             {[

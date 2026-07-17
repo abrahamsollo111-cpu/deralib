@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollFx from "@/components/ScrollFx";
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/lib/config";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -29,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={manrope.variable} data-scroll-behavior="smooth">
+    <html lang="fr" data-scroll-behavior="smooth">
       <body>
         {/* sans JavaScript, les éléments à apparition différée restent visibles */}
         <noscript>
