@@ -18,8 +18,11 @@ import {
 import { site } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: `${site.marque} — Dératisation & lutte anti-nuisibles en ${site.zone} | Devis gratuit`,
-  description: `Rats, souris, punaises de lit, cafards, guêpes : nos techniciens certifiés ${site.certification} interviennent rapidement partout en ${site.zone}. Devis gratuit.`,
+  // ≤ 60 caractères, unique, service + zone (guide SEO Google)
+  title: {
+    absolute: `Dératisation & anti-nuisibles ${site.zone} | ${site.marque}`,
+  },
+  description: `Rats, punaises de lit, cafards, guêpes : intervention 24-48h par techniciens certifiés ${site.certification} en ${site.zone}. Appelez, devis gratuit.`,
   alternates: { canonical: "/" },
 };
 
@@ -241,8 +244,10 @@ export default function Home() {
                   </span>
                   <h3>{s.titre}</h3>
                   <p>{s.desc}</p>
+                  {/* ancre descriptive (guide SEO Google : pas de « en
+                      savoir plus ») */}
                   <span className="card-link">
-                    En savoir plus <IconArrow size={14} />
+                    {s.titre} en {site.zone} <IconArrow size={14} />
                   </span>
                 </Link>
               );
@@ -394,7 +399,7 @@ export default function Home() {
             </p>
             <div style={{ marginTop: 24 }}>
               <Link href="/a-propos" className="btn btn-outline">
-                Découvrir l&apos;équipe <IconArrow size={14} />
+                Notre histoire et notre équipe <IconArrow size={14} />
               </Link>
             </div>
           </div>

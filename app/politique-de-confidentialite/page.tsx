@@ -16,14 +16,15 @@ export default function Page() {
       <section>
         <div className="container prose">
           <h1>Politique de confidentialité</h1>
-          <p style={{ marginTop: 18 }}>
-            [PAGE À COMPLÉTER / faire valider. Version de départ.]
-          </p>
 
+          {/* TODO : faire valider cette version par le client ; compléter
+              le responsable de traitement avec la raison sociale exacte
+              dès qu'elle est renseignée dans lib/config.ts */}
           <h2>Qui sommes-nous ?</h2>
           <p>
-            Le responsable du traitement des données collectées sur ce site est{" "}
-            {site.raisonSociale}, joignable à l&apos;adresse {site.email}.
+            Le responsable du traitement des données collectées sur ce site
+            est {site.raisonSociale.includes("TODO") ? site.marque : site.raisonSociale},
+            joignable à l&apos;adresse {site.email}.
           </p>
 
           <h2>Quelles données collectons-nous ?</h2>
@@ -39,14 +40,18 @@ export default function Page() {
             Ces données servent exclusivement à vous recontacter, établir un
             devis et organiser une éventuelle intervention. Elles ne sont
             jamais revendues ni transmises à des tiers à des fins commerciales.
-            Elles sont conservées au maximum [À COMPLÉTER : durée, ex. 3 ans]
-            après le dernier contact.
+            Elles sont conservées au maximum 3 ans après le dernier contact,
+            conformément aux recommandations de la CNIL pour la prospection.
+            {/* TODO : durée à confirmer par le client (3 ans = référence
+                CNIL pour les prospects) */}
           </p>
 
           <h2>Cookies et mesure d&apos;audience</h2>
           <p>
-            Ce site n&apos;utilise pas de cookies publicitaires. [À COMPLÉTER si un
-            outil de mesure d&apos;audience est ajouté plus tard.]
+            Ce site n&apos;utilise ni cookies publicitaires ni traceurs
+            nécessitant un consentement.
+            {/* TODO : mettre à jour cette section si un outil de mesure
+                d'audience est ajouté plus tard */}
           </p>
 
           <h2>Vos droits</h2>

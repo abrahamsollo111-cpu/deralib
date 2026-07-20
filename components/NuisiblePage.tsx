@@ -164,7 +164,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
                   </span>
                   <h3>{NUISIBLES_LABELS[s]}</h3>
                   <span className="card-link">
-                    Voir la page <IconArrow size={14} />
+                    {NUISIBLES_LABELS[s]} en {site.zone} <IconArrow size={14} />
                   </span>
                 </Link>
               );

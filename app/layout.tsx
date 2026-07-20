@@ -4,15 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollFx from "@/components/ScrollFx";
 import JsonLd from "@/components/JsonLd";
-import { site } from "@/lib/config";
+import { site, DEPARTEMENTS } from "@/lib/config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.marque} — Dératisation & lutte anti-nuisibles en ${site.zone}`,
+    default: `Dératisation & anti-nuisibles ${site.zone} | ${site.marque}`,
     template: `%s | ${site.marque}`,
   },
-  description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Techniciens salariés certifiés ${site.certification}. Intervention rapide, devis gratuit.`,
+  description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Techniciens salariés certifiés ${site.certification}. Intervention 24-48h, devis gratuit.`,
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -58,21 +58,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 publisher: { "@id": `${site.url}/#organization` },
               },
               {
-                "@type": "LocalBusiness",
+                // PestControl = sous-type LocalBusiness dédié au métier
+                "@type": "PestControl",
                 "@id": `${site.url}/#localbusiness`,
                 name: site.marque,
-                description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}.`,
+                description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Intervention 24-48h, techniciens certifiés ${site.certification}.`,
                 url: site.url,
                 telephone: site.telephone,
                 email: site.email,
-                areaServed: {
-                  "@type": "AdministrativeArea",
-                  name: site.zone,
+                priceRange: "€€",
+                // TODO : ajouter "address" (PostalAddress) et "geo" dès que
+                // l'adresse du siège est renseignée dans lib/config.ts —
+                // identique à la fiche Google Business Profile
+                openingHoursSpecification: {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: site.horairesSchema.jours,
+                  opens: site.horairesSchema.ouverture,
+                  closes: site.horairesSchema.fermeture,
                 },
+                areaServed: DEPARTEMENTS.map((d) => ({
+                  "@type": "AdministrativeArea",
+                  name: `${d.nom} (${d.code})`,
+                })),
                 knowsAbout: [
                   "dératisation",
                   "punaises de lit",
-                  "cafards",
+                  "cafards et blattes",
                   "guêpes et frelons",
                 ],
                 parentOrganization: { "@id": `${site.url}/#organization` },

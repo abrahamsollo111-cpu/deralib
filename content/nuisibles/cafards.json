@@ -1,23 +1,50 @@
 {
   "nom": "Cafards et blattes",
   "slug": "cafards",
-  "meta_title": "Désinsectisation cafards en Île-de-France — traitement professionnel | Deralib",
-  "meta_description": "Cafards dans la cuisine ? Nos techniciens certifiés Certibiocide éliminent blattes et cafards en Île-de-France : gel appât professionnel, suivi, prévention. Devis gratuit.",
+  "meta_title": "Cafards Île-de-France — Traitement gel 24-48h | Deralib",
+  "meta_description": "Cafards dans la cuisine ? Gel anti-blattes professionnel, sans quitter le logement. Intervention 24-48h en Île-de-France. Devis gratuit.",
   "h1": "Cafards et blattes en Île-de-France : élimination par nos techniciens certifiés",
   "intro": "Un cafard qui détale quand vous allumez la lumière de la cuisine est rarement seul : pour un individu visible, des dizaines peuvent être cachés dans les fissures, derrière le réfrigérateur ou sous l'évier. Les blattes contaminent les aliments et les plans de travail (salmonelles, E. coli), et leurs déjections peuvent aggraver l'asthme et les allergies. Elles se reproduisent très vite dans les environnements chauds et humides. Nos techniciens certifiés Certibiocide traitent l'infestation à la source, avec des produits professionnels inaccessibles au grand public.",
   "signes": [
-    { "titre": "Individus visibles la nuit", "detail": "Cafards qui fuient la lumière dans la cuisine ou la salle de bain. En voir en pleine journée est le signe d'une infestation déjà importante." },
-    { "titre": "Déjections", "detail": "Petits points noirs semblables à du marc de café ou du poivre moulu, dans les placards, sous l'évier, derrière l'électroménager." },
-    { "titre": "Oothèques", "detail": "Petites capsules brunes allongées (les poches d'œufs), collées dans les fentes, charnières de placards et recoins chauds." },
-    { "titre": "Odeur caractéristique", "detail": "Odeur âcre et huileuse persistante dans les placards ou la pièce, typique d'une infestation installée." },
-    { "titre": "Traces et mues", "detail": "Peaux translucides abandonnées lors des mues, traces brunâtres le long des passages." }
+    {
+      "titre": "Individus visibles la nuit",
+      "detail": "Cafards qui fuient la lumière dans la cuisine ou la salle de bain. En voir en pleine journée est le signe d'une infestation déjà importante."
+    },
+    {
+      "titre": "Déjections",
+      "detail": "Petits points noirs semblables à du marc de café ou du poivre moulu, dans les placards, sous l'évier, derrière l'électroménager."
+    },
+    {
+      "titre": "Oothèques",
+      "detail": "Petites capsules brunes allongées (les poches d'œufs), collées dans les fentes, charnières de placards et recoins chauds."
+    },
+    {
+      "titre": "Odeur caractéristique",
+      "detail": "Odeur âcre et huileuse persistante dans les placards ou la pièce, typique d'une infestation installée."
+    },
+    {
+      "titre": "Traces et mues",
+      "detail": "Peaux translucides abandonnées lors des mues, traces brunâtres le long des passages."
+    }
   ],
   "comprendre_espece": "En Île-de-France, l'espèce la plus courante dans les logements est la blatte germanique : petite, brun clair, elle vit près de la chaleur et de l'humidité (cuisine, salle de bain, moteur du réfrigérateur, lave-vaisselle). Une seule oothèque contient 30 à 40 œufs, et une femelle en produit plusieurs : une infestation peut être multipliée par dix en quelques semaines. Les blattes circulent dans les immeubles par les gaines techniques, les colonnes d'eau et les vide-ordures, ce qui explique que les infestations reviennent quand un seul logement est traité. Les bombes insecticides grand public dispersent les colonies sans les détruire ; le gel appât professionnel, lui, agit en cascade : les blattes contaminées empoisonnent le reste de la colonie.",
   "plan_action": [
-    { "etape": "1. Inspection", "detail": "Repérage des foyers (cuisine, salle de bain, électroménager, gaines), évaluation du niveau d'infestation, identification de l'espèce." },
-    { "etape": "2. Traitement par gel appât professionnel", "detail": "Application ciblée de gel appât dans les zones de passage et de nidification : discret, sans évacuation des lieux, sans danger pour les occupants quand il est appliqué par un professionnel certifié Certibiocide." },
-    { "etape": "3. Traitement des recoins et compléments", "detail": "Selon le cas : pulvérisation ciblée des fissures et plinthes, poudrage des gaines techniques, conseils d'hygiène et de rangement pour couper les sources de nourriture." },
-    { "etape": "4. Contrôle et suivi", "detail": "Passage de contrôle pour vérifier l'élimination complète, renouvellement du gel si nécessaire. En immeuble, recommandation de traiter les logements voisins ou les parties communes si besoin." }
+    {
+      "etape": "1. Inspection",
+      "detail": "Repérage des foyers (cuisine, salle de bain, électroménager, gaines), évaluation du niveau d'infestation, identification de l'espèce."
+    },
+    {
+      "etape": "2. Traitement par gel appât professionnel",
+      "detail": "Application ciblée de gel appât dans les zones de passage et de nidification : discret, sans évacuation des lieux, sans danger pour les occupants quand il est appliqué par un professionnel certifié Certibiocide."
+    },
+    {
+      "etape": "3. Traitement des recoins et compléments",
+      "detail": "Selon le cas : pulvérisation ciblée des fissures et plinthes, poudrage des gaines techniques, conseils d'hygiène et de rangement pour couper les sources de nourriture."
+    },
+    {
+      "etape": "4. Contrôle et suivi",
+      "detail": "Passage de contrôle pour vérifier l'élimination complète, renouvellement du gel si nécessaire. En immeuble, recommandation de traiter les logements voisins ou les parties communes si besoin."
+    }
   ],
   "gestes_urgence": [
     "Ne laissez aucune nourriture accessible : boîtes hermétiques, plans de travail nettoyés, vaisselle faite avant la nuit.",
@@ -27,18 +54,49 @@
     "Notez les endroits où vous voyez des cafards : cela aidera notre technicien à cibler les foyers."
   ],
   "prix": [
-    { "prestation": "Diagnostic / déplacement", "fourchette": "à préciser", "note": "Souvent offert ou déduit si intervention." },
-    { "prestation": "Traitement gel — studio / 2 pièces", "fourchette": "à préciser (ex. 100-200 €)", "note": "Contrôle inclus selon formule." },
-    { "prestation": "Traitement gel — 3 pièces et +", "fourchette": "à préciser (ex. 150-280 €)", "note": "Variable selon l'infestation." },
-    { "prestation": "Contrat commerces / restaurants", "fourchette": "à préciser", "note": "Passages réguliers + registre sanitaire." }
+    {
+      "prestation": "Diagnostic / déplacement",
+      "fourchette": "à préciser",
+      "note": "Souvent offert ou déduit si intervention."
+    },
+    {
+      "prestation": "Traitement gel — studio / 2 pièces",
+      "fourchette": "à préciser (ex. 100-200 €)",
+      "note": "Contrôle inclus selon formule."
+    },
+    {
+      "prestation": "Traitement gel — 3 pièces et +",
+      "fourchette": "à préciser (ex. 150-280 €)",
+      "note": "Variable selon l'infestation."
+    },
+    {
+      "prestation": "Contrat commerces / restaurants",
+      "fourchette": "à préciser",
+      "note": "Passages réguliers + registre sanitaire."
+    }
   ],
   "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact se confirme au devis gratuit.",
   "faq": [
-    { "q": "J'ai vu un seul cafard, dois-je m'inquiéter ?", "r": "Un individu isolé peut venir d'un logement voisin, mais les blattes vivent cachées : un individu visible en journée signale souvent une colonie installée. Un diagnostic permet d'en avoir le cœur net." },
-    { "q": "Le traitement m'oblige-t-il à quitter mon logement ?", "r": "Non. Le gel appât professionnel s'applique de façon ciblée et discrète, sans évacuation ni bâchage, et vous pouvez rester chez vous." },
-    { "q": "Le gel est-il dangereux pour les enfants ou les animaux ?", "r": "Appliqué par un technicien certifié dans les zones inaccessibles (charnières, fentes, arrière d'électroménager), le risque est très limité. Nous adaptons les points d'application à votre foyer." },
-    { "q": "Pourquoi les cafards reviennent-ils après un traitement ?", "r": "Le plus souvent parce que la source est ailleurs : gaines de l'immeuble, logement voisin, local poubelles. C'est pourquoi nous inspectons au-delà du logement et recommandons parfois un traitement à l'échelle de l'immeuble." },
-    { "q": "Combien de temps le traitement met-il à agir ?", "r": "Le gel agit en cascade : la population chute fortement en 1 à 2 semaines, avec un contrôle ensuite pour confirmer l'élimination." }
+    {
+      "q": "J'ai vu un seul cafard, dois-je m'inquiéter ?",
+      "r": "Un individu isolé peut venir d'un logement voisin, mais les blattes vivent cachées : un individu visible en journée signale souvent une colonie installée. Un diagnostic permet d'en avoir le cœur net."
+    },
+    {
+      "q": "Le traitement m'oblige-t-il à quitter mon logement ?",
+      "r": "Non. Le gel appât professionnel s'applique de façon ciblée et discrète, sans évacuation ni bâchage, et vous pouvez rester chez vous."
+    },
+    {
+      "q": "Le gel est-il dangereux pour les enfants ou les animaux ?",
+      "r": "Appliqué par un technicien certifié dans les zones inaccessibles (charnières, fentes, arrière d'électroménager), le risque est très limité. Nous adaptons les points d'application à votre foyer."
+    },
+    {
+      "q": "Pourquoi les cafards reviennent-ils après un traitement ?",
+      "r": "Le plus souvent parce que la source est ailleurs : gaines de l'immeuble, logement voisin, local poubelles. C'est pourquoi nous inspectons au-delà du logement et recommandons parfois un traitement à l'échelle de l'immeuble."
+    },
+    {
+      "q": "Combien de temps le traitement met-il à agir ?",
+      "r": "Le gel agit en cascade : la population chute fortement en 1 à 2 semaines, avec un contrôle ensuite pour confirmer l'élimination."
+    }
   ],
   "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (immeubles types, restaurants, cas fréquents) et VOS prix réels."
 }

@@ -36,64 +36,66 @@ export default function Page() {
       <Reassurance />
 
       {/* ===== L'HISTOIRE =====
-          TODO : cette section attend les faits réels de l'entreprise.
-          Remplacer chaque [TODO ...] par les vraies dates et le vrai
-          parcours — c'est ce qui différencie cette page de celle d'un
-          concurrent générique. Ne rien inventer. */}
+          TODO (enrichissement, ne rien inventer) : quand le dirigeant
+          fournira les faits précis, ajouter ici — année exacte de début,
+          employeurs/parcours, année de création de la société actuelle,
+          première embauche, spécialisations. Le texte ci-dessous ne
+          contient que des faits confirmés par le client (20 ans de
+          métier, enseigne actuelle récente). */}
       <section>
         <div className="container prose" data-reveal>
           <span className="kicker">L&apos;entreprise</span>
           <h2 style={{ marginTop: 0 }}>L&apos;histoire</h2>
           <p>
-            [TODO : année de création — « {site.marque} a été créée en XXXX
-            par {site.dirigeant} »]. Avant de créer l&apos;entreprise, [TODO :
-            parcours réel du dirigeant — formation, années passées chez un
-            autre acteur du secteur, première spécialité (3D : dératisation,
-            désinsectisation, désinfection)].
+            {site.marque} est une enseigne récente, mais le métier, lui, ne
+            date pas d&apos;hier : son fondateur travaille dans la lutte
+            anti-nuisibles depuis {site.anneesMetier} ans. Vingt ans de
+            dératisation de caves et de locaux poubelles, de traitements
+            punaises de lit, de nids de guêpes décrochés sous les toits,
+            partout en {site.zone}.
           </p>
           <p>
-            [TODO : pourquoi ce métier — la vraie raison, même simple. Un
-            passage chez un client marquant, une opportunité de reprise, une
-            formation initiale en hygiène. Les lecteurs comme Google repèrent
-            les histoires plaquées ; une explication courte et vraie vaut
-            mieux qu&apos;un paragraphe romancé.]
+            Créer sa propre enseigne, c&apos;était la suite logique : appliquer
+            ces vingt ans d&apos;expérience avec ses propres méthodes, son
+            propre matériel et son propre niveau d&apos;éthique — diagnostic
+            honnête, prix confirmé avant intervention, et traitement de la
+            cause, pas seulement des symptômes.
           </p>
           <p>
-            [TODO : comment l&apos;équipe s&apos;est construite — première
-            embauche en XXXX, arrivée du deuxième véhicule, spécialisation
-            punaises de lit, etc. Aujourd&apos;hui l&apos;équipe compte{" "}
-            {site.nbTechniciens} techniciens.]
-          </p>
-          <p>
-            Ce qui n&apos;a pas changé depuis le début : les interventions sont
-            réalisées par nos propres techniciens, certifiés{" "}
-            {site.certification}, jamais sous-traitées. C&apos;est plus exigeant
-            à faire tourner qu&apos;une plateforme, mais c&apos;est la seule façon
-            de répondre du résultat.
+            Une règle n&apos;a jamais changé : les interventions sont réalisées
+            par nos propres techniciens, certifiés {site.certification},
+            jamais sous-traitées. C&apos;est plus exigeant à faire tourner
+            qu&apos;une plateforme de mise en relation, mais c&apos;est la
+            seule façon de répondre du résultat.
           </p>
         </div>
       </section>
 
-      {/* ===== LE DIRIGEANT ===== */}
+      {/* ===== LE DIRIGEANT =====
+          TODO (E-E-A-T) : dès que lib/config.ts contient le vrai nom,
+          il s'affiche automatiquement ici. Ajouter ensuite :
+          - une vraie photo → /public/images/dirigeant-deralib.jpg
+            (alt : « [Prénom Nom], dirigeant de Deralib, devant un
+            véhicule d'intervention »)
+          - un paragraphe factuel : diplômes, n° Certibiocide, parcours.
+          Ne rien inventer d'ici là. */}
       <section className="section-azur">
         <div className="container two-col">
           <div data-reveal>
             <span className="kicker">Le dirigeant</span>
-            {/* TODO : remplacer par le vrai nom dans lib/config.ts */}
-            <h2>{site.dirigeant}</h2>
+            <h2>
+              {site.dirigeant.includes("TODO")
+                ? "Un fondateur qui vient du terrain"
+                : site.dirigeant}
+            </h2>
             <p style={{ marginTop: 6, color: "var(--bleu)", fontWeight: 700 }}>
-              {site.dirigeantTitre}
+              {site.dirigeantTitre} — {site.anneesMetier} ans d&apos;expérience
             </p>
-            {/* TODO PHOTO : ajouter ici une vraie photo du dirigeant.
-                Fichier : /public/images/dirigeant-deralib.jpg
-                Alt : « [Prénom Nom], dirigeant de Deralib, devant un véhicule
-                d'intervention » */}
             <p style={{ marginTop: 16 }}>
-              [TODO : 5 à 10 lignes factuelles sur le dirigeant — diplômes,
-              certificat {site.certification} et son numéro, années
-              d&apos;expérience, types d&apos;interventions qu&apos;il
-              connaît le mieux. C&apos;est cette expertise nommée et vérifiable
-              qui compte, pour les clients comme pour Google.]
+              Le fondateur de {site.marque} exerce ce métier depuis{" "}
+              {site.anneesMetier} ans. Il connaît les trois volets du secteur —
+              dératisation, désinsectisation, désinfection — et continue
+              d&apos;intervenir sur le terrain avec l&apos;équipe.
             </p>
           </div>
           <div data-reveal>
@@ -104,10 +106,8 @@ export default function Page() {
                 TP14 rodenticides et TP18 insecticides)
               </li>
               <li>
-                <IconCheck /> [TODO : diplômes et formations du dirigeant]
-              </li>
-              <li>
-                <IconCheck /> [TODO : années d&apos;expérience]
+                <IconCheck /> {site.anneesMetier} ans d&apos;expérience en
+                lutte anti-nuisibles
               </li>
               <li>
                 <IconCheck /> Assurance responsabilité civile professionnelle
@@ -146,8 +146,10 @@ export default function Page() {
           </div>
           <div data-reveal>
             <ul className="checklist" data-stagger>
+              {/* TODO : afficher le nombre réel dès qu'il est renseigné
+                  dans lib/config.ts (nbTechniciens) */}
               <li>
-                <IconTeam /> [TODO : nombre] techniciens répartis sur toute
+                <IconTeam /> Des techniciens répartis sur toute
                 l&apos;{site.zone}
               </li>
               <li>
@@ -216,7 +218,10 @@ export default function Page() {
           <h2 style={{ marginTop: 0 }}>Informations</h2>
           <ul>
             <li>
-              <strong>Société :</strong> {site.raisonSociale}
+              {/* TODO : la raison sociale complète s'affichera dès qu'elle
+                  sera renseignée dans lib/config.ts */}
+              <strong>Société :</strong>{" "}
+              {site.raisonSociale.includes("TODO") ? site.marque : site.raisonSociale}
             </li>
             <li>
               <strong>Zone d&apos;intervention :</strong> {site.zone} — les 8

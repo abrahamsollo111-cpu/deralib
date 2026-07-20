@@ -26,9 +26,9 @@ export async function generateMetadata({
   const v = getVille(ville);
   return {
     title: {
-      absolute: `Dératisation à ${v.nom} (${v.departement}) — intervention rapide | ${site.marque}`,
+      absolute: `Dératisation ${v.nom} (${v.departement}) — 24-48h | ${site.marque}`,
     },
-    description: `Rats ou souris à ${v.nom} ? Nos techniciens certifiés ${site.certification} interviennent dans tous les arrondissements. Diagnostic, traitement, prévention. Devis gratuit.`,
+    description: `Rats ou souris à ${v.nom} ? Techniciens certifiés ${site.certification}, intervention 24-48h. Diagnostic, traitement, prévention. Devis gratuit.`,
     alternates: { canonical: `/deratisation/${v.slug}` },
   };
 }
