@@ -22,6 +22,7 @@ export default function Header() {
                 {NUISIBLES_LABELS[slug]}
               </Link>
             ))}
+            <Link href="/conseils">Conseils</Link>
             <Link href="/a-propos">À propos</Link>
             <Link href="/contact">Contact</Link>
           </nav>

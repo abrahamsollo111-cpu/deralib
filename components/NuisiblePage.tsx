@@ -103,8 +103,24 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* ===== SECTIONS DÉTAILLÉES (déroulé, méthodes, cas particuliers) ===== */}
+      {n.sections_longues && n.sections_longues.length > 0 && (
+        <section className="section-azur">
+          <div className="container prose" style={{ maxWidth: 860 }}>
+            {n.sections_longues.map((s) => (
+              <div key={s.titre} data-reveal>
+                <h2>{s.titre}</h2>
+                {s.paragraphes.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ===== GESTES D'URGENCE ===== */}
-      <section className="section-azur">
+      <section>
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">En attendant notre passage</span>
@@ -178,7 +194,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
               <div className="chip-list">
                 {villes.map((v) => (
                   <Link key={v.slug} href={`/${slug}/${v.slug}`} className="chip">
-                    {NUISIBLES_LABELS[slug]} à {v.nom}
+                    Dératisation {v.nom} ({v.departement})
                   </Link>
                 ))}
               </div>

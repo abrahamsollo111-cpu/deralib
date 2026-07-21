@@ -46,6 +46,40 @@
       "detail": "Un second traitement est planifié environ 2 semaines après pour éliminer les punaises issues des œufs, suivi d'un contrôle de résultat."
     }
   ],
+  "sections_longues": [
+    {
+      "titre": "Deux passages : le déroulé précis du traitement",
+      "paragraphes": [
+        "Premier passage, à J+0. Le technicien commence par une inspection fine de la chambre et des pièces adjacentes : coutures du matelas, vis du sommier, tête de lit, plinthes, prises, cadres, canapé. Il démonte ce qui doit l'être, puis traite méthodiquement : vapeur sèche sur les zones de couchage, insecticide rémanent sur les cachettes et les zones de passage. Comptez 2 à 3 heures selon la surface et le niveau d'encombrement. Vous pouvez dormir dans le logement le soir même, une fois les surfaces sèches et les pièces aérées.",
+        "Second passage, environ à J+15. Ce délai n'est pas un confort d'agenda : il correspond au cycle d'éclosion des œufs, qui résistent à la plupart des traitements. Les jeunes punaises écloses entre-temps sont éliminées avant d'avoir pu pondre à leur tour. Le technicien réinspecte, traite à nouveau les zones sensibles et vérifie les points de contrôle posés au premier passage.",
+        "Entre les deux passages, ne lavez pas les surfaces traitées et dormez normalement dans la chambre : les punaises doivent traverser les zones traitées pour vous atteindre. C'est contre-intuitif, mais c'est ce qui fait fonctionner le protocole."
+      ]
+    },
+    {
+      "titre": "Préparer votre logement : la liste concrète",
+      "paragraphes": [
+        "La préparation conditionne la moitié du résultat. Avant notre passage : lavez l'intégralité du linge de lit, des vêtements et des rideaux de la pièce à 60 °C minimum, puis stockez-les dans des sacs plastique fermés hermétiquement. Ce qui ne supporte pas 60 °C passe au sèche-linge à haute température pendant 30 minutes, ou au congélateur à -18 °C pendant 72 heures pour les textiles délicats.",
+        "Désencombrez le dessous du lit et le pourtour des plinthes, écartez les meubles des murs d'une vingtaine de centimètres pour que le technicien accède à toutes les cachettes. Passez l'aspirateur soigneusement — coutures, fentes, plinthes — et jetez le sac fermé dans une poubelle extérieure.",
+        "Trois interdits, en revanche : ne déplacez aucun meuble ni matelas vers une autre pièce, ne pulvérisez aucun insecticide grand public, ne dormez pas ailleurs dans le logement. Chacun de ces réflexes disperse l'infestation et allonge le traitement. Nous vous remettons cette liste par écrit dès la prise de rendez-vous, pour que tout soit prêt le jour J."
+      ]
+    },
+    {
+      "titre": "Nos méthodes combinées : vapeur, insecticide rémanent, housses",
+      "paragraphes": [
+        "Aucune méthode seule ne vient à bout d'une infestation installée. C'est la combinaison qui fonctionne. La vapeur sèche à 120 °C d'abord : projetée au plus près des coutures, des fentes et des zones de couchage, elle tue au contact les adultes, les larves et — c'est le point clé — les œufs, que les insecticides n'atteignent pas. Sans produit chimique, elle est idéale sur les matelas, les canapés et dans les chambres d'enfants.",
+        "L'insecticide rémanent ensuite, appliqué par pulvérisation ciblée sur les plinthes, le sommier, les pieds de lit et les zones de passage. Il reste actif plusieurs semaines et élimine les punaises qui sortent de leurs cachettes après notre passage — y compris celles que l'inspection la plus minutieuse ne peut pas voir.",
+        "Enfin, les housses anti-punaises : elles encoffrent intégralement matelas et sommier avec une fermeture étanche. Les punaises restées à l'intérieur meurent enfermées, et aucune nouvelle ne peut s'y installer. Elles permettent presque toujours de conserver la literie — jeter un matelas est rarement nécessaire, et souvent contre-productif."
+      ]
+    },
+    {
+      "titre": "En immeuble : le cas des logements voisins",
+      "paragraphes": [
+        "En habitat collectif, la punaise de lit ne connaît pas les limites de propriété. Elle circule par les gaines techniques, les passages de câbles, les plinthes mitoyennes, et colonise volontiers les logements adjacents — au-dessus, en dessous, de part et d'autre. Traiter un seul appartement dans un immeuble touché, c'est prendre le risque d'une recontamination quelques semaines plus tard.",
+        "Lors du diagnostic, nous cherchons les indices d'une circulation entre logements : punaises près des gaines, infestation ancienne, signalements chez les voisins. Si l'immeuble est concerné, nous le disons clairement et pouvons établir un devis groupé pour le syndic ou le bailleur — traiter plusieurs logements en coordination coûte moins cher que multiplier les interventions isolées, et surtout, cela fonctionne.",
+        "Un mot sur la loi : depuis 2023, le propriétaire bailleur doit garantir un logement exempt de punaises de lit ; en cours de bail, la prise en charge se discute selon l'origine de l'infestation. Notre rapport d'intervention documente les constats, ce qui facilite ces échanges avec le propriétaire, l'assurance ou le syndic."
+      ]
+    }
+  ],
   "gestes_urgence": [
     "Ne déplacez pas votre matelas ni vos meubles dans d'autres pièces : vous disperseriez l'infestation.",
     "Lavez le linge de lit à 60 °C minimum et enfermez-le dans des sacs fermés après lavage.",
@@ -56,26 +90,26 @@
   "prix": [
     {
       "prestation": "Diagnostic / inspection",
-      "fourchette": "à préciser",
-      "note": "Souvent déduit si intervention."
+      "fourchette": "Offert si intervention",
+      "note": "Déduit du montant du traitement."
     },
     {
       "prestation": "Traitement studio / 2 pièces (2 passages)",
-      "fourchette": "à préciser (ex. 250-450 €)",
-      "note": "Variable selon l'infestation."
+      "fourchette": "300 à 450 €",
+      "note": "Vapeur + insecticide rémanent, second passage inclus."
     },
     {
-      "prestation": "Traitement appartement 3 pièces et + (2 passages)",
-      "fourchette": "à préciser (ex. 350-600 €)",
-      "note": "Variable selon la surface."
+      "prestation": "Traitement 3 pièces et + (2 passages)",
+      "fourchette": "400 à 600 €",
+      "note": "Variable selon la surface et le niveau d'infestation."
     },
     {
-      "prestation": "Traitement vapeur complémentaire",
-      "fourchette": "à préciser",
-      "note": "Recommandé chambres d'enfants / personnes sensibles."
+      "prestation": "Traitement vapeur seul",
+      "fourchette": "Sur devis",
+      "note": "Chambres d'enfants, personnes sensibles, literie uniquement."
     }
   ],
-  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact dépend de la surface et de l'ampleur, confirmé au devis gratuit.",
+  "prix_note": "Fourchettes indicatives 2026 (TODO : à ajuster avec les tarifs réels de l'entreprise). Le prix exact dépend de la surface, de l'ampleur et de l'accès — confirmé par devis gratuit avant toute intervention.",
   "faq": [
     {
       "q": "Les punaises de lit sont-elles un signe de manque d'hygiène ?",
@@ -96,7 +130,18 @@
     {
       "q": "Faut-il traiter les logements voisins ?",
       "r": "En immeuble, c'est parfois nécessaire : les punaises circulent par les gaines et les cloisons. Nous le vérifions au diagnostic et pouvons proposer un devis à la copropriété."
+    },
+    {
+      "q": "Locataire ou propriétaire : qui paie le traitement ?",
+      "r": "Le propriétaire doit fournir un logement exempt de punaises à l'entrée dans les lieux. En cours de bail, la prise en charge dépend de l'origine de l'infestation ; beaucoup de bailleurs participent au coût pour éviter l'aggravation. Notre rapport d'intervention sert de pièce dans ces échanges."
+    },
+    {
+      "q": "Le traitement est-il sans danger pour les enfants et les animaux ?",
+      "r": "Oui, avec les précautions d'usage : la vapeur sèche est sans produit chimique, et l'insecticide rémanent est appliqué de façon ciblée par un technicien certifié. Il suffit de s'absenter pendant l'application, puis d'aérer et de laisser sécher les surfaces avant de réintégrer les pièces — nous vous indiquons les délais précis."
+    },
+    {
+      "q": "Pouvez-vous intervenir discrètement vis-à-vis du voisinage ?",
+      "r": "Oui. Véhicule banalisé et tenue neutre sur demande : rien n'indique la nature de l'intervention. Les punaises de lit restent un sujet sensible ; la discrétion fait partie du service."
     }
-  ],
-  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (types de logements, cas fréquents en IDF) et VOS prix réels."
+  ]
 }

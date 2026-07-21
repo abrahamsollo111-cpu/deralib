@@ -2,26 +2,88 @@
   "nom": "Paris",
   "slug": "paris",
   "departement": "75",
-  "quartiers": [
-    "Paris 1er", "Paris 2e", "Paris 3e", "Paris 4e", "Paris 5e", "Paris 6e",
-    "Paris 7e", "Paris 8e", "Paris 9e", "Paris 10e", "Paris 11e", "Paris 12e",
-    "Paris 13e", "Paris 14e", "Paris 15e", "Paris 16e", "Paris 17e", "Paris 18e",
-    "Paris 19e", "Paris 20e"
+  "meta_title": "Dératisation Paris (75) — Intervention 24-48h | Deralib",
+  "meta_description": "Rats ou souris à Paris ? Techniciens certifiés Certibiocide, intervention 24-48h dans les 20 arrondissements. Traitement, obturation. Devis gratuit.",
+  "h1": "Dératisation à Paris : intervention dans les 20 arrondissements",
+  "intro": "Paris est la ville de France où la pression des rongeurs est la plus forte. Un réseau d'égouts ancien et dense, des caves communicantes, des centaines de chantiers permanents et une concentration record de restaurants : tout y favorise le rat brun et la souris grise. Vingt ans de métier sur le terrain parisien nous ont appris une chose : traiter un logement sans raisonner à l'échelle de l'immeuble revient à recommencer trois mois plus tard. Nos techniciens certifiés Certibiocide interviennent sous 24 à 48 h dans tous les arrondissements, avec un protocole complet — diagnostic, traitement sécurisé, obturation grillagée des accès et passage de contrôle.",
+  "villes_principales": [
+    "Paris 1er",
+    "Paris 2e",
+    "Paris 3e",
+    "Paris 4e",
+    "Paris 5e",
+    "Paris 6e",
+    "Paris 7e",
+    "Paris 8e",
+    "Paris 9e",
+    "Paris 10e",
+    "Paris 11e",
+    "Paris 12e",
+    "Paris 13e",
+    "Paris 14e",
+    "Paris 15e",
+    "Paris 16e",
+    "Paris 17e",
+    "Paris 18e",
+    "Paris 19e",
+    "Paris 20e"
   ],
-  "contexte_local": "Paris cumule les facteurs qui favorisent les rongeurs. Son réseau d'égouts, dense et ancien, sert d'autoroute aux rats bruns, qui remontent par les canalisations et les regards. Le bâti haussmannien, avec ses caves communicantes, ses anciens vide-ordures et ses cours intérieures, offre des passages et des abris idéaux. La densité de commerces de bouche et de restaurants (surtout dans les 1er, 2e, 9e, 10e, 11e et 18e) multiplie les sources de nourriture, tout comme les marchés, les quais de Seine et les parcs (Buttes-Chaumont, Bercy, Vincennes en lisière). Les chantiers, très nombreux, déplacent régulièrement les colonies d'un immeuble à l'autre. Résultat : à Paris, un traitement efficace suppose de raisonner à l'échelle de l'immeuble et de la copropriété, pas seulement du logement.",
+  "sections": [
+    {
+      "titre": "Pourquoi Paris est un terrain si favorable aux rats",
+      "paragraphes": [
+        "Le réseau d'égouts parisien, dense et ancien, sert d'autoroute aux rats bruns : ils remontent par les canalisations, les regards et les gaines techniques des colonnes d'eaux usées. Le bâti haussmannien aggrave les choses — caves communicantes, anciens vide-ordures condamnés à la va-vite, cours intérieures. Dans les caves du 11e ou du 18e, le passage se fait presque toujours par les mêmes points : gaines techniques, soupiraux dégrillagés, bas de portes rongés.",
+        "S'ajoutent la densité de commerces de bouche (1er, 2e, 9e, 10e, 11e, 18e en tête), les marchés découverts, les quais de Seine et les chantiers permanents qui déplacent les colonies d'un pâté de maisons à l'autre. Résultat : un traitement efficace à Paris se raisonne à l'échelle de l'immeuble, pas du logement isolé."
+      ]
+    },
+    {
+      "titre": "Souris dans un appartement parisien : le cas le plus fréquent",
+      "paragraphes": [
+        "La souris grise est le nuisible n°1 des appartements parisiens, surtout dans les étages. Elle passe par les gaines électriques, les faux plafonds et les passages de canalisations entre logements — un trou du diamètre d'un stylo lui suffit. Les signes classiques : crottes de 3 à 6 mm derrière la plinthe de la cuisine, emballages rongés, trottinements le soir dans la cloison.",
+        "Le traitement combine postes d'appâtage sécurisés placés sur les axes de passage et obturation de chaque point d'entrée à la paille de fer et au grillage. Sans cette étape d'obturation, les souris de l'immeuble recolonisent le logement en quelques semaines. C'est l'erreur type des traitements amateurs — et la raison pour laquelle nous l'incluons systématiquement."
+      ]
+    },
+    {
+      "titre": "Rats en copropriété : qui paie, qui décide ?",
+      "paragraphes": [
+        "Dans un immeuble parisien, les rats occupent d'abord les parties communes : caves, local poubelles, cour. Le traitement de ces espaces relève du syndic. Notre recommandation, appuyée par vingt ans d'interventions en copropriété : faire voter un traitement global (caves + local poubelles + logements touchés) plutôt que de multiplier les interventions individuelles, inefficaces et plus chères au total.",
+        "Nous établissons des devis pour les syndics et les gardiens d'immeuble, avec rapport d'intervention et plan des postes d'appâtage — utile pour le suivi et exigé par certains conseils syndicaux. Pour un logement isolé (locataire ou propriétaire), l'intervention reste possible, mais nous vérifions toujours au diagnostic si la source est dans les parties communes."
+      ]
+    },
+    {
+      "titre": "Restaurants et commerces de bouche : discrétion et registre sanitaire",
+      "paragraphes": [
+        "Un restaurant parisien ne peut pas se permettre ni les rongeurs, ni une intervention voyante en salle. Nous intervenons en dehors des heures de service, avec des dispositifs discrets, et nous fournissons le registre de suivi que les contrôles d'hygiène demandent : plan des postes, produits utilisés, dates de passage.",
+        "Pour les établissements, un contrat de passages réguliers est presque toujours plus rentable qu'une succession d'urgences : la pression des rongeurs autour des rues commerçantes parisiennes est permanente, et un local sans surveillance se fait recoloniser par les caves voisines ou les égouts."
+      ]
+    }
+  ],
   "signalement": {
-    "espace_public": "Pour un rat ou un nuisible sur la voie publique, dans un square ou lié à la propreté, signalez-le à la Ville de Paris via l'application DansMaRue ou en appelant le 3975.",
-    "logement_insalubre": "Pour une infestation liée à l'insalubrité d'un logement, le Service technique de l'habitat / le Service communal d'hygiène et de santé peut être saisi.",
-    "prive": "Dans un logement, une cave ou une copropriété privée, la dératisation relève du propriétaire, du locataire ou du syndic selon le cas : c'est là que nous intervenons."
+    "espace_public": "Pour un rat sur la voie publique, dans un square ou lié à la propreté, signalez-le à la Ville de Paris via l'application DansMaRue ou en appelant le 3975. La Ville traite l'espace public, pas les immeubles privés.",
+    "logement_insalubre": "Pour une infestation liée à l'insalubrité d'un logement, le Service technique de l'habitat de la Ville de Paris peut être saisi.",
+    "prive": "Dans un logement, une cave ou une copropriété privée, la dératisation est à la charge du propriétaire, du locataire ou du syndic selon l'origine : c'est là que nous intervenons."
   },
-  "prix_locaux": {
-    "note": "Mêmes fourchettes indicatives qu'au niveau régional, à confirmer au devis. À Paris, l'accès (étage sans ascenseur, caves multiples, parties communes) peut influer sur le temps d'intervention.",
-    "renvoi": "Voir le détail des tarifs sur la page dératisation."
-  },
+  "delais": "Intervention généralement sous 24 h dans Paris intra-muros, 48 h au plus. Les urgences — restaurant avant un contrôle, infestation massive — sont traitées en priorité, 7j/7.",
   "faq_locale": [
-    { "q": "Intervenez-vous dans tous les arrondissements de Paris ?", "r": "Oui, nos techniciens couvrent les 20 arrondissements, du centre aux quartiers périphériques." },
-    { "q": "Mon immeuble est en copropriété, qui doit gérer les rats dans les caves ?", "r": "Les caves et parties communes relèvent généralement du syndic. Nous pouvons établir un devis pour la copropriété et traiter l'ensemble de l'immeuble, plus efficace qu'un traitement logement par logement." },
-    { "q": "La Ville de Paris ne s'en occupe-t-elle pas gratuitement ?", "r": "La Ville agit sur l'espace public et les égouts (signalement via DansMaRue ou le 3975), mais pas à l'intérieur des logements et copropriétés privées, qui restent à la charge des occupants ou du syndic." }
-  ],
-  "_a_enrichir": "REMPLACER/COMPLÉTER par des observations réelles de vos techniciens à Paris : arrondissements où vous intervenez le plus, types d'immeubles, cas marquants, délais réels. Ce sont ces détails first-party qui font la différence en SEO local."
+    {
+      "q": "Intervenez-vous dans tous les arrondissements de Paris ?",
+      "r": "Oui, du 1er au 20e, y compris pour les caves, les parties communes et les commerces. Le délai courant est de 24 à 48 h."
+    },
+    {
+      "q": "La Ville de Paris ne dératise-t-elle pas gratuitement ?",
+      "r": "La Ville agit sur l'espace public et les égouts (signalement via DansMaRue ou le 3975), mais jamais à l'intérieur des logements et copropriétés privées, qui restent à la charge des occupants ou du syndic."
+    },
+    {
+      "q": "Mon immeuble est en copropriété : qui doit gérer les rats dans les caves ?",
+      "r": "Les caves et parties communes relèvent du syndic. Nous établissons un devis pour la copropriété et traitons l'ensemble de l'immeuble — bien plus efficace qu'un traitement logement par logement."
+    },
+    {
+      "q": "Combien coûte une dératisation à Paris ?",
+      "r": "Les fourchettes 2026 : 120 à 250 € pour un appartement, sur devis pour une copropriété ou un commerce. L'accès (étages sans ascenseur, caves multiples) peut jouer sur le temps d'intervention. Le prix exact est confirmé par devis gratuit."
+    },
+    {
+      "q": "Traitez-vous aussi les punaises de lit et les cafards à Paris ?",
+      "r": "Oui. Punaises de lit (2 passages à 15 jours d'intervalle), blattes germaniques au gel appât et nids de guêpes : les quatre familles de nuisibles sont couvertes dans tout Paris."
+    }
+  ]
 }

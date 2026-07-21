@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { IconPhone } from "./Icons";
-import { site } from "@/lib/config";
+import { site, DEPARTEMENTS } from "@/lib/config";
 import { NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/content";
 
 // Un champ de config encore marqué TODO n'est pas affiché :
@@ -37,10 +37,13 @@ export default function Footer() {
           <div>
             <h4>Zones d&apos;intervention</h4>
             <ul>
-              <li>
-                <Link href="/deratisation/paris">Dératisation à Paris</Link>
-              </li>
-              <li>Toute l&apos;{site.zone}</li>
+              {DEPARTEMENTS.map((d) => (
+                <li key={d.slug}>
+                  <Link href={`/deratisation/${d.slug}`}>
+                    Dératisation {d.nom} ({d.code})
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -48,6 +51,9 @@ export default function Footer() {
             <ul>
               <li>
                 <Link href="/a-propos">À propos de nous</Link>
+              </li>
+              <li>
+                <Link href="/conseils">Conseils anti-nuisibles</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>

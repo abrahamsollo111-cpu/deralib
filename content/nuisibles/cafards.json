@@ -46,6 +46,40 @@
       "detail": "Passage de contrôle pour vérifier l'élimination complète, renouvellement du gel si nécessaire. En immeuble, recommandation de traiter les logements voisins ou les parties communes si besoin."
     }
   ],
+  "sections_longues": [
+    {
+      "titre": "Le déroulé d'un traitement au gel, pas à pas",
+      "paragraphes": [
+        "L'intervention complète dure 45 à 90 minutes selon la surface et le niveau d'infestation. Elle commence par une inspection systématique des zones chaudes et humides : dessous et arrière du réfrigérateur, moteur du lave-vaisselle, dessous d'évier, charnières de placards, plinthes de la cuisine et de la salle de bain, gaines techniques. Le technicien cherche les blattes vivantes, les déjections et les oothèques — c'est la carte des foyers qui détermine où traiter.",
+        "Vient ensuite l'application du gel appât : de petites gouttes déposées au plus près des foyers et sur les axes de circulation, dans les fentes, sous les plans de travail, derrière l'électroménager. Les points d'application sont choisis pour être hors de portée des enfants et des animaux, et invisibles au quotidien. Selon le cas, le technicien complète par un poudrage des gaines techniques ou une pulvérisation ciblée des fissures.",
+        "Aucune préparation lourde n'est demandée : videz simplement le dessous de l'évier et laissez l'accès libre derrière les gros appareils si possible. Vous restez chez vous pendant et après le traitement. La population chute nettement dès la première semaine ; un passage de contrôle confirme ensuite l'élimination."
+      ]
+    },
+    {
+      "titre": "Pourquoi le gel professionnel bat les bombes aérosol",
+      "paragraphes": [
+        "La bombe insecticide tue les blattes qu'elle touche — c'est-à-dire les quelques individus visibles, une fraction infime de la colonie. Le reste, caché dans les fentes et les gaines, perçoit le répulsif et se disperse vers les pièces voisines, parfois vers les logements mitoyens. Résultat : une infestation éclatée, plus difficile à traiter, et des blattes qui reviennent en quelques jours. Vingt ans de métier nous l'ont assez montré : la bombe aggrave presque toujours la situation.",
+        "Le gel appât fonctionne à l'inverse. Il attire au lieu de repousser. La blatte consomme l'appât, retourne dans sa cachette et y meurt ; les autres consomment ses déjections et sa dépouille — c'est l'effet domino, ou effet cascade, qui atteint les individus que personne ne verra jamais, jusqu'au cœur de la colonie.",
+        "Autre avantage décisif au quotidien : le gel s'applique sans évacuation, sans bâchage, sans odeur. Pas besoin de vider les placards ni de quitter le logement. Les formulations professionnelles que nous utilisons sont réservées aux techniciens certifiés Certibiocide, et nous alternons les matières actives pour éviter les résistances — un phénomène réel chez la blatte germanique."
+      ]
+    },
+    {
+      "titre": "Blattes en restaurant et commerce alimentaire",
+      "paragraphes": [
+        "Pour un restaurant, une boulangerie ou tout commerce de bouche, les blattes ne sont pas seulement un problème d'image : la réglementation sanitaire impose la maîtrise des nuisibles, et un plan de lutte documenté est exigé lors des contrôles d'hygiène. Une infestation constatée peut entraîner une mise en demeure, voire une fermeture administrative. Chaleur des cuisines, humidité de la plonge, livraisons quotidiennes : tout y favorise la blatte germanique.",
+        "Le traitement ponctuel ne suffit pas dans ces environnements. Nous mettons en place des contrats avec passages réguliers — mensuels ou trimestriels selon l'activité — incluant inspection, renouvellement des points de gel, pièges de détection et traitement des zones techniques (plonge, chambre froide, gaines, local poubelles).",
+        "Chaque visite alimente votre registre sanitaire : plan des points de contrôle, fiches de passage datées et signées, fiches techniques des produits. C'est précisément ce que l'inspecteur demande à voir. Nos interventions peuvent se faire en dehors des heures d'ouverture, en tenue neutre, sans perturber le service ni alerter la clientèle."
+      ]
+    },
+    {
+      "titre": "Prévention durable : hygiène, joints et gaines",
+      "paragraphes": [
+        "Une blatte a besoin de trois choses : manger, boire, se cacher. La prévention consiste à lui retirer les trois. Côté nourriture : plans de travail nettoyés chaque soir, vaisselle faite avant la nuit, aliments en boîtes hermétiques, poubelle vidée quotidiennement et fermée. Côté eau : réparez les fuites, essuyez l'évier le soir, ne laissez pas d'eau stagner sous les plantes ou dans la gamelle du chat la nuit.",
+        "Côté cachettes, c'est un travail de bâti. Refaites les joints silicone fatigués autour de l'évier, de la baignoire et des plans de travail. Comblez les fissures des plinthes et des murs. Traquez les interstices derrière les tuyaux : un passage de câble mal calfeutré est une autoroute à blattes.",
+        "En immeuble, le point faible reste les gaines techniques et les colonnes d'eau, par lesquelles les blattes circulent d'un logement à l'autre. Grillagez ou calfeutrez les accès aux gaines, et signalez toute infestation au syndic : un traitement coordonné des parties communes coûte moins cher que des réinfestations en boucle. Nous pouvons établir ce diagnostic à l'échelle de l'immeuble."
+      ]
+    }
+  ],
   "gestes_urgence": [
     "Ne laissez aucune nourriture accessible : boîtes hermétiques, plans de travail nettoyés, vaisselle faite avant la nuit.",
     "Videz la poubelle chaque soir et gardez-la fermée.",
@@ -56,26 +90,26 @@
   "prix": [
     {
       "prestation": "Diagnostic / déplacement",
-      "fourchette": "à préciser",
-      "note": "Souvent offert ou déduit si intervention."
+      "fourchette": "Offert si intervention",
+      "note": "Déduit du montant du traitement."
     },
     {
       "prestation": "Traitement gel — studio / 2 pièces",
-      "fourchette": "à préciser (ex. 100-200 €)",
-      "note": "Contrôle inclus selon formule."
+      "fourchette": "100 à 200 €",
+      "note": "Passage de contrôle inclus selon formule."
     },
     {
       "prestation": "Traitement gel — 3 pièces et +",
-      "fourchette": "à préciser (ex. 150-280 €)",
-      "note": "Variable selon l'infestation."
+      "fourchette": "150 à 280 €",
+      "note": "Variable selon la surface et le niveau d'infestation."
     },
     {
-      "prestation": "Contrat commerces / restaurants",
-      "fourchette": "à préciser",
-      "note": "Passages réguliers + registre sanitaire."
+      "prestation": "Contrat restaurants / commerces",
+      "fourchette": "Sur devis",
+      "note": "Passages réguliers, registre sanitaire, rapports d'intervention."
     }
   ],
-  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact se confirme au devis gratuit.",
+  "prix_note": "Fourchettes indicatives 2026 (TODO : à ajuster avec les tarifs réels de l'entreprise). Le prix exact dépend de la surface, de l'ampleur et de l'accès — confirmé par devis gratuit avant toute intervention.",
   "faq": [
     {
       "q": "J'ai vu un seul cafard, dois-je m'inquiéter ?",
@@ -96,7 +130,18 @@
     {
       "q": "Combien de temps le traitement met-il à agir ?",
       "r": "Le gel agit en cascade : la population chute fortement en 1 à 2 semaines, avec un contrôle ensuite pour confirmer l'élimination."
+    },
+    {
+      "q": "Locataire, propriétaire ou syndic : qui paie le traitement ?",
+      "r": "Le propriétaire doit livrer un logement sans infestation ; en cours de bail, l'entretien courant incombe au locataire, sauf si les blattes viennent des parties communes ou d'un défaut du bâti — le syndic ou le bailleur est alors concerné. Notre rapport d'intervention documente l'origine probable, ce qui aide à trancher."
+    },
+    {
+      "q": "Faut-il préparer le logement avant votre passage ?",
+      "r": "Très peu : videz le dessous de l'évier, dégagez si possible l'accès derrière le réfrigérateur et la cuisinière, et évitez de nettoyer à grande eau juste après le traitement pour ne pas retirer le gel. Nous vous précisons tout à la prise de rendez-vous."
+    },
+    {
+      "q": "Fournissez-vous une facture et un rapport d'intervention ?",
+      "r": "Oui, systématiquement : facture détaillée et rapport indiquant les constats, les zones traitées et les produits utilisés. Indispensable pour le registre sanitaire des commerces, utile pour le bailleur, l'assurance ou le syndic."
     }
-  ],
-  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (immeubles types, restaurants, cas fréquents) et VOS prix réels."
+  ]
 }

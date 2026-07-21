@@ -15,7 +15,7 @@ import {
   IconPin,
   NUISIBLE_ICONS,
 } from "@/components/Icons";
-import { site } from "@/lib/config";
+import { site, DEPARTEMENTS } from "@/lib/config";
 
 export const metadata: Metadata = {
   // ≤ 60 caractères, unique, service + zone (guide SEO Google)
@@ -69,6 +69,31 @@ const FAQ_HOME = [
   {
     q: "Les traitements sont-ils sans danger pour ma famille ?",
     r: "Nos techniciens sont formés et certifiés pour appliquer les produits biocides dans le respect strict de la réglementation, avec des dispositifs sécurisés adaptés à la présence d'enfants et d'animaux.",
+  },
+  // Questions « People Also Ask » les plus recherchées sur le sujet
+  {
+    q: "Qui doit payer la dératisation : le locataire ou le propriétaire ?",
+    r: "En location, l'entretien courant incombe au locataire, mais une infestation liée à la vétusté du logement ou aux parties communes relève du propriétaire ou du syndic. En copropriété, caves et locaux poubelles sont à la charge du syndic. Notre diagnostic précise l'origine, ce qui aide à déterminer qui paie.",
+  },
+  {
+    q: "La mairie intervient-elle gratuitement contre les rats ?",
+    r: "Non, sauf sur l'espace public (rues, squares, égouts). À l'intérieur des logements, caves et copropriétés privées, la dératisation est à la charge des occupants ou du syndic — c'est là que nous intervenons. À Paris, signalez les rats sur la voie publique via l'application DansMaRue.",
+  },
+  {
+    q: "Combien de temps dure un traitement contre les punaises de lit ?",
+    r: "Le protocole complet s'étale sur 2 à 4 semaines : un premier passage (J+0), puis un second environ 15 jours après (J+15) pour éliminer les punaises écloses entre-temps. Les piqûres diminuent nettement dès le premier traitement.",
+  },
+  {
+    q: "Les cafards reviennent-ils après un traitement ?",
+    r: "Pas si la source est traitée. Quand ils reviennent, c'est presque toujours que la colonie se trouve ailleurs : gaines de l'immeuble, logement voisin, local poubelles. C'est pourquoi nous inspectons au-delà du logement et recommandons parfois un traitement à l'échelle de l'immeuble.",
+  },
+  {
+    q: "Faut-il quitter son logement pendant le traitement ?",
+    r: "Rarement. Le gel anti-blattes et les postes d'appâtage ne nécessitent aucune évacuation. Pour un traitement insecticide contre les punaises de lit, il faut s'absenter quelques heures le temps du séchage — nous vous donnons les consignes exactes avant l'intervention.",
+  },
+  {
+    q: "Délivrez-vous une facture et un rapport d'intervention ?",
+    r: "Oui, systématiquement : facture et rapport détaillant le diagnostic, les produits utilisés et les recommandations. Pour les commerces et copropriétés, nous fournissons aussi le registre de suivi exigé lors des contrôles sanitaires.",
   },
 ];
 
@@ -336,14 +361,19 @@ export default function Home() {
               plutôt les nids de guêpes sous les tuiles et les souris dans les
               combles. On adapte le traitement au bâti, pas l&apos;inverse.
             </p>
+            {/* maillage interne : chaque chip pointe vers la page
+                département correspondante, avec une ancre descriptive */}
             <div className="chip-list" style={{ marginTop: 24 }} data-stagger>
-              {["Paris (75)", "Hauts-de-Seine (92)", "Seine-Saint-Denis (93)", "Val-de-Marne (94)", "Seine-et-Marne (77)", "Yvelines (78)", "Essonne (91)", "Val-d'Oise (95)"].map(
-                (d) => (
-                  <span key={d} className="chip" data-reveal>
-                    {d}
-                  </span>
-                )
-              )}
+              {DEPARTEMENTS.map((d) => (
+                <Link
+                  key={d.slug}
+                  href={`/deratisation/${d.slug}`}
+                  className="chip"
+                  data-reveal
+                >
+                  Dératisation {d.nom} ({d.code})
+                </Link>
+              ))}
             </div>
             <div style={{ marginTop: 26 }}>
               <Link href="/deratisation/paris" className="btn btn-primary">

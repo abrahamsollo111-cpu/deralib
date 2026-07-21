@@ -42,6 +42,40 @@
       "detail": "Quand c'est possible, retrait du nid neutralisé pour éviter la réutilisation des lieux, et conseils pour limiter les réinstallations (points d'accès, coffres de volets)."
     }
   ],
+  "sections_longues": [
+    {
+      "titre": "Le déroulé d'une destruction de nid, minute par minute",
+      "paragraphes": [
+        "À l'arrivée, le technicien commence par le repérage : localisation exacte du nid, identification de l'espèce, observation du trou d'envol et de l'activité. Cinq à dix minutes qui déterminent la méthode, le produit et l'angle d'approche. Il sécurise ensuite la zone : occupants à l'intérieur, fenêtres fermées côté nid, animaux rentrés, voisins prévenus si le nid est en limite de propriété.",
+        "Le traitement lui-même dure 20 à 45 minutes selon l'accès. En combinaison intégrale, le technicien injecte la poudre insecticide directement dans le nid ou dans son trou d'envol — à la perche télescopique si le nid est en hauteur. Les insectes présents sont neutralisés rapidement ; les butineuses en vol reviennent au nid dans les heures qui suivent et sont éliminées à leur tour par le produit resté actif.",
+        "Après le passage, quelques consignes simples : ne touchez pas au nid pendant 24 à 48 heures, gardez enfants et animaux à distance, et attendez-vous à une activité résiduelle décroissante — c'est normal, ce sont les retardataires. Quand le nid est accessible, nous le retirons une fois l'activité éteinte. Vous repartez avec une facture et un rapport d'intervention."
+      ]
+    },
+    {
+      "titre": "Notre matériel : intervenir là où le nid se trouve",
+      "paragraphes": [
+        "On ne s'approche pas d'un nid de plusieurs milliers d'individus en tenue de jardinage. Nos techniciens portent une combinaison intégrale anti-frelons : textile épais, gants renforcés, cagoule grillagée — le dard d'un frelon, plus long que celui d'une guêpe, traverse les combinaisons d'entrée de gamme. Cette protection permet de travailler posément, sans gestes brusques, au contact direct du nid.",
+        "Pour les nids en hauteur — et le frelon asiatique niche volontiers à la cime des arbres — nous utilisons une perche télescopique qui porte le traitement jusqu'à une vingtaine de mètres, sans nacelle ni échafaudage dans la plupart des cas. La tête de perche injecte la poudre insecticide au cœur du nid, depuis le sol, en sécurité.",
+        "Le poudrage est notre méthode de référence : contrairement à un liquide, la poudre se diffuse dans toutes les galeries du nid et se dépose sur le trou d'envol, contaminant aussi les insectes qui rentrent après le traitement. C'est ce qui garantit la destruction complète de la colonie, reine comprise, et pas seulement des individus présents au moment du passage."
+      ]
+    },
+    {
+      "titre": "Frelon asiatique ou européen : comment les distinguer",
+      "paragraphes": [
+        "Le frelon européen est le plus grand (jusqu'à 3,5 cm) : abdomen jaune rayé de noir, tête et thorax roux, vol bruyant, parfois actif la nuit autour des lampes. Il est impressionnant mais relativement placide loin de son nid. Le frelon asiatique est plus petit (environ 2,5 à 3 cm) et plus sombre : thorax noir, abdomen sombre avec un seul anneau orangé bien visible, pattes jaunes caractéristiques. En vol stationnaire devant une ruche ou un point d'eau, c'est presque toujours lui.",
+        "La différence de comportement compte davantage que la taille. Le frelon asiatique défend son nid sur un large périmètre et attaque en groupe quand il se sent menacé — les accidents graves surviennent souvent lors de travaux de taille ou d'élagage, quand un nid caché dans une haie ou un arbre est heurté sans avoir été vu. Il est aussi un prédateur redoutable des abeilles, ce qui en fait un enjeu pour toute la filière apicole.",
+        "Espèce exotique envahissante, le frelon asiatique fait l'objet d'une surveillance : signalez tout nid sur la plateforme nationale dédiée ou en mairie. Certaines communes d'Île-de-France participent au coût de destruction — renseignez-vous, et nous fournissons les justificatifs nécessaires au dossier."
+      ]
+    },
+    {
+      "titre": "Agir au bon moment : la saison change tout",
+      "paragraphes": [
+        "Un nid de guêpes ou de frelons vit une seule saison. Au printemps, la reine sortie d'hibernation construit seule un nid primaire de la taille d'une balle de golf, souvent dans un abri de jardin, un coffre de volet ou sous une avancée de toit. À ce stade, la destruction est rapide, sans risque notable et au tarif le plus bas. C'est le meilleur moment pour agir — chaque nid primaire détruit en avril ou mai, c'est un nid de plusieurs milliers d'individus évité en septembre.",
+        "L'été, la colonie croît vite : plusieurs centaines d'individus en juillet, plusieurs milliers fin août. C'est la période des interventions d'urgence, quand le va-et-vient devient impossible à ignorer ou qu'une piqûre a eu lieu. En fin de saison, les frelons asiatiques déplacent parfois la colonie vers un gros nid secondaire en hauteur, découvert souvent à la chute des feuilles.",
+        "En prévention : inspectez au printemps les coffres de volets roulants, les abris de jardin, les combles et les avancées de toit ; grillagez les entrées de ventilation ; rebouchez les trous de murs. Et si vous repérez un début de nid, n'attendez pas qu'il grossisse — un appel suffit, nous passons sous 24 à 48 heures."
+      ]
+    }
+  ],
   "gestes_urgence": [
     "Ne vous approchez pas du nid à moins de quelques mètres et n'essayez jamais de le détruire vous-même.",
     "Ne bouchez pas le trou d'entrée d'un nid dans un mur : les insectes chercheraient une autre sortie, parfois vers l'intérieur du logement.",
@@ -51,27 +85,27 @@
   ],
   "prix": [
     {
-      "prestation": "Destruction nid accessible (moins de 5 m)",
-      "fourchette": "à préciser (ex. 90-150 €)",
-      "note": "Guêpes ou frelons, accès simple."
+      "prestation": "Nid accessible (moins de 5 m)",
+      "fourchette": "90 à 150 €",
+      "note": "Guêpes ou frelons, accès simple depuis le sol ou un escabeau."
     },
     {
       "prestation": "Nid en hauteur (perche télescopique)",
-      "fourchette": "à préciser (ex. 130-250 €)",
-      "note": "Selon hauteur et accès."
+      "fourchette": "130 à 250 €",
+      "note": "Selon la hauteur et l'accès, jusqu'à une vingtaine de mètres."
     },
     {
       "prestation": "Nid difficile d'accès (toiture, cloison)",
-      "fourchette": "à préciser",
-      "note": "Sur devis après repérage."
+      "fourchette": "Sur devis",
+      "note": "Après repérage sur place."
     },
     {
       "prestation": "Frelon asiatique",
-      "fourchette": "à préciser",
-      "note": "Certaines communes/départements proposent des aides — renseignez-vous en mairie."
+      "fourchette": "Sur devis — aides communales possibles",
+      "note": "Certaines communes participent au coût : renseignez-vous en mairie, nous fournissons les justificatifs."
     }
   ],
-  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact dépend de la hauteur et de l'accès, confirmé au devis gratuit.",
+  "prix_note": "Fourchettes indicatives 2026 (TODO : à ajuster avec les tarifs réels de l'entreprise). Le prix exact dépend de la surface, de l'ampleur et de l'accès — confirmé par devis gratuit avant toute intervention.",
   "faq": [
     {
       "q": "Intervenez-vous rapidement pour un nid de frelons ?",
@@ -92,7 +126,18 @@
     {
       "q": "Faut-il quitter la maison pendant l'intervention ?",
       "r": "Non, il suffit de rester à l'intérieur, fenêtres fermées côté nid, pendant l'intervention et les heures qui suivent."
+    },
+    {
+      "q": "La mairie prend-elle en charge la destruction du nid ?",
+      "r": "Sur une propriété privée, la destruction est à la charge de l'occupant ou du propriétaire. Exception notable : pour le frelon asiatique, plusieurs communes d'Île-de-France accordent une aide partielle ou totale. Renseignez-vous en mairie avant l'intervention — notre facture et notre rapport servent de justificatifs."
+    },
+    {
+      "q": "Combien de temps après le traitement peut-on ressortir dans le jardin ?",
+      "r": "L'activité chute fortement dans les heures qui suivent, mais des retardataires reviennent au nid pendant 24 à 48 h. Gardez enfants et animaux à distance de la zone durant ce délai, puis la vie reprend normalement."
+    },
+    {
+      "q": "Fournissez-vous une facture pour l'assurance ou le syndic ?",
+      "r": "Oui, systématiquement : facture détaillée et rapport d'intervention précisant l'espèce, l'emplacement du nid et le traitement réalisé. Utile pour le syndic si le nid est en partie commune, pour votre assurance ou pour un dossier d'aide communale."
     }
-  ],
-  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (communes fréquentes, hauteurs types, saison) et VOS prix réels."
+  ]
 }

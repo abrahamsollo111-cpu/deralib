@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import HeroDecor from "@/components/HeroDecor";
 import Reassurance from "@/components/Reassurance";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
-import { IconPhone, IconPin, IconArrow } from "@/components/Icons";
+import { IconPhone, IconPin, IconArrow, IconCheck } from "@/components/Icons";
 import { site } from "@/lib/config";
 import { getVille, getAllVilles, NUISIBLES_LABELS } from "@/lib/content";
 
-// Une page ville n'est créée que si une vraie fiche locale existe (règle §3.1 du PLAN)
+// Une page département n'existe que si une vraie fiche locale existe
+// (contenu unique par département — jamais de template dupliqué)
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -25,11 +25,10 @@ export async function generateMetadata({
   const { ville } = await params;
   const v = getVille(ville);
   return {
-    title: {
-      absolute: `Dératisation ${v.nom} (${v.departement}) — 24-48h | ${site.marque}`,
-    },
-    description: `Rats ou souris à ${v.nom} ? Techniciens certifiés ${site.certification}, intervention 24-48h. Diagnostic, traitement, prévention. Devis gratuit.`,
+    title: { absolute: v.meta_title },
+    description: v.meta_description,
     alternates: { canonical: `/deratisation/${v.slug}` },
+    openGraph: { title: v.meta_title, description: v.meta_description },
   };
 }
 
@@ -40,6 +39,7 @@ export default async function Page({
 }) {
   const { ville } = await params;
   const v = getVille(ville);
+  const autres = getAllVilles().filter((a) => a.slug !== v.slug);
 
   return (
     <>
@@ -51,19 +51,11 @@ export default async function Page({
       />
 
       {/* ===== HERO ===== */}
-      <section className="hero hero-page" data-mouse-zone>
-        <HeroDecor />
+      <section className="hero hero-page">
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <h1 style={{ maxWidth: 860 }}>
-            Dératisation à {v.nom} : nos techniciens interviennent dans tous
-            les arrondissements
-          </h1>
+          <h1 style={{ maxWidth: 860 }}>{v.h1}</h1>
           <p className="lead" style={{ maxWidth: 760, margin: "20px 0 28px" }}>
-            Rats ou souris dans votre logement, votre cave ou votre commerce à{" "}
-            {v.nom} ? Nos techniciens certifiés {site.certification}{" "}
-            connaissent le terrain parisien et interviennent rapidement, avec
-            un protocole complet : diagnostic, traitement sécurisé, obturation
-            des accès et suivi.
+            {v.intro}
           </p>
           <div className="hero-actions">
             <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
@@ -84,34 +76,37 @@ export default async function Page({
 
       <Reassurance />
 
-      {/* ===== CONTEXTE LOCAL ===== */}
+      {/* ===== CONTENU LOCAL (sections uniques au département) ===== */}
       <section>
-        <div className="container two-col">
-          <div data-reveal="left">
-            <span className="kicker">Le terrain local</span>
-            <h2>Pourquoi {v.nom} est un terrain favorable aux rongeurs</h2>
-          </div>
-          <p className="lead" data-reveal="right">
-            {v.contexte_local}
-          </p>
+        <div className="container prose" style={{ maxWidth: 860 }}>
+          {v.sections.map((s) => (
+            <div key={s.titre} data-reveal>
+              <h2>{s.titre}</h2>
+              {s.paragraphes.map((p) => (
+                <p key={p.slice(0, 40)}>{p}</p>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ===== QUARTIERS ===== */}
+      {/* ===== COMMUNES COUVERTES ===== */}
       <section className="section-azur">
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">
               <IconPin size={14} /> Couverture
             </span>
-            <h2>Nous intervenons dans tout {v.nom}</h2>
+            <h2>Communes couvertes — {v.nom} ({v.departement})</h2>
+            <p>{v.delais}</p>
           </div>
           <div className="chip-list" data-reveal>
-            {v.quartiers.map((q) => (
+            {v.villes_principales.map((q) => (
               <span key={q} className="chip">
                 {q}
               </span>
             ))}
+            <span className="chip">… et tout le département</span>
           </div>
         </div>
       </section>
@@ -121,7 +116,7 @@ export default async function Page({
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Bon à savoir</span>
-            <h2>Espace public ou logement privé : qui contacter à {v.nom} ?</h2>
+            <h2>Espace public ou logement privé : qui contacter ?</h2>
           </div>
           <div className="signs-grid" data-stagger>
             <div className="sign" data-reveal>
@@ -140,56 +135,52 @@ export default async function Page({
         </div>
       </section>
 
-      {/* ===== PRIX ===== */}
+      {/* ===== FAQ LOCALE ===== */}
       <section className="section-azur">
         <div className="container">
           <div className="section-head" data-reveal>
-            <span className="kicker">Tarifs</span>
-            <h2>Combien coûte une dératisation à {v.nom} ?</h2>
-          </div>
-          <p className="notice" data-reveal>
-            {v.prix_locaux.note}{" "}
-            <Link href="/deratisation">{v.prix_locaux.renvoi}</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* ===== FAQ LOCALE ===== */}
-      <section>
-        <div className="container">
-          <div className="section-head" data-reveal>
-            <span className="kicker">Questions fréquentes</span>
-            <h2>Dératisation à {v.nom} : vos questions</h2>
+            <span className="kicker">FAQ</span>
+            <h2>Questions fréquentes — {v.nom}</h2>
           </div>
           <Faq items={v.faq_locale} />
         </div>
       </section>
 
-      {/* ===== MAILLAGE ===== */}
-      <section className="section-azur">
+      {/* ===== MAILLAGE : services + autres départements ===== */}
+      <section>
         <div className="container" data-reveal>
           <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
-            Voir aussi :
+            <IconCheck size={15} /> Nos services en {v.nom} :
           </p>
-          <div className="chip-list">
+          <div className="chip-list" style={{ marginBottom: 26 }}>
             <Link href="/deratisation" className="chip">
               Dératisation en {site.zone} <IconArrow size={12} />
             </Link>
             <Link href="/punaises-de-lit" className="chip">
-              Punaises de lit
+              Traitement punaises de lit
             </Link>
             <Link href="/cafards" className="chip">
-              Cafards
+              Traitement cafards
             </Link>
             <Link href="/guepes-frelons" className="chip">
-              Guêpes & frelons
+              Destruction nid de guêpes
             </Link>
+          </div>
+          <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
+            <IconPin size={15} /> Dératisation dans les autres départements :
+          </p>
+          <div className="chip-list">
+            {autres.map((a) => (
+              <Link key={a.slug} href={`/deratisation/${a.slug}`} className="chip">
+                Dératisation {a.nom} ({a.departement})
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       <CtaBand
-        title={`Un problème de rongeurs à ${v.nom} ?`}
+        title={`Un problème de rongeurs en ${v.nom} ?`}
         text="Appelez-nous ou décrivez la situation en ligne : un technicien vous rappelle avec un diagnostic et un prix clair."
       />
 
@@ -197,9 +188,10 @@ export default async function Page({
         data={{
           "@context": "https://schema.org",
           "@type": "Service",
-          name: `Dératisation à ${v.nom}`,
+          name: `Dératisation ${v.nom}`,
+          description: v.meta_description,
           url: `${site.url}/deratisation/${v.slug}`,
-          areaServed: { "@type": "City", name: v.nom },
+          areaServed: { "@type": "AdministrativeArea", name: `${v.nom} (${v.departement})` },
           provider: { "@id": `${site.url}/#localbusiness` },
         }}
       />

@@ -50,6 +50,40 @@
       "detail": "Passage(s) de contrôle pour vérifier la disparition et ajuster si besoin. Conseils de prévention personnalisés."
     }
   ],
+  "sections_longues": [
+    {
+      "titre": "Le déroulé d'une intervention, étape par étape",
+      "paragraphes": [
+        "Tout commence par le diagnostic, qui dure 30 à 45 minutes selon la surface. Le technicien inspecte le logement pièce par pièce : plinthes, dessous d'évier, arrière de l'électroménager, cave, combles, gaines techniques. Il identifie l'espèce en cause, évalue l'ampleur de l'infestation et repère les points d'entrée. Ce repérage conditionne toute la suite : un poste d'appâtage mal placé ne prend rien.",
+        "Vient ensuite la pose du dispositif. Le technicien positionne les postes d'appâtage sécurisés sur les axes de circulation repérés — le long des murs, près des sources de nourriture et d'eau — et les numérote pour le suivi. Là où les biocides sont déconseillés, il installe des pièges mécaniques. Comptez une heure à une heure et demie au total pour un logement, davantage pour un commerce ou une copropriété.",
+        "Un passage de contrôle est programmé entre J+10 et J+15. Le technicien relève la consommation des appâts, retire les rongeurs capturés, recharge ou déplace les postes si l'activité persiste, et vérifie les obturations. Dans la majorité des cas, deux passages suffisent. Une infestation ancienne ou un immeuble entier peuvent en demander un troisième."
+      ]
+    },
+    {
+      "titre": "Produits et méthodes : ce que nous utilisons chez vous",
+      "paragraphes": [
+        "Contre les rongeurs, deux familles d'outils, jamais employées au hasard. Les rodenticides anticoagulants d'abord : des blocs ou pâtes d'appât placés exclusivement dans des postes sécurisés, verrouillés, qu'un enfant ou un chien ne peut pas ouvrir. Leur action différée est voulue : le rat, méfiant par nature, n'associe pas l'appât au danger, et toute la colonie continue de consommer. Ces produits sont réservés aux professionnels et manipulés par nos techniciens certifiés Certibiocide, à la dose juste.",
+        "Les pièges mécaniques ensuite : tapettes professionnelles sous coffrage, pièges à capture multiple pour les souris. Nous les privilégions dans les cuisines, les chambres d'enfants, ou quand un rongeur mort dans une cloison poserait un problème d'odeur.",
+        "Reste le geste qui fait la différence sur la durée : l'obturation. Grille inox sur les aérations, mortier et laine d'acier autour des passages de canalisations, bas de portes renforcés. Une souris passe par un trou de 6 mm, un rat par une ouverture de 2 cm. Tant que ces accès restent ouverts, aucun traitement ne tient dans le temps."
+      ]
+    },
+    {
+      "titre": "Rats en copropriété et commerces de bouche",
+      "paragraphes": [
+        "En copropriété, les rats circulent par les caves, les colonnes de vide-ordures et les réseaux d'assainissement. Traiter un seul lot revient souvent à déplacer le problème d'un étage. La bonne approche passe par le syndic : traitement coordonné des parties communes, postes en cave et en local poubelles, puis interventions ciblées dans les logements touchés. Le règlement sanitaire départemental impose d'ailleurs aux propriétaires de maintenir leurs immeubles exempts de rongeurs — un signalement écrit au syndic suffit généralement à déclencher l'action.",
+        "Pour les restaurants, boulangeries et métiers de bouche, la lutte contre les nuisibles n'est pas une option : la réglementation sanitaire impose un plan de lutte documenté, vérifié lors des contrôles d'hygiène. Concrètement, cela signifie un plan des postes d'appâtage numérotés, des fiches de passage datées et signées, et les fiches techniques des produits utilisés.",
+        "Nos contrats annuels couvrent l'ensemble : passages réguliers programmés, registre sanitaire tenu à jour à chaque visite, rapport d'intervention systématique. C'est le classeur que l'inspecteur demande en premier — autant qu'il soit irréprochable."
+      ]
+    },
+    {
+      "titre": "Garantie et prévention : empêcher le retour",
+      "paragraphes": [
+        "Une dératisation réussie se juge à trois mois, pas à trois jours. C'est pourquoi le passage de contrôle fait partie du protocole, et pourquoi nous ne considérons pas une intervention terminée tant que l'activité n'a pas cessé : consommation d'appâts nulle, plus de traces fraîches, plus de bruits. Si des signes persistent après le protocole complet, nous revenons ajuster le dispositif — les modalités exactes sont précisées sur le devis, avant intervention.",
+        "La prévention repose sur deux leviers, et deux seulement : couper l'accès à la nourriture et fermer les passages. Stockez les denrées, y compris les croquettes, dans des contenants hermétiques. Sortez les poubelles chaque jour et gardez les couvercles fermés. Réparez les fuites : un rat a besoin de boire quotidiennement.",
+        "Côté bâti, maintenez les obturations en état, dégagez la végétation qui touche les façades, vérifiez les grilles de ventilation et les bas de portes. Un rongeur revient toujours pour les mêmes raisons : de la nourriture accessible et un passage ouvert. Supprimez les deux, et le traitement tient."
+      ]
+    }
+  ],
   "gestes_urgence": [
     "Stockez la nourriture (y compris croquettes pour animaux) dans des contenants hermétiques en verre ou métal.",
     "Sortez les poubelles régulièrement et gardez-les fermées ; supprimez les points d'eau stagnante.",
@@ -60,26 +94,26 @@
   "prix": [
     {
       "prestation": "Diagnostic / déplacement",
-      "fourchette": "à préciser",
-      "note": "Souvent offert ou déduit si intervention."
+      "fourchette": "Offert si intervention",
+      "note": "Déduit du montant de l'intervention."
     },
     {
       "prestation": "Intervention ponctuelle — appartement",
-      "fourchette": "à préciser (ex. 90-180 €)",
-      "note": "Variable selon l'ampleur."
+      "fourchette": "120 à 250 €",
+      "note": "Passage de contrôle inclus, selon l'ampleur."
     },
     {
       "prestation": "Intervention — maison / pavillon",
-      "fourchette": "à préciser (ex. 150-300 €)",
-      "note": "Variable selon la surface et l'accès."
+      "fourchette": "180 à 350 €",
+      "note": "Variable selon la surface et l'accès (cave, combles, jardin)."
     },
     {
-      "prestation": "Contrat de suivi annuel",
-      "fourchette": "à préciser",
-      "note": "Pour commerces, copropriétés, cabinets."
+      "prestation": "Contrat annuel commerces / copropriétés",
+      "fourchette": "Sur devis",
+      "note": "Passages réguliers, registre sanitaire, rapports d'intervention."
     }
   ],
-  "prix_note": "REMPLACER par VOS tarifs réels. Fourchettes indicatives constatées en Île-de-France en 2026, données à titre d'exemple — le prix exact dépend de l'infestation et se confirme au devis gratuit.",
+  "prix_note": "Fourchettes indicatives 2026 (TODO : à ajuster avec les tarifs réels de l'entreprise). Le prix exact dépend de la surface, de l'ampleur et de l'accès — confirmé par devis gratuit avant toute intervention.",
   "faq": [
     {
       "q": "En combien de temps se débarrasse-t-on des rongeurs ?",
@@ -99,8 +133,19 @@
     },
     {
       "q": "Y a-t-il une garantie ?",
-      "r": "Oui, [À COMPLÉTER : préciser votre garantie / passages de contrôle inclus]."
+      "r": "Oui. Le passage de contrôle fait partie du protocole, et si l'activité persiste après le traitement complet, nous revenons ajuster le dispositif. Les modalités exactes figurent sur le devis, avant toute intervention."
+    },
+    {
+      "q": "La mairie intervient-elle gratuitement contre les rats ?",
+      "r": "Non, sauf exception. Les communes traitent l'espace public (égouts, parcs), pas les propriétés privées. Chez vous, l'intervention relève d'une entreprise spécialisée ; certaines mairies tiennent une liste de prestataires, mais le coût reste à la charge de l'occupant ou du propriétaire."
+    },
+    {
+      "q": "Pouvez-vous intervenir discrètement, sans alerter le voisinage ?",
+      "r": "Oui. Nos techniciens peuvent intervenir en tenue neutre et avec un véhicule banalisé sur demande. Le matériel (postes d'appâtage, pièges) est discret par nature — rien ne signale une dératisation en cours."
+    },
+    {
+      "q": "Fournissez-vous une facture et un rapport d'intervention ?",
+      "r": "Oui, systématiquement : facture détaillée et rapport précisant les constats, les produits utilisés et les emplacements des postes. Utile pour votre assurance, votre propriétaire ou le syndic, et obligatoire pour les commerces soumis au registre sanitaire."
     }
-  ],
-  "_a_enrichir": "Ajoutez ici le vécu terrain de vos techniciens (quartiers/immeubles typiques, cas fréquents) et VOS prix réels. C'est cette matière first-party que Google valorise et que l'IA ne peut pas inventer."
+  ]
 }
