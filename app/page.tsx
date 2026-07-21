@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Reassurance from "@/components/Reassurance";
 import Avis from "@/components/Avis";
 import QuickQuote from "@/components/QuickQuote";
@@ -433,22 +434,29 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <ul className="checklist" data-stagger>
-            <li data-reveal="right">
-              <IconCheck /> Techniciens salariés de l&apos;entreprise — jamais de
-              mise en relation
-            </li>
-            <li data-reveal="right">
-              <IconCheck /> Certification {site.certification} et assurance
-              professionnelle
-            </li>
-            <li data-reveal="right">
-              <IconCheck /> Méthodes conformes à la réglementation biocides
-            </li>
-            <li data-reveal="right">
-              <IconCheck /> Prix annoncé et confirmé avant chaque intervention
-            </li>
-          </ul>
+          <div data-reveal="right">
+            <figure className="photo-cadre" style={{ marginBottom: 18 }}>
+              <Image
+                src="/images/equipe-deralib-polos.jpg"
+                alt="Techniciens en polo Deralib"
+                width={1024}
+                height={765}
+              />
+            </figure>
+            <ul className="checklist" data-stagger>
+              <li data-reveal="right">
+                <IconCheck /> Techniciens salariés de l&apos;entreprise — jamais
+                de mise en relation
+              </li>
+              <li data-reveal="right">
+                <IconCheck /> Certification {site.certification} et assurance
+                professionnelle
+              </li>
+              <li data-reveal="right">
+                <IconCheck /> Prix annoncé et confirmé avant chaque intervention
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

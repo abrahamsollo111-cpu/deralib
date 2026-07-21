@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import HeroDecor from "@/components/HeroDecor";
 import Reassurance from "@/components/Reassurance";
@@ -145,6 +146,14 @@ export default function Page() {
                 et pour la fiche Google Business Profile. */}
           </div>
           <div data-reveal>
+            <figure className="photo-cadre" style={{ marginBottom: 18 }}>
+              <Image
+                src="/images/technicien-traitement-plinthes.jpg"
+                alt="Technicien en combinaison appliquant un traitement le long des plinthes avec un pulvérisateur"
+                width={540}
+                height={370}
+              />
+            </figure>
             <ul className="checklist" data-stagger>
               {/* TODO : afficher le nombre réel dès qu'il est renseigné
                   dans lib/config.ts (nbTechniciens) */}

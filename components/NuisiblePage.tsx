@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "./Breadcrumbs";
-import HeroDecor from "./HeroDecor";
 import Reassurance from "./Reassurance";
 import Avis from "./Avis";
 import PriceTable from "./PriceTable";
@@ -11,6 +11,35 @@ import { IconPhone, IconSearch, IconAlert, IconCheck, IconArrow, NUISIBLE_ICONS 
 import { site } from "@/lib/config";
 import { getNuisible, getAllVilles, NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/content";
 import { NUISIBLES_TILES } from "@/lib/nuisibles";
+
+// Illustration du hero par nuisible (fichiers dans /public/images/,
+// nommés en SEO, alt descriptifs en français)
+const HERO_IMAGES: Record<string, { src: string; alt: string; w: number; h: number }> = {
+  deratisation: {
+    src: "/images/rat-brun-canalisation.jpg",
+    alt: "Rat brun dans une canalisation, voie d'entrée classique vers les caves et logements",
+    w: 738,
+    h: 414,
+  },
+  "punaises-de-lit": {
+    src: "/images/punaises-de-lit-matelas.jpg",
+    alt: "Deux punaises de lit adultes sur un matelas, reconnaissables à leur corps brun et plat",
+    w: 554,
+    h: 554,
+  },
+  cafards: {
+    src: "/images/cafards-blattes-infestation.jpg",
+    alt: "Blattes adultes et juvéniles, signe d'une colonie installée",
+    w: 500,
+    h: 396,
+  },
+  "guepes-frelons": {
+    src: "/images/comparaison-guepe-frelon-asiatique-europeen.jpg",
+    alt: "Comparaison de taille entre guêpe commune, frelon asiatique et frelon européen",
+    w: 554,
+    h: 554,
+  },
+};
 
 // Gabarit commun des 4 pages piliers (dératisation, punaises, cafards, guêpes)
 export default function NuisiblePage({ slug }: { slug: string }) {
@@ -23,28 +52,40 @@ export default function NuisiblePage({ slug }: { slug: string }) {
     <>
       <Breadcrumbs crumbs={[{ label: NUISIBLES_LABELS[slug] }]} />
 
-      {/* ===== HERO ===== */}
-      <section className="hero hero-page" data-mouse-zone>
-        <HeroDecor />
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <h1 style={{ maxWidth: 900 }}>{n.h1}</h1>
-          <p className="lead" style={{ maxWidth: 760, margin: "20px 0 28px" }}>
-            {n.intro}
-          </p>
-          <div className="hero-actions">
-            <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
-              <IconPhone /> {site.telephone}
-            </a>
-            <Link href="/devis" className="btn btn-outline btn-lg">
-              Devis gratuit en ligne
-            </Link>
+      {/* ===== HERO (texte + illustration du nuisible) ===== */}
+      <section className="hero hero-page">
+        <div className="container hero-service" style={{ position: "relative", zIndex: 2 }}>
+          <div>
+            <h1>{n.h1}</h1>
+            <p className="lead" style={{ margin: "20px 0 28px" }}>
+              {n.intro}
+            </p>
+            <div className="hero-actions">
+              <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
+                <IconPhone /> {site.telephone}
+              </a>
+              <Link href="/devis" className="btn btn-outline btn-lg">
+                Devis gratuit en ligne
+              </Link>
+            </div>
+            <p className="dispo">
+              <span className="dot" />
+              <span>
+                Nous répondons <em>{site.horaires}</em> — appel sans engagement
+              </span>
+            </p>
           </div>
-          <p className="dispo">
-            <span className="dot" />
-            <span>
-              Nous répondons <em>{site.horaires}</em> — appel sans engagement
-            </span>
-          </p>
+          {HERO_IMAGES[slug] && (
+            <figure className="hero-service-img">
+              <Image
+                src={HERO_IMAGES[slug].src}
+                alt={HERO_IMAGES[slug].alt}
+                width={HERO_IMAGES[slug].w}
+                height={HERO_IMAGES[slug].h}
+                priority
+              />
+            </figure>
+          )}
         </div>
       </section>
 
