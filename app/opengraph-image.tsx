@@ -59,7 +59,7 @@ export default function OgImage() {
           Nuisibles éliminés. Maison assainie.
         </div>
         <div style={{ display: "flex", fontSize: 30, color: "#cfe5d8", marginTop: 28 }}>
-          {`${site.zone} — intervention 24-48h — ${site.anneesMetier} ans de métier`}
+          {`${site.zone} — sur place en 30-45 min — ${site.anneesMetier} ans de métier`}
         </div>
         <div
           style={{

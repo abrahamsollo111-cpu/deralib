@@ -4,7 +4,7 @@ import { site } from "@/lib/config";
 
 export default function CtaBand({
   title = "Un nuisible ? Appelez.",
-  text = `Un technicien vous répond et vous donne un prix clair. Intervention généralement sous 24 à 48 h partout en ${site.zone}.`,
+  text = `Un technicien vous répond et vous donne un prix clair. Sur place en 30 à 45 minutes maximum partout en ${site.zone}.`,
 }: {
   title?: string;
   text?: string;

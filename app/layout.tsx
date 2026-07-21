@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: `Dératisation & anti-nuisibles ${site.zone} | ${site.marque}`,
     template: `%s | ${site.marque}`,
   },
-  description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Techniciens salariés certifiés ${site.certification}. Intervention 24-48h, devis gratuit.`,
+  description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Techniciens salariés certifiés ${site.certification}. Sur place en 30-45 min, devis gratuit.`,
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "@type": "PestControl",
                 "@id": `${site.url}/#localbusiness`,
                 name: site.marque,
-                description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Intervention 24-48h, techniciens certifiés ${site.certification}.`,
+                description: `Entreprise de dératisation et de lutte anti-nuisibles en ${site.zone}. Sur place en 30-45 min, techniciens certifiés ${site.certification}.`,
                 url: site.url,
                 telephone: site.telephone,
                 email: site.email,

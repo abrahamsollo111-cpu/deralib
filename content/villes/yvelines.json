@@ -2,15 +2,27 @@
   "nom": "Yvelines",
   "slug": "yvelines",
   "departement": "78",
-  "meta_title": "Dératisation Yvelines (78) — Intervention 48h | Deralib",
-  "meta_description": "Souris dans les combles, rats en cave, nid de guêpes ? Intervention sous 48 h dans les Yvelines, techniciens certifiés Certibiocide. Devis gratuit.",
+  "meta_title": "Dératisation Yvelines (78) — Urgence 24h/24 | Deralib",
+  "meta_description": "Souris dans les combles, rats en cave, nid de guêpes ? Intervention en 30 à 45 minutes dans les Yvelines, techniciens certifiés Certibiocide. Devis gratuit.",
   "h1": "Dératisation et désinsectisation dans les Yvelines (78)",
-  "intro": "Peu de départements mêlent autant les contextes que les Yvelines. D'un côté, le bâti ancien de Versailles et de Saint-Germain-en-Laye, avec ses caves voûtées et ses combles où grimpent rats noirs et souris. De l'autre, la vallée de la Seine industrielle, de Mantes-la-Jolie à Poissy, où le surmulot prospère le long des berges et des chantiers. Entre les deux, un immense pavillonnaire avec jardins, et au sud, la plaine agricole et les forêts de Rambouillet et de Marly, d'où le frelon asiatique poursuit son expansion. Nos techniciens salariés, certifiés Certibiocide, interviennent sous 24 à 48 h dans tout le 78, 7 j/7. Le devis est gratuit.",
+  "intro": "Peu de départements mêlent autant les contextes que les Yvelines. D'un côté, le bâti ancien de Versailles et de Saint-Germain-en-Laye, avec ses caves voûtées et ses combles où grimpent rats noirs et souris. De l'autre, la vallée de la Seine industrielle, de Mantes-la-Jolie à Poissy, où le surmulot prospère le long des berges et des chantiers. Entre les deux, un immense pavillonnaire avec jardins, et au sud, la plaine agricole et les forêts de Rambouillet et de Marly, d'où le frelon asiatique poursuit son expansion. Nos techniciens salariés, certifiés Certibiocide, peuvent être sur place en 30 à 45 minutes dans tout le 78, 7 j/7. Le devis est gratuit.",
   "villes_principales": [
-    "Versailles", "Saint-Germain-en-Laye", "Sartrouville", "Mantes-la-Jolie",
-    "Poissy", "Conflans-Sainte-Honorine", "Les Mureaux", "Plaisir",
-    "Chatou", "Houilles", "Trappes", "Montigny-le-Bretonneux",
-    "Guyancourt", "Rambouillet", "Vélizy-Villacoublay", "Élancourt"
+    "Versailles",
+    "Saint-Germain-en-Laye",
+    "Sartrouville",
+    "Mantes-la-Jolie",
+    "Poissy",
+    "Conflans-Sainte-Honorine",
+    "Les Mureaux",
+    "Plaisir",
+    "Chatou",
+    "Houilles",
+    "Trappes",
+    "Montigny-le-Bretonneux",
+    "Guyancourt",
+    "Rambouillet",
+    "Vélizy-Villacoublay",
+    "Élancourt"
   ],
   "sections": [
     {
@@ -40,11 +52,11 @@
     "logement_insalubre": "Si les nuisibles sont liés à l'insalubrité d'un logement, saisissez le service communal d'hygiène et de santé lorsqu'il existe dans votre ville, ou la délégation départementale des Yvelines de l'ARS Île-de-France.",
     "prive": "Dans un logement, un jardin, un commerce ou une copropriété, la lutte contre les nuisibles incombe à l'occupant, au propriétaire ou au syndic : c'est précisément notre métier."
   },
-  "delais": "Nous intervenons généralement sous 48 h dans les Yvelines, et souvent sous 24 h dans la boucle de Seine (Sartrouville, Houilles, Chatou, Poissy) et l'agglomération de Versailles et de Saint-Quentin-en-Yvelines. Vers Rambouillet, Houdan et le sud rural, le créneau est confirmé dès votre appel. Ligne ouverte 7 j/7, 24 h/24.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Couvrez-vous le sud des Yvelines, vers Rambouillet et Houdan ?",
-      "r": "Oui, tout le département est couvert. Ces communes sont plus éloignées, donc le délai est généralement de 48 h ; nous vous confirmons le créneau dès la prise de contact."
+      "r": "Oui, tout le département est couvert, y compris les communes rurales. Un technicien peut être sur place en 30 à 45 minutes maximum ; nous vous confirmons le créneau dès la prise de contact."
     },
     {
       "q": "J'entends gratter dans les combles de ma maison ancienne. Rat ou souris, et comment traitez-vous ?",

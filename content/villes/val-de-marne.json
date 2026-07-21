@@ -2,15 +2,27 @@
   "nom": "Val-de-Marne",
   "slug": "val-de-marne",
   "departement": "94",
-  "meta_title": "Dératisation Val-de-Marne (94) — 24-48h | Deralib",
-  "meta_description": "Rats, souris, guêpes dans le 94 ? Techniciens Certibiocide, intervention 24-48h de Créteil à Saint-Maur. Devis gratuit, appelez 7j/7 — 24h/24.",
-  "h1": "Dératisation dans le Val-de-Marne (94) : rats, souris et nuisibles traités sous 24-48h",
-  "intro": "Le Val-de-Marne cumule deux moteurs d'infestation bien identifiés. À l'est, la Marne : ses berges, de Saint-Maur à Nogent en passant par Créteil et Champigny, offrent aux rats bruns l'humidité et les abris qu'ils recherchent, et les pavillons riverains en font les frais. Au sud-ouest, le marché de Rungis, plus grand marché de produits frais d'Europe, entretient une pression rongeurs constante sur Chevilly-Larue, Thiais, Choisy-le-Roi et les communes voisines. Entre les deux, un tissu dense d'immeubles collectifs à Créteil, Vitry ou Ivry, et un pavillonnaire où les guêpes s'installent sous les tuiles chaque été. Nos techniciens certifiés Certibiocide interviennent sous 24 à 48 heures partout dans le 94, 7j/7 et 24h/24. Devis gratuit.",
+  "meta_title": "Dératisation Val-de-Marne (94) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris, guêpes dans le 94 ? Techniciens Certibiocide, sur place en 30-45 min de Créteil à Saint-Maur. Devis gratuit, appelez 7j/7 — 24h/24.",
+  "h1": "Dératisation dans le Val-de-Marne (94) : rats, souris et nuisibles traités en 30-45 min",
+  "intro": "Le Val-de-Marne cumule deux moteurs d'infestation bien identifiés. À l'est, la Marne : ses berges, de Saint-Maur à Nogent en passant par Créteil et Champigny, offrent aux rats bruns l'humidité et les abris qu'ils recherchent, et les pavillons riverains en font les frais. Au sud-ouest, le marché de Rungis, plus grand marché de produits frais d'Europe, entretient une pression rongeurs constante sur Chevilly-Larue, Thiais, Choisy-le-Roi et les communes voisines. Entre les deux, un tissu dense d'immeubles collectifs à Créteil, Vitry ou Ivry, et un pavillonnaire où les guêpes s'installent sous les tuiles chaque été. Nos techniciens certifiés Certibiocide peuvent être sur place en 30 à 45 minuteseures partout dans le 94, 7j/7 et 24h/24. Devis gratuit.",
   "villes_principales": [
-    "Créteil", "Vitry-sur-Seine", "Champigny-sur-Marne", "Saint-Maur-des-Fossés",
-    "Ivry-sur-Seine", "Villejuif", "Maisons-Alfort", "Fontenay-sous-Bois",
-    "Nogent-sur-Marne", "Vincennes", "Alfortville", "Choisy-le-Roi",
-    "Thiais", "Chevilly-Larue", "Le Perreux-sur-Marne", "L'Haÿ-les-Roses"
+    "Créteil",
+    "Vitry-sur-Seine",
+    "Champigny-sur-Marne",
+    "Saint-Maur-des-Fossés",
+    "Ivry-sur-Seine",
+    "Villejuif",
+    "Maisons-Alfort",
+    "Fontenay-sous-Bois",
+    "Nogent-sur-Marne",
+    "Vincennes",
+    "Alfortville",
+    "Choisy-le-Roi",
+    "Thiais",
+    "Chevilly-Larue",
+    "Le Perreux-sur-Marne",
+    "L'Haÿ-les-Roses"
   ],
   "sections": [
     {
@@ -47,7 +59,7 @@
     "logement_insalubre": "Si les nuisibles sont liés à un logement dégradé ou mal entretenu par son propriétaire, adressez un signalement écrit au bailleur puis, sans réaction, au service d'hygiène de votre commune.",
     "prive": "Pavillon, appartement, commerce, copropriété : le traitement des espaces privés revient à l'occupant, au propriétaire ou au syndic. C'est notre métier — diagnostic sur place et devis gratuit."
   },
-  "delais": "Intervention sous 24 à 48 heures dans tout le Val-de-Marne, d'Ivry à Sucy-en-Brie. Nid de frelons près d'une école, rats dans un commerce alimentaire, infestation massive : ces urgences passent devant, 7j/7 et 24h/24.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Les rats viennent de la berge de la Marne, est-ce à moi de payer ?",
@@ -67,7 +79,7 @@
     },
     {
       "q": "Sous quel délai pouvez-vous passer à Vitry-sur-Seine ?",
-      "r": "Sous 24 à 48 heures dans la quasi-totalité des cas, et plus vite en urgence : la ligne est ouverte 7j/7, 24h/24."
+      "r": "Sous 30 à 45 minuteseures dans la quasi-totalité des cas, et plus vite en urgence : la ligne est ouverte 7j/7, 24h/24."
     }
   ]
 }

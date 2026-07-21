@@ -2,15 +2,27 @@
   "nom": "Val-d'Oise",
   "slug": "val-d-oise",
   "departement": "95",
-  "meta_title": "Dératisation Val-d'Oise (95) — 24-48h | Deralib",
-  "meta_description": "Rats, punaises de lit ou frelons dans le 95 ? Intervention certifiée Certibiocide sous 24-48 h, d'Argenteuil à Roissy. Demandez votre devis gratuit.",
+  "meta_title": "Dératisation Val-d'Oise (95) — 24h/24 | Deralib",
+  "meta_description": "Rats, punaises de lit ou frelons dans le 95 ? Intervention certifiée Certibiocide en 30-45 min, d'Argenteuil à Roissy. Demandez votre devis gratuit.",
   "h1": "Dératisation et traitement des nuisibles dans le Val-d'Oise (95)",
-  "intro": "Entre les tours d'Argenteuil, les pavillons de la vallée de Montmorency et les pistes de Roissy, le Val-d'Oise ne se traite pas d'une seule manière. Les rats bruns suivent la Seine et l'Oise, de Bezons à Pontoise. Les punaises de lit voyagent dans les bagages et touchent d'abord les hôtels et les logements proches de l'aéroport. Les frelons, eux, profitent des vergers et des lisières de forêt, de Montmorency à L'Isle-Adam. Nos techniciens salariés, tous certifiés Certibiocide, connaissent ces trois terrains. Intervention sous 24 à 48 h partout dans le 95, 7j/7 et 24h/24, diagnostic sur place et devis gratuit. Derrière l'entreprise, vingt ans de métier du fondateur.",
+  "intro": "Entre les tours d'Argenteuil, les pavillons de la vallée de Montmorency et les pistes de Roissy, le Val-d'Oise ne se traite pas d'une seule manière. Les rats bruns suivent la Seine et l'Oise, de Bezons à Pontoise. Les punaises de lit voyagent dans les bagages et touchent d'abord les hôtels et les logements proches de l'aéroport. Les frelons, eux, profitent des vergers et des lisières de forêt, de Montmorency à L'Isle-Adam. Nos techniciens salariés, tous certifiés Certibiocide, connaissent ces trois terrains. Sur place en 30 à 45 minutes maximum partout dans le 95, 7j/7 et 24h/24, diagnostic sur place et devis gratuit. Derrière l'entreprise, vingt ans de métier du fondateur.",
   "villes_principales": [
-    "Argenteuil", "Cergy", "Sarcelles", "Garges-lès-Gonesse",
-    "Franconville", "Ermont", "Goussainville", "Pontoise",
-    "Bezons", "Villiers-le-Bel", "Gonesse", "Taverny",
-    "Herblay-sur-Seine", "Eaubonne", "Montmorency", "L'Isle-Adam"
+    "Argenteuil",
+    "Cergy",
+    "Sarcelles",
+    "Garges-lès-Gonesse",
+    "Franconville",
+    "Ermont",
+    "Goussainville",
+    "Pontoise",
+    "Bezons",
+    "Villiers-le-Bel",
+    "Gonesse",
+    "Taverny",
+    "Herblay-sur-Seine",
+    "Eaubonne",
+    "Montmorency",
+    "L'Isle-Adam"
   ],
   "sections": [
     {
@@ -47,7 +59,7 @@
     "logement_insalubre": "Pour une infestation liée à l'insalubrité d'un logement, adressez-vous au service communal d'hygiène et de santé de votre ville s'il existe, sinon à la mairie, qui saisira l'Agence régionale de santé d'Île-de-France.",
     "prive": "Logement, pavillon, hôtel, commerce ou copropriété privée : le traitement incombe à l'occupant, au propriétaire, à l'exploitant ou au syndic. C'est là que nous intervenons, après diagnostic et devis gratuit."
   },
-  "delais": "Intervention sous 24 à 48 h partout dans le Val-d'Oise, 7j/7 et 24h/24. Les urgences des professionnels de la zone de Roissy et les nids de frelons situés à proximité d'un public sont traités en priorité, souvent le jour même.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Pouvez-vous traiter un hôtel près de Roissy sans fermer l'établissement ?",
@@ -59,7 +71,7 @@
     },
     {
       "q": "Un nid de frelons asiatiques dans mon jardin à L'Isle-Adam, intervenez-vous ?",
-      "r": "Oui, sous 24 à 48 h, à la perche télescopique. Tenez enfants et animaux à distance en attendant. Certaines communes participent aux frais de destruction : renseignez-vous en mairie, nous fournissons une facture détaillée."
+      "r": "Oui, en 30 à 45 minutes, à la perche télescopique. Tenez enfants et animaux à distance en attendant. Certaines communes participent aux frais de destruction : renseignez-vous en mairie, nous fournissons une facture détaillée."
     },
     {
       "q": "Mon bailleur à Sarcelles ne réagit pas face aux rats, que faire ?",
@@ -67,7 +79,7 @@
     },
     {
       "q": "Couvrez-vous les communes rurales du Vexin ?",
-      "r": "Oui, tout le département est desservi, jusqu'à Magny-en-Vexin et les villages alentour. Comptez 48 h au maximum pour ces secteurs, sans majoration de déplacement."
+      "r": "Oui, tout le département est desservi, jusqu'à Magny-en-Vexin et les villages alentour. Un technicien peut être sur place en 30 à 45 minutes maximum, sans majoration de déplacement."
     }
   ]
 }

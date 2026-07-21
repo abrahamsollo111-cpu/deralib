@@ -2,15 +2,27 @@
   "nom": "Seine-et-Marne",
   "slug": "seine-et-marne",
   "departement": "77",
-  "meta_title": "Dératisation Seine-et-Marne (77) — 24-48h | Deralib",
-  "meta_description": "Rats, souris, guêpes ou punaises de lit dans le 77 ? Techniciens certifiés Certibiocide, intervention sous 48 h. Demandez votre devis gratuit.",
+  "meta_title": "Dératisation Seine-et-Marne (77) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris, guêpes ou punaises de lit dans le 77 ? Techniciens certifiés Certibiocide, intervention en 30 à 45 minutes. Demandez votre devis gratuit.",
   "h1": "Dératisation et lutte anti-nuisibles en Seine-et-Marne (77)",
-  "intro": "La Seine-et-Marne est le plus vaste département d'Île-de-France, et le plus contrasté : pavillons de Chelles ou de Pontault-Combault, corps de ferme de la Brie, hôtels du Val d'Europe, entrepôts de Sénart. Chaque contexte attire ses nuisibles. Les rats bruns suivent les bords de Marne et de Seine, les souris s'installent dans les zones logistiques, les frelons asiatiques colonisent vergers et lisières de forêt. Nos techniciens salariés, certifiés Certibiocide, couvrent tout le 77 et interviennent sous 24 à 48 h, 7 j/7. Diagnostic sur place, traitement adapté, obturation des accès : le fondateur a vingt ans de métier, et la méthode s'en ressent. Devis gratuit.",
+  "intro": "La Seine-et-Marne est le plus vaste département d'Île-de-France, et le plus contrasté : pavillons de Chelles ou de Pontault-Combault, corps de ferme de la Brie, hôtels du Val d'Europe, entrepôts de Sénart. Chaque contexte attire ses nuisibles. Les rats bruns suivent les bords de Marne et de Seine, les souris s'installent dans les zones logistiques, les frelons asiatiques colonisent vergers et lisières de forêt. Nos techniciens salariés, certifiés Certibiocide, couvrent tout le 77 et peuvent être sur place en 30 à 45 minutes, 7 j/7. Diagnostic sur place, traitement adapté, obturation des accès : le fondateur a vingt ans de métier, et la méthode s'en ressent. Devis gratuit.",
   "villes_principales": [
-    "Meaux", "Melun", "Chelles", "Pontault-Combault", "Savigny-le-Temple",
-    "Torcy", "Bussy-Saint-Georges", "Lagny-sur-Marne", "Villeparisis",
-    "Combs-la-Ville", "Fontainebleau", "Provins", "Nemours",
-    "Montereau-Fault-Yonne", "Coulommiers", "Serris"
+    "Meaux",
+    "Melun",
+    "Chelles",
+    "Pontault-Combault",
+    "Savigny-le-Temple",
+    "Torcy",
+    "Bussy-Saint-Georges",
+    "Lagny-sur-Marne",
+    "Villeparisis",
+    "Combs-la-Ville",
+    "Fontainebleau",
+    "Provins",
+    "Nemours",
+    "Montereau-Fault-Yonne",
+    "Coulommiers",
+    "Serris"
   ],
   "sections": [
     {
@@ -47,11 +59,11 @@
     "logement_insalubre": "Pour une infestation liée à un logement insalubre, adressez-vous au service communal d'hygiène et de santé si votre commune en possède un, sinon à la délégation départementale de Seine-et-Marne de l'ARS Île-de-France.",
     "prive": "Chez vous, dans votre commerce, votre exploitation agricole ou votre copropriété, le traitement relève de l'occupant, du propriétaire ou du syndic : c'est là que nous intervenons."
   },
-  "delais": "En Seine-et-Marne, nous intervenons généralement sous 48 h, souvent dès le lendemain dans le nord et l'ouest du département (Chelles, Meaux, Marne-la-Vallée, Sénart). Pour les secteurs plus éloignés comme Provins, Nemours ou Montereau-Fault-Yonne, le créneau exact est confirmé dès la prise d'appel. Nous restons joignables 7 j/7 et 24 h/24 pour les urgences.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Intervenez-vous dans le sud du département, vers Fontainebleau, Nemours ou Provins ?",
-      "r": "Oui. Ces secteurs sont plus éloignés de nos tournées quotidiennes, mais nous y intervenons généralement sous 48 h. Le créneau précis vous est donné dès le premier appel."
+      "r": "Oui. Ces secteurs sont plus éloignés de nos tournées quotidiennes, mais nous y intervenons généralement en 30 à 45 minutes. Le créneau précis vous est donné dès le premier appel."
     },
     {
       "q": "J'ai un poulailler et un composteur, et des rats sont apparus dans le jardin. Que faire ?",

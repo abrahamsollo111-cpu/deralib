@@ -7,7 +7,7 @@ import { site } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: `Contact — ${site.marque}, dératisation en ${site.zone}`,
-  description: `Contactez ${site.marque} : téléphone, email, horaires et formulaire. Intervention anti-nuisibles sous 24-48h partout en ${site.zone}. Devis gratuit.`,
+  description: `Contactez ${site.marque} : téléphone, email, horaires et formulaire. Intervention anti-nuisibles en 30-45 min partout en ${site.zone}. Devis gratuit.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -103,7 +103,7 @@ export default function Page() {
                   Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93),
                   Val-de-Marne (94), Seine-et-Marne (77), Yvelines (78),
                   Essonne (91) et Val-d&apos;Oise (95). Intervention
-                  généralement sous 24 à 48 h.
+                  en 30 à 45 minutes maximum.
                 </p>
               </div>
             </div>

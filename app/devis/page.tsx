@@ -32,7 +32,7 @@ export default function Page() {
                 <IconCheck /> Prix confirmé avant toute intervention
               </li>
               <li>
-                <IconCheck /> Intervention possible sous 24-48 h en {site.zone}
+                <IconCheck /> Intervention possible en 30-45 min en {site.zone}
               </li>
             </ul>
             <p style={{ fontWeight: 700, color: "var(--marine)" }}>

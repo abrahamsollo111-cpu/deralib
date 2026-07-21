@@ -2,15 +2,27 @@
   "nom": "Hauts-de-Seine",
   "slug": "hauts-de-seine",
   "departement": "92",
-  "meta_title": "Dératisation Hauts-de-Seine (92) — 24-48h | Deralib",
-  "meta_description": "Rats, souris, blattes dans le 92 ? Techniciens certifiés Certibiocide, intervention 24-48h de La Défense à Antony. Devis gratuit, appelez 7j/7.",
-  "h1": "Dératisation dans les Hauts-de-Seine (92) : intervention sous 24-48h par des techniciens certifiés",
-  "intro": "Entre les tours de La Défense, les berges de Seine et les rues pavillonnaires de Colombes ou d'Antony, les Hauts-de-Seine ne posent jamais deux fois le même problème de nuisibles. Le rat brun circule le long du fleuve et remonte par les colonnes d'eaux usées des immeubles anciens de Levallois ou de Neuilly. La souris s'installe dans les faux plafonds des plateaux de bureaux. Les blattes suivent les gaines techniques des résidences collectives. Nos techniciens salariés, certifiés Certibiocide, interviennent sous 24 à 48 heures dans tout le département, 7j/7 et 24h/24, avec un principe simple : identifier l'espèce, traiter, puis obturer les accès pour que le problème ne revienne pas. Devis gratuit.",
+  "meta_title": "Dératisation Hauts-de-Seine (92) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris, blattes dans le 92 ? Techniciens certifiés Certibiocide, sur place en 30-45 min de La Défense à Antony. Devis gratuit, appelez 7j/7.",
+  "h1": "Dératisation dans les Hauts-de-Seine (92) : intervention en 30-45 min par des techniciens certifiés",
+  "intro": "Entre les tours de La Défense, les berges de Seine et les rues pavillonnaires de Colombes ou d'Antony, les Hauts-de-Seine ne posent jamais deux fois le même problème de nuisibles. Le rat brun circule le long du fleuve et remonte par les colonnes d'eaux usées des immeubles anciens de Levallois ou de Neuilly. La souris s'installe dans les faux plafonds des plateaux de bureaux. Les blattes suivent les gaines techniques des résidences collectives. Nos techniciens salariés, certifiés Certibiocide, peuvent être sur place en 30 à 45 minuteseures dans tout le département, 7j/7 et 24h/24, avec un principe simple : identifier l'espèce, traiter, puis obturer les accès pour que le problème ne revienne pas. Devis gratuit.",
   "villes_principales": [
-    "Boulogne-Billancourt", "Nanterre", "Colombes", "Asnières-sur-Seine",
-    "Courbevoie", "Levallois-Perret", "Neuilly-sur-Seine", "Rueil-Malmaison",
-    "Issy-les-Moulineaux", "Antony", "Clichy", "Gennevilliers",
-    "Clamart", "Montrouge", "Suresnes", "Puteaux"
+    "Boulogne-Billancourt",
+    "Nanterre",
+    "Colombes",
+    "Asnières-sur-Seine",
+    "Courbevoie",
+    "Levallois-Perret",
+    "Neuilly-sur-Seine",
+    "Rueil-Malmaison",
+    "Issy-les-Moulineaux",
+    "Antony",
+    "Clichy",
+    "Gennevilliers",
+    "Clamart",
+    "Montrouge",
+    "Suresnes",
+    "Puteaux"
   ],
   "sections": [
     {
@@ -47,7 +59,7 @@
     "logement_insalubre": "Si l'infestation est liée à l'insalubrité d'un logement (dégradations, défaut d'entretien du bailleur), le service communal d'hygiène et de santé de la ville peut être saisi pour constater la situation.",
     "prive": "Logement, pavillon, commerce, copropriété : la dératisation d'un espace privé est à la charge de l'occupant, du propriétaire ou du syndic selon le cas. C'est notre terrain d'intervention, sur devis gratuit."
   },
-  "delais": "Intervention sous 24 à 48 heures dans tout le département, de La Défense à Antony. Les urgences — rats dans un commerce alimentaire, infestation massive, morsure — passent en priorité, 7j/7 et 24h/24.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Intervenez-vous dans les immeubles de bureaux de La Défense en dehors des heures ouvrées ?",
@@ -67,7 +79,7 @@
     },
     {
       "q": "Traitez-vous aussi les blattes et les punaises de lit dans le 92 ?",
-      "r": "Oui. Rongeurs, blattes (gel anti-blattes dans les cuisines et gaines techniques), punaises de lit, guêpes et frelons : mêmes techniciens certifiés Certibiocide, mêmes délais de 24 à 48 heures."
+      "r": "Oui. Rongeurs, blattes (gel anti-blattes dans les cuisines et gaines techniques), punaises de lit, guêpes et frelons : mêmes techniciens certifiés Certibiocide, mêmes délais de 30 à 45 minuteseures."
     }
   ]
 }

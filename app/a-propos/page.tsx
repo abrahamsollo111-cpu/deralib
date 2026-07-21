@@ -198,7 +198,7 @@ export default function Page() {
               ],
               [
                 "Disponibilité",
-                `Intervention généralement sous 24 à 48 h partout en ${site.zone}, en priorité pour les urgences (nids de frelons, infestations importantes).`,
+                `Sur place en 30 à 45 minutes maximum partout en ${site.zone}, en priorité pour les urgences (nids de frelons, infestations importantes).`,
               ],
               [
                 "Prix annoncé avant",

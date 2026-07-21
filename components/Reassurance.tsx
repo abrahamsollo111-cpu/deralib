@@ -19,7 +19,7 @@ export default function Reassurance() {
     {
       icon: <IconClock />,
       tile: "tile-cyan",
-      strong: "Intervention 24-48 h",
+      strong: "Sur place en 30-45 min",
       sub: `Partout en ${site.zone}`,
     },
     {

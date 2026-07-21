@@ -80,7 +80,7 @@ export default async function Page({
             <strong>Besoin d&apos;un professionnel ?</strong> Découvrez notre
             page{" "}
             <Link href={`/${a.service}`}>{a.cta_texte}</Link> — intervention
-            sous 24-48 h, devis gratuit, ou appelez le{" "}
+            en 30-45 min, devis gratuit, ou appelez le{" "}
             <a href={site.telephoneHref} style={{ fontWeight: 700 }}>
               {site.telephone}
             </a>
@@ -121,7 +121,7 @@ export default async function Page({
 
       <CtaBand
         title={`${NUISIBLES_LABELS[a.service]} : demandez votre devis gratuit`}
-        text="Un technicien vous rappelle avec un diagnostic et un prix clair — intervention sous 24-48 h."
+        text="Un technicien vous rappelle avec un diagnostic et un prix clair — intervention en 30-45 min."
       />
 
       <JsonLd

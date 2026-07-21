@@ -2,15 +2,27 @@
   "nom": "Seine-Saint-Denis",
   "slug": "seine-saint-denis",
   "departement": "93",
-  "meta_title": "Dératisation Seine-Saint-Denis (93) — 24-48h | Deralib",
-  "meta_description": "Rats ou souris en Seine-Saint-Denis ? Techniciens certifiés Certibiocide, intervention 24-48h de Saint-Denis à Montreuil. Devis gratuit, appelez 7j/7.",
-  "h1": "Dératisation en Seine-Saint-Denis (93) : des techniciens certifiés sous 24-48h",
-  "intro": "En Seine-Saint-Denis, la carte des infestations bouge en permanence. Les chantiers du Grand Paris Express éventrent les sous-sols et déplacent des colonies entières de rats vers les rues voisines. Les canaux de l'Ourcq et de Saint-Denis servent de corridors aux surmulots. Les marchés et les commerces de bouche, très denses à Saint-Denis, Aubervilliers ou Montreuil, leur fournissent de quoi se nourrir toute l'année. Ajoutez un bâti hétérogène — grands ensembles, pavillons, entrepôts et friches en reconversion à Saint-Ouen — et vous obtenez un département où le diagnostic compte autant que le traitement. Nos techniciens salariés, certifiés Certibiocide, interviennent sous 24 à 48 heures dans les quarante communes du 93, 7j/7 et 24h/24. Devis gratuit.",
+  "meta_title": "Dératisation Seine-Saint-Denis (93) — 24h/24 | Deralib",
+  "meta_description": "Rats ou souris en Seine-Saint-Denis ? Techniciens certifiés Certibiocide, sur place en 30-45 min de Saint-Denis à Montreuil. Devis gratuit, appelez 7j/7.",
+  "h1": "Dératisation en Seine-Saint-Denis (93) : des techniciens certifiés en 30-45 min",
+  "intro": "En Seine-Saint-Denis, la carte des infestations bouge en permanence. Les chantiers du Grand Paris Express éventrent les sous-sols et déplacent des colonies entières de rats vers les rues voisines. Les canaux de l'Ourcq et de Saint-Denis servent de corridors aux surmulots. Les marchés et les commerces de bouche, très denses à Saint-Denis, Aubervilliers ou Montreuil, leur fournissent de quoi se nourrir toute l'année. Ajoutez un bâti hétérogène — grands ensembles, pavillons, entrepôts et friches en reconversion à Saint-Ouen — et vous obtenez un département où le diagnostic compte autant que le traitement. Nos techniciens salariés, certifiés Certibiocide, peuvent être sur place en 30 à 45 minuteseures dans les quarante communes du 93, 7j/7 et 24h/24. Devis gratuit.",
   "villes_principales": [
-    "Saint-Denis", "Montreuil", "Aubervilliers", "Aulnay-sous-Bois",
-    "Saint-Ouen-sur-Seine", "Pantin", "Bobigny", "Bondy",
-    "Épinay-sur-Seine", "Rosny-sous-Bois", "Noisy-le-Grand", "Drancy",
-    "La Courneuve", "Bagnolet", "Le Blanc-Mesnil", "Livry-Gargan"
+    "Saint-Denis",
+    "Montreuil",
+    "Aubervilliers",
+    "Aulnay-sous-Bois",
+    "Saint-Ouen-sur-Seine",
+    "Pantin",
+    "Bobigny",
+    "Bondy",
+    "Épinay-sur-Seine",
+    "Rosny-sous-Bois",
+    "Noisy-le-Grand",
+    "Drancy",
+    "La Courneuve",
+    "Bagnolet",
+    "Le Blanc-Mesnil",
+    "Livry-Gargan"
   ],
   "sections": [
     {
@@ -47,7 +59,7 @@
     "logement_insalubre": "Plusieurs villes du département disposent d'un service communal d'hygiène et de santé, compétent lorsque l'infestation est liée à l'insalubrité du logement. Un signalement écrit au bailleur reste le premier réflexe.",
     "prive": "Appartement, pavillon, local commercial, copropriété : le traitement d'un espace privé incombe à l'occupant, au propriétaire, au bailleur ou au syndic. C'est là que nous intervenons, sur devis gratuit."
   },
-  "delais": "Nous intervenons sous 24 à 48 heures dans toute la Seine-Saint-Denis, de Saint-Ouen à Aulnay-sous-Bois. Commerces alimentaires menacés de contrôle et infestations massives sont traités en priorité, 7j/7 et 24h/24.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Des rats sont apparus depuis le chantier voisin, qui est responsable ?",

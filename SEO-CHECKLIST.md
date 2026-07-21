@@ -6,7 +6,7 @@ officiel Google « Bien débuter en référencement naturel ».
 ## ✅ Fait
 
 ### Technique
-- [x] Title unique ≤ 60 caractères par page, format « [Service] [Lieu] — 24-48h | Deralib »
+- [x] Title unique ≤ 60 caractères par page, format « [Service] [Lieu] — 24h/24 | Deralib »
 - [x] Meta description unique ≤ 155 caractères avec appel à l'action
 - [x] Un seul H1 par page (mot-clé principal + localisation), H2/H3 logiques
 - [x] Canonical sur chaque page ; redirections 308 apex/http → https://www

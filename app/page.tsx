@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: {
     absolute: `Dératisation & anti-nuisibles ${site.zone} | ${site.marque}`,
   },
-  description: `Rats, punaises de lit, cafards, guêpes : intervention 24-48h par techniciens certifiés ${site.certification} en ${site.zone}. Appelez, devis gratuit.`,
+  description: `Rats, punaises de lit, cafards, guêpes : sur place en 30-45 min par techniciens certifiés ${site.certification} en ${site.zone}. Appelez, devis gratuit.`,
   alternates: { canonical: "/" },
 };
 
@@ -65,7 +65,7 @@ const FAQ_HOME = [
   },
   {
     q: "Sous quel délai pouvez-vous intervenir ?",
-    r: `Nous intervenons rapidement partout en ${site.zone}, généralement sous 24 à 48 h, et en priorité pour les urgences (nids de frelons, infestations importantes).`,
+    r: `Nous intervenons rapidement partout en ${site.zone}, en 30 à 45 minutes maximum, et en priorité pour les urgences (nids de frelons, infestations importantes).`,
   },
   {
     q: "Les traitements sont-ils sans danger pour ma famille ?",
@@ -118,7 +118,7 @@ export default function Home() {
               Rats, souris, punaises de lit, cafards, guêpes et frelons : nos
               techniciens certifiés {site.certification} éliminent
               l&apos;infestation, assainissent les lieux et bouchent les accès.
-              Intervention sous 24 à 48 h dans les 8 départements franciliens,
+              Sur place en 30 à 45 minutes maximum dans les 8 départements franciliens,
               prix confirmé par devis avant de commencer.
             </p>
             <div className="hero-actions">
@@ -316,8 +316,8 @@ export default function Home() {
               <span>de métier sur le terrain, en {site.zone}</span>
             </div>
             <div className="stat" data-reveal="left">
-              <strong data-count="48" data-count-suffix="h">48h</strong>
-              <span>délai maximum d&apos;intervention en général</span>
+              <strong data-count="45" data-count-suffix=" min">45 min</strong>
+              <span>délai maximum pour être sur place</span>
             </div>
             <div className="stat" data-reveal="left">
               <strong data-count="7" data-count-suffix="j/7">7j/7</strong>

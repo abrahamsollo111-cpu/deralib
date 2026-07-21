@@ -2,15 +2,27 @@
   "nom": "Essonne",
   "slug": "essonne",
   "departement": "91",
-  "meta_title": "Dératisation Essonne (91) — 24-48h | Deralib",
-  "meta_description": "Rats, souris, guêpes en Essonne ? Techniciens certifiés Certibiocide, intervention 24-48 h d'Évry à Étampes. Appelez pour un devis gratuit.",
+  "meta_title": "Dératisation Essonne (91) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris, guêpes en Essonne ? Techniciens certifiés Certibiocide, sur place en 30-45 min d'Évry à Étampes. Appelez pour un devis gratuit.",
   "h1": "Dératisation et lutte anti-nuisibles en Essonne (91)",
-  "intro": "L'Essonne impose deux façons de travailler à un dératiseur. Au nord, un tissu urbain dense — Évry-Courcouronnes, Corbeil-Essonnes, Massy — où les rongeurs circulent par les parkings souterrains, les dalles et les gaines techniques des grands ensembles. Au sud, un territoire pavillonnaire puis rural, du Hurepoix aux fermes des environs d'Étampes, où l'on traite autant les souris dans les combles que les guêpes sous les toitures. Entre les deux, les vallées de l'Orge, de l'Yvette et de la Seine entretiennent une humidité qui convient parfaitement au rat brun. Nos techniciens salariés, certifiés Certibiocide, interviennent sous 24 à 48 h dans tout le département, 7j/7 et 24h/24. Le diagnostic se fait sur place et le devis est gratuit.",
+  "intro": "L'Essonne impose deux façons de travailler à un dératiseur. Au nord, un tissu urbain dense — Évry-Courcouronnes, Corbeil-Essonnes, Massy — où les rongeurs circulent par les parkings souterrains, les dalles et les gaines techniques des grands ensembles. Au sud, un territoire pavillonnaire puis rural, du Hurepoix aux fermes des environs d'Étampes, où l'on traite autant les souris dans les combles que les guêpes sous les toitures. Entre les deux, les vallées de l'Orge, de l'Yvette et de la Seine entretiennent une humidité qui convient parfaitement au rat brun. Nos techniciens salariés, certifiés Certibiocide, peuvent être sur place en 30 à 45 minutes dans tout le département, 7j/7 et 24h/24. Le diagnostic se fait sur place et le devis est gratuit.",
   "villes_principales": [
-    "Évry-Courcouronnes", "Corbeil-Essonnes", "Massy", "Savigny-sur-Orge",
-    "Sainte-Geneviève-des-Bois", "Palaiseau", "Athis-Mons", "Viry-Châtillon",
-    "Draveil", "Vigneux-sur-Seine", "Grigny", "Ris-Orangis",
-    "Brétigny-sur-Orge", "Les Ulis", "Étampes", "Dourdan"
+    "Évry-Courcouronnes",
+    "Corbeil-Essonnes",
+    "Massy",
+    "Savigny-sur-Orge",
+    "Sainte-Geneviève-des-Bois",
+    "Palaiseau",
+    "Athis-Mons",
+    "Viry-Châtillon",
+    "Draveil",
+    "Vigneux-sur-Seine",
+    "Grigny",
+    "Ris-Orangis",
+    "Brétigny-sur-Orge",
+    "Les Ulis",
+    "Étampes",
+    "Dourdan"
   ],
   "sections": [
     {
@@ -47,7 +59,7 @@
     "logement_insalubre": "Si l'infestation est liée à l'insalubrité d'un logement, saisissez le service communal d'hygiène et de santé lorsque votre ville en dispose, sinon la mairie, qui transmettra à l'Agence régionale de santé d'Île-de-France.",
     "prive": "Dans un logement, un pavillon ou une copropriété privée, le traitement relève de l'occupant, du propriétaire ou du syndic selon le cas : c'est notre terrain d'intervention, après diagnostic et devis gratuit."
   },
-  "delais": "Intervention sous 24 à 48 h dans toute l'Essonne, 7j/7 et 24h/24. Le nord du département (Massy, Évry-Courcouronnes, Corbeil-Essonnes) est souvent traité le jour même ou le lendemain ; comptez 48 h au maximum pour le sud rural autour d'Étampes et de Dourdan.",
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes maximum. Les urgences — nid de frelons, infestation massive, commerce avant un contrôle — passent en priorité.",
   "faq_locale": [
     {
       "q": "Intervenez-vous dans le sud de l'Essonne, vers Étampes ou Dourdan ?",
@@ -67,7 +79,7 @@
     },
     {
       "q": "Pouvez-vous intervenir un dimanche ou de nuit ?",
-      "r": "Oui, nous fonctionnons 7j/7 et 24h/24. Pour une urgence — rat dans un logement, nid de frelons près d'une école — appelez directement : un technicien vous rappelle et se déplace sous 24 à 48 h."
+      "r": "Oui, nous fonctionnons 7j/7 et 24h/24. Pour une urgence — rat dans un logement, nid de frelons près d'une école — appelez directement : un technicien vous rappelle et se déplace en 30 à 45 minutes."
     }
   ]
 }
