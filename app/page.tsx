@@ -115,11 +115,10 @@ export default function Home() {
               <em className="grad-text">Maison assainie.</em>
             </h1>
             <p className="hero-sub">
-              Rats, souris, punaises de lit, cafards, guêpes et frelons : nos
-              techniciens certifiés {site.certification} éliminent
-              l&apos;infestation, assainissent les lieux et bouchent les accès.
-              Sur place en 30 à 45 minutes maximum dans les 8 départements franciliens,
-              prix confirmé par devis avant de commencer.
+              Rats, punaises de lit, cafards, guêpes et frelons : nos
+              techniciens certifiés {site.certification} éliminent,
+              assainissent et bouchent les accès. Sur place en 30 à 45
+              minutes, 24h/24, prix confirmé avant de commencer.
             </p>
             <div className="hero-actions">
               <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">

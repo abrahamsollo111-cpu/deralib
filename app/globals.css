@@ -572,13 +572,41 @@ body.menu-open { overflow: hidden; }
     var(--azur);
 }
 @media (max-width: 900px) {
+  /* mobile : hero centré, filtre plus léger en bas pour révéler la
+     photo, texte court et CTA pleine largeur — vraie première section */
   .hero-home {
     background:
-      linear-gradient(180deg, rgba(251, 249, 244, 0.9) 0%, rgba(251, 249, 244, 0.78) 100%),
-      linear-gradient(rgba(30, 91, 70, 0.18), rgba(30, 91, 70, 0.18)),
-      url("/images/techniciens-deratisation-entrepot.jpg") center / cover no-repeat,
+      linear-gradient(180deg, rgba(251, 249, 244, 0.93) 0%, rgba(251, 249, 244, 0.82) 55%, rgba(251, 249, 244, 0.55) 100%),
+      linear-gradient(rgba(30, 91, 70, 0.14), rgba(30, 91, 70, 0.14)),
+      url("/images/techniciens-deratisation-entrepot.jpg") center 25% / cover no-repeat,
       var(--azur);
+    padding: 40px 0 72px;
+    text-align: center;
   }
+  .hero-home .kicker {
+    justify-content: center;
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+  }
+  .hero-home .kicker::before { display: none; }
+  .hero-home h1 { font-size: clamp(2rem, 8.5vw, 2.5rem); }
+  .hero-home .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.04rem;
+    margin-bottom: 26px;
+  }
+  .hero-home .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-home .hero-points { justify-content: center; }
+  .hero-home .dispo { justify-content: center; width: 100%; }
+  /* la carte protocole reste alignée à gauche (liste d'étapes) */
+  .hero-home .hero-card { text-align: left; }
 }
 .hero-home { padding: 52px 0 96px; }
 .hero-page { padding: 36px 0 84px; }
