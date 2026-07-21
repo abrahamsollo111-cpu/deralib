@@ -38,7 +38,9 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* overflow-x: clip (et non hidden) : bloque tout défilement latéral
+   sans casser le header sticky */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   /* police système : lisible, rapide, sans effet « template » */
@@ -461,7 +463,9 @@ body.scrolled .header {
 .mnav-panel.is-open li:nth-child(4) { transition-delay: 160ms; }
 .mnav-panel.is-open li:nth-child(5) { transition-delay: 200ms; }
 .mnav-panel.is-open li:nth-child(6) { transition-delay: 240ms; }
-.mnav-panel.is-open .mnav-call { transition-delay: 300ms; }
+.mnav-panel.is-open li:nth-child(7) { transition-delay: 280ms; }
+.mnav-panel.is-open li:nth-child(8) { transition-delay: 320ms; }
+.mnav-panel.is-open .mnav-call { transition-delay: 360ms; }
 .mnav-call { width: 100%; margin-top: 18px; }
 
 body.menu-open { overflow: hidden; }
@@ -488,12 +492,25 @@ body.menu-open { overflow: hidden; }
   .logo-word { font-size: 1.2rem; }
   .logo-tagline { font-size: 0.5rem; letter-spacing: 0.22em; }
 }
-@media (max-width: 400px) {
-  .call-cta span { display: none; } /* icône seule sur très petits écrans */
+/* petits écrans : chaque élément du header se compacte pour que
+   logo + bouton d'appel + burger tiennent TOUJOURS dans la largeur,
+   sans défilement latéral */
+@media (max-width: 560px) {
+  .header-inner { padding: 0 14px; gap: 8px; }
+  .call-cta span { display: none; } /* icône seule */
   .call-cta { padding: 10px 12px; }
+  .header-cta { gap: 8px; }
+  .logo { gap: 8px; min-width: 0; }
+  .logo-text { min-width: 0; }
+  .logo-tagline { font-size: 0.46rem; letter-spacing: 0.14em; }
+  .mnav-toggle { width: 40px; height: 40px; }
 }
-@media (max-width: 355px) {
-  .logo-tagline { display: none; }
+@media (max-width: 480px) {
+  /* la tagline n'a pas la place : on garde un logo net plutôt
+     qu'un texte rogné. Sélecteur à 2 classes : la règle de base
+     .logo-tagline { display: block } est déclarée plus bas dans le
+     fichier et gagnerait sinon à spécificité égale. */
+  .logo .logo-tagline { display: none; }
 }
 
 /* ---------- Logo ---------- */

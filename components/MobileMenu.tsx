@@ -70,8 +70,18 @@ export default function MobileMenu() {
             </li>
           ))}
           <li>
+            <Link href="/conseils" onClick={close}>
+              Conseils
+            </Link>
+          </li>
+          <li>
             <Link href="/a-propos" onClick={close}>
               À propos
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" onClick={close}>
+              Contact
             </Link>
           </li>
           <li>
