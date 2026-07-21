@@ -41,57 +41,156 @@ const HERO_IMAGES: Record<string, { src: string; alt: string; w: number; h: numb
   },
 };
 
-// Gabarit commun des 4 pages piliers (dératisation, punaises, cafards, guêpes)
+/**
+ * Chaque nuisible a sa propre mise en page (hero, signes, protocole,
+ * prix, réassurance) : quatre pages sœurs mais jamais identiques,
+ * pour un rendu vivant et crédible. Les variantes partagent les mêmes
+ * primitives CSS — la cohérence visuelle reste totale.
+ */
+const VARIANTES: Record<
+  string,
+  {
+    hero: "imageDroite" | "imageGauche" | "banniere" | "flottant";
+    signes: "cartes" | "carrousel" | "liste";
+    protocole: "timeline" | "grille" | "timelineH";
+    prix: "table" | "cartes";
+    reassurance: "bandeau" | "badges";
+    alerteSecurite?: boolean;
+  }
+> = {
+  deratisation: { hero: "imageDroite", signes: "cartes", protocole: "timeline", prix: "table", reassurance: "bandeau" },
+  "punaises-de-lit": { hero: "imageGauche", signes: "carrousel", protocole: "grille", prix: "cartes", reassurance: "badges" },
+  cafards: { hero: "banniere", signes: "liste", protocole: "timelineH", prix: "table", reassurance: "bandeau" },
+  "guepes-frelons": { hero: "flottant", signes: "cartes", protocole: "grille", prix: "cartes", reassurance: "badges", alerteSecurite: true },
+};
+
+// Badges de réassurance compacts affichés dans le hero (variante "badges")
+function HeroBadges({ slug }: { slug: string }) {
+  const badges =
+    slug === "punaises-de-lit"
+      ? ["2 passages J+0 et J+15 inclus", `Certifiés ${site.certification}`, "Sur place en 30-45 min"]
+      : ["Combinaison intégrale", "Perche télescopique jusqu'à 20 m", "Urgences 7j/7 — 24h/24"];
+  return (
+    <div className="hero-points" style={{ marginTop: 20 }}>
+      {badges.map((b) => (
+        <span key={b} className="hero-point">
+          <IconCheck size={14} /> {b}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function NuisiblePage({ slug }: { slug: string }) {
   const n = getNuisible(slug);
+  const v = VARIANTES[slug] ?? VARIANTES["deratisation"];
+  const img = HERO_IMAGES[slug];
   const autres = NUISIBLES_SLUGS.filter((s) => s !== slug);
-  // Pages villes existantes pour ce nuisible (pour l'instant : dératisation/paris)
   const villes = slug === "deratisation" ? getAllVilles() : [];
+
+  const boutonsCta = (
+    <div className="hero-actions">
+      <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
+        <IconPhone /> {site.telephone}
+      </a>
+      <Link href="/devis" className="btn btn-outline btn-lg">
+        Devis gratuit en ligne
+      </Link>
+    </div>
+  );
+  const dispo = (
+    <p className="dispo">
+      <span className="dot" />
+      <span>
+        Nous répondons <em>{site.horaires}</em> — appel sans engagement
+      </span>
+    </p>
+  );
 
   return (
     <>
       <Breadcrumbs crumbs={[{ label: NUISIBLES_LABELS[slug] }]} />
 
-      {/* ===== HERO (texte + illustration du nuisible) ===== */}
-      <section className="hero hero-page">
-        <div className="container hero-service" style={{ position: "relative", zIndex: 2 }}>
-          <div>
-            <h1>{n.h1}</h1>
-            <p className="lead" style={{ margin: "20px 0 28px" }}>
-              {n.intro}
-            </p>
-            <div className="hero-actions">
-              <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
-                <IconPhone /> {site.telephone}
-              </a>
-              <Link href="/devis" className="btn btn-outline btn-lg">
-                Devis gratuit en ligne
-              </Link>
-            </div>
-            <p className="dispo">
-              <span className="dot" />
-              <span>
-                Nous répondons <em>{site.horaires}</em> — appel sans engagement
-              </span>
-            </p>
+      {/* ===== HERO — 4 variantes ===== */}
+      {v.hero === "banniere" ? (
+        <>
+          {/* bannière photo pleine largeur, texte en dessous */}
+          <div className="banniere-photo">
+            <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority />
           </div>
-          {HERO_IMAGES[slug] && (
+          <section className="hero hero-page" style={{ paddingTop: 36, paddingBottom: 56 }}>
+            <div className="container">
+              <h1 style={{ maxWidth: 860 }}>{n.h1}</h1>
+              <p className="lead" style={{ maxWidth: 760, margin: "18px 0 26px" }}>
+                {n.intro}
+              </p>
+              {boutonsCta}
+              {dispo}
+            </div>
+          </section>
+        </>
+      ) : v.hero === "flottant" ? (
+        // image flottante dans le texte d'intro (utile : comparatif des espèces)
+        <section className="hero hero-page">
+          <div className="container" style={{ position: "relative", zIndex: 2 }}>
+            <h1 style={{ maxWidth: 900 }}>{n.h1}</h1>
+            <div className="intro-flottante">
+              <figure className="img-flottante photo-cadre">
+                <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority />
+                <figcaption>Guêpe, frelon asiatique, frelon européen : la taille ne fait pas le danger.</figcaption>
+              </figure>
+              <p className="lead">{n.intro}</p>
+            </div>
+            {boutonsCta}
+            {dispo}
+            <HeroBadges slug={slug} />
+          </div>
+        </section>
+      ) : (
+        // deux colonnes, image à droite ou à gauche selon la page
+        <section className="hero hero-page">
+          <div
+            className={`container hero-service${v.hero === "imageGauche" ? " hero-service-inverse" : ""}`}
+            style={{ position: "relative", zIndex: 2 }}
+          >
+            <div>
+              <h1>{n.h1}</h1>
+              <p className="lead" style={{ margin: "20px 0 28px" }}>
+                {n.intro}
+              </p>
+              {boutonsCta}
+              {dispo}
+              {v.reassurance === "badges" && <HeroBadges slug={slug} />}
+            </div>
             <figure className="hero-service-img">
-              <Image
-                src={HERO_IMAGES[slug].src}
-                alt={HERO_IMAGES[slug].alt}
-                width={HERO_IMAGES[slug].w}
-                height={HERO_IMAGES[slug].h}
-                priority
-              />
+              <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority />
             </figure>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
-      <Reassurance />
+      {/* ===== RÉASSURANCE (bandeau 4 tuiles ou déjà en badges hero) ===== */}
+      {v.reassurance === "bandeau" ? <Reassurance /> : <div style={{ height: 8 }} />}
 
-      {/* ===== SIGNES ===== */}
+      {/* ===== ALERTE SÉCURITÉ (guêpes-frelons) ===== */}
+      {v.alerteSecurite && (
+        <section style={{ paddingTop: 26, paddingBottom: 0 }}>
+          <div className="container">
+            <div className="alerte-secu" data-reveal>
+              <IconAlert size={22} />
+              <div>
+                <strong>N&apos;approchez pas du nid.</strong> Un nid dérangé
+                peut déclencher une attaque groupée. En cas de piqûres
+                multiples, de piqûre dans la bouche ou la gorge, ou de
+                réaction allergique : appelez le 15 immédiatement. Pour le
+                nid, appelez-nous — l&apos;intervention est notre métier.
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== SIGNES — 3 variantes ===== */}
       <section>
         <div className="container">
           <div className="section-head" data-reveal>
@@ -99,16 +198,32 @@ export default function NuisiblePage({ slug }: { slug: string }) {
             <h2>Les signes</h2>
             <p>Un seul de ces signes suffit pour agir.</p>
           </div>
-          <div className="signs-grid" data-stagger>
-            {n.signes.map((s) => (
-              <div key={s.titre} className="sign" data-reveal>
-                <h3>
-                  <IconSearch size={16} /> {s.titre}
-                </h3>
-                <p>{s.detail}</p>
-              </div>
-            ))}
-          </div>
+          {v.signes === "liste" ? (
+            <ul className="signes-liste" data-stagger>
+              {n.signes.map((s) => (
+                <li key={s.titre} data-reveal>
+                  <IconSearch size={15} />
+                  <div>
+                    <strong>{s.titre}.</strong> {s.detail}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div
+              className={v.signes === "carrousel" ? "signs-grid signes-carrousel" : "signs-grid"}
+              data-stagger
+            >
+              {n.signes.map((s) => (
+                <div key={s.titre} className="sign" data-reveal>
+                  <h3>
+                    <IconSearch size={16} /> {s.titre}
+                  </h3>
+                  <p>{s.detail}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -125,26 +240,64 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* ===== PLAN D'ACTION ===== */}
+      {/* ===== PROTOCOLE — 3 variantes ===== */}
       <section>
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Notre protocole</span>
             <h2>Le déroulé</h2>
           </div>
-          <div className="steps-grid" data-stagger>
-            {n.plan_action.map((e, i) => (
-              <div key={e.etape} className="step" data-reveal>
-                <span className="step-num">{i + 1}</span>
-                <h3>{e.etape.replace(/^\d+\.\s*/, "")}</h3>
-                <p>{e.detail}</p>
-              </div>
-            ))}
+
+          {v.protocole === "timeline" ? (
+            <ol className="timeline" data-stagger>
+              {n.plan_action.map((e, i) => (
+                <li key={e.etape} data-reveal>
+                  <span className="timeline-num">{i + 1}</span>
+                  <div className="timeline-corps">
+                    <h3>{e.etape.replace(/^\d+\.\s*/, "")}</h3>
+                    <p>{e.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          ) : v.protocole === "timelineH" ? (
+            <ol className="timeline-h" data-stagger>
+              {n.plan_action.map((e, i) => (
+                <li key={e.etape} data-reveal>
+                  <span className="timeline-num">{i + 1}</span>
+                  <h3>{e.etape.replace(/^\d+\.\s*/, "")}</h3>
+                  <p>{e.detail}</p>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div className="steps-grid" data-stagger>
+              {n.plan_action.map((e, i) => (
+                <div key={e.etape} className="step" data-reveal>
+                  <span className="step-num">{i + 1}</span>
+                  <h3>{e.etape.replace(/^\d+\.\s*/, "")}</h3>
+                  <p>{e.detail}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* CTA intermédiaire intégré au contenu (position naturelle :
+              juste après le déroulé, quand la confiance est installée) */}
+          <div className="cta-inline" data-reveal>
+            <p>
+              <strong>Un doute sur votre situation ?</strong> Décrivez-la au
+              téléphone : un technicien vous dit en 5 minutes si une
+              intervention s&apos;impose — et à quel prix.
+            </p>
+            <a href={site.telephoneHref} className="btn btn-primary btn-call">
+              <IconPhone size={16} /> {site.telephone}
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ===== SECTIONS DÉTAILLÉES (déroulé, méthodes, cas particuliers) ===== */}
+      {/* ===== SECTIONS DÉTAILLÉES ===== */}
       {n.sections_longues && n.sections_longues.length > 0 && (
         <section className="section-azur">
           <div className="container prose" style={{ maxWidth: 860 }}>
@@ -168,8 +321,8 @@ export default function NuisiblePage({ slug }: { slug: string }) {
             <h2>Les bons gestes</h2>
           </div>
           <ul className="checklist" data-stagger>
-            {n.gestes_urgence.map((g, i) => (
-              <li key={g} data-reveal={i % 2 === 0 ? "left" : "right"}>
+            {n.gestes_urgence.map((g) => (
+              <li key={g} data-reveal>
                 <IconAlert /> {g}
               </li>
             ))}
@@ -177,24 +330,39 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* ===== PRIX ===== */}
-      <section>
+      {/* ===== PRIX — table ou cartes ===== */}
+      <section className={v.prix === "cartes" ? "section-azur" : undefined}>
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">Tarifs</span>
             <h2>Nos tarifs</h2>
           </div>
-          <div data-reveal>
-            <PriceTable prix={n.prix} note={n.prix_note} />
-          </div>
+          {v.prix === "cartes" ? (
+            <>
+              <div className="prix-cartes" data-stagger>
+                {n.prix.map((p) => (
+                  <div key={p.prestation} className="prix-carte" data-reveal>
+                    <h3>{p.prestation}</h3>
+                    <strong>{p.fourchette}</strong>
+                    <p>{p.note}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="price-note" data-reveal>{n.prix_note}</p>
+            </>
+          ) : (
+            <div data-reveal>
+              <PriceTable prix={n.prix} note={n.prix_note} />
+            </div>
+          )}
         </div>
       </section>
 
       {/* ===== AVIS CLIENTS (rien tant que content/avis.json est vide) ===== */}
       <Avis />
 
-      {/* ===== FAQ ===== */}
-      <section className="section-azur">
+      {/* ===== FAQ (accordéon commun — allège la page, surtout en mobile) ===== */}
+      <section className={v.prix === "cartes" ? undefined : "section-azur"}>
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">FAQ</span>
@@ -233,9 +401,9 @@ export default function NuisiblePage({ slug }: { slug: string }) {
                 <IconCheck size={15} /> Nos pages locales :
               </p>
               <div className="chip-list">
-                {villes.map((v) => (
-                  <Link key={v.slug} href={`/${slug}/${v.slug}`} className="chip">
-                    Dératisation {v.nom} ({v.departement})
+                {villes.map((vl) => (
+                  <Link key={vl.slug} href={`/${slug}/${vl.slug}`} className="chip">
+                    Dératisation {vl.nom} ({vl.departement})
                   </Link>
                 ))}
               </div>
