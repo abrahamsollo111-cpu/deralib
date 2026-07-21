@@ -549,16 +549,16 @@ body.menu-open { overflow: hidden; }
    — tant qu'il n'existe pas, seul le fond beige s'affiche. */
 .hero-home {
   background:
-    linear-gradient(90deg, rgba(251, 249, 244, 0.97) 0%, rgba(251, 249, 244, 0.86) 48%, rgba(243, 239, 230, 0.3) 100%),
-    linear-gradient(rgba(30, 91, 70, 0.32), rgba(30, 91, 70, 0.32)),
+    linear-gradient(90deg, rgba(251, 249, 244, 0.93) 0%, rgba(251, 249, 244, 0.78) 48%, rgba(243, 239, 230, 0.12) 100%),
+    linear-gradient(rgba(30, 91, 70, 0.18), rgba(30, 91, 70, 0.18)),
     url("/images/techniciens-deratisation-entrepot.jpg") center 30% / cover no-repeat,
     var(--azur);
 }
 @media (max-width: 900px) {
   .hero-home {
     background:
-      linear-gradient(180deg, rgba(251, 249, 244, 0.94) 0%, rgba(251, 249, 244, 0.86) 100%),
-      linear-gradient(rgba(30, 91, 70, 0.32), rgba(30, 91, 70, 0.32)),
+      linear-gradient(180deg, rgba(251, 249, 244, 0.9) 0%, rgba(251, 249, 244, 0.78) 100%),
+      linear-gradient(rgba(30, 91, 70, 0.18), rgba(30, 91, 70, 0.18)),
       url("/images/techniciens-deratisation-entrepot.jpg") center / cover no-repeat,
       var(--azur);
   }
