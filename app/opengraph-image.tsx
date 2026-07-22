@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import fs from "fs";
+import path from "path";
 import { site } from "@/lib/config";
 
 // Image Open Graph 1200×630 générée au build (partages réseaux sociaux
@@ -9,6 +11,12 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OgImage() {
+  // logo officiel embarqué en data URL (généré au build, aucun réseau)
+  const logoData = fs.readFileSync(
+    path.join(process.cwd(), "public", "images", "logo-deralib.png")
+  );
+  const logoUrl = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -27,19 +35,17 @@ export default function OgImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           <div
             style={{
-              width: 88,
-              height: 88,
+              width: 92,
+              height: 92,
               borderRadius: 18,
-              background: "#1e5b46",
-              color: "#ffffff",
+              background: "#ffffff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 56,
-              fontWeight: 800,
             }}
           >
-            D
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logoUrl} alt="" width={72} height={73} />
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 54, fontWeight: 800 }}>{site.marque}</div>

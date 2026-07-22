@@ -488,7 +488,7 @@ body.menu-open { overflow: hidden; }
   .header-devis { display: none; }
   .mnav-toggle { display: flex; }
   .header-cta { gap: 9px; }
-  .logo-badge { width: 34px; height: 34px; border-radius: 10px; font-size: 1.05rem; }
+  .logo-img { width: 34px; }
   .logo-word { font-size: 1.2rem; }
   .logo-tagline { font-size: 0.5rem; letter-spacing: 0.22em; }
 }
@@ -515,21 +515,16 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- Logo ---------- */
 
-.logo { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo:hover { text-decoration: none; }
-.logo-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: var(--grad);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.25rem;
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(21, 119, 219, 0.28);
+/* logo image (D au rat, fond transparent) */
+.logo-img { width: 40px; height: auto; flex-shrink: 0; }
+/* footer (fond vert sombre) : pastille blanche pour garder le contraste */
+.logo-invert .logo-img {
+  background: var(--white);
+  border-radius: 9px;
+  padding: 4px;
+  width: 44px;
 }
 .logo-text { line-height: 1.1; }
 .logo-word { font-size: 1.28rem; font-weight: 800; letter-spacing: -0.02em; color: var(--marine); }
