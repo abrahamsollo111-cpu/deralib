@@ -40,6 +40,11 @@ export default function Page() {
                 <strong>SIRET :</strong> {site.siret}
               </li>
             )}
+            {estRenseigne(site.rcs) && (
+              <li>
+                <strong>Immatriculation :</strong> {site.rcs}
+              </li>
+            )}
             {estRenseigne(site.adresse) && (
               <li>
                 <strong>Siège social :</strong> {site.adresse},{" "}

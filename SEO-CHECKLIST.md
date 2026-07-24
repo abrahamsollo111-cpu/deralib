@@ -50,10 +50,12 @@ officiel Google « Bien débuter en référencement naturel ».
 
 ## ⚠️ TODO restants (données réelles à fournir par l'entreprise)
 
-1. **lib/config.ts** : téléphone réel (remplace 01 23 45 67 89 partout),
-   raison sociale + SIRET + adresse du siège (activera address/geo dans le
-   JSON-LD), nom du dirigeant, année de création de la société, nombre de
-   techniciens, n° Certibiocide, assureur RC pro + n° de contrat
+1. **lib/config.ts** — ✅ fait le 2026-07-23 : téléphone (07 43 51 02 94),
+   SAS Deralib, SIRET 917 410 011 00014, 45 rue Boursault 75017 Paris,
+   Stéphane Grinesse, RCS Pontoise, address/geo JSON-LD, carte /contact.
+   RESTE : année de création, nombre de techniciens, n° Certibiocide
+   (ne JAMAIS l'inventer), assureur RC pro + n° de contrat, email à
+   confirmer (contact@deralib.com)
 2. **content/avis.json** : recopier les vrais avis Google dès qu'ils
    existent (JAMAIS de faux avis)
 3. **public/images/** : vraies photos (dirigeant, équipe, véhicule siglé,

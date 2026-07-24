@@ -15,14 +15,12 @@ export const site = {
   marque: "Deralib",
   slogan: "Dératisation & anti-nuisibles",
 
-  // ⚠️ TODO : raison sociale complète (ex. « Deralib SARL »)
-  raisonSociale: "Deralib [TODO : forme juridique]",
-  // ⚠️ TODO : SIRET réel (14 chiffres) — affiché au footer et aux mentions légales
-  siret: "TODO — SIRET à compléter",
-  // ⚠️ TODO : adresse réelle du siège — identique à la fiche Google Business Profile
-  adresse: "TODO — adresse du siège à compléter",
-  codePostal: "TODO",
-  villeSiege: "TODO",
+  raisonSociale: "SAS Deralib",
+  siret: "917 410 011 00014",
+  // Siège — doit rester identique à la fiche Google Business Profile
+  adresse: "45 rue Boursault",
+  codePostal: "75017",
+  villeSiege: "Paris",
   // ⚠️ TODO : année de création réelle de la société ACTUELLE (pour le
   // footer et les mentions légales). Ne pas confondre avec l'expérience.
   anneeCreation: "TODO",
@@ -30,19 +28,19 @@ export const site = {
   // par le client). On affiche « 20 ans de métier », jamais « entreprise
   // fondée il y a 20 ans » : la société actuelle est récente.
   anneesMetier: "20",
-  // ⚠️ TODO : prénom et nom réels du dirigeant
-  dirigeant: "TODO — Prénom Nom du dirigeant",
-  dirigeantTitre: "Dirigeant fondateur", // TODO : compléter avec diplômes/certifications réels
+  dirigeant: "Stéphane Grinesse",
+  dirigeantTitre: "Dirigeant — directeur de la publication",
   // ⚠️ TODO : nombre réel de techniciens (utilisé sur la page À propos)
   nbTechniciens: "TODO",
 
   // Contact
-  // ⚠️ TODO : numéro réel de l'entreprise — remplace le placeholder partout
-  telephone: "01 23 45 67 89",
-  // ⚠️ TODO : même numéro au format international (tel:+33...)
-  telephoneHref: "tel:+33123456789",
-  // ⚠️ TODO : adresse email réelle de contact
+  telephone: "07 43 51 02 94",
+  telephoneHref: "tel:+33743510294",
+  // TODO : confirmer que cette adresse email est active et relevée
   email: "contact@deralib.com",
+
+  // Immatriculation (fournie par le client)
+  rcs: "RCS Pontoise 917 410 011",
 
   // Web
   url: "https://www.deralib.com",

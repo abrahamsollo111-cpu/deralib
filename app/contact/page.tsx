@@ -91,11 +91,17 @@ export default function Page() {
                 </ul>
               </div>
 
-              {/* ⚠️ TODO CARTE : une fois l'adresse du siège renseignée,
-                  intégrer ici une carte (iframe Google Maps ou OpenStreetMap)
-                  centrée sur le siège, avec title="Localisation du siège de
-                  Deralib". Ne pas afficher de carte tant que l'adresse est
-                  inconnue. */}
+              {/* carte OpenStreetMap centrée sur le siège (45 rue
+                  Boursault, Paris 17e) — chargée en différé */}
+              <div className="contact-bloc" style={{ marginTop: 22, padding: 0, overflow: "hidden" }}>
+                <iframe
+                  title="Localisation du siège de Deralib — 45 rue Boursault, 75017 Paris"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=2.3129%2C48.8803%2C2.3269%2C48.8883&layer=mapnik&marker=48.8843%2C2.3199"
+                  style={{ width: "100%", height: 260, border: 0, display: "block" }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
 
               <div className="contact-bloc" style={{ marginTop: 22 }}>
                 <h2 style={{ fontSize: "1.2rem" }}>Zone d&apos;intervention</h2>

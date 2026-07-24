@@ -67,9 +67,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 telephone: site.telephone,
                 email: site.email,
                 priceRange: "€€",
-                // TODO : ajouter "address" (PostalAddress) et "geo" dès que
-                // l'adresse du siège est renseignée dans lib/config.ts —
-                // identique à la fiche Google Business Profile
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: site.adresse,
+                  postalCode: site.codePostal,
+                  addressLocality: site.villeSiege,
+                  addressCountry: "FR",
+                },
+                // coordonnées approximatives du 45 rue Boursault, Paris 17e
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: 48.8843,
+                  longitude: 2.3199,
+                },
                 openingHoursSpecification: {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: site.horairesSchema.jours,
