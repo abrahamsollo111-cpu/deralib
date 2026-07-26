@@ -34,8 +34,8 @@ export const site = {
   nbTechniciens: "TODO",
 
   // Contact
-  telephone: "07 43 51 02 94",
-  telephoneHref: "tel:+33743510294",
+  telephone: "01 72 68 21 30",
+  telephoneHref: "tel:+33172682130",
   // TODO : confirmer que cette adresse email est active et relevée
   email: "contact@deralib.com",
 

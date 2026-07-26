@@ -50,7 +50,7 @@ officiel Google « Bien débuter en référencement naturel ».
 
 ## ⚠️ TODO restants (données réelles à fournir par l'entreprise)
 
-1. **lib/config.ts** — ✅ fait le 2026-07-23 : téléphone (07 43 51 02 94),
+1. **lib/config.ts** — ✅ fait le 2026-07-23 : téléphone (01 72 68 21 30, ligne pro fixe — 2026-07-26),
    SAS Deralib, SIRET 917 410 011 00014, 45 rue Boursault 75017 Paris,
    Stéphane Grinesse, RCS Pontoise, address/geo JSON-LD, carte /contact.
    RESTE : année de création, nombre de techniciens, n° Certibiocide
