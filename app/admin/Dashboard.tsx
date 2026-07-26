@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Lead, Reglages } from "@/lib/store";
+import Accueil from "./Accueil";
 import Demandes from "./Demandes";
 import Statistiques from "./Statistiques";
 import Suivi from "./Suivi";
@@ -9,6 +10,7 @@ import SiteInfos from "./SiteInfos";
 import Prospection from "./Prospection";
 
 const ONGLETS = [
+  { cle: "accueil", label: "Accueil" },
   { cle: "demandes", label: "Demandes" },
   { cle: "stats", label: "Statistiques" },
   { cle: "suivi", label: "Suivi & balises" },
@@ -23,7 +25,7 @@ export default function Dashboard({
 }: {
   stockagePersistant: boolean;
 }) {
-  const [onglet, setOnglet] = useState<Onglet>("demandes");
+  const [onglet, setOnglet] = useState<Onglet>("accueil");
   const [leads, setLeads] = useState<Lead[]>([]);
   const [reglages, setReglages] = useState<Reglages | null>(null);
   const [chargement, setChargement] = useState(true);
@@ -97,10 +99,13 @@ export default function Dashboard({
       )}
 
       <main className="admin-contenu">
-        {chargement && onglet === "demandes" ? (
+        {chargement && (onglet === "demandes" || onglet === "accueil") ? (
           <p className="admin-vide">Chargement…</p>
         ) : (
           <>
+            {onglet === "accueil" && (
+              <Accueil leads={leads} reglages={reglages} aller={setOnglet} />
+            )}
             {onglet === "demandes" && (
               <Demandes leads={leads} recharger={chargerLeads} />
             )}
