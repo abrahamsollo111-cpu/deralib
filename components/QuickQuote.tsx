@@ -58,14 +58,15 @@ const TOTAL = CHOICES.length + 1; // + l'étape coordonnées
 
 /**
  * Formulaire de devis express en 4 étapes : une question à la fois,
- * réponse au clic → étape suivante. Pour l'instant, l'envoi ouvre
- * l'application email du visiteur pré-remplie (comme /devis).
- * TODO plus tard : brancher un service d'envoi (Formspree / Resend).
+ * réponse au clic → étape suivante. La demande est enregistrée
+ * directement sur le site et consultable dans /admin.
  */
 export default function QuickQuote() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
+  const [envoi, setEnvoi] = useState(false);
+  const [erreur, setErreur] = useState("");
 
   const pick = (key: string, value: string) => {
     setAnswers((a) => ({ ...a, [key]: value }));
@@ -73,23 +74,35 @@ export default function QuickQuote() {
     window.setTimeout(() => setStep((s) => s + 1), 200);
   };
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setEnvoi(true);
+    setErreur("");
     const data = new FormData(e.currentTarget);
-    const lignes = [
-      `Nuisible : ${answers.nuisible}`,
-      `Lieu : ${answers.lieu}`,
-      `Urgence : ${answers.urgence}`,
-      `Nom : ${data.get("nom")}`,
-      `Téléphone : ${data.get("tel")}`,
-      `Ville / code postal : ${data.get("ville")}`,
-    ];
-    const subject = encodeURIComponent(
-      `Devis express — ${answers.nuisible} — ${answers.lieu}`
-    );
-    const body = encodeURIComponent(lignes.join("\n"));
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nom: data.get("nom"),
+          tel: data.get("tel"),
+          ville: data.get("ville"),
+          nuisible: answers.nuisible,
+          lieu: answers.lieu,
+          urgence: answers.urgence,
+          societe: data.get("societe"), // piège à robots
+          source: "devis-express",
+          page: window.location.pathname,
+        }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.erreur || "Envoi impossible");
+      setSent(true);
+    } catch (err) {
+      setErreur(err instanceof Error ? err.message : "Envoi impossible");
+      setEnvoi(false);
+    }
   }
 
   if (sent) {
@@ -99,13 +112,12 @@ export default function QuickQuote() {
           <span className="qq-done-ico">
             <IconCheck size={28} />
           </span>
-          <h3>Merci, c&apos;est presque envoyé !</h3>
+          <h3>Demande envoyée</h3>
           <p>
-            Votre application email s&apos;est ouverte avec votre demande
-            pré-remplie : il ne reste qu&apos;à appuyer sur « Envoyer ». Un
-            technicien vous rappelle rapidement.
+            Merci, votre demande est bien enregistrée. Un technicien vous
+            rappelle au plus vite — nous répondons {site.horaires}.
           </p>
-          <p style={{ marginTop: 14 }}>Encore plus rapide :</p>
+          <p style={{ marginTop: 14 }}>C&apos;est urgent ? Appelez :</p>
           <a href={site.telephoneHref} className="btn btn-primary btn-call" style={{ marginTop: 10 }}>
             <IconPhone /> {site.telephone}
           </a>
@@ -171,9 +183,29 @@ export default function QuickQuote() {
               <input id="qq-ville" name="ville" required placeholder="Ex. Paris 11e" />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary btn-lg" style={{ width: "100%", marginTop: 20 }}>
-            Recevoir mon devis gratuit
+          {/* champ piège : invisible pour les humains, rempli par les robots */}
+          <input
+            type="text"
+            name="societe"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden
+            style={{ position: "absolute", left: "-9999px", width: 1, height: 1 }}
+          />
+          <button
+            type="submit"
+            className="btn btn-primary btn-lg"
+            style={{ width: "100%", marginTop: 20 }}
+            disabled={envoi}
+          >
+            {envoi ? "Envoi en cours…" : "Recevoir mon devis gratuit"}
           </button>
+          {erreur && (
+            <p className="form-erreur">
+              {erreur}. Appelez-nous au{" "}
+              <a href={site.telephoneHref}>{site.telephone}</a>.
+            </p>
+          )}
           <p className="qq-note">
             Réponse rapide d&apos;un technicien — sans engagement. Vos données ne
             sont jamais revendues.

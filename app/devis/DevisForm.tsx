@@ -5,51 +5,61 @@ import { site } from "@/lib/config";
 import { NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/nuisibles";
 
 /**
- * Formulaire de devis — version de départ.
- * Pour l'instant, l'envoi ouvre l'application email du visiteur (mailto),
- * pré-remplie vers l'adresse de l'entreprise.
- * TODO plus tard : brancher un service type Formspree / Resend pour
- * recevoir les demandes directement par email sans action du visiteur.
+ * Formulaire de devis complet.
+ * La demande est enregistrée directement sur le site (visible dans
+ * /admin) : plus aucune ouverture de l'application email du visiteur.
  */
-export default function DevisForm() {
-  const [sent, setSent] = useState(false);
+export default function DevisForm({ source = "formulaire-devis" }: { source?: string }) {
+  const [etat, setEtat] = useState<"saisie" | "envoi" | "envoye" | "erreur">("saisie");
+  const [erreur, setErreur] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setEtat("envoi");
     const data = new FormData(e.currentTarget);
-    const lignes = [
-      `Nom : ${data.get("nom")}`,
-      `Téléphone : ${data.get("tel")}`,
-      `Ville / code postal : ${data.get("ville")}`,
-      `Nuisible : ${data.get("nuisible")}`,
-      `Type de lieu : ${data.get("lieu")}`,
-      "",
-      "Description :",
-      String(data.get("message") || ""),
-    ];
-    const subject = encodeURIComponent(
-      `Demande de devis — ${data.get("nuisible")} à ${data.get("ville")}`
-    );
-    const body = encodeURIComponent(lignes.join("\n"));
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nom: data.get("nom"),
+          tel: data.get("tel"),
+          ville: data.get("ville"),
+          nuisible: data.get("nuisible"),
+          lieu: data.get("lieu"),
+          message: data.get("message"),
+          societe: data.get("societe"), // piège à robots
+          source,
+          page: typeof window !== "undefined" ? window.location.pathname : "",
+        }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.erreur || "Envoi impossible");
+      setEtat("envoye");
+    } catch (err) {
+      setErreur(err instanceof Error ? err.message : "Envoi impossible");
+      setEtat("erreur");
+    }
   }
 
-  if (sent) {
+  if (etat === "envoye") {
     return (
-      <div role="status">
-        <h3 style={{ marginBottom: 10 }}>Merci !</h3>
-        <p style={{ fontSize: "0.95rem" }}>
-          Votre application email s&apos;est ouverte avec votre demande
-          pré-remplie : il ne reste qu&apos;à appuyer sur « Envoyer ».
+      <div role="status" className="form-confirmation">
+        <span className="form-confirmation-ico" aria-hidden>
+          ✓
+        </span>
+        <h3>Demande envoyée</h3>
+        <p>
+          Merci, votre demande est bien enregistrée. Un technicien vous rappelle
+          au plus vite — nous répondons {site.horaires}.
         </p>
-        <p style={{ fontSize: "0.95rem", marginTop: 12 }}>
-          Vous pouvez aussi nous appeler directement au{" "}
-          <a href={site.telephoneHref} style={{ fontWeight: 700 }}>
-            {site.telephone}
-          </a>
-          .
+        <p style={{ marginTop: 14, fontSize: "0.93rem" }}>
+          C&apos;est urgent ? Appelez directement :
         </p>
+        <a href={site.telephoneHref} className="btn btn-primary" style={{ marginTop: 10 }}>
+          {site.telephone}
+        </a>
       </div>
     );
   }
@@ -105,9 +115,33 @@ export default function DevisForm() {
           />
         </div>
       </div>
-      <button type="submit" className="btn btn-primary btn-lg" style={{ width: "100%", marginTop: 22 }}>
-        Recevoir mon devis gratuit
+
+      {/* champ piège : invisible pour les humains, rempli par les robots */}
+      <input
+        type="text"
+        name="societe"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1 }}
+      />
+
+      <button
+        type="submit"
+        className="btn btn-primary btn-lg"
+        style={{ width: "100%", marginTop: 22 }}
+        disabled={etat === "envoi"}
+      >
+        {etat === "envoi" ? "Envoi en cours…" : "Recevoir mon devis gratuit"}
       </button>
+
+      {etat === "erreur" && (
+        <p className="form-erreur">
+          {erreur}. Appelez-nous directement au{" "}
+          <a href={site.telephoneHref}>{site.telephone}</a>.
+        </p>
+      )}
+
       <p style={{ fontSize: "0.78rem", color: "var(--text-light)", marginTop: 14 }}>
         En envoyant ce formulaire, vous acceptez d&apos;être recontacté au sujet de
         votre demande. Vos données ne sont jamais revendues — voir notre{" "}

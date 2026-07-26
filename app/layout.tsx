@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollFx from "@/components/ScrollFx";
 import JsonLd from "@/components/JsonLd";
+import Tracking from "@/components/Tracking";
 import { site, DEPARTEMENTS } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="contenu">{children}</main>
         <Footer />
         <ScrollFx />
+        <Tracking />
         <JsonLd
           data={{
             "@context": "https://schema.org",
