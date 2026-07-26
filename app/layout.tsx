@@ -7,6 +7,11 @@ import JsonLd from "@/components/JsonLd";
 import Tracking from "@/components/Tracking";
 import { site, DEPARTEMENTS } from "@/lib/config";
 
+/** Régénération périodique : les pages restent servies statiquement
+ *  (rapides, bonnes pour le SEO) tout en reprenant automatiquement les
+ *  balises de suivi modifiées depuis /admin, sans redéploiement. */
+export const revalidate = 600;
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {

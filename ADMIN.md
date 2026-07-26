@@ -23,23 +23,21 @@ de passe. Ne jamais l'écrire dans le code (le dépôt GitHub est public).
 Pour changer de mot de passe : modifier la variable puis redéployer.
 Toutes les sessions ouvertes sont alors invalidées.
 
-## 2. Activer l'enregistrement durable des demandes (fortement recommandé)
+## 2. Enregistrement durable des demandes — ✅ déjà configuré
 
-Sans cette étape, les demandes sont conservées de façon **temporaire** et
-disparaissent au redéploiement du site. Configuration gratuite, 5 minutes :
+Le stockage utilise **Vercel Blob** (service natif Vercel, aucun compte
+tiers) : store privé `deralib-donnees`, région Francfort, variable
+`BLOB_READ_WRITE_TOKEN` connectée aux trois environnements.
 
-1. Créer un compte sur [upstash.com](https://upstash.com)
-2. **Create Database** → type *Redis* → région **Europe (Frankfurt)** →
-   plan **Free**
-3. Onglet **REST API** : copier `UPSTASH_REDIS_REST_URL` et
-   `UPSTASH_REDIS_REST_TOKEN`
-4. Les ajouter dans Vercel (mêmes étapes qu'au point 1)
-5. Redéployer
+- Une demande = un fichier indépendant : aucune demande ne peut en
+  écraser une autre, même en cas d'envois simultanés.
+- Accès **privé** : les données personnelles ne sont jamais lisibles par
+  URL, même en connaissant l'adresse exacte (vérifié : HTTP 403).
+- Volume négligeable (quelques Ko), très loin des quotas inclus.
 
-Le bandeau orange du dashboard disparaît une fois la configuration active.
-
-Volumes du plan gratuit : 10 000 commandes par jour — très largement
-suffisant (une demande = 1 commande).
+En cas de bascule vers un autre hébergement, le code accepte aussi
+Upstash Redis : il suffit de définir `UPSTASH_REDIS_REST_URL` et
+`UPSTASH_REDIS_REST_TOKEN` (elles prennent le relais automatiquement).
 
 ## 3. Utilisation
 

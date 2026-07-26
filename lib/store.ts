@@ -1,17 +1,17 @@
 import fs from "fs";
 import path from "path";
 import os from "os";
+import { put, list, del, get } from "@vercel/blob";
 
 /**
  * Stockage des demandes (leads) et des réglages du dashboard.
  *
- * Deux modes, choisis automatiquement :
- *  1. Upstash Redis (recommandé, gratuit) si les variables
- *     UPSTASH_REDIS_REST_URL et UPSTASH_REDIS_REST_TOKEN existent.
- *     → persistance réelle, survit aux déploiements.
- *  2. Fichier local, sinon. Pratique en développement, mais sur Vercel
- *     le disque est éphémère : les demandes seraient perdues au
- *     redéploiement. Voir ADMIN.md pour la configuration.
+ * Trois modes, choisis automatiquement dans cet ordre :
+ *  1. Vercel Blob (actif en production) — natif, aucun compte tiers.
+ *     Une demande = un fichier : aucune écriture concurrente possible,
+ *     donc aucune demande ne peut en écraser une autre.
+ *  2. Upstash Redis, si les variables UPSTASH_* sont présentes.
+ *  3. Fichier local, en dernier recours (développement).
  */
 
 export type Lead = {
@@ -52,14 +52,21 @@ const REGLAGES_VIDE: Reglages = {
   notes: "",
 };
 
+const PREFIXE_LEADS = "leads/";
+const CHEMIN_REGLAGES = "reglages.json";
 const CLE_LEADS = "deralib:leads";
 const CLE_REGLAGES = "deralib:reglages";
 
+const tokenBlob = process.env.BLOB_READ_WRITE_TOKEN;
 const urlUpstash = process.env.UPSTASH_REDIS_REST_URL;
 const tokenUpstash = process.env.UPSTASH_REDIS_REST_TOKEN;
-export const stockagePersistant = Boolean(urlUpstash && tokenUpstash);
 
-// ---------- Upstash (API REST, aucune dépendance npm) ----------
+const modeBlob = Boolean(tokenBlob);
+const modeUpstash = !modeBlob && Boolean(urlUpstash && tokenUpstash);
+/** Vrai si les données survivent aux redéploiements */
+export const stockagePersistant = modeBlob || modeUpstash;
+
+// ---------- Upstash (API REST) ----------
 
 async function redis(commande: (string | number)[], revalidate?: number) {
   const res = await fetch(urlUpstash!, {
@@ -69,7 +76,6 @@ async function redis(commande: (string | number)[], revalidate?: number) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(commande),
-    // par défaut : aucune mise en cache (données d'administration)
     ...(revalidate === undefined
       ? { cache: "no-store" as const }
       : { next: { revalidate } }),
@@ -79,10 +85,9 @@ async function redis(commande: (string | number)[], revalidate?: number) {
   return data.result;
 }
 
-// ---------- Fichier local (développement / secours) ----------
+// ---------- Fichier local (développement) ----------
 
 function cheminFichier(nom: string) {
-  // en production le dépôt est en lecture seule : on écrit dans /tmp
   const base =
     process.env.NODE_ENV === "production"
       ? path.join(os.tmpdir(), "deralib")
@@ -105,7 +110,7 @@ function ecrireFichier(nom: string, valeur: unknown) {
   try {
     fs.writeFileSync(cheminFichier(nom), JSON.stringify(valeur, null, 2));
   } catch {
-    // disque en lecture seule : on n'interrompt pas la requête
+    /* disque en lecture seule : on n'interrompt pas la requête */
   }
 }
 
@@ -121,7 +126,16 @@ export async function ajouterLead(
     statut: "nouveau",
     note: "",
   };
-  if (stockagePersistant) {
+
+  if (modeBlob) {
+    await put(`${PREFIXE_LEADS}${complet.id}.json`, JSON.stringify(complet), {
+      access: "private", // données personnelles : jamais accessibles par URL
+      contentType: "application/json",
+      addRandomSuffix: false,
+      token: tokenBlob,
+      allowOverwrite: true,
+    });
+  } else if (modeUpstash) {
     await redis(["HSET", CLE_LEADS, complet.id, JSON.stringify(complet)]);
   } else {
     const tous = lireFichier<Lead[]>("leads.json", []);
@@ -133,9 +147,28 @@ export async function ajouterLead(
 
 export async function listerLeads(): Promise<Lead[]> {
   let leads: Lead[] = [];
-  if (stockagePersistant) {
+
+  if (modeBlob) {
+    const { blobs } = await list({ prefix: PREFIXE_LEADS, token: tokenBlob });
+    // lecture en parallèle par lots pour rester rapide
+    const lots: (typeof blobs)[] = [];
+    for (let i = 0; i < blobs.length; i += 20) lots.push(blobs.slice(i, i + 20));
+    for (const lot of lots) {
+      const resultats = await Promise.all(
+        lot.map(async (b) => {
+          try {
+            const r = await get(b.pathname, { token: tokenBlob, access: "private" });
+            if (!r) return null;
+            return (await new Response(r.stream).json()) as Lead;
+          } catch {
+            return null;
+          }
+        })
+      );
+      leads.push(...resultats.filter((l): l is Lead => l !== null));
+    }
+  } else if (modeUpstash) {
     const plat = (await redis(["HGETALL", CLE_LEADS])) as string[] | null;
-    // HGETALL renvoie [champ, valeur, champ, valeur, ...]
     for (let i = 1; i < (plat?.length ?? 0); i += 2) {
       try {
         leads.push(JSON.parse(plat![i]) as Lead);
@@ -146,6 +179,7 @@ export async function listerLeads(): Promise<Lead[]> {
   } else {
     leads = lireFichier<Lead[]>("leads.json", []);
   }
+
   return leads.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
@@ -157,7 +191,16 @@ export async function majLead(
   const lead = tous.find((l) => l.id === id);
   if (!lead) return null;
   const maj = { ...lead, ...champs };
-  if (stockagePersistant) {
+
+  if (modeBlob) {
+    await put(`${PREFIXE_LEADS}${id}.json`, JSON.stringify(maj), {
+      access: "private",
+      contentType: "application/json",
+      addRandomSuffix: false,
+      token: tokenBlob,
+      allowOverwrite: true,
+    });
+  } else if (modeUpstash) {
     await redis(["HSET", CLE_LEADS, id, JSON.stringify(maj)]);
   } else {
     ecrireFichier(
@@ -169,7 +212,13 @@ export async function majLead(
 }
 
 export async function supprimerLead(id: string): Promise<void> {
-  if (stockagePersistant) {
+  if (modeBlob) {
+    const { blobs } = await list({
+      prefix: `${PREFIXE_LEADS}${id}`,
+      token: tokenBlob,
+    });
+    await Promise.all(blobs.map((b) => del(b.url, { token: tokenBlob })));
+  } else if (modeUpstash) {
     await redis(["HDEL", CLE_LEADS, id]);
   } else {
     const tous = await listerLeads();
@@ -180,14 +229,23 @@ export async function supprimerLead(id: string): Promise<void> {
   }
 }
 
-/** Réglages du site. `revalidate` permet de mettre en cache la lecture
- *  faite par le layout public (balises de suivi). */
+/** Réglages du site. `revalidate` met en cache la lecture faite par le
+ *  layout public (balises de suivi) pour préserver la performance. */
 export async function lireReglages(revalidate?: number): Promise<Reglages> {
   try {
-    if (stockagePersistant) {
-      const brut = (await redis(["GET", CLE_REGLAGES], revalidate)) as
-        | string
-        | null;
+    if (modeBlob) {
+      const { blobs } = await list({ prefix: CHEMIN_REGLAGES, token: tokenBlob });
+      if (!blobs.length) return REGLAGES_VIDE;
+      const res = await get(blobs[0].pathname, {
+        token: tokenBlob,
+        access: "private",
+      });
+      if (!res) return REGLAGES_VIDE;
+      const data = (await new Response(res.stream).json()) as Partial<Reglages>;
+      return { ...REGLAGES_VIDE, ...data };
+    }
+    if (modeUpstash) {
+      const brut = (await redis(["GET", CLE_REGLAGES], revalidate)) as string | null;
       return brut
         ? { ...REGLAGES_VIDE, ...(JSON.parse(brut) as Partial<Reglages>) }
         : REGLAGES_VIDE;
@@ -201,7 +259,16 @@ export async function lireReglages(revalidate?: number): Promise<Reglages> {
 export async function ecrireReglages(r: Partial<Reglages>): Promise<Reglages> {
   const actuel = await lireReglages();
   const maj = { ...actuel, ...r };
-  if (stockagePersistant) {
+
+  if (modeBlob) {
+    await put(CHEMIN_REGLAGES, JSON.stringify(maj), {
+      access: "private",
+      contentType: "application/json",
+      addRandomSuffix: false,
+      token: tokenBlob,
+      allowOverwrite: true,
+    });
+  } else if (modeUpstash) {
     await redis(["SET", CLE_REGLAGES, JSON.stringify(maj)]);
   } else {
     ecrireFichier("reglages.json", maj);
