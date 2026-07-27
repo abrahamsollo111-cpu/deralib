@@ -1,5 +1,13 @@
 {
-  "_TODO": "⚠️ AUCUN AVIS AFFICHÉ TANT QUE CE TABLEAU EST VIDE — ne JAMAIS inventer d'avis. Dès que l'entreprise a de vrais avis Google, les recopier ici à l'identique (prénom, ville, date, note sur 5, texte) ou intégrer le widget Google. Exemple de format : { \"prenom\": \"Karim\", \"ville\": \"Montreuil\", \"date\": \"2026-05\", \"note\": 5, \"texte\": \"...\" }",
-  "urlProfilGoogle": "",
-  "avis": []
+  "_regle": "⚠️ UNIQUEMENT de vrais avis Google, recopiés à l'identique (prénom, ville, date, note, texte). Ne JAMAIS inventer ni retoucher un avis.",
+  "urlProfilGoogle": "https://g.page/r/CZxd_o4lXN7VEAE",
+  "avis": [
+    {
+      "prenom": "Fares",
+      "ville": "Paris 7e",
+      "date": "2026-07",
+      "note": 5,
+      "texte": "Intervention réalisé avec succès toute mes punaises de lit on été éradiqué dans mon appartement à Paris 7 eme. Prix annoncé respecté. Excellent rien a dire"
+    }
+  ]
 }
