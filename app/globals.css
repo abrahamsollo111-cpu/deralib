@@ -233,8 +233,8 @@ section { padding: 56px 0; position: relative; }
   align-items: center;
   justify-content: center;
   gap: 9px;
-  padding: 13px 24px;
-  border-radius: 8px;
+  padding: 13px 26px;
+  border-radius: 999px; /* pilule : plus chaleureux qu'un rectangle administratif */
   font-weight: 700;
   font-size: 0.98rem;
   font-family: inherit;
