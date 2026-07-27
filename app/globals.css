@@ -2396,3 +2396,18 @@ body:has(.admin-page) { background: #f4f6f4; }
 }
 .acc-raccourcis-grille a:hover,
 .acc-raccourcis-grille button:hover { border-color: var(--bleu); transform: translateY(-1px); text-decoration: none; }
+
+/* ---------- Avis : provenance Google ---------- */
+
+.avis-source { display: flex; align-items: flex-start; gap: 9px; }
+.avis-source svg { flex-shrink: 0; margin-top: 3px; }
+.avis-source strong { color: var(--marine); }
+.avis-tete { display: flex; justify-content: space-between; align-items: center; }
+.avis-g { display: inline-flex; opacity: 0.9; }
+.avis-provenance {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-top: 3px;
+}
