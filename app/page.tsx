@@ -310,6 +310,10 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== AVIS CLIENTS — placés haut : la preuve sociale juste
+          après l'offre (rien ne s'affiche tant que avis.json est vide) ===== */}
+      <Avis />
+
       {/* ===== PROFESSIONNELS ===== */}
       <section className="section-azur">
         <div className="container two-col">
@@ -527,9 +531,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ===== AVIS CLIENTS (rien tant que content/avis.json est vide) ===== */}
-      <Avis />
 
       {/* ===== FAQ ===== */}
       <section className="section-azur">
