@@ -324,15 +324,16 @@ body.scrolled .header {
   justify-content: space-between;
   gap: 16px;
 }
-.header-nav { display: flex; align-items: center; gap: 16px; }
-.header-nav a {
+.header-nav { display: flex; align-items: center; gap: 30px; }
+.header-nav > a,
+.nav-groupe-btn {
   color: var(--marine);
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   position: relative;
   white-space: nowrap; /* jamais de lien sur deux lignes */
 }
-.header-nav a::after {
+.header-nav > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -343,9 +344,70 @@ body.scrolled .header {
   background: var(--grad);
   transition: right 0.22s ease;
 }
-.header-nav a:hover { color: var(--bleu); text-decoration: none; }
-.header-nav a:hover::after { right: 0; }
-.header-cta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-nav > a:hover { color: var(--bleu); text-decoration: none; }
+.header-nav > a:hover::after { right: 0; }
+
+/* menu déroulant « Nos services » */
+.nav-groupe { position: relative; }
+.nav-groupe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.nav-groupe-btn svg { transition: transform 0.22s ease; margin-top: 1px; }
+.nav-groupe:hover .nav-groupe-btn,
+.nav-groupe:focus-within .nav-groupe-btn { color: var(--bleu); }
+.nav-groupe:hover .nav-groupe-btn svg,
+.nav-groupe:focus-within .nav-groupe-btn svg { transform: rotate(180deg); }
+/* le panneau garde un « pont » invisible (padding-top) pour que le
+   survol ne se coupe pas entre le bouton et la liste */
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: -18px;
+  padding-top: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.2s ease;
+  z-index: 110;
+}
+.nav-groupe:hover .nav-menu,
+.nav-groupe:focus-within .nav-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.nav-menu-inner {
+  min-width: 230px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(27, 47, 39, 0.14);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.nav-menu-inner a {
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--marine);
+  white-space: nowrap;
+}
+.nav-menu-inner a:hover {
+  background: var(--beige);
+  color: var(--bleu);
+  text-decoration: none;
+}
+
+.header-cta { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
 .header-phone {
   display: inline-flex;
   align-items: center;
@@ -360,15 +422,14 @@ body.scrolled .header {
 /* écrans intermédiaires : on resserre progressivement pour garantir
    de l'air entre le logo et le menu à toutes les largeurs */
 @media (max-width: 1360px) {
-  .header-nav { gap: 13px; }
-  .header-nav a { font-size: 0.86rem; }
-  .header-cta { gap: 10px; }
+  .header-nav { gap: 22px; }
+  .header-cta { gap: 14px; }
   .header-phone { font-size: 0.92rem; }
   .logo-tagline { font-size: 0.48rem; letter-spacing: 0.18em; }
 }
 @media (max-width: 1270px) {
-  .header-nav { gap: 10px; }
-  .header-nav a { font-size: 0.84rem; }
+  .header-nav { gap: 16px; }
+  .header-nav > a, .nav-groupe-btn { font-size: 0.88rem; }
   .header .btn { padding: 10px 14px; }
   .header-phone-note { display: none; }
 }

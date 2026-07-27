@@ -15,15 +15,26 @@ export default function Header() {
       <header className="header">
         <div className="container header-inner">
           <Logo />
-          {/* navigation desktop */}
+          {/* navigation desktop : les 5 services sont regroupés dans un
+              menu déroulant pour que la barre reste aérée (4 entrées) */}
           <nav className="header-nav" aria-label="Navigation principale">
-            {/* le dépigeonnage reste hors barre desktop (place limitée) :
-                il est dans le menu mobile, le footer et le maillage interne */}
-            {NUISIBLES_SLUGS.filter((s) => s !== "depigeonnage").map((slug) => (
-              <Link key={slug} href={`/${slug}`}>
-                {NUISIBLES_LABELS[slug]}
-              </Link>
-            ))}
+            <div className="nav-groupe">
+              <button type="button" className="nav-groupe-btn" aria-haspopup="true">
+                Nos services
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div className="nav-menu">
+                <div className="nav-menu-inner">
+                  {NUISIBLES_SLUGS.map((slug) => (
+                    <Link key={slug} href={`/${slug}`}>
+                      {NUISIBLES_LABELS[slug]}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             {/* « À propos» reste accessible via le footer et le menu
                 mobile : la barre desktop privilégie les pages business */}
             <Link href="/professionnels">Professionnels</Link>
