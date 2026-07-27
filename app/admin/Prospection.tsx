@@ -66,8 +66,12 @@ export default function Prospection({ lienAvis }: { lienAvis: string }) {
     }
   }
 
+  // On guide la question, jamais la réponse : inviter le client à dire
+  // QUELLE intervention et OÙ fait venir naturellement les mots-clés
+  // (« dératisation », « punaises », sa ville) sans dicter le texte —
+  // des avis variés et authentiques, ce que Google valorise.
   const modeleSms = lienAvis
-    ? `Bonjour, c'est Deralib. Merci pour votre confiance lors de notre intervention. Si vous êtes satisfait, un avis Google nous aiderait beaucoup : ${lienAvis}`
+    ? `Bonjour, c'est Deralib. Merci pour votre confiance ! Si vous êtes satisfait, un avis Google nous aiderait beaucoup. En 2 phrases : quelle intervention avons-nous faite chez vous, dans quelle ville, et comment ça s'est passé ? ${lienAvis}`
     : "";
 
   return (
