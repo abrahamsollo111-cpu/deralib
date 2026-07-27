@@ -16,6 +16,7 @@ import {
   IconBedbug,
   IconRoach,
   IconWasp,
+  IconPigeon,
 } from "./Icons";
 
 type Option = { v: string; icon: React.ReactElement; tile: string };
@@ -30,6 +31,7 @@ const CHOICES: Choice[] = [
       { v: "Punaises de lit", icon: <IconBedbug />, tile: "tile-indigo" },
       { v: "Cafards", icon: <IconRoach />, tile: "tile-cyan" },
       { v: "Guêpes / frelons", icon: <IconWasp />, tile: "tile-teal" },
+      { v: "Pigeons", icon: <IconPigeon />, tile: "tile-cyan" },
       { v: "Autre / je ne sais pas", icon: <IconSearch />, tile: "tile-bleu" },
     ],
   },

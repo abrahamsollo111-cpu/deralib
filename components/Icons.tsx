@@ -184,9 +184,23 @@ export function IconQuestion({ size = 22 }: P) {
   );
 }
 
+export function IconPigeon({ size = 26 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M7 20c-1.5-1.6-2.5-3.8-2.5-6.2C4.5 9 7.5 5.5 12 5.5c1 0 1.9.15 2.7.45" />
+      <path d="M14.7 6c.4-1.2 1.5-2 2.8-2 .3.8 1 1.4 1.9 1.6-.2 1.3-1.2 2.3-2.5 2.6" />
+      <circle cx="16.4" cy="5.6" r="0.4" fill="currentColor" stroke="none" />
+      <path d="M16.9 8.2c.4 1 .6 2.2.6 3.6 0 4.4-2.7 8.2-6.5 8.2-1.4 0-2.7-.5-3.7-1.4" />
+      <path d="M9 13c2.5-.5 5.5-2 7-4.5" />
+      <path d="M11 20.8 10.6 23M13 20.6l.4 2.4" />
+    </svg>
+  );
+}
+
 export const NUISIBLE_ICONS: Record<string, (p: P) => React.ReactElement> = {
   deratisation: IconRat,
   "punaises-de-lit": IconBedbug,
   cafards: IconRoach,
   "guepes-frelons": IconWasp,
+  depigeonnage: IconPigeon,
 };

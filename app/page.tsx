@@ -93,6 +93,14 @@ const FAQ_HOME = [
     r: "Rarement. Le gel anti-blattes et les postes d'appâtage ne nécessitent aucune évacuation. Pour un traitement insecticide contre les punaises de lit, il faut s'absenter quelques heures le temps du séchage — nous vous donnons les consignes exactes avant l'intervention.",
   },
   {
+    q: "Vos traitements sont-ils garantis ?",
+    r: "Oui : nos traitements sont garantis, avec les conditions précisées noir sur blanc sur le devis. Si les nuisibles reviennent pendant la période couverte, nous revenons.",
+  },
+  {
+    q: "Y a-t-il une majoration la nuit, le week-end ou les jours fériés ?",
+    r: "Non, aucune. Nous répondons 24h/24 et 7j/7 au même tarif : le prix annoncé au devis est le même un dimanche soir qu'un mardi matin.",
+  },
+  {
     q: "Délivrez-vous une facture et un rapport d'intervention ?",
     r: "Oui, systématiquement : facture et rapport détaillant le diagnostic, les produits utilisés et les recommandations. Pour les commerces et copropriétés, nous fournissons aussi le registre de suivi exigé lors des contrôles sanitaires.",
   },
@@ -296,6 +304,7 @@ export default function Home() {
               <Link href="/guepes-frelons" className="chip">guêpe commune</Link>
               <Link href="/guepes-frelons" className="chip">frelon européen</Link>
               <Link href="/guepes-frelons" className="chip">frelon asiatique</Link>
+              <Link href="/depigeonnage" className="chip">pigeons (dépigeonnage)</Link>
             </div>
           </div>
         </div>

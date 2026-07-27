@@ -62,6 +62,9 @@ const VARIANTES: Record<
   "punaises-de-lit": { hero: "imageGauche", signes: "carrousel", protocole: "grille", prix: "cartes", reassurance: "badges" },
   cafards: { hero: "banniere", signes: "liste", protocole: "timelineH", prix: "table", reassurance: "bandeau" },
   "guepes-frelons": { hero: "flottant", signes: "cartes", protocole: "grille", prix: "cartes", reassurance: "badges", alerteSecurite: true },
+  // TODO PHOTO : ajouter une vraie photo de chantier dépigeonnage
+  // (pics/filets posés) dans HERO_IMAGES dès qu'elle existe
+  depigeonnage: { hero: "imageDroite", signes: "cartes", protocole: "timeline", prix: "table", reassurance: "bandeau" },
 };
 
 // Badges de réassurance compacts affichés dans le hero (variante "badges")
@@ -150,7 +153,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         // deux colonnes, image à droite ou à gauche selon la page
         <section className="hero hero-page">
           <div
-            className={`container hero-service${v.hero === "imageGauche" ? " hero-service-inverse" : ""}`}
+            className={`container${img ? " hero-service" : ""}${v.hero === "imageGauche" ? " hero-service-inverse" : ""}`}
             style={{ position: "relative", zIndex: 2 }}
           >
             <div>
@@ -162,9 +165,11 @@ export default function NuisiblePage({ slug }: { slug: string }) {
               {dispo}
               {v.reassurance === "badges" && <HeroBadges slug={slug} />}
             </div>
-            <figure className="hero-service-img">
-              <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority />
-            </figure>
+            {img && (
+              <figure className="hero-service-img">
+                <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority />
+              </figure>
+            )}
           </div>
         </section>
       )}

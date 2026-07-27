@@ -6,6 +6,7 @@ export const NUISIBLES_SLUGS = [
   "punaises-de-lit",
   "cafards",
   "guepes-frelons",
+  "depigeonnage",
 ] as const;
 
 export const NUISIBLES_LABELS: Record<string, string> = {
@@ -13,6 +14,7 @@ export const NUISIBLES_LABELS: Record<string, string> = {
   "punaises-de-lit": "Punaises de lit",
   cafards: "Cafards",
   "guepes-frelons": "Guêpes & frelons",
+  depigeonnage: "Dépigeonnage",
 };
 
 // Couleur de la tuile d'icône associée à chaque nuisible
@@ -21,4 +23,5 @@ export const NUISIBLES_TILES: Record<string, string> = {
   "punaises-de-lit": "tile-indigo",
   cafards: "tile-cyan",
   "guepes-frelons": "tile-teal",
+  depigeonnage: "tile-cyan",
 };

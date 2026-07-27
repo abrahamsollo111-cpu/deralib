@@ -6,6 +6,7 @@ const PAGES = [
   { url: "/punaises-de-lit", label: "Punaises de lit" },
   { url: "/cafards", label: "Cafards" },
   { url: "/guepes-frelons", label: "Guêpes & frelons" },
+  { url: "/depigeonnage", label: "Dépigeonnage" },
   { url: "/deratisation/paris", label: "Dératisation Paris (75)" },
   { url: "/deratisation/hauts-de-seine", label: "Hauts-de-Seine (92)" },
   { url: "/deratisation/seine-saint-denis", label: "Seine-Saint-Denis (93)" },
@@ -62,7 +63,7 @@ export default function SiteInfos({
               : "temporaire — à configurer"}
           </li>
           <li className="ok">
-            <span>Référencement</span> sitemap soumis, 21 pages
+            <span>Référencement</span> sitemap soumis, 23 pages
           </li>
         </ul>
 

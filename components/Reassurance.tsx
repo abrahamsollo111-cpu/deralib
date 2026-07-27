@@ -25,8 +25,8 @@ export default function Reassurance() {
     {
       icon: <IconDoc />,
       tile: "tile-indigo",
-      strong: "Devis gratuit",
-      sub: "Prix confirmé avant intervention",
+      strong: "Traitements garantis",
+      sub: "Aucune majoration soir & week-end",
     },
   ];
   return (

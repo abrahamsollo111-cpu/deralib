@@ -17,7 +17,9 @@ export default function Header() {
           <Logo />
           {/* navigation desktop */}
           <nav className="header-nav" aria-label="Navigation principale">
-            {NUISIBLES_SLUGS.map((slug) => (
+            {/* le dépigeonnage reste hors barre desktop (place limitée) :
+                il est dans le menu mobile, le footer et le maillage interne */}
+            {NUISIBLES_SLUGS.filter((s) => s !== "depigeonnage").map((slug) => (
               <Link key={slug} href={`/${slug}`}>
                 {NUISIBLES_LABELS[slug]}
               </Link>

@@ -187,6 +187,13 @@ export default function Page() {
               <IconCheck /> Tarif annuel connu d&apos;avance, sur devis après
               visite du site
             </li>
+            <li data-reveal>
+              <IconCheck /> Traitements garantis — conditions écrites au devis
+            </li>
+            <li data-reveal>
+              <IconCheck /> Aucune majoration la nuit, le week-end ni les
+              jours fériés
+            </li>
           </ul>
         </div>
       </section>
@@ -220,6 +227,9 @@ export default function Page() {
             </Link>
             <Link href="/guepes-frelons" className="chip">
               Destruction nid de guêpes
+            </Link>
+            <Link href="/depigeonnage" className="chip">
+              Dépigeonnage (façades, cours, enseignes)
             </Link>
             <Link href="/deratisation/paris" className="chip">
               Dératisation Paris (75)
