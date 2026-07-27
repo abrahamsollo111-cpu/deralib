@@ -19,6 +19,7 @@ const PAGES = [
   { url: "/conseils/reconnaitre-punaises-de-lit", label: "— Reconnaître les punaises" },
   { url: "/conseils/rat-ou-souris-differences", label: "— Rat ou souris" },
   { url: "/conseils/nid-de-guepes-ne-pas-detruire-soi-meme", label: "— Nid de guêpes" },
+  { url: "/professionnels", label: "Professionnels" },
   { url: "/a-propos", label: "À propos" },
   { url: "/contact", label: "Contact" },
   { url: "/devis", label: "Devis" },

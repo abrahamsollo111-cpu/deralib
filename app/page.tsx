@@ -278,6 +278,66 @@ export default function Home() {
               );
             })}
           </div>
+
+          {/* maillage fin : les espèces précises que couvrent nos 4
+              protocoles — capte les recherches « blatte germanique »,
+              « frelon asiatique », etc. */}
+          <div style={{ marginTop: 30 }} data-reveal>
+            <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
+              Nous traitons notamment :
+            </p>
+            <div className="chip-list">
+              <Link href="/deratisation" className="chip">rat brun (surmulot)</Link>
+              <Link href="/deratisation" className="chip">rat noir</Link>
+              <Link href="/deratisation" className="chip">souris grise</Link>
+              <Link href="/punaises-de-lit" className="chip">punaises de lit</Link>
+              <Link href="/cafards" className="chip">blatte germanique</Link>
+              <Link href="/cafards" className="chip">blatte orientale</Link>
+              <Link href="/guepes-frelons" className="chip">guêpe commune</Link>
+              <Link href="/guepes-frelons" className="chip">frelon européen</Link>
+              <Link href="/guepes-frelons" className="chip">frelon asiatique</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PROFESSIONNELS ===== */}
+      <section className="section-azur">
+        <div className="container two-col">
+          <div data-reveal="left">
+            <span className="kicker">Professionnels</span>
+            <h2>
+              Vous êtes un <span className="grad-text">établissement ?</span>
+            </h2>
+            <p style={{ marginTop: 16 }}>
+              Restaurants, hôtels, copropriétés, bureaux, écoles : nous
+              intervenons hors horaires d&apos;ouverture, en discrétion, avec le
+              registre sanitaire que vos contrôles exigent. Contrats annuels
+              avec passages programmés pour les sites exposés.
+            </p>
+            <div style={{ marginTop: 22 }}>
+              <Link href="/professionnels" className="btn btn-primary">
+                Nos solutions pour les professionnels <IconArrow size={14} />
+              </Link>
+            </div>
+          </div>
+          <div className="chip-list" data-reveal="right" style={{ alignContent: "center" }}>
+            {[
+              "Restaurants",
+              "Commerces de bouche",
+              "Hôtels",
+              "Locations saisonnières",
+              "Copropriétés & syndics",
+              "Bureaux",
+              "Crèches & écoles",
+              "Entrepôts",
+              "Chantiers",
+            ].map((s) => (
+              <Link key={s} href="/professionnels" className="chip">
+                {s}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

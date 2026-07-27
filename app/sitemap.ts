@@ -5,7 +5,7 @@ import { getAllVilles, getAllArticles, NUISIBLES_SLUGS } from "@/lib/content";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const statiques = ["", "/a-propos", "/devis", "/contact"].map((p) => ({
+  const statiques = ["", "/a-propos", "/devis", "/contact", "/professionnels"].map((p) => ({
     url: `${site.url}${p}`,
     lastModified: now,
     priority: p === "" ? 1 : 0.7,

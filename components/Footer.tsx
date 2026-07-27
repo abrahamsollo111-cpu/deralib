@@ -32,6 +32,9 @@ export default function Footer() {
                   <Link href={`/${slug}`}>{NUISIBLES_LABELS[slug]}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/professionnels">Offre professionnels</Link>
+              </li>
             </ul>
           </div>
           <div>

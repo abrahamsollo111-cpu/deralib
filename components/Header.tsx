@@ -22,8 +22,10 @@ export default function Header() {
                 {NUISIBLES_LABELS[slug]}
               </Link>
             ))}
+            {/* « À propos» reste accessible via le footer et le menu
+                mobile : la barre desktop privilégie les pages business */}
+            <Link href="/professionnels">Professionnels</Link>
             <Link href="/conseils">Conseils</Link>
-            <Link href="/a-propos">À propos</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="header-cta">
