@@ -67,6 +67,48 @@ const VARIANTES: Record<
   depigeonnage: { hero: "imageDroite", signes: "cartes", protocole: "timeline", prix: "table", reassurance: "bandeau" },
 };
 
+/**
+ * Section « terrain » : photo d'intervention + texte, insérée après le
+ * protocole. La photo glisse en parallax dans son cadre, le texte décrit
+ * uniquement notre façon réelle de travailler (équipement, méthode).
+ */
+const SECTIONS_TERRAIN: Record<
+  string,
+  {
+    src: string;
+    alt: string;
+    w: number;
+    h: number;
+    cote: "gauche" | "droite";
+    titre: string;
+    texte: string;
+    legende: string;
+  }
+> = {
+  "guepes-frelons": {
+    src: "/images/technicien-deralib-nid-guepes.jpg",
+    alt: "Technicien Deralib en combinaison intégrale traitant un nid de guêpes sous une toiture",
+    w: 900,
+    h: 1130,
+    cote: "gauche",
+    titre: "Protégé, équipé, méthodique",
+    texte:
+      "Combinaison intégrale, masque de protection, perche télescopique : le technicien traite le nid à distance de sécurité, puis le décroche et l'évacue quand l'emplacement le permet. Vous restez à l'intérieur pendant toute l'intervention.",
+    legende: "Traitement d'un nid sous gouttière, à la perche.",
+  },
+  cafards: {
+    src: "/images/traitement-cafards-cuisine-appartement.jpg",
+    alt: "Technicien appliquant un traitement anti-cafards sous l'évier d'une cuisine",
+    w: 678,
+    h: 452,
+    cote: "droite",
+    titre: "Le traitement se joue au centimètre",
+    texte:
+      "Le gel appât s'applique aux points de passage réels des blattes : charnières, dessous d'évier, moteur du réfrigérateur, plinthes. C'est un travail de précision, pièce par pièce — et c'est pour ça qu'un insecticide en bombe ne règle jamais une infestation.",
+    legende: "Application du gel appât sous l'évier, zone la plus colonisée.",
+  },
+};
+
 // Badges de réassurance compacts affichés dans le hero (variante "badges")
 function HeroBadges({ slug }: { slug: string }) {
   const badges =
@@ -88,6 +130,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
   const n = getNuisible(slug);
   const v = VARIANTES[slug] ?? VARIANTES["deratisation"];
   const img = HERO_IMAGES[slug];
+  const terrain = SECTIONS_TERRAIN[slug];
   const autres = NUISIBLES_SLUGS.filter((s) => s !== slug);
   const villes = slug === "deratisation" ? getAllVilles() : [];
 
@@ -301,6 +344,35 @@ export default function NuisiblePage({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+
+      {/* ===== SUR LE TERRAIN (photo d'intervention + parallax) ===== */}
+      {terrain && (
+        <section className="section-terrain">
+          <div
+            className={`container photo-split${terrain.cote === "droite" ? " photo-split-inverse" : ""}`}
+          >
+            <figure className="photo-split-img" data-reveal>
+              <Image
+                src={terrain.src}
+                alt={terrain.alt}
+                width={terrain.w}
+                height={terrain.h}
+                sizes="(max-width: 900px) 100vw, 520px"
+                data-parallax="0.05"
+              />
+              <figcaption>{terrain.legende}</figcaption>
+            </figure>
+            <div className="photo-split-texte" data-reveal>
+              <span className="kicker">Sur le terrain</span>
+              <h2>{terrain.titre}</h2>
+              <p>{terrain.texte}</p>
+              <a href={site.telephoneHref} className="btn btn-primary btn-call">
+                <IconPhone size={16} /> {site.telephone}
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== SECTIONS DÉTAILLÉES ===== */}
       {n.sections_longues && n.sections_longues.length > 0 && (

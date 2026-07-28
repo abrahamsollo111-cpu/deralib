@@ -677,6 +677,220 @@ body.menu-open { overflow: hidden; }
 .hero-home { padding: 52px 0 96px; }
 .hero-page { padding: 36px 0 84px; }
 
+/* ---------- Bande photo immersive (parallax) ---------- */
+/* l'image dépasse de son cadre (hauteur 130 %) : le déplacement
+   parallax [data-parallax] glisse dans cette marge sans montrer de bord */
+.photo-band-section { padding: 10px 0 42px; }
+.photo-band {
+  position: relative;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  isolation: isolate;
+}
+.photo-band img {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 42vw, 440px);
+  object-fit: cover;
+  scale: 1.18; /* marge de sécurité pour le glissement parallax */
+}
+.photo-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(27, 47, 39, 0) 42%, rgba(27, 47, 39, 0.55));
+  pointer-events: none;
+}
+.photo-band-card {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  right: 22px;
+  z-index: 2;
+  max-width: 520px;
+  /* pas de backdrop-filter : le flou re-rastérisé sous une image en
+     parallax fait planter le compositing GPU de certains navigateurs */
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 13px;
+  padding: 16px 20px;
+  box-shadow: var(--shadow-md);
+}
+.photo-band-card strong { color: var(--marine); font-size: 1.02rem; }
+.photo-band-card p { margin-top: 5px; font-size: 0.9rem; color: var(--text); }
+.photo-band-locale { margin: 46px 0 54px; }
+@media (max-width: 640px) {
+  .photo-band img { height: 250px; }
+  .photo-band-card { left: 12px; right: 12px; bottom: 12px; padding: 13px 15px; }
+}
+
+/* ---------- Sections locales (pages départements) ---------- */
+/* alternance titre/texte + grand numéro en parallax : le contenu
+   respire au lieu de former un seul bloc de texte */
+.locales { overflow: clip; }
+.locale-row {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px 56px;
+  align-items: start;
+  padding: 26px 0;
+}
+.locale-inverse { grid-template-columns: 1fr 300px; }
+.locale-inverse .locale-tete { order: 2; text-align: right; }
+.locale-inverse .locale-corps { order: 1; }
+.locale-tete { position: sticky; top: calc(var(--header-h) + 24px); }
+.locale-tete h2 { font-size: 1.35rem; line-height: 1.25; }
+.locale-num {
+  display: block;
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 6px;
+  color: rgba(30, 91, 70, 0.16);
+}
+.locale-corps p { margin-bottom: 16px; }
+.locale-corps p:last-child { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .locale-row, .locale-inverse { grid-template-columns: 1fr; gap: 10px; padding: 20px 0; }
+  .locale-inverse .locale-tete { order: 0; text-align: left; }
+  .locale-inverse .locale-corps { order: 1; }
+  .locale-tete { position: static; }
+  .locale-num { font-size: 2.9rem; }
+}
+
+/* filigrane du hero département : numéro géant en parallax */
+.hero-ville { position: relative; overflow: clip; }
+.hero-watermark {
+  position: absolute;
+  right: 2%;
+  top: -4%;
+  z-index: 1;
+  font-size: clamp(150px, 26vw, 340px);
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(30, 91, 70, 0.07);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ---------- Section terrain (pages services : photo + texte) ---------- */
+.section-terrain { overflow: clip; }
+.photo-split {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+}
+.photo-split-inverse .photo-split-img { order: 2; }
+.photo-split-inverse .photo-split-texte { order: 1; }
+.photo-split-img {
+  margin: 0;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  isolation: isolate;
+}
+.photo-split-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  scale: 1.12;
+}
+.photo-split-img figcaption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--marine);
+}
+.photo-split-texte h2 { margin: 10px 0 14px; }
+.photo-split-texte p { margin-bottom: 22px; }
+@media (max-width: 900px) {
+  .photo-split, .photo-split-inverse { grid-template-columns: 1fr; gap: 30px; }
+  .photo-split-inverse .photo-split-img { order: 0; }
+  .photo-split-inverse .photo-split-texte { order: 1; }
+  .photo-split-img img { max-height: 380px; }
+}
+
+/* ---------- Article conseils : sommaire collant + numéros ---------- */
+.article-meta { margin-top: 14px; font-size: 0.85rem; color: var(--text-light); }
+.article-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.article-aside {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.toc {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.toc-titre {
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  margin-bottom: 10px;
+}
+.toc ol { list-style: none; counter-reset: toc; }
+.toc li { counter-increment: toc; margin-bottom: 2px; }
+.toc a {
+  display: flex;
+  gap: 9px;
+  padding: 6px 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+.toc a::before {
+  content: counter(toc, decimal-leading-zero);
+  font-weight: 800;
+  color: rgba(30, 91, 70, 0.45);
+  flex-shrink: 0;
+}
+.toc a:hover { color: var(--bleu); text-decoration: none; }
+.toc-cta {
+  background: var(--azur);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+.toc-cta p { font-size: 0.86rem; font-weight: 600; color: var(--marine); margin-bottom: 12px; }
+.article-section { scroll-margin-top: calc(var(--header-h) + 20px); }
+.article-corps h2 { display: flex; align-items: baseline; gap: 12px; }
+.article-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(30, 91, 70, 0.28);
+  flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .article-layout { grid-template-columns: 1fr; gap: 30px; }
+  .article-aside { position: static; }
+  .toc-cta { display: none; } /* le CTA existe déjà plus bas dans la page */
+}
+
 /* cadre photo commun : sobre, arrondi discret, ombre légère */
 .photo-cadre {
   margin: 0;

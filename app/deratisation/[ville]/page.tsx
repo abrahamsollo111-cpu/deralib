@@ -2,12 +2,73 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reassurance from "@/components/Reassurance";
+import SectionsLocales from "@/components/SectionsLocales";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import { IconPhone, IconPin, IconArrow, IconCheck } from "@/components/Icons";
 import { site } from "@/lib/config";
 import { getVille, getAllVilles, NUISIBLES_LABELS } from "@/lib/content";
+
+/**
+ * Chaque département a sa propre respiration : photo de la bande
+ * immersive, position de cette bande dans la lecture, et légende.
+ * Combiné à l'alternance gauche/droite des sections et au numéro du
+ * département en filigrane, aucune des 8 pages ne ressemble à sa sœur.
+ */
+const VARIANTES_VILLE: Record<
+  string,
+  { photo: string; alt: string; legende: string; apres: number }
+> = {
+  paris: {
+    photo: "/images/technicien-traitement-plinthes.jpg",
+    alt: "Technicien traitant les plinthes d'un appartement parisien",
+    legende: "Traitement au plus près des passages : plinthes, gaines, caves.",
+    apres: 1,
+  },
+  "hauts-de-seine": {
+    photo: "/images/techniciens-deratisation-entrepot.jpg",
+    alt: "Techniciens Deralib préparant une intervention en entrepôt",
+    legende: "Sièges sociaux, commerces, pavillons : nous couvrons tout le 92.",
+    apres: 0,
+  },
+  "seine-saint-denis": {
+    photo: "/images/technicien-deralib-inspection-entrepot.jpg",
+    alt: "Technicien Deralib inspectant une réserve de stockage",
+    legende: "Entrepôts et logistique : le 93 est notre terrain quotidien.",
+    apres: 1,
+  },
+  "val-de-marne": {
+    photo: "/images/technicien-traitement-plinthes.jpg",
+    alt: "Traitement des plinthes dans un logement du Val-de-Marne",
+    legende: "Du pavillon aux bords de Marne, un protocole complet.",
+    apres: 0,
+  },
+  "seine-et-marne": {
+    photo: "/images/technicien-deralib-inspection-entrepot.jpg",
+    alt: "Inspection d'un bâtiment agricole par un technicien Deralib",
+    legende: "Fermes, granges, zones d'activité : le 77 côté terrain.",
+    apres: 1,
+  },
+  yvelines: {
+    photo: "/images/techniciens-deratisation-entrepot.jpg",
+    alt: "Équipe Deralib en intervention de dératisation",
+    legende: "Des Yvelines résidentielles aux zones commerciales.",
+    apres: 0,
+  },
+  essonne: {
+    photo: "/images/technicien-traitement-plinthes.jpg",
+    alt: "Traitement anti-rongeurs le long des plinthes d'une cuisine",
+    legende: "Pavillons, résidences, commerces : l'Essonne couverte 24h/24.",
+    apres: 1,
+  },
+  "val-d-oise": {
+    photo: "/images/techniciens-deratisation-entrepot.jpg",
+    alt: "Techniciens Deralib équipés pour une intervention en entrepôt",
+    legende: "Du bâti ancien aux plateformes de Roissy : le 95 sous protection.",
+    apres: 0,
+  },
+};
 
 // Une page département n'existe que si une vraie fiche locale existe
 // (contenu unique par département — jamais de template dupliqué)
@@ -40,6 +101,7 @@ export default async function Page({
   const { ville } = await params;
   const v = getVille(ville);
   const autres = getAllVilles().filter((a) => a.slug !== v.slug);
+  const variante = VARIANTES_VILLE[v.slug] ?? VARIANTES_VILLE["paris"];
 
   return (
     <>
@@ -50,8 +112,11 @@ export default async function Page({
         ]}
       />
 
-      {/* ===== HERO ===== */}
-      <section className="hero hero-page">
+      {/* ===== HERO (numéro du département en filigrane parallax) ===== */}
+      <section className="hero hero-page hero-ville">
+        <span className="hero-watermark" data-parallax="0.12" aria-hidden>
+          {v.departement}
+        </span>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <h1 style={{ maxWidth: 860 }}>{v.h1}</h1>
           <p className="lead" style={{ maxWidth: 760, margin: "20px 0 28px" }}>
@@ -76,19 +141,14 @@ export default async function Page({
 
       <Reassurance />
 
-      {/* ===== CONTENU LOCAL (sections uniques au département) ===== */}
-      <section>
-        <div className="container prose" style={{ maxWidth: 860 }}>
-          {v.sections.map((s) => (
-            <div key={s.titre} data-reveal>
-              <h2>{s.titre}</h2>
-              {s.paragraphes.map((p) => (
-                <p key={p.slice(0, 40)}>{p}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ===== CONTENU LOCAL (sections uniques au département,
+           mise en page alternée + bande photo parallax) ===== */}
+      <SectionsLocales
+        sections={v.sections}
+        bandePhoto={{ src: variante.photo, alt: variante.alt }}
+        bandeTitre={variante.legende}
+        bandeApres={variante.apres}
+      />
 
       {/* ===== COMMUNES COUVERTES ===== */}
       <section className="section-azur">

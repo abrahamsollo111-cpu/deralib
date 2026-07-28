@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
-import { IconArrow } from "@/components/Icons";
+import { IconArrow, IconPhone } from "@/components/Icons";
 import { site } from "@/lib/config";
 import { getArticle, getAllArticles, NUISIBLES_LABELS } from "@/lib/content";
 
@@ -35,6 +35,16 @@ function formatDate(d: string) {
   return `${Number(j)} ${noms[Number(m) - 1]} ${an}`;
 }
 
+// ancre lisible à partir d'un titre de section (pour le sommaire)
+function ancre(titre: string) {
+  return titre
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export default async function Page({
   params,
 }: {
@@ -43,6 +53,12 @@ export default async function Page({
   const { slug } = await params;
   const a = getArticle(slug);
   const autres = getAllArticles().filter((x) => x.slug !== a.slug);
+  // temps de lecture estimé (220 mots/min), calculé sur le vrai contenu
+  const nbMots = a.sections
+    .flatMap((s) => s.paragraphes)
+    .join(" ")
+    .split(/\s+/).length;
+  const minutes = Math.max(1, Math.round(nbMots / 220));
 
   return (
     <>
@@ -56,35 +72,61 @@ export default async function Page({
             Conseils — {NUISIBLES_LABELS[a.service]}
           </span>
           <h1 style={{ maxWidth: 820 }}>{a.h1}</h1>
-          <p style={{ marginTop: 14, fontSize: "0.85rem", color: "var(--text-light)" }}>
+          <p className="article-meta">
             Publié le {formatDate(a.date)} par l&apos;équipe {site.marque} —{" "}
-            {site.anneesMetier} ans de métier
+            {site.anneesMetier} ans de métier · Lecture : {minutes} min
           </p>
         </div>
       </section>
 
-      {/* ===== CORPS DE L'ARTICLE ===== */}
+      {/* ===== CORPS — sommaire collant + sections numérotées ===== */}
       <section>
-        <div className="container prose" style={{ maxWidth: 780 }}>
-          {a.sections.map((s) => (
-            <div key={s.titre}>
-              <h2>{s.titre}</h2>
-              {s.paragraphes.map((p) => (
-                <p key={p.slice(0, 40)}>{p}</p>
-              ))}
+        <div className="container article-layout">
+          <aside className="article-aside">
+            <nav className="toc" data-reveal aria-label="Sommaire de l'article">
+              <p className="toc-titre">Sommaire</p>
+              <ol>
+                {a.sections.map((s) => (
+                  <li key={s.titre}>
+                    <a href={`#${ancre(s.titre)}`}>{s.titre}</a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <div className="toc-cta" data-reveal>
+              <p>Un doute ? Un technicien vous répond {site.horaires}.</p>
+              <a href={site.telephoneHref} className="btn btn-primary btn-call">
+                <IconPhone size={15} /> {site.telephone}
+              </a>
             </div>
-          ))}
+          </aside>
 
-          {/* CTA vers la page service (ancre descriptive) */}
-          <div className="notice" style={{ marginTop: 34 }}>
-            <strong>Besoin d&apos;un professionnel ?</strong> Découvrez notre
-            page{" "}
-            <Link href={`/${a.service}`}>{a.cta_texte}</Link> — intervention
-            en 30-45 min, devis gratuit, ou appelez le{" "}
-            <a href={site.telephoneHref} style={{ fontWeight: 700 }}>
-              {site.telephone}
-            </a>
-            .
+          <div className="prose article-corps">
+            {a.sections.map((s, i) => (
+              <div key={s.titre} id={ancre(s.titre)} className="article-section">
+                <h2>
+                  <span className="article-num" aria-hidden>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {s.titre}
+                </h2>
+                {s.paragraphes.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+            ))}
+
+            {/* CTA vers la page service (ancre descriptive) */}
+            <div className="notice" style={{ marginTop: 34 }}>
+              <strong>Besoin d&apos;un professionnel ?</strong> Découvrez notre
+              page{" "}
+              <Link href={`/${a.service}`}>{a.cta_texte}</Link> — intervention
+              en 30-45 min, devis gratuit, ou appelez le{" "}
+              <a href={site.telephoneHref} style={{ fontWeight: 700 }}>
+                {site.telephone}
+              </a>
+              .
+            </div>
           </div>
         </div>
       </section>
@@ -109,10 +151,14 @@ export default async function Page({
             <span className="kicker">À lire aussi</span>
             <h2>Autres conseils</h2>
           </div>
-          <div className="chip-list" data-reveal>
+          <div className="cards-grid cards-grid-3" data-stagger>
             {autres.map((x) => (
-              <Link key={x.slug} href={`/conseils/${x.slug}`} className="chip">
-                {x.titre} <IconArrow size={12} />
+              <Link key={x.slug} href={`/conseils/${x.slug}`} className="card" data-reveal>
+                <span className="kicker">{NUISIBLES_LABELS[x.service]}</span>
+                <h3 style={{ marginTop: 8 }}>{x.titre}</h3>
+                <span className="card-link">
+                  Lire l&apos;article <IconArrow size={14} />
+                </span>
               </Link>
             ))}
           </div>

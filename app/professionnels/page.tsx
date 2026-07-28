@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reassurance from "@/components/Reassurance";
+import PhotoBand from "@/components/PhotoBand";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
@@ -144,6 +145,14 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* ===== PHOTO TERRAIN (parallax) ===== */}
+      <PhotoBand
+        src="/images/technicien-deralib-inspection-entrepot.jpg"
+        alt="Technicien Deralib inspectant une réserve de stockage à la recherche de traces de rongeurs"
+        titre="L'inspection d'abord, le traitement ensuite"
+        texte="Réserves, quais, faux plafonds : chaque visite commence par une inspection des points de passage avant de poser ou renouveler les dispositifs."
+      />
 
       {/* ===== CONTRAT ===== */}
       <section className="section-azur">
