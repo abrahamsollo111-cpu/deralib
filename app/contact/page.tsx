@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import DevisForm from "@/app/devis/DevisForm";
 import JsonLd from "@/components/JsonLd";
-import { IconPhone, IconPin, IconClock, IconDoc } from "@/components/Icons";
+import { IconPhone, IconPin, IconClock, IconDoc, IconWhatsApp } from "@/components/Icons";
 import { site } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -43,6 +43,19 @@ export default function Page() {
                       <a href={site.telephoneHref}>{site.telephone}</a>
                       <span className="contact-note">
                         Appel sans engagement — {site.horaires}
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <IconWhatsApp size={17} />
+                    <div>
+                      <strong>WhatsApp</strong>
+                      <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">
+                        {site.whatsapp}
+                      </a>
+                      <span className="contact-note">
+                        Envoyez une photo du problème, on vous répond avec un
+                        diagnostic
                       </span>
                     </div>
                   </li>

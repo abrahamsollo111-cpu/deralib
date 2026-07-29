@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BarreAppelMobile from "@/components/BarreAppelMobile";
 import ScrollFx from "@/components/ScrollFx";
 import JsonLd from "@/components/JsonLd";
 import Tracking from "@/components/Tracking";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="contenu">{children}</main>
         <Footer />
+        <BarreAppelMobile />
         <ScrollFx />
         <Tracking />
         <JsonLd

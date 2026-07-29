@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import HeroDecor from "@/components/HeroDecor";
 import DevisForm from "./DevisForm";
-import { IconPhone, IconCheck } from "@/components/Icons";
+import { IconPhone, IconCheck, IconWhatsApp } from "@/components/Icons";
 import { site } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -38,13 +38,19 @@ export default function Page() {
             <p style={{ fontWeight: 700, color: "var(--marine)" }}>
               Vous préférez nous parler directement ?
             </p>
-            <a
-              href={site.telephoneHref}
-              className="btn btn-primary btn-lg btn-call"
-              style={{ marginTop: 12 }}
-            >
-              <IconPhone /> {site.telephone}
-            </a>
+            <div className="hero-actions" style={{ marginTop: 12 }}>
+              <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
+                <IconPhone /> {site.telephone}
+              </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-wa btn-lg"
+              >
+                <IconWhatsApp /> WhatsApp
+              </a>
+            </div>
             <p className="dispo" style={{ marginTop: 14 }}>
               <span className="dot" /> <span>Nous répondons <em>{site.horaires}</em></span>
             </p>

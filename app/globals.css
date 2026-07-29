@@ -677,6 +677,75 @@ body.menu-open { overflow: hidden; }
 .hero-home { padding: 52px 0 96px; }
 .hero-page { padding: 36px 0 84px; }
 
+/* ---------- Bouton WhatsApp ---------- */
+.btn-wa {
+  background: #1da851; /* vert WhatsApp, assombri pour le contraste AA */
+  color: var(--white);
+}
+.btn-wa:hover {
+  background: #178a42;
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ---------- Micro-réassurance prix (sous les boutons d'appel) ---------- */
+.cta-rassure {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(30, 91, 70, 0.08);
+  color: var(--marine);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+.cta-rassure svg { color: var(--bleu); flex-shrink: 0; }
+/* variante sur fond sombre (bandeau CTA final) */
+.cta-rassure-clair {
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.95);
+}
+.cta-rassure-clair svg { color: #7ee8d8; }
+
+/* ---------- Barre d'appel fixe (mobile) ---------- */
+.barre-appel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 96; /* sous le header (100) et le menu mobile (98-99) */
+  display: none;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 10px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 18px rgba(27, 47, 39, 0.12);
+}
+.barre-appel a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.barre-appel a:hover { text-decoration: none; }
+.barre-appel-tel { background: var(--accent); color: var(--white); }
+.barre-appel-tel:hover { background: var(--accent-dark); color: var(--white); }
+.barre-appel-wa { background: #1da851; color: var(--white); }
+.barre-appel-wa:hover { background: #178a42; color: var(--white); }
+@media (max-width: 900px) {
+  .barre-appel { display: grid; }
+  /* le contenu ne doit jamais finir caché sous la barre */
+  body { padding-bottom: calc(66px + env(safe-area-inset-bottom)); }
+}
+
 /* ---------- Bande photo immersive (parallax) ---------- */
 /* l'image dépasse de son cadre (hauteur 130 %) : le déplacement
    parallax [data-parallax] glisse dans cette marge sans montrer de bord */
@@ -1982,10 +2051,11 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--bleu); color: va
 body:has(.admin-page) .header,
 body:has(.admin-page) .topbar,
 body:has(.admin-page) .footer,
+body:has(.admin-page) .barre-appel,
 body:has(.admin-page) .skip-link {
   display: none !important;
 }
-body:has(.admin-page) { background: #f4f6f4; }
+body:has(.admin-page) { background: #f4f6f4; padding-bottom: 0 !important; }
 
 /* ---------- Connexion ---------- */
 

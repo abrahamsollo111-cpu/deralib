@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IconPhone } from "./Icons";
+import { IconPhone, IconWhatsApp, IconCheck } from "./Icons";
 import { site } from "@/lib/config";
 
 export default function CtaBand({
@@ -40,12 +40,24 @@ export default function CtaBand({
               <a href={site.telephoneHref} className="btn btn-white btn-lg">
                 <IconPhone /> {site.telephone}
               </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-wa btn-lg"
+              >
+                <IconWhatsApp /> WhatsApp
+              </a>
               <Link href="/devis" className="btn btn-marine btn-lg">
                 Devis gratuit en ligne
               </Link>
             </div>
             <p className="dispo dispo-light" style={{ marginTop: 14 }}>
               <span className="dot" /> <span>Nous répondons <em>{site.horaires}</em></span>
+            </p>
+            <p className="cta-rassure cta-rassure-clair">
+              <IconCheck size={14} /> Prix confirmé avant intervention — devis
+              gratuit
             </p>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reassurance from "@/components/Reassurance";
 import SectionsLocales from "@/components/SectionsLocales";
+import CtaRassure from "@/components/CtaRassure";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
@@ -136,6 +137,7 @@ export default async function Page({
               Nous répondons <em>{site.horaires}</em> — appel sans engagement
             </span>
           </p>
+          <CtaRassure />
         </div>
       </section>
 

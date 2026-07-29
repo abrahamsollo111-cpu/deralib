@@ -6,6 +6,7 @@ import Avis from "./Avis";
 import PriceTable from "./PriceTable";
 import Faq from "./Faq";
 import CtaBand from "./CtaBand";
+import CtaRassure from "./CtaRassure";
 import JsonLd from "./JsonLd";
 import { IconPhone, IconSearch, IconAlert, IconCheck, IconArrow, NUISIBLE_ICONS } from "./Icons";
 import { site } from "@/lib/config";
@@ -145,12 +146,15 @@ export default function NuisiblePage({ slug }: { slug: string }) {
     </div>
   );
   const dispo = (
-    <p className="dispo">
-      <span className="dot" />
-      <span>
-        Nous répondons <em>{site.horaires}</em> — appel sans engagement
-      </span>
-    </p>
+    <>
+      <p className="dispo">
+        <span className="dot" />
+        <span>
+          Nous répondons <em>{site.horaires}</em> — appel sans engagement
+        </span>
+      </p>
+      <CtaRassure />
+    </>
   );
 
   return (

@@ -36,6 +36,14 @@ export const site = {
   // Contact
   telephone: "01 72 68 21 30",
   telephoneHref: "tel:+33172682130",
+  // WhatsApp (ligne mobile dédiée) — le message pré-rempli invite à
+  // envoyer une photo : elle pré-qualifie l'intervention avant l'appel
+  whatsapp: "07 56 95 44 87",
+  whatsappHref:
+    "https://wa.me/33756954487?text=" +
+    encodeURIComponent(
+      "Bonjour, j'ai un problème de nuisibles. Je peux vous envoyer une photo ?"
+    ),
   // TODO : confirmer que cette adresse email est active et relevée
   email: "contact@deralib.com",
 

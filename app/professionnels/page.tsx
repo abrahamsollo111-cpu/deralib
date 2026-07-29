@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reassurance from "@/components/Reassurance";
 import PhotoBand from "@/components/PhotoBand";
+import CtaRassure from "@/components/CtaRassure";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
@@ -116,6 +117,7 @@ export default function Page() {
               horaires d&apos;ouverture
             </span>
           </p>
+          <CtaRassure />
         </div>
       </section>
 

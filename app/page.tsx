@@ -7,7 +7,9 @@ import QuickQuote from "@/components/QuickQuote";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import HeroDecor from "@/components/HeroDecor";
+import CtaRassure from "@/components/CtaRassure";
 import {
+  IconWhatsApp,
   IconPhone,
   IconCheck,
   IconShield,
@@ -132,16 +134,25 @@ export default function Home() {
               <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
                 <IconPhone /> {site.telephone}
               </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-wa btn-lg"
+              >
+                <IconWhatsApp /> WhatsApp
+              </a>
               <a href="#devis-express" className="btn btn-outline btn-lg">
                 Devis gratuit en 30 s
               </a>
             </div>
-            <p className="dispo" style={{ marginBottom: 22 }}>
+            <p className="dispo">
               <span className="dot" />
               <span>
                 Nous répondons <em>{site.horaires}</em> — appel sans engagement
               </span>
             </p>
+            <CtaRassure />
             <div className="hero-points">
               <span className="hero-point">
                 <IconCheck size={15} /> Certifiés {site.certification}
