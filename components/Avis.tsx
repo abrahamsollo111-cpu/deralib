@@ -89,9 +89,10 @@ export default function Avis() {
                   <LogoGoogle size={16} />
                 </span>
               </div>
-              <blockquote>{a.texte}</blockquote>
+              <blockquote style={{ whiteSpace: "pre-line" }}>{a.texte}</blockquote>
               <figcaption>
-                {a.prenom} — {a.ville}, {formatDate(a.date)}
+                {a.prenom}
+                {a.ville ? ` — ${a.ville}` : ""}, {formatDate(a.date)}
                 <span className="avis-provenance">Publié sur Google</span>
               </figcaption>
             </figure>
