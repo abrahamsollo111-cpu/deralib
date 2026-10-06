@@ -1,0 +1,80 @@
+{
+  "nom": "Sarcelles",
+  "slug": "sarcelles",
+  "departement": "95",
+  "parent": "val-d-oise",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et toute la commune",
+  "meta_title": "Dératisation Sarcelles (95) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit à Sarcelles ? Techniciens certifiés Certibiocide, des Lochères au Village. Traitement, obturation, suivi. Devis gratuit.",
+  "h1": "Dératisation à Sarcelles : des Lochères au Village",
+  "intro": "Sarcelles, c'est deux villes en une : l'un des plus grands ensembles d'habitat collectif de France côté Lochères, et un vieux village aux rues anciennes côté sud-est. Pour les nuisibles, cela change tout. Dans les tours et les barres, rats et punaises de lit circulent par les caves, les gaines et les vide-ordures ; dans les pavillons du Village, c'est le rat brun des jardins et la souris d'automne. Nos techniciens certifiés Certibiocide connaissent ces deux terrains et interviennent 7j/7 dans tous les quartiers, avec un protocole complet : diagnostic, traitement sécurisé, obturation et passage de contrôle.",
+  "villes_principales": [
+    "Les Lochères",
+    "Les Flanades",
+    "Le Village",
+    "Les Vignes Blanches",
+    "Les Rosiers",
+    "Les Sablons",
+    "Les Chardonnerettes",
+    "Abords de la gare Garges – Sarcelles"
+  ],
+  "sections": [
+    {
+      "titre": "Grand ensemble : traiter à l'échelle de la dalle, pas du logement",
+      "paragraphes": [
+        "Le grand ensemble de Sarcelles a été construit dans les années 1950-1960 pour des dizaines de milliers d'habitants : dalles, caves en enfilade, anciens vide-ordures, locaux poubelles collectifs. Dans ce type de bâti, un rongeur ne « vit » pas dans un logement — il y passe. Traiter un seul appartement revient à déplacer le problème chez le voisin pendant quelques semaines.",
+        "Notre méthode aux Lochères et dans les quartiers voisins : travailler avec le gardien, le bailleur ou le syndic, poser des postes d'appâtage sécurisés dans les parties communes (caves, locaux poubelles, gaines techniques), traiter les logements touchés, puis remettre un plan des dispositifs et un rapport — le document qui permet au bailleur de suivre l'infestation dans la durée."
+      ]
+    },
+    {
+      "titre": "Punaises de lit : la première demande à Sarcelles",
+      "paragraphes": [
+        "Les recherches « punaises de lit Sarcelles » figurent parmi les plus fréquentes du Val-d'Oise, et ce n'est pas un hasard : logements familiaux occupés en continu, forte rotation, voyages réguliers — tout ce qui favorise l'introduction puis la propagation des punaises d'un logement à l'autre, par les plinthes, les gaines et les cloisons mitoyennes.",
+        "Le traitement sérieux se fait en deux passages espacés d'une quinzaine de jours, car les œufs résistent au premier traitement. Nous vous remettons une liste de préparation claire (linge à 60 °C, désencombrement ciblé) et, en immeuble collectif, nous vérifions systématiquement si les logements mitoyens doivent être inclus — sinon, les punaises reviennent par le mur."
+      ]
+    },
+    {
+      "titre": "Le Village et les rues pavillonnaires : le rat brun des jardins",
+      "paragraphes": [
+        "Le vieux village de Sarcelles, avec ses rues anciennes autour de l'église, et les quartiers pavillonnaires qui l'entourent posent un problème différent : le rat brun s'installe dehors — terriers le long des clôtures, sous les abris de jardin, près des composteurs et des poulaillers — avant de tenter sa chance vers le garage ou le cellier dès les premiers froids.",
+        "Nous traitons par postes d'appâtage extérieurs sécurisés (inaccessibles aux enfants, chats et hérissons), nous localisons les terriers actifs et nous obturons les accès au bâti : bas de portes de garage, passages de canalisations, soupiraux dégrillagés. Sans cette étape, le jardin se repeuple depuis les parcelles voisines à chaque saison."
+      ]
+    },
+    {
+      "titre": "Commerces des Flanades et abords de la gare",
+      "paragraphes": [
+        "La dalle commerçante des Flanades et les rues autour de la gare Garges – Sarcelles concentrent restaurants, alimentaire et flux de passage du RER D. Pour un commerce de bouche, le risque est double : blattes en cuisine (chaleur, humidité, livraisons) et rats autour des locaux déchets mutualisés.",
+        "Nous intervenons en dehors des heures d'ouverture, avec des dispositifs discrets, et nous fournissons le registre sanitaire que demandent les contrôles d'hygiène : plan des postes, produits utilisés, dates de passage. Pour les commerçants, un contrat de passages réguliers coûte presque toujours moins cher qu'une urgence par trimestre."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour des rats sur la voie publique, dans un parc ou autour d'un local poubelles municipal, signalez-le aux services techniques de la mairie de Sarcelles : la commune traite l'espace public, pas les immeubles privés.",
+    "logement_insalubre": "Pour une infestation liée à un logement insalubre, le service communal d'hygiène et de santé de la ville peut être saisi, ou l'Agence régionale de santé en second recours.",
+    "prive": "Dans un logement, une cave, un pavillon ou une copropriété privée, la dératisation est à la charge du propriétaire, du locataire ou du bailleur selon l'origine : c'est là que nous intervenons."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7. Sarcelles est l'une de nos zones d'intervention les plus régulières du Val-d'Oise : un technicien peut être sur place en 30 à 45 minutes, Lochères comme Village.",
+  "faq_locale": [
+    {
+      "q": "Intervenez-vous dans tous les quartiers de Sarcelles ?",
+      "r": "Oui : grand ensemble des Lochères, Flanades, Vignes Blanches, Rosiers, Sablons, Chardonnerettes, le Village et les rues pavillonnaires. Appartements, pavillons, caves, commerces et parties communes."
+    },
+    {
+      "q": "J'habite en HLM à Sarcelles : qui doit payer la dératisation ?",
+      "r": "Les parties communes (caves, vide-ordures, locaux poubelles) relèvent du bailleur. Dans le logement, cela dépend de l'origine de l'infestation : si elle vient de l'immeuble, signalez-le par écrit à votre bailleur. Nous intervenons pour les deux, et notre rapport d'intervention sert de pièce justificative."
+    },
+    {
+      "q": "Combien coûte une dératisation à Sarcelles ?",
+      "r": "Les fourchettes 2026 : 120 à 250 € pour un appartement ou un pavillon, sur devis pour une copropriété, un bailleur ou un commerce. Le prix exact est confirmé par devis gratuit avant toute intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Pourquoi deux passages pour les punaises de lit ?",
+      "r": "Parce que les œufs survivent au premier traitement. Le second passage, environ 15 jours après, élimine les punaises écloses entre-temps. Un traitement en un seul passage, c'est une rechute quasi garantie dans le mois."
+    },
+    {
+      "q": "Pouvez-vous intervenir discrètement ?",
+      "r": "Oui. Passage discret, à l'horaire de votre choix — tôt le matin ou en soirée si besoin : vos voisins n'ont pas à connaître la raison de notre visite."
+    }
+  ]
+}

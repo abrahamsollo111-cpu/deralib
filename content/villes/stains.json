@@ -1,0 +1,79 @@
+{
+  "nom": "Stains",
+  "slug": "stains",
+  "departement": "93",
+  "parent": "seine-saint-denis",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et toute la commune",
+  "meta_title": "Dératisation Stains (93) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit à Stains ? Techniciens certifiés Certibiocide — cité-jardin, Clos Saint-Lazare, pavillons. Traitement complet. Devis gratuit.",
+  "h1": "Dératisation à Stains : cité-jardin, Clos Saint-Lazare, pavillons",
+  "intro": "Stains est une ville au bâti singulier : une cité-jardin des années 1920-1930 classée au patrimoine, l'un des plus grands ensembles de Seine-Saint-Denis au Clos Saint-Lazare, un centre ancien et des rues pavillonnaires avec jardins. Chaque type de bâti a ses nuisibles et sa façon de les traiter — on n'intervient pas dans une maison de brique centenaire comme dans une tour des années 1970. Nos techniciens certifiés Certibiocide connaissent ces différences et couvrent toute la commune, 7j/7.",
+  "villes_principales": [
+    "Cité-jardin",
+    "Clos Saint-Lazare",
+    "Centre-ville – Vieux Stains",
+    "Le Globe",
+    "Moulin Neuf",
+    "L'Avenir",
+    "Abords de la gare Pierrefitte – Stains"
+  ],
+  "sections": [
+    {
+      "titre": "La cité-jardin : traiter sans abîmer un patrimoine centenaire",
+      "paragraphes": [
+        "La cité-jardin de Stains, construite entre les deux guerres, est un ensemble remarquable de maisons et petits collectifs en brique, organisés autour de venelles et de jardins. C'est aussi un paradis pour les rongeurs : jardins contigus, caves anciennes, combles accessibles, potagers. Les rats y circulent de parcelle en parcelle le long des clôtures.",
+        "Nous y privilégions les postes d'appâtage sécurisés en extérieur et le piégeage mécanique près des potagers et des poulaillers, avec une obturation soignée qui respecte le bâti : grillage fin sur les soupiraux, paille de fer dans les passages de canalisations — jamais de percement sauvage dans la brique. Traiter plusieurs maisons voisines en même temps est souvent la clé, et revient moins cher à chacun."
+      ]
+    },
+    {
+      "titre": "Clos Saint-Lazare : l'échelle du bailleur",
+      "paragraphes": [
+        "Avec ses milliers de logements, le Clos Saint-Lazare est l'un des plus grands quartiers d'habitat social du département. Dans un ensemble de cette taille, rats et blattes vivent dans le réseau — caves, gaines techniques, vide-ordures, locaux poubelles — et les punaises de lit passent de logement en logement par les cloisons.",
+        "Un locataire seul ne peut pas régler ce problème : il faut traiter les parties communes et les logements touchés de façon coordonnée. Nous travaillons avec les gardiens, bailleurs et amicales de locataires : état des lieux, traitement coordonné, plan des dispositifs et rapport écrit. Locataire : signalez par écrit au bailleur, notre rapport d'intervention appuie votre demande."
+      ]
+    },
+    {
+      "titre": "Punaises de lit : agir dans les 15 premiers jours",
+      "paragraphes": [
+        "Comme dans tout le nord de la Seine-Saint-Denis, la pression punaises de lit est forte à Stains. Les premiers signes — piqûres alignées au réveil, points noirs sur les coutures du matelas — apparaissent souvent plusieurs semaines après l'introduction : chaque jour d'attente multiplie les cachettes.",
+        "Notre protocole en deux passages à 15 jours d'intervalle vient à bout des punaises ET de leurs œufs. Nous fournissons la liste de préparation (lavage à 60 °C, désencombrement) et vérifions les logements mitoyens en collectif. Surtout, n'utilisez pas de bombes insecticides du commerce : elles dispersent les punaises dans tout le logement et compliquent le traitement."
+      ]
+    },
+    {
+      "titre": "Moulin Neuf, L'Avenir et les rues pavillonnaires",
+      "paragraphes": [
+        "Entre le Globe et le Moulin Neuf, Stains garde un vrai tissu pavillonnaire : jardins, garages, abris, composteurs. Le rat brun s'y installe en extérieur — terriers le long des murets, sous les tas de bois — et la souris grise rentre au chaud dès l'automne par les garages et les combles.",
+        "Le traitement durable tient en trois gestes : appâtage extérieur sécurisé, suppression des abris faciles (encombrants, tas de bois au contact du sol), et obturation du bâti. Nous contrôlons ensuite que l'activité a cessé. Les voisins ont le même problème ? Une intervention groupée sur 2-3 pavillons est plus efficace et le déplacement se partage."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour des rats sur la voie publique, dans un parc ou près d'un équipement municipal, signalez-le aux services techniques de la mairie de Stains : la commune traite l'espace public, pas les parcelles privées.",
+    "logement_insalubre": "Pour une infestation liée à un logement indigne, le service hygiène de la ville ou l'Agence régionale de santé peuvent être saisis.",
+    "prive": "Dans un logement, une maison de la cité-jardin, une cave ou une résidence, la dératisation est à la charge du propriétaire, du locataire ou du bailleur selon l'origine : c'est là que nous intervenons."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7. Stains fait partie de notre zone d'intervention quotidienne au nord de Paris : un technicien peut être sur place en 30 à 45 minutes.",
+  "faq_locale": [
+    {
+      "q": "Intervenez-vous dans toute la ville de Stains ?",
+      "r": "Oui : cité-jardin, Clos Saint-Lazare, centre-ville, Le Globe, Moulin Neuf, L'Avenir et les abords de la gare. Maisons, appartements, caves, commerces et parties communes."
+    },
+    {
+      "q": "J'habite la cité-jardin : vos traitements abîment-ils les jardins ?",
+      "r": "Non. Nous utilisons des postes d'appâtage fermés et du piégeage mécanique près des potagers : pas de produit épandu, pas de danger pour les enfants, les animaux ni les cultures, et aucune intervention invasive sur le bâti ancien."
+    },
+    {
+      "q": "Locataire au Clos Saint-Lazare : qui paie le traitement ?",
+      "r": "Les parties communes relèvent du bailleur. Dans votre logement, si l'infestation vient de l'immeuble (cas le plus fréquent en grand ensemble), le traitement lui incombe en principe : signalez par écrit, notre rapport d'intervention sert de justificatif."
+    },
+    {
+      "q": "Combien coûte une dératisation à Stains ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un logement ou un pavillon, sur devis pour les bailleurs, copropriétés et commerces. Devis gratuit, prix confirmé avant intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Sous quel délai pouvez-vous passer ?",
+      "r": "Nous répondons 24h/24 et un technicien peut être sur place en 30 à 45 minutes. Les urgences — commerce avant un contrôle, infestation massive — passent en priorité."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "nom": "Paris 18e",
+  "slug": "paris-18",
+  "departement": "75",
+  "parent": "paris",
+  "filigrane": "18e",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et tout l'arrondissement",
+  "meta_title": "Dératisation Paris 18 — Montmartre, Barbès | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit dans le 18e ? Techniciens certifiés Certibiocide : Montmartre, Goutte d'Or, La Chapelle, Clignancourt. Devis gratuit.",
+  "h1": "Dératisation Paris 18 : Montmartre, Barbès, La Chapelle",
+  "intro": "Le 18e est l'arrondissement de tous les contrastes — et de toutes les pressions de nuisibles. La butte Montmartre et ses caves anciennes, les immeubles dégradés de la Goutte d'Or et de La Chapelle, le faisceau ferroviaire de la gare du Nord qui longe tout l'est de l'arrondissement, les marchés, les puces de la porte de Clignancourt : rats et punaises de lit y trouvent gîte, couvert et moyens de transport. Nos techniciens certifiés Certibiocide y interviennent en continu, avec une règle d'or : la discrétion.",
+  "villes_principales": [
+    "Montmartre – Abbesses",
+    "Goutte d'Or – Château Rouge",
+    "Barbès",
+    "La Chapelle – Marx Dormoy",
+    "Jules Joffrin – Clignancourt",
+    "Simplon",
+    "Porte de Clignancourt",
+    "Grandes-Carrières"
+  ],
+  "sections": [
+    {
+      "titre": "Punaises de lit : le 18e en première ligne à Paris",
+      "paragraphes": [
+        "Habitat très dense, petites surfaces à forte rotation, meublés et hôtels nombreux : le 18e concentre l'une des plus fortes demandes de traitement punaises de lit de la capitale. L'insecte voyage dans les bagages et les meubles récupérés sur le trottoir, puis se propage de logement en logement par les plinthes, gaines et cloisons des immeubles anciens.",
+        "Notre protocole ne varie pas : diagnostic pour confirmer (et éviter de traiter pour rien), premier traitement, second passage 15 jours plus tard pour les écloses, vérification des logements mitoyens. Un conseil propre au 18e : ne remontez jamais un matelas ou un canapé trouvé dans la rue — c'est le mode d'introduction numéro un que nous constatons."
+      ]
+    },
+    {
+      "titre": "La butte Montmartre : caves creusées et restaurants touristiques",
+      "paragraphes": [
+        "Le bâti de la butte est unique à Paris : immeubles anciens accrochés à la pente, caves parfois creusées à même la butte, escaliers, venelles et courettes. Les rongeurs y circulent verticalement autant qu'horizontalement, et une infestation peut concerner trois immeubles en escalier sans qu'aucun occupant ne le soupçonne.",
+        "Autour des Abbesses et du Tertre, la densité de restaurants et de commerces touristiques ajoute la ressource alimentaire. Pour les exploitants, nous intervenons hors heures d'affluence, en toute discrétion — dans un quartier qui vit du tourisme, pas question qu'une intervention se remarque — et nous fournissons le registre sanitaire pour les contrôles."
+      ]
+    },
+    {
+      "titre": "Goutte d'Or, La Chapelle, Marx Dormoy : bâti ancien et rails",
+      "paragraphes": [
+        "Entre les marchés de quartier, les immeubles anciens parfois dégradés et le faisceau ferroviaire de la gare du Nord qui borde tout le flanc est, ce secteur cumule les sources et les autoroutes à rats : les talus et emprises ferroviaires servent de réservoir, les caves et courettes de refuge, les marchés de garde-manger.",
+        "Dans ces rues, traiter un seul logement ne sert à rien si la cave de l'immeuble reste ouverte aux allées et venues. Notre méthode : état des lieux du sous-sol au logement, postes d'appâtage sécurisés dans les parties communes, obturation grillagée des soupiraux et passages, puis contrôle. Pour les locataires, notre rapport écrit appuie le signalement au bailleur."
+      ]
+    },
+    {
+      "titre": "Copropriétés, meublés et hôtels : la discrétion comme méthode",
+      "paragraphes": [
+        "Qu'il s'agisse d'une copropriété de Jules Joffrin, d'un meublé de Barbès ou d'un petit hôtel de Clignancourt, le point commun dans le 18e est la peur du bruit qui court. Une rumeur de punaises ou de rats fait plus de dégâts que l'infestation elle-même.",
+        "C'est pourquoi nos passages sont pensés pour ne pas se remarquer : créneaux tôt le matin ou en soirée, technicien discret, échanges directs avec le gestionnaire. Pour les exploitants, nous documentons tout par écrit — registre, plan des dispositifs, dates — afin que la réponse aux contrôles comme aux clients inquiets soit factuelle : le problème est traité, et c'est prouvé."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour un rat sur la voie publique, dans un square ou sur un marché, signalez-le à la Ville de Paris via l'application DansMaRue ou le 3975 : la Ville traite l'espace public et les égouts, pas les immeubles privés.",
+    "logement_insalubre": "Le 18e concentre de l'habitat dégradé : pour une infestation liée à l'insalubrité, le Service technique de l'habitat de la Ville de Paris peut être saisi.",
+    "prive": "Dans un logement, une cave, un meublé ou une copropriété, la dératisation revient au propriétaire, au locataire, au bailleur ou au syndic selon l'origine : c'est là que nous intervenons."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7. Le 18e jouxte notre base du 17e : un technicien peut être sur place en 30 à 45 minutes, de Montmartre à la porte de Clignancourt.",
+  "faq_locale": [
+    {
+      "q": "Intervenez-vous dans tout le 18e arrondissement ?",
+      "r": "Oui : Montmartre, Abbesses, Goutte d'Or, Château Rouge, Barbès, La Chapelle, Marx Dormoy, Jules Joffrin, Simplon, Grandes-Carrières et porte de Clignancourt. Logements, caves, commerces, meublés et hôtels."
+    },
+    {
+      "q": "Pourquoi tant de punaises de lit dans le 18e ?",
+      "r": "Densité de population, petites surfaces à forte rotation, nombreux meublés et récupération de mobilier sur le trottoir : tous les facteurs de propagation y sont réunis. Prise tôt, une infestation se traite très bien en deux passages."
+    },
+    {
+      "q": "Combien coûte un traitement dans le 18e ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un appartement, sur devis pour une copropriété, un meublé ou un hôtel. Devis gratuit, prix confirmé avant intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Je gère un petit hôtel : pouvez-vous intervenir sans que ça se voie ?",
+      "r": "Oui, c'est notre spécialité : passage en dehors des heures d'arrivée des clients, technicien discret, chambre traitée et remise en service rapidement, registre sanitaire à jour. Appelez-nous, la première visite d'évaluation est discrète elle aussi."
+    },
+    {
+      "q": "Les rats viennent des voies ferrées : à qui le signaler ?",
+      "r": "Les emprises ferroviaires relèvent de leurs gestionnaires et l'espace public de la Ville (DansMaRue / 3975). Mais pour protéger votre immeuble, le plus efficace reste de traiter et d'obturer votre propre bâti — c'est ce que nous faisons."
+    }
+  ]
+}

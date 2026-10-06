@@ -101,14 +101,34 @@ export default async function Page({
 }) {
   const { ville } = await params;
   const v = getVille(ville);
-  const autres = getAllVilles().filter((a) => a.slug !== v.slug);
-  const variante = VARIANTES_VILLE[v.slug] ?? VARIANTES_VILLE["paris"];
+  const tous = getAllVilles();
+  // Pages départements (hors soi-même) pour le maillage bas de page
+  const autres = tous.filter((a) => !a.parent && a.slug !== v.slug);
+  // Ville/arrondissement : sa page département de rattachement et ses voisines
+  const parentPage = v.parent ? getVille(v.parent) : null;
+  const soeurs = v.parent
+    ? tous.filter((a) => a.parent === v.parent && a.slug !== v.slug)
+    : [];
+  // Département (ou Paris) : ses pages villes/arrondissements
+  const enfants = tous.filter((a) => a.parent === v.slug);
+  // Les pages villes réutilisent la bande photo de leur département,
+  // avec une position alternée pour varier la lecture
+  const base =
+    VARIANTES_VILLE[v.slug] ??
+    VARIANTES_VILLE[v.parent ?? ""] ??
+    VARIANTES_VILLE["paris"];
+  const variante = VARIANTES_VILLE[v.slug]
+    ? base
+    : { ...base, apres: v.slug.length % 2 };
 
   return (
     <>
       <Breadcrumbs
         crumbs={[
           { label: NUISIBLES_LABELS["deratisation"], href: "/deratisation" },
+          ...(parentPage
+            ? [{ label: parentPage.nom, href: `/deratisation/${parentPage.slug}` }]
+            : []),
           { label: v.nom },
         ]}
       />
@@ -116,7 +136,7 @@ export default async function Page({
       {/* ===== HERO (numéro du département en filigrane parallax) ===== */}
       <section className="hero hero-page hero-ville">
         <span className="hero-watermark" data-parallax="0.12" aria-hidden>
-          {v.departement}
+          {v.filigrane ?? v.departement}
         </span>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <h1 style={{ maxWidth: 860 }}>{v.h1}</h1>
@@ -159,7 +179,9 @@ export default async function Page({
             <span className="kicker">
               <IconPin size={14} /> Couverture
             </span>
-            <h2>Communes couvertes — {v.nom} ({v.departement})</h2>
+            <h2>
+              {v.couverture_titre ?? "Communes couvertes"} — {v.nom} ({v.departement})
+            </h2>
             <p>{v.delais}</p>
           </div>
           <div className="chip-list" data-reveal>
@@ -168,7 +190,7 @@ export default async function Page({
                 {q}
               </span>
             ))}
-            <span className="chip">… et tout le département</span>
+            <span className="chip">{v.couverture_suffixe ?? "… et tout le département"}</span>
           </div>
         </div>
       </section>
@@ -212,7 +234,7 @@ export default async function Page({
       <section>
         <div className="container" data-reveal>
           <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
-            <IconCheck size={15} /> Nos services en {v.nom} :
+            <IconCheck size={15} /> Nos services {v.parent ? "à" : "en"} {v.nom} :
           </p>
           <div className="chip-list" style={{ marginBottom: 26 }}>
             <Link href="/deratisation" className="chip">
@@ -228,6 +250,37 @@ export default async function Page({
               Destruction nid de guêpes
             </Link>
           </div>
+          {parentPage && (
+            <>
+              <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
+                <IconPin size={15} /> Dératisation autour de {v.nom} :
+              </p>
+              <div className="chip-list" style={{ marginBottom: 26 }}>
+                <Link href={`/deratisation/${parentPage.slug}`} className="chip">
+                  Dératisation {parentPage.nom} ({parentPage.departement})
+                </Link>
+                {soeurs.map((s) => (
+                  <Link key={s.slug} href={`/deratisation/${s.slug}`} className="chip">
+                    Dératisation {s.nom}
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+          {enfants.length > 0 && (
+            <>
+              <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
+                <IconPin size={15} /> Nos pages locales — {v.nom} :
+              </p>
+              <div className="chip-list" style={{ marginBottom: 26 }}>
+                {enfants.map((e) => (
+                  <Link key={e.slug} href={`/deratisation/${e.slug}`} className="chip">
+                    Dératisation {e.nom}
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
           <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
             <IconPin size={15} /> Dératisation dans les autres départements :
           </p>
@@ -242,7 +295,7 @@ export default async function Page({
       </section>
 
       <CtaBand
-        title={`Un problème de rongeurs en ${v.nom} ?`}
+        title={`Un problème de rongeurs ${v.parent ? "à" : "en"} ${v.nom} ?`}
         text="Appelez-nous ou décrivez la situation en ligne : un technicien vous rappelle avec un diagnostic et un prix clair."
       />
 

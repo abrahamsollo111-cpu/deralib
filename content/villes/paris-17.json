@@ -1,0 +1,81 @@
+{
+  "nom": "Paris 17e",
+  "slug": "paris-17",
+  "departement": "75",
+  "parent": "paris",
+  "filigrane": "17e",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et tout l'arrondissement",
+  "meta_title": "Dératisation Paris 17 — l'entreprise du quartier | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit dans le 17e ? Deralib est basée rue Boursault : intervention très rapide, Batignolles, Épinettes, Ternes, Monceau. Devis gratuit.",
+  "h1": "Dératisation Paris 17 : nous sommes l'entreprise du quartier",
+  "intro": "Le siège de Deralib est au 45 rue Boursault, en plein cœur des Batignolles : le 17e n'est pas une zone d'intervention parmi d'autres, c'est notre adresse. Des immeubles haussmanniens de Monceau aux rues faubouriennes des Épinettes, en passant par le nouveau quartier Clichy-Batignolles, nous connaissons les immeubles de l'arrondissement pour y travailler au quotidien — et un technicien peut souvent y être en moins de 30 minutes.",
+  "villes_principales": [
+    "Batignolles",
+    "Épinettes",
+    "Ternes",
+    "Monceau – Courcelles",
+    "La Fourche",
+    "Guy Môquet",
+    "Pereire",
+    "Clichy-Batignolles – Martin Luther King"
+  ],
+  "sections": [
+    {
+      "titre": "Basés rue Boursault : ce que ça change pour vous",
+      "paragraphes": [
+        "Être l'entreprise du quartier, ce n'est pas un slogan : c'est un technicien qui connaît déjà le type de cave de votre rue, des délais raccourcis parce qu'il n'y a pas de périphérique à traverser, et la possibilité de repasser facilement pour un contrôle. Beaucoup de nos interventions dans le 17e commencent par un voisin qui pousse la porte ou un gardien qui appelle.",
+        "C'est aussi un engagement de réputation : on ne bâcle pas une intervention à cinq rues de chez soi. Diagnostic honnête — si une souricière bien placée suffit, on vous le dit —, prix confirmé avant de commencer, et passage de contrôle inclus dans nos protocoles."
+      ]
+    },
+    {
+      "titre": "Haussmannien de Monceau aux Batignolles : l'immeuble entier compte",
+      "paragraphes": [
+        "Autour du parc Monceau, des Ternes et des Batignolles, le bâti haussmannien offre aux rongeurs ce qu'ils préfèrent : caves en enfilade, anciens conduits de vide-ordures, cours intérieures, gaines techniques centenaires. Une souris aperçue au 4e étage est presque toujours le signe d'une circulation dans tout l'immeuble.",
+        "Nous proposons donc systématiquement au syndic ou au gardien un état des lieux des parties communes en plus du logement touché : traiter la cave et obturer les passages coûte moins cher qu'une succession d'interventions appartement par appartement — et c'est la seule approche durable dans ce bâti."
+      ]
+    },
+    {
+      "titre": "Épinettes, Guy Môquet, Clichy-Batignolles : deux générations d'immeubles",
+      "paragraphes": [
+        "Au nord de l'arrondissement, les rues faubouriennes des Épinettes et de Guy Môquet alignent des immeubles plus modestes, aux caves anciennes et aux courettes étroites — un terrain où rats et souris circulent d'immeuble en immeuble. Juste à côté, la ZAC Clichy-Batignolles et le parc Martin Luther King ont apporté des constructions neuves… et des années de chantiers qui ont remué le sous-sol du secteur.",
+        "Résultat : même les résidences récentes du secteur ne sont pas épargnées, surtout en pied d'immeuble et dans les parkings. L'obturation y est déterminante — un immeuble neuf mal fermé en pied se recolonise en quelques semaines. Nous traitons, nous fermons, puis nous contrôlons."
+      ]
+    },
+    {
+      "titre": "Punaises de lit et commerces : rue de Lévis, Ternes, Batignolles",
+      "paragraphes": [
+        "Côté punaises de lit, le 17e suit la tendance parisienne : introductions par les voyages et les meubles d'occasion, propagation par les cloisons dans les immeubles anciens. Notre protocole en deux passages à 15 jours s'applique du studio sous les toits au grand appartement familial, avec vérification des pièces et logements mitoyens.",
+        "Côté commerces, entre la rue de Lévis et son marché, les restaurants des Batignolles et les brasseries des Ternes, nous intervenons en dehors des heures de service, avec dispositifs discrets et registre sanitaire fourni. Être à cinq minutes permet aussi de caler facilement un passage très tôt le matin, avant l'arrivée des équipes."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour un rat sur la voie publique, dans un square ou le parc Martin Luther King, signalez-le à la Ville de Paris via l'application DansMaRue ou le 3975 : la Ville traite l'espace public, pas les immeubles privés.",
+    "logement_insalubre": "Pour une infestation liée à l'insalubrité d'un logement, le Service technique de l'habitat de la Ville de Paris peut être saisi.",
+    "prive": "Dans un logement, une cave ou une copropriété du 17e, la dératisation revient au propriétaire, au locataire ou au syndic selon l'origine : c'est là que nous intervenons — et c'est notre quartier."
+  },
+  "delais": "Nous sommes basés rue Boursault, aux Batignolles : dans le 17e, un technicien peut souvent être sur place en moins de 30 minutes. Nous répondons 24h/24 et 7j/7.",
+  "faq_locale": [
+    {
+      "q": "Intervenez-vous vraiment plus vite dans le 17e ?",
+      "r": "Oui : notre siège est au 45 rue Boursault, entre Rome et les Batignolles. Sans trajet à travers Paris, un technicien peut souvent être chez vous en moins de 30 minutes — et repasser pour un contrôle est simple."
+    },
+    {
+      "q": "Mon immeuble haussmannien a des souris à plusieurs étages : que faire ?",
+      "r": "C'est le signe d'une circulation par les caves et les gaines : il faut traiter les parties communes en plus des logements. Parlez-en au gardien ou au syndic — nous établissons un devis pour l'immeuble, plus efficace et moins cher au total."
+    },
+    {
+      "q": "Combien coûte une dératisation dans le 17e ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un appartement, sur devis pour une copropriété ou un commerce. Devis gratuit, prix confirmé avant intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Traitez-vous les punaises de lit dans le 17e ?",
+      "r": "Oui, en deux passages espacés de 15 jours, avec liste de préparation et vérification des pièces mitoyennes. Les quatre familles de nuisibles sont couvertes : rongeurs, punaises, blattes, guêpes — et le dépigeonnage."
+    },
+    {
+      "q": "Pouvez-vous passer avant l'ouverture de mon commerce ?",
+      "r": "Oui, c'est même notre créneau favori dans le quartier : tôt le matin avant les équipes, ou le soir après la fermeture — sans majoration."
+    }
+  ]
+}

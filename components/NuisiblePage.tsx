@@ -10,7 +10,7 @@ import CtaRassure from "./CtaRassure";
 import JsonLd from "./JsonLd";
 import { IconPhone, IconSearch, IconAlert, IconCheck, IconArrow, NUISIBLE_ICONS } from "./Icons";
 import { site } from "@/lib/config";
-import { getNuisible, getAllVilles, NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/content";
+import { getNuisible, getDepartements, NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/content";
 import { NUISIBLES_TILES } from "@/lib/nuisibles";
 
 // Illustration du hero par nuisible (fichiers dans /public/images/,
@@ -133,7 +133,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
   const img = HERO_IMAGES[slug];
   const terrain = SECTIONS_TERRAIN[slug];
   const autres = NUISIBLES_SLUGS.filter((s) => s !== slug);
-  const villes = slug === "deratisation" ? getAllVilles() : [];
+  const villes = slug === "deratisation" ? getDepartements() : [];
 
   const boutonsCta = (
     <div className="hero-actions">

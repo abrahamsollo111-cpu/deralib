@@ -45,6 +45,11 @@ export type Ville = {
   };
   delais: string;
   faq_locale: FaqItem[];
+  // Champs propres aux pages villes / arrondissements (absents sur les départements)
+  parent?: string; // slug de la page département de rattachement (ou "paris")
+  filigrane?: string; // texte du filigrane du hero (défaut : departement)
+  couverture_titre?: string; // défaut : « Communes couvertes »
+  couverture_suffixe?: string; // défaut : « … et tout le département »
 };
 
 // Article de la section /conseils
@@ -102,6 +107,16 @@ export function getAllVilles(): Ville[] {
         ORDRE_DEPARTEMENTS.indexOf(a.departement) -
         ORDRE_DEPARTEMENTS.indexOf(b.departement)
     );
+}
+
+// Les 8 pages départements uniquement (sans les pages villes/arrondissements)
+export function getDepartements(): Ville[] {
+  return getAllVilles().filter((v) => !v.parent);
+}
+
+// Les pages villes rattachées à un département (ou à la page paris)
+export function getVillesDe(parentSlug: string): Ville[] {
+  return getAllVilles().filter((v) => v.parent === parentSlug);
 }
 
 export function getArticle(slug: string): Article {

@@ -1,0 +1,80 @@
+{
+  "nom": "Aulnay-sous-Bois",
+  "slug": "aulnay-sous-bois",
+  "departement": "93",
+  "parent": "seine-saint-denis",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et toute la commune",
+  "meta_title": "Dératisation Aulnay-sous-Bois (93) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit à Aulnay-sous-Bois ? Techniciens certifiés Certibiocide, du nord au sud pavillonnaire. Traitement complet. Devis gratuit.",
+  "h1": "Dératisation à Aulnay-sous-Bois : du nord au sud pavillonnaire",
+  "intro": "Aulnay-sous-Bois est une ville double. Au nord du canal de l'Ourcq : grands ensembles, dalles et friches industrielles en reconversion. Au sud : des kilomètres de rues pavillonnaires, de jardins et de petits commerces autour de la gare. Les nuisibles ne s'y traitent pas de la même façon — gestion de parties communes et coordination avec les bailleurs d'un côté, appâtage extérieur et obturation de pavillons de l'autre. Nos techniciens certifiés Certibiocide pratiquent les deux, 7j/7, sur toute la commune.",
+  "villes_principales": [
+    "Rose-des-Vents",
+    "Gros Saule",
+    "Mitry – Ambourget",
+    "Vieux Pays",
+    "Centre-gare",
+    "Nonneville",
+    "Chanteloup",
+    "Abords du canal de l'Ourcq"
+  ],
+  "sections": [
+    {
+      "titre": "Nord d'Aulnay : grands ensembles et parties communes",
+      "paragraphes": [
+        "À la Rose-des-Vents, au Gros Saule ou à Mitry – Ambourget, les immeubles collectifs concentrent les problèmes classiques du grand ensemble : rats dans les caves et les locaux poubelles, blattes dans les gaines, punaises de lit qui circulent entre logements. Traiter un appartement isolé y est un pansement — la colonie vit dans les parties communes.",
+        "Nous travaillons avec les gardiens et les bailleurs pour traiter à la bonne échelle : postes d'appâtage sécurisés dans les sous-sols et locaux techniques, traitement coordonné des logements touchés, plan des dispositifs et rapport écrit. Locataires : un signalement écrit au bailleur, appuyé par notre rapport, reste le levier le plus efficace."
+      ]
+    },
+    {
+      "titre": "Canal de l'Ourcq et friches : le réservoir à rats bruns",
+      "paragraphes": [
+        "Les berges du canal de l'Ourcq et les grandes emprises en mutation du nord de la ville — à commencer par l'ancien site industriel automobile en pleine reconversion — forment un réservoir permanent de rats bruns : eau, abris, terrains remués par les chantiers. À chaque phase de travaux, une partie de la population se déplace vers les rues habitées voisines.",
+        "Pour les riverains, la parade tient en deux temps : traitement extérieur par postes sécurisés pour intercepter les arrivées, et obturation du bâti (soupiraux grillagés, passages de canalisations, bas de portes de garage) pour que les rongeurs restent dehors. Nous programmons ensuite un contrôle, car la pression dure tant que durent les chantiers."
+      ]
+    },
+    {
+      "titre": "Sud pavillonnaire : Nonneville, Chanteloup, Vieux Pays",
+      "paragraphes": [
+        "Le sud d'Aulnay aligne pavillons, jardins et garages du Vieux Pays à Nonneville. Le scénario type : des allées et venues le long des clôtures au crépuscule, un composteur visité, puis des grattements dans le garage ou le faux plafond dès les premiers froids — la souris grise n'a besoin que d'un trou de la taille d'un stylo.",
+        "Nous traitons le jardin par postes sécurisés sans danger pour enfants et animaux, localisons les terriers, puis fermons méthodiquement chaque accès au bâti. Les infestations venant souvent de la parcelle voisine, une intervention groupée entre voisins est fréquente ici — plus efficace, et le déplacement se partage."
+      ]
+    },
+    {
+      "titre": "Punaises de lit et commerces : deux urgences différentes",
+      "paragraphes": [
+        "Côté punaises de lit, le nord de la commune génère une demande soutenue : notre protocole en deux passages à 15 jours, avec liste de préparation et vérification des logements mitoyens, s'applique du studio au T5. N'utilisez jamais de fumigènes du commerce — ils dispersent l'infestation dans tout le logement.",
+        "Côté commerces, entre les restaurants du centre-gare et les enseignes des zones commerciales du nord, la problématique est la gestion des déchets et des réserves : blattes en cuisine, rongeurs autour des locaux poubelles mutualisés. Interventions hors horaires d'ouverture, dispositifs discrets, registre sanitaire fourni pour les contrôles."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour des rats sur la voie publique, un square ou les berges du canal, signalez-le aux services techniques de la mairie d'Aulnay-sous-Bois : la collectivité traite l'espace public, pas les parcelles privées.",
+    "logement_insalubre": "Pour une infestation liée à un logement indigne, le service communal d'hygiène et de santé peut être saisi, l'Agence régionale de santé en second recours.",
+    "prive": "Dans un pavillon, un appartement, une cave ou une copropriété, la dératisation revient au propriétaire, au locataire ou au bailleur selon l'origine : c'est là que nous intervenons."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes, au nord comme au sud de la commune.",
+  "faq_locale": [
+    {
+      "q": "Couvrez-vous tous les quartiers d'Aulnay-sous-Bois ?",
+      "r": "Oui : Rose-des-Vents, Gros Saule, Mitry – Ambourget, Vieux Pays, centre-gare, Nonneville, Chanteloup et les abords du canal. Pavillons, appartements, caves, commerces et parties communes."
+    },
+    {
+      "q": "Mon pavillon est envahi depuis des travaux à proximité : est-ce lié ?",
+      "r": "Très probablement : chaque terrassement déplace les colonies installées dans les friches. Le traitement extérieur plus l'obturation de votre bâti vous protège durablement ; nous le documentons dans notre rapport."
+    },
+    {
+      "q": "Quel est le prix d'une dératisation à Aulnay-sous-Bois ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un pavillon ou un appartement, sur devis pour bailleurs, copropriétés et commerces. Devis gratuit, prix confirmé avant intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Combien de temps dure un traitement punaises de lit ?",
+      "r": "Deux passages espacés d'environ 15 jours, indispensables pour éliminer punaises et œufs. Les piqûres diminuent nettement dès le premier passage."
+    },
+    {
+      "q": "Intervenez-vous pour les commerces et restaurants ?",
+      "r": "Oui, en dehors des heures d'ouverture, avec dispositifs discrets et registre sanitaire fourni — le document demandé lors des contrôles d'hygiène."
+    }
+  ]
+}

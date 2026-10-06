@@ -1,0 +1,80 @@
+{
+  "nom": "Saint-Denis",
+  "slug": "saint-denis",
+  "departement": "93",
+  "parent": "seine-saint-denis",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et toute la commune",
+  "meta_title": "Dératisation Saint-Denis (93) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit à Saint-Denis ? Techniciens certifiés Certibiocide — centre ancien, Pleyel, La Plaine. Intervention rapide. Devis gratuit.",
+  "h1": "Dératisation à Saint-Denis : centre ancien, Pleyel, La Plaine",
+  "intro": "Saint-Denis réunit tout ce qui nourrit une population de rongeurs : un centre ancien au bâti dégradé autour de la basilique, l'un des plus grands marchés d'Île-de-France trois fois par semaine, et une décennie de chantiers géants entre Pleyel et La Plaine qui retournent le sous-sol et déplacent les colonies. S'y ajoute une pression punaises de lit parmi les plus fortes du pays, liée à la densité de l'habitat. Nos techniciens certifiés Certibiocide y interviennent tous les mois, 7j/7, du studio au local commercial.",
+  "villes_principales": [
+    "Centre-ville – Basilique",
+    "Quartier de la gare",
+    "La Plaine",
+    "Pleyel",
+    "Porte de Paris",
+    "Franc-Moisin – Bel-Air",
+    "Delaunay-Belleville",
+    "Floréal"
+  ],
+  "sections": [
+    {
+      "titre": "Le centre ancien et le marché : des rats nourris trois fois par semaine",
+      "paragraphes": [
+        "Autour de la basilique et des halles, le marché de Saint-Denis — l'un des plus importants d'Île-de-France — génère un volume considérable de déchets alimentaires. Les rats du centre-ville vivent à ce rythme : les jours de marché les nourrissent, les vieux immeubles des rues adjacentes les logent. Caves anciennes, cours intérieures, immeubles dégradés parfois en indivision compliquée : le terrain idéal.",
+        "Dans ce secteur, nous commençons toujours par les sous-sols et les cours : c'est là que se trouvent les nids, pas dans les cuisines où on les aperçoit. Postes d'appâtage sécurisés, obturation grillagée des soupiraux et passages de canalisations, puis contrôle. Pour les commerces de bouche du centre, le registre sanitaire que nous fournissons est systématiquement demandé lors des contrôles."
+      ]
+    },
+    {
+      "titre": "Pleyel – La Plaine : les chantiers du Grand Paris déplacent tout",
+      "paragraphes": [
+        "Entre le métro Grand Paris Express à Pleyel, les aménagements hérités des Jeux et la transformation continue de La Plaine, Saint-Denis vit l'un des plus grands bouleversements urbains d'Europe. Chaque terrassement chasse les rats de leurs galeries : les immeubles voisins — y compris les résidences neuves et les bureaux — voient arriver des rongeurs par vagues.",
+        "Si votre résidence ou votre entreprise est en bordure de chantier, l'infestation ne dit rien de votre hygiène : elle dit que le sous-sol bouge. Le traitement utile combine appâtage sécurisé, obturation systématique du bâti (un immeuble neuf mal obturé en pied se recolonise en quelques semaines) et passages de contrôle tant que les travaux durent."
+      ]
+    },
+    {
+      "titre": "Punaises de lit : la plus forte demande du département",
+      "paragraphes": [
+        "Habitat dense, meublés, hôtels sociaux, rotation locative élevée : Saint-Denis concentre les facteurs de propagation des punaises de lit, et les demandes de traitement y dépassent souvent celles de dératisation. La punaise ne saute pas et ne vole pas — elle voyage dans les affaires et passe d'un logement à l'autre par les cloisons et les gaines.",
+        "Notre protocole : confirmation au diagnostic (beaucoup de « punaises » signalées sont en réalité d'autres insectes), premier traitement, second passage 15 jours après, et vérification des logements mitoyens en collectif. En meublé ou en location, le traitement d'une infestation présente à l'entrée dans les lieux incombe en principe au bailleur — notre rapport écrit appuie la démarche."
+      ]
+    },
+    {
+      "titre": "Franc-Moisin, Floréal, Delaunay-Belleville : agir avec les bailleurs",
+      "paragraphes": [
+        "Dans les grands quartiers d'habitat social dionysiens, le traitement logement par logement est un tonneau des Danaïdes : rats et blattes vivent dans les caves, vide-ordures et gaines, les punaises circulent entre étages. Sans action sur les parties communes, chaque intervention individuelle est à refaire trois mois plus tard.",
+        "Nous intervenons pour les bailleurs et les amicales de locataires avec une méthode d'ensemble : état des lieux des parties communes, traitement coordonné, plan des dispositifs, rapport. Et pour chaque locataire : signalement écrit au bailleur, photos, et notre rapport d'intervention comme pièce justificative — c'est ce qui fait avancer les dossiers."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour des rats sur la voie publique, dans un square ou aux abords du marché, signalez-le aux services municipaux de Saint-Denis (allo agglo / services techniques de Plaine Commune pour l'espace public) : la collectivité traite le domaine public, pas les immeubles privés.",
+    "logement_insalubre": "Saint-Denis compte un service communal d'hygiène et de santé actif sur l'habitat indigne : il peut être saisi pour une infestation liée à l'insalubrité, l'ARS en second recours.",
+    "prive": "Dans un logement, une cave, un commerce ou une copropriété, la dératisation est à la charge du propriétaire, du locataire ou du bailleur selon l'origine : c'est là que nous intervenons."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7. Saint-Denis est l'une de nos communes d'intervention les plus fréquentes : un technicien peut être sur place en 30 à 45 minutes, centre ancien comme Plaine.",
+  "faq_locale": [
+    {
+      "q": "Intervenez-vous dans tous les quartiers de Saint-Denis ?",
+      "r": "Oui : centre-ville et abords du marché, quartier de la gare, La Plaine, Pleyel, Porte de Paris, Franc-Moisin – Bel-Air, Delaunay-Belleville, Floréal. Logements, caves, commerces, bureaux et parties communes."
+    },
+    {
+      "q": "Les rats viennent du chantier d'à côté : que faire ?",
+      "r": "Traiter et obturer votre bâtiment — c'est la seule protection immédiate — et signaler la situation à la mairie, car les chantiers ont des obligations de dératisation. Nous documentons l'origine probable dans notre rapport, utile pour vos démarches."
+    },
+    {
+      "q": "Combien coûte une dératisation à Saint-Denis ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un appartement, sur devis pour copropriétés, bailleurs et commerces. Devis gratuit, prix confirmé avant intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Traitez-vous les punaises de lit dans les meublés et petits hôtels ?",
+      "r": "Oui, c'est une part importante de notre activité à Saint-Denis : traitement en deux passages, discrétion totale, et registre écrit des interventions pour les exploitants."
+    },
+    {
+      "q": "Mon bailleur ne répond pas : pouvez-vous quand même intervenir ?",
+      "r": "Oui, nous pouvons traiter votre logement sans attendre, et notre rapport d'intervention (origine probable, parties communes touchées) vous servira ensuite de pièce pour obtenir du bailleur le traitement global et, le cas échéant, le remboursement."
+    }
+  ]
+}

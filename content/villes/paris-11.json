@@ -1,0 +1,81 @@
+{
+  "nom": "Paris 11e",
+  "slug": "paris-11",
+  "departement": "75",
+  "parent": "paris",
+  "filigrane": "11e",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et tout l'arrondissement",
+  "meta_title": "Dératisation Paris 11 — Oberkampf, Bastille | Deralib",
+  "meta_description": "Rats, souris ou punaises de lit dans le 11e ? Techniciens certifiés Certibiocide : Oberkampf, Bastille, Charonne, République. Intervention discrète. Devis gratuit.",
+  "h1": "Dératisation Paris 11 : Oberkampf, Bastille, Charonne",
+  "intro": "Le 11e est l'arrondissement le plus densément peuplé de Paris — et l'un des plus denses d'Europe. Immeubles faubouriens étroits, cours et passages hérités des ateliers du faubourg Saint-Antoine, et l'une des plus fortes concentrations de bars et restaurants de la capitale entre Oberkampf, Bastille et Charonne : pour les nuisibles, c'est un écosystème complet. Nos techniciens certifiés Certibiocide y traitent rongeurs, punaises de lit et blattes avec une approche adaptée à ce bâti si particulier : l'îlot, pas seulement le logement.",
+  "villes_principales": [
+    "Oberkampf",
+    "Bastille – Faubourg Saint-Antoine",
+    "République",
+    "Charonne",
+    "Nation – Voltaire",
+    "Saint-Ambroise",
+    "Parmentier",
+    "Ledru-Rollin"
+  ],
+  "sections": [
+    {
+      "titre": "Cours et passages du faubourg : traiter l'îlot entier",
+      "paragraphes": [
+        "Entre Bastille et Nation, le bâti du faubourg Saint-Antoine est un labyrinthe : cours en enfilade, passages, anciens ateliers d'artisans devenus logements ou bureaux, caves voûtées. Les rongeurs y circulent d'une cour à l'autre sans jamais passer par la rue — traiter un seul local revient à écoper une barque percée.",
+        "Notre approche dans ces adresses : cartographier l'îlot (qui communique avec qui par les caves et les courettes), traiter les points de passage, et coordonner avec les syndics des bâtiments voisins quand c'est nécessaire. C'est plus de travail au diagnostic, mais c'est ce qui rend le résultat durable."
+      ]
+    },
+    {
+      "titre": "Oberkampf, Bastille, Charonne : le défi des restaurants et des bars",
+      "paragraphes": [
+        "Rue Oberkampf, rue de Lappe, rue de Charonne : peu de quartiers parisiens alignent autant d'établissements au mètre. Pour les blattes, les cuisines mitoyennes et les gaines partagées sont un réseau autoroutier ; pour les rats, les sorties de poubelles nocturnes sont un buffet quotidien.",
+        "Nous intervenons hors heures de service — tôt le matin ou après la fermeture, sans majoration — avec gel appât discret en cuisine et postes sécurisés pour les locaux déchets, puis remettons le registre sanitaire complet. Pour les gérants voisins : un traitement coordonné de plusieurs établissements d'une même rue est souvent la vraie solution, et nous savons l'organiser."
+      ]
+    },
+    {
+      "titre": "Punaises de lit : petites surfaces, grande rotation",
+      "paragraphes": [
+        "Studios et deux-pièces dominent le parc du 11e, avec une rotation locative élevée et beaucoup de colocations : les punaises de lit y trouvent un terrain idéal, chaque déménagement étant une occasion de voyager. La densité du bâti fait le reste — les cloisons mitoyennes sont rarement étanches dans les immeubles faubouriens.",
+        "Nous confirmons toujours l'infestation au diagnostic avant de traiter, puis appliquons le protocole en deux passages à 15 jours. En cas de doute sur l'origine (logement voisin, literie d'occasion, voyage), notre rapport le documente : utile entre locataire et propriétaire, et entre voisins de palier."
+      ]
+    },
+    {
+      "titre": "Caves, courettes et locaux poubelles : les points faibles de l'immeuble",
+      "paragraphes": [
+        "Dans le 11e, la différence entre un immeuble sain et un immeuble infesté tient souvent à trois endroits : la cave (soupiraux dégrillagés, portes disjointes), la courette (évacuations anciennes) et le local poubelles (bacs débordants, porte mal fermée). Tant que ces trois points restent ouverts, les rongeurs reviendront.",
+        "Notre passage type pour un syndic ou un gardien : état des lieux de ces points faibles, traitement par postes sécurisés, obturation grillagée et paille de fer, et un plan écrit des dispositifs posés. La copropriété sait ce qui a été fait, où, et quand le contrôle est prévu."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Pour un rat sur la voie publique, dans un square (Jules Ferry, Maurice Gardette…) ou sur un marché, signalez-le à la Ville de Paris via l'application DansMaRue ou le 3975 : la Ville traite l'espace public, pas les immeubles privés.",
+    "logement_insalubre": "Pour une infestation liée à l'insalubrité d'un logement, le Service technique de l'habitat de la Ville de Paris peut être saisi.",
+    "prive": "Dans un logement, une cave, un commerce ou une copropriété du 11e, la dératisation revient au propriétaire, au locataire ou au syndic selon l'origine : c'est là que nous intervenons."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes, de République à Nation. Les restaurants avant un contrôle d'hygiène passent en priorité.",
+  "faq_locale": [
+    {
+      "q": "Intervenez-vous dans tout le 11e arrondissement ?",
+      "r": "Oui : Oberkampf, Bastille, faubourg Saint-Antoine, République, Charonne, Nation – Voltaire, Saint-Ambroise, Parmentier, Ledru-Rollin. Logements, caves, cours, commerces, bars et restaurants."
+    },
+    {
+      "q": "Mon restaurant ne peut pas fermer : comment intervenez-vous ?",
+      "r": "Hors heures de service, tôt le matin ou après la fermeture, sans majoration. Gel appât discret, postes sécurisés, aucune évacuation nécessaire — et le registre sanitaire est fourni pour les contrôles."
+    },
+    {
+      "q": "Combien coûte une dératisation dans le 11e ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un appartement, sur devis pour une copropriété ou un établissement. Devis gratuit, prix confirmé avant intervention, sans majoration soir ni week-end."
+    },
+    {
+      "q": "Les nuisibles reviennent par la cour commune : qui doit agir ?",
+      "r": "Si la source est dans les parties communes ou une cour partagée, c'est au syndic (ou aux syndics des bâtiments concernés) d'organiser le traitement. Nous établissons un devis pour l'îlot et notre rapport documente l'origine — c'est ce qui débloque les décisions en assemblée."
+    },
+    {
+      "q": "Punaises de lit en colocation : faut-il traiter toutes les chambres ?",
+      "r": "Presque toujours, oui : les punaises circulent entre pièces mitoyennes. Le diagnostic précise l'étendue réelle, et le devis est établi pour le logement entier — traiter une seule chambre mène droit à la rechute."
+    }
+  ]
+}
