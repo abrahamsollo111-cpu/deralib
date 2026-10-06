@@ -56,6 +56,9 @@ export default function Footer() {
                 <Link href="/a-propos">À propos de nous</Link>
               </li>
               <li>
+                <Link href="/recrutement">Nous recrutons</Link>
+              </li>
+              <li>
                 <Link href="/conseils">Conseils anti-nuisibles</Link>
               </li>
               <li>

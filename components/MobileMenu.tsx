@@ -80,6 +80,11 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li>
+            <Link href="/recrutement" onClick={close}>
+              Nous recrutons
+            </Link>
+          </li>
+          <li>
             <Link href="/a-propos" onClick={close}>
               À propos
             </Link>

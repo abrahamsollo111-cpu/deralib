@@ -39,6 +39,7 @@ export default function Header() {
                 mobile : la barre desktop privilégie les pages business */}
             <Link href="/professionnels">Professionnels</Link>
             <Link href="/conseils">Conseils</Link>
+            <Link href="/recrutement">Nous recrutons</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="header-cta">

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Lead, Reglages } from "@/lib/store";
 import Accueil from "./Accueil";
 import Demandes from "./Demandes";
+import Candidatures from "./Candidatures";
 import Statistiques from "./Statistiques";
 import Suivi from "./Suivi";
 import SiteInfos from "./SiteInfos";
@@ -12,6 +13,7 @@ import Prospection from "./Prospection";
 const ONGLETS = [
   { cle: "accueil", label: "Accueil" },
   { cle: "demandes", label: "Demandes" },
+  { cle: "candidatures", label: "Candidatures" },
   { cle: "stats", label: "Statistiques" },
   { cle: "suivi", label: "Suivi & balises" },
   { cle: "site", label: "Site" },
@@ -46,9 +48,23 @@ export default function Dashboard({
       .then((d) => d && setReglages(d.reglages as Reglages));
   }, [chargerLeads]);
 
-  const nouveaux = useMemo(
-    () => leads.filter((l) => l.statut === "nouveau").length,
+  // Les candidatures de techniciens (page /recrutement) sont séparées
+  // des demandes clients dans tout le dashboard
+  const demandes = useMemo(
+    () => leads.filter((l) => l.source !== "candidature"),
     [leads]
+  );
+  const candidatures = useMemo(
+    () => leads.filter((l) => l.source === "candidature"),
+    [leads]
+  );
+  const nouveaux = useMemo(
+    () => demandes.filter((l) => l.statut === "nouveau").length,
+    [demandes]
+  );
+  const nouvellesCandidatures = useMemo(
+    () => candidatures.filter((l) => l.statut === "nouveau").length,
+    [candidatures]
   );
 
   async function deconnexion() {
@@ -73,6 +89,9 @@ export default function Dashboard({
               {o.label}
               {o.cle === "demandes" && nouveaux > 0 && (
                 <span className="admin-pastille">{nouveaux}</span>
+              )}
+              {o.cle === "candidatures" && nouvellesCandidatures > 0 && (
+                <span className="admin-pastille">{nouvellesCandidatures}</span>
               )}
             </button>
           ))}
@@ -104,12 +123,15 @@ export default function Dashboard({
         ) : (
           <>
             {onglet === "accueil" && (
-              <Accueil leads={leads} reglages={reglages} aller={setOnglet} />
+              <Accueil leads={demandes} reglages={reglages} aller={setOnglet} />
             )}
             {onglet === "demandes" && (
-              <Demandes leads={leads} recharger={chargerLeads} />
+              <Demandes leads={demandes} recharger={chargerLeads} />
             )}
-            {onglet === "stats" && <Statistiques leads={leads} />}
+            {onglet === "candidatures" && (
+              <Candidatures leads={candidatures} recharger={chargerLeads} />
+            )}
+            {onglet === "stats" && <Statistiques leads={demandes} />}
             {onglet === "suivi" && (
               <Suivi reglages={reglages} setReglages={setReglages} />
             )}
