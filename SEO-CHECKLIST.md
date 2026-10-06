@@ -53,9 +53,11 @@ officiel Google « Bien débuter en référencement naturel ».
 1. **lib/config.ts** — ✅ fait le 2026-07-23 : téléphone (01 72 68 21 30, ligne pro fixe — 2026-07-26),
    SAS Deralib, SIRET 917 410 011 00014, 45 rue Boursault 75017 Paris,
    Stéphane Grinesse, RCS Pontoise, address/geo JSON-LD, carte /contact.
+   Email ✅ : contact@deralib.com actif depuis le 2026-10-06 (Google
+   Workspace Starter ; MX, SPF et DMARC posés sur le DNS Vercel, DKIM
+   à activer dans admin.google.com).
    RESTE : année de création, nombre de techniciens, n° Certibiocide
-   (ne JAMAIS l'inventer), assureur RC pro + n° de contrat, email à
-   confirmer (contact@deralib.com)
+   (ne JAMAIS l'inventer), assureur RC pro + n° de contrat
 2. **content/avis.json** : recopier les vrais avis Google dès qu'ils
    existent (JAMAIS de faux avis)
 3. **public/images/** : vraies photos (dirigeant, équipe, véhicule siglé,

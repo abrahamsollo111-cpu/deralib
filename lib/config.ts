@@ -44,7 +44,8 @@ export const site = {
     encodeURIComponent(
       "Bonjour, j'ai un problème de nuisibles. Je peux vous envoyer une photo ?"
     ),
-  // TODO : confirmer que cette adresse email est active et relevée
+  // ✅ Boîte active depuis le 2026-10-06 (Google Workspace Starter,
+  // MX/SPF/DMARC configurés sur le DNS Vercel)
   email: "contact@deralib.com",
 
   // Immatriculation (fournie par le client)
