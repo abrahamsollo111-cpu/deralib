@@ -2786,3 +2786,527 @@ body:has(.admin-page) { background: #f4f6f4; padding-bottom: 0 !important; }
 
 .recrutement-etapes { display: grid; gap: 10px; font-size: 0.93rem; }
 .recrutement-etapes strong { color: var(--bleu); margin-right: 4px; }
+
+/* ============================================================
+   DESIGN v4 — « Clinique de l'assainissement » (oct. 2026)
+   Blanc clinique, vert Deralib (logo et véhicule), orange réservé
+   à l'appel. Lignes fines, grille millimétrée discrète, photos
+   cadrées. Ce bloc surcharge les jetons et composants historiques.
+   ⚠️ Jamais de backdrop-filter ni de -webkit-text-stroke sur un
+   élément [data-parallax] : crash du compositing GPU constaté.
+   ============================================================ */
+
+:root {
+  --marine: #0f2a1f;
+  --marine-2: #163a2b;
+  --bleu: #1e5b46;
+  --bleu-dark: #16452f;
+  --teal: #2a6b52;
+  --indigo: #3f6655;
+  --azur: #f3f7f4;
+  --azur-deep: #e2ebe5;
+  --mint: #eef5f1;
+  --line: #e1e8e3;
+  --text: #33403a;
+  --text-light: #5d6a63;
+  --grad-soft: #f3f7f4;
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 42, 31, 0.05);
+  --shadow-md: 0 6px 22px rgba(15, 42, 31, 0.08);
+  --shadow-lg: 0 18px 50px rgba(15, 42, 31, 0.14);
+  --grille: linear-gradient(rgba(30, 91, 70, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 91, 70, 0.05) 1px, transparent 1px);
+}
+
+body { background: #ffffff; }
+::selection { background: rgba(30, 91, 70, 0.16); }
+
+h1, h2, h3, h4, .logo-word {
+  font-family: var(--font-titre), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+h1, h2 { letter-spacing: -0.022em; font-weight: 750; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.1; }
+h3 { letter-spacing: -0.01em; }
+
+.section-azur { background: var(--azur); }
+
+/* tuiles d'icônes : camaïeu vert clinique */
+.tile-bleu { background: #e4efe9; color: var(--bleu); }
+.tile-cyan { background: #e8f2ee; color: var(--teal); }
+.tile-teal { background: #e4efe9; color: var(--teal); }
+.tile-indigo { background: #eaf0ec; color: var(--indigo); }
+
+/* ---------- Header & bandeau ---------- */
+.topbar { background: var(--marine); letter-spacing: 0.01em; }
+.topbar em { color: #9fd9bf; }
+.header { border-bottom-color: var(--line); }
+body.scrolled .header { box-shadow: 0 6px 24px rgba(15, 42, 31, 0.07); }
+
+/* ---------- Boutons ---------- */
+.btn { font-weight: 700; letter-spacing: -0.005em; }
+.btn:focus-visible { outline-color: rgba(30, 91, 70, 0.4); }
+.btn-primary { box-shadow: 0 8px 22px rgba(207, 79, 23, 0.28); }
+.btn-primary:hover { box-shadow: 0 10px 26px rgba(207, 79, 23, 0.34); }
+.btn-outline { border-color: var(--line); }
+.btn-marine { background: var(--marine); }
+.btn-marine:hover { background: var(--bleu); }
+
+/* ---------- Cartes, puces, listes ---------- */
+.card,
+.reassure-card,
+.qq-card,
+.form-card,
+.avis-card,
+.faq-item,
+.checklist li,
+.sign,
+.step {
+  border-color: var(--line);
+}
+.card { border-radius: var(--radius); }
+a.card:hover { border-color: rgba(30, 91, 70, 0.35); box-shadow: var(--shadow-md); }
+.chip { background: #fff; border-color: var(--line); }
+a.chip:hover { border-color: var(--bleu); color: var(--bleu); background: var(--mint); }
+
+/* ---------- Hero des pages internes : blanc clinique millimétré ---------- */
+.hero:not(.cl-hero) {
+  background:
+    radial-gradient(800px 420px at 90% 0%, rgba(30, 91, 70, 0.08), transparent 65%),
+    var(--grille),
+    #f8fbf9;
+  background-size: auto, 44px 44px, 44px 44px, auto;
+}
+
+/* ---------- Réassurance (sous le hero) ---------- */
+.reassure-card {
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+.reassure-icon { border-radius: 12px; }
+
+/* ============================================================
+   ACCUEIL v4
+   ============================================================ */
+
+.cl-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  margin-bottom: 14px;
+}
+.cl-kicker::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--bleu);
+  transform: rotate(45deg);
+}
+.cl-kicker-clair { color: #9fd9bf; }
+
+/* les intitulés historiques (.kicker) adoptent le même style sur tout le site */
+.kicker {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--bleu);
+}
+.kicker::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--bleu);
+  transform: rotate(45deg);
+}
+.cl-kicker-clair::before { background: #9fd9bf; }
+
+.cl-section { padding: 92px 0; }
+.cl-section-teinte {
+  background:
+    var(--grille),
+    var(--azur);
+  background-size: 44px 44px, 44px 44px, auto;
+}
+@media (max-width: 700px) { .cl-section { padding: 68px 0; } }
+
+.cl-head { max-width: 640px; margin-bottom: 44px; }
+.cl-head p { margin-top: 14px; color: var(--text-light); font-size: 1.05rem; }
+
+/* ---------- Hero ---------- */
+.cl-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 150px;
+  background:
+    radial-gradient(900px 520px at 88% -10%, rgba(30, 91, 70, 0.10), transparent 62%),
+    radial-gradient(700px 400px at -10% 110%, rgba(30, 91, 70, 0.06), transparent 60%),
+    #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+.cl-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--grille);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 70% 30%, #000 10%, transparent 70%);
+  mask-image: radial-gradient(ellipse 70% 70% at 70% 30%, #000 10%, transparent 70%);
+  pointer-events: none;
+}
+.cl-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.94fr 1.06fr;
+  gap: 60px;
+  align-items: center;
+}
+.cl-statut {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px 6px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--marine);
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+}
+.cl-statut .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55);
+  animation: pulse 2s infinite;
+}
+.cl-hero .cl-kicker { display: flex; }
+.cl-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1.03;
+  letter-spacing: -0.028em;
+  font-weight: 800;
+  margin: 2px 0 22px;
+}
+.cl-hero h1 em { font-style: normal; color: var(--bleu); display: block; }
+.cl-hero-sub {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  max-width: 540px;
+  color: var(--text);
+  margin-bottom: 30px;
+}
+.cl-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.cl-lien-devis {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--marine);
+  border-bottom: 1.5px solid rgba(30, 91, 70, 0.3);
+  padding-bottom: 2px;
+}
+.cl-lien-devis:hover { text-decoration: none; color: var(--bleu); border-bottom-color: var(--bleu); }
+.cl-garanties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+.cl-garanties li { display: inline-flex; align-items: center; gap: 7px; }
+.cl-garanties svg { color: var(--bleu); }
+
+/* visuel : photo cadrée + éléments flottants (fonds opaques, pas de flou) */
+.cl-visuel { position: relative; }
+.cl-photo {
+  position: relative;
+  margin: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  background: var(--azur);
+  box-shadow: var(--shadow-lg);
+  outline: 1px solid rgba(15, 42, 31, 0.06);
+}
+.cl-photo img { display: block; width: 100%; height: auto; }
+
+.cl-photo figcaption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(15, 42, 31, 0.86);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.cl-badge {
+  position: absolute;
+  top: 24px;
+  right: -22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px 12px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+.cl-badge strong { display: block; color: var(--marine); font-size: 0.92rem; line-height: 1.2; }
+.cl-badge small { color: var(--text-light); font-size: 0.76rem; font-weight: 600; }
+.cl-badge-ico {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: var(--mint);
+  color: var(--bleu);
+  flex-shrink: 0;
+}
+.cl-fiche {
+  position: absolute;
+  right: -26px;
+  bottom: -38px;
+  width: 236px;
+  padding: 16px 18px 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+.cl-fiche-titre {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+.cl-fiche ol { display: grid; gap: 7px; }
+.cl-fiche li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--marine);
+}
+.cl-fiche li svg {
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  border-radius: 6px;
+  background: var(--bleu);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .cl-hero { padding: 36px 0 108px; }
+  .cl-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cl-hero-texte { text-align: center; }
+  .cl-hero .cl-kicker { justify-content: center; font-size: 0.68rem; letter-spacing: 0.12em; }
+  .cl-hero h1 { font-size: clamp(2.15rem, 9vw, 2.8rem); }
+  .cl-hero-sub { margin-left: auto; margin-right: auto; font-size: 1.03rem; }
+  .cl-actions { flex-direction: column; align-items: stretch; max-width: 380px; margin: 0 auto; }
+  .cl-garanties { justify-content: center; }
+  .cl-badge { right: 10px; top: 10px; padding: 9px 13px 9px 9px; }
+  .cl-fiche { right: 10px; bottom: -28px; width: 200px; padding: 13px 14px; }
+  .cl-fiche li { font-size: 0.84rem; }
+}
+
+/* ---------- Triage : du symptôme au protocole ---------- */
+.cl-triage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1000px) { .cl-triage { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cl-triage { grid-template-columns: 1fr; } }
+.cl-symptome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 212px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  color: var(--marine);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.cl-symptome:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+  border-color: rgba(30, 91, 70, 0.4);
+  box-shadow: var(--shadow-md);
+}
+.cl-symptome-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+}
+.cl-symptome-txt {
+  font-family: var(--font-titre), sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.cl-symptome-diag {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  color: var(--bleu);
+}
+.cl-symptome-diag small {
+  width: 100%;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.cl-symptome-cta {
+  background: var(--marine);
+  border-color: var(--marine);
+  color: #fff;
+}
+.cl-symptome-cta .cl-symptome-ico { background: rgba(255, 255, 255, 0.1); color: #9fd9bf; }
+.cl-symptome-cta .cl-symptome-diag { color: #fff; border-top-color: rgba(255, 255, 255, 0.2); }
+.cl-symptome-cta .cl-symptome-diag small { color: rgba(255, 255, 255, 0.65); }
+.cl-symptome-cta:hover { border-color: var(--bleu); background: #12301f; }
+.cl-especes { margin-top: 34px; }
+.cl-especes > p { font-weight: 700; color: var(--marine); margin-bottom: 12px; }
+
+/* ---------- Protocole ---------- */
+.cl-protocole-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+.cl-photo-carree { max-width: 480px; }
+@media (max-width: 900px) {
+  .cl-protocole-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cl-photo-carree { max-width: 420px; margin: 0 auto; }
+}
+.cl-protocole { margin-top: 30px; display: grid; gap: 0; position: relative; }
+.cl-protocole li {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.cl-protocole li:last-child { border-bottom: 1px solid var(--line); }
+.cl-num {
+  font-family: var(--font-titre), sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--bleu);
+  font-variant-numeric: tabular-nums;
+}
+.cl-protocole h3 { font-size: 1.12rem; margin-bottom: 5px; }
+.cl-protocole p { color: var(--text-light); font-size: 0.96rem; }
+
+/* ---------- Professionnels ---------- */
+.cl-pro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+@media (max-width: 900px) { .cl-pro-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+/* ---------- Bande chiffres : vert profond, grille fine ---------- */
+.cl-stats {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(900px 500px at 85% 0%, rgba(159, 217, 191, 0.14), transparent 60%),
+    var(--marine);
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+.cl-stats .stat { border-left: 1px solid rgba(255, 255, 255, 0.14); padding-left: 20px; }
+
+/* grilles v4 : une colonne ne peut jamais imposer sa largeur (bouton
+   nowrap, liste de puces) et faire déborder la page sur mobile */
+.cl-hero-grid > *,
+.cl-protocole-grid > *,
+.cl-pro-grid > * { min-width: 0; }
+@media (max-width: 560px) {
+  .cl-section .btn { white-space: normal; text-align: center; }
+  .cl-hero .cl-kicker::before { display: none; }
+  .cl-lien-devis { font-size: 0.9rem; }
+}
+@media (max-width: 900px) {
+  .cl-visuel .cl-photo { aspect-ratio: 4 / 3; }
+  .cl-visuel .cl-photo img { height: 100%; object-fit: cover; object-position: 20% 50%; }
+}
+@media (max-width: 560px) {
+  .cl-fiche { display: none; }
+  .cl-badge { top: auto; bottom: 10px; right: 10px; }
+}
+/* titres longs des pages intérieures : un souffle de plus qu'à l'accueil */
+.hero:not(.cl-hero) h1 { letter-spacing: -0.018em; }
+
+/* ============================================================
+   MOTIF « LABORATOIRE » — structure moléculaire en fond de site
+   (hexagones + atomes, vert Deralib très léger). Les sections
+   teintées deviennent translucides pour laisser voir le motif ;
+   cartes, header et formulaires restent blancs et ressortent.
+   ============================================================ */
+:root { --motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 28 48.5'%3E%3Cpath d='M14 0V8.08L28 16.17V32.33L14 40.42V48.5M14 8.08L0 16.17V32.33L14 40.42' fill='none' stroke='%231e5b46' stroke-opacity='0.13' stroke-width='0.5'/%3E%3Cg fill='%231e5b46' fill-opacity='0.22'%3E%3Ccircle cx='14' cy='8.08' r='1'/%3E%3Ccircle cx='0' cy='32.33' r='1'/%3E%3Ccircle cx='28' cy='32.33' r='1'/%3E%3C/g%3E%3C/svg%3E"); }
+body {
+  background-color: #f3f8f5;
+  background-image: var(--motif);
+  background-size: 56px 97px;
+}
+.cl-hero {
+  background:
+    radial-gradient(900px 520px at 88% -10%, rgba(30, 91, 70, 0.10), transparent 62%),
+    radial-gradient(700px 400px at -10% 110%, rgba(30, 91, 70, 0.06), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.35));
+}
+.cl-hero::before { display: none; }
+.cl-section-teinte,
+.section-azur {
+  background: rgba(220, 235, 227, 0.5);
+}
+.hero:not(.cl-hero) {
+  background:
+    radial-gradient(800px 420px at 90% 0%, rgba(30, 91, 70, 0.09), transparent 65%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+}
+

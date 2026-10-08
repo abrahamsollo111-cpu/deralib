@@ -4,16 +4,14 @@ import Image from "next/image";
 import Reassurance from "@/components/Reassurance";
 import Avis from "@/components/Avis";
 import QuickQuote from "@/components/QuickQuote";
+import HomeFx from "@/components/HomeFx";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
-import HeroDecor from "@/components/HeroDecor";
-import CtaRassure from "@/components/CtaRassure";
 import {
   IconWhatsApp,
   IconPhone,
   IconCheck,
-  IconShield,
-  IconTeam,
+  IconClock,
   IconArrow,
   IconPin,
   NUISIBLE_ICONS,
@@ -108,29 +106,83 @@ const FAQ_HOME = [
   },
 ];
 
+// « Triage » : le visiteur part de ce qu'il observe, pas du nom du
+// nuisible — comme une consultation. Chaque carte mène au protocole.
+const SYMPTOMES = [
+  {
+    slug: "punaises-de-lit",
+    symptome: "Piqûres alignées au réveil, points noirs sur le matelas",
+    diagnostic: "Punaises de lit",
+    tile: "tile-indigo",
+  },
+  {
+    slug: "deratisation",
+    symptome: "Crottes, emballages rongés, grattements la nuit",
+    diagnostic: "Rats & souris",
+    tile: "tile-bleu",
+  },
+  {
+    slug: "cafards",
+    symptome: "Insectes qui fuient la lumière dans la cuisine",
+    diagnostic: "Cafards & blattes",
+    tile: "tile-cyan",
+  },
+  {
+    slug: "guepes-frelons",
+    symptome: "Va-et-vient sous le toit ou le coffre du volet",
+    diagnostic: "Guêpes & frelons",
+    tile: "tile-teal",
+  },
+  {
+    slug: "depigeonnage",
+    symptome: "Fientes et nids sur le balcon ou les corniches",
+    diagnostic: "Pigeons",
+    tile: "tile-cyan",
+  },
+];
+
+const PROTOCOLE = [
+  {
+    titre: "Diagnostic",
+    texte: "Identification de l'espèce, de l'ampleur de l'infestation et des points d'entrée. Le prix est confirmé à ce moment-là, avant de commencer.",
+  },
+  {
+    titre: "Traitement",
+    texte: "Méthode adaptée au nuisible : postes d'appâtage sécurisés, gel, vapeur sèche ou insecticide. Dispositifs pensés pour les enfants et les animaux.",
+  },
+  {
+    titre: "Prévention",
+    texte: "Obturation grillagée des accès, retrait du nid, conseils concrets : c'est l'étape qui empêche le retour.",
+  },
+  {
+    titre: "Contrôle",
+    texte: "Passage de contrôle et ajustement si nécessaire. Traitement garanti, conditions écrites sur le devis.",
+  },
+];
+
 export default function Home() {
   return (
     <>
-      {/* ===== HERO parallax multi-couches ===== */}
-      <section className="hero hero-home" data-mouse-zone>
-        <HeroDecor dense />
-
-        <div className="container hero-grid">
-          <div className="enter-left">
-            <span className="kicker">
-              {site.anneesMetier} ans de métier — {site.zone}
+      {/* ===== HERO « clinique » : texte + photo cadrée, fiche flottante ===== */}
+      <section className="cl-hero">
+        <div className="container cl-hero-grid">
+          <div className="cl-hero-texte enter-left">
+            <p className="cl-statut">
+              <span className="dot" /> Nous répondons {site.horaires}
+            </p>
+            <span className="cl-kicker">
+              Clinique de l&apos;assainissement · {site.zone}
             </span>
             <h1>
-              Nuisibles éliminés.{" "}
-              <em className="grad-text">Maison assainie.</em>
+              Nuisibles éliminés. <em>Maison assainie.</em>
             </h1>
-            <p className="hero-sub">
-              Rats, punaises de lit, cafards, guêpes et frelons : nos
-              techniciens certifiés {site.certification} éliminent,
-              assainissent et bouchent les accès. Sur place en 30 à 45
-              minutes, 24h/24, prix confirmé avant de commencer.
+            <p className="cl-hero-sub">
+              Un protocole précis, appliqué par nos techniciens certifiés{" "}
+              {site.certification} : diagnostic, traitement, prévention,
+              contrôle. Sur place en 30 à 45 minutes, prix confirmé avant de
+              commencer.
             </p>
-            <div className="hero-actions">
+            <div className="cl-actions">
               <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
                 <IconPhone /> {site.telephone}
               </a>
@@ -142,101 +194,154 @@ export default function Home() {
               >
                 <IconWhatsApp /> WhatsApp
               </a>
-              <a href="#devis-express" className="btn btn-outline btn-lg">
-                Devis gratuit en 30 s
-              </a>
             </div>
-            <p className="dispo">
-              <span className="dot" />
-              <span>
-                Nous répondons <em>{site.horaires}</em> — appel sans engagement
-              </span>
-            </p>
-            <CtaRassure />
-            <div className="hero-points">
-              <span className="hero-point">
+            <a href="#devis-express" className="cl-lien-devis">
+              ou décrivez votre problème en 30 secondes <IconArrow size={14} />
+            </a>
+            <ul className="cl-garanties">
+              <li>
                 <IconCheck size={15} /> Certifiés {site.certification}
-              </span>
-              <span className="hero-point">
-                <IconCheck size={15} /> Techniciens salariés
-              </span>
-              <span className="hero-point">
-                <IconCheck size={15} /> Devis gratuit
-              </span>
-            </div>
+              </li>
+              <li>
+                <IconCheck size={15} /> Traitements garantis
+              </li>
+              <li>
+                <IconCheck size={15} /> Sans majoration soir & week-end
+              </li>
+            </ul>
           </div>
 
-          <div style={{ position: "relative" }} className="enter-right">
-            <div className="hero-float hero-float-1" data-parallax="0.1" data-depth="14">
-              <IconShield size={17} /> Certifié {site.certification}
+          <div className="cl-visuel enter-right">
+            <figure className="cl-photo">
+              <Image
+                src="/images/technicien-deralib-vehicule.webp"
+                alt="Technicien Deralib en combinaison de protection devant le véhicule de l'entreprise"
+                width={1536}
+                height={1024}
+                priority
+                sizes="(max-width: 900px) 100vw, 560px"
+              />
+            </figure>
+            <div className="cl-badge" data-parallax="0.08">
+              <span className="cl-badge-ico">
+                <IconClock size={18} />
+              </span>
+              <span>
+                <strong>Sur place en 30-45 min</strong>
+                <small>Partout en {site.zone}</small>
+              </span>
             </div>
-            <div className="hero-card" data-depth="5">
-              <div className="hero-card-title">
-                <span className="pulse" /> Déroulé d&apos;une intervention
-              </div>
-              <p className="hero-card-sub">
-                Les 4 étapes, de l&apos;appel au contrôle de résultat
-              </p>
-              <div className="hero-card-steps">
-                {[
-                  ["Diagnostic sur place", "Identification de l'espèce et des points d'entrée"],
-                  ["Traitement adapté", "Postes d'appâtage, gel ou insecticide selon le nuisible"],
-                  ["Prévention du retour", "Obturation grillagée des accès, conseils concrets"],
-                  ["Suivi & contrôle", "Passage de contrôle, ajustement si nécessaire"],
-                ].map(([t, s], i) => (
-                  <div key={t} className="hero-card-step">
-                    <span className="num">{i + 1}</span>
-                    <div>
-                      <strong>{t}</strong>
-                      <span>{s}</span>
-                    </div>
-                  </div>
+            <div className="cl-fiche" data-parallax="0.04">
+              <p className="cl-fiche-titre">Protocole d&apos;intervention</p>
+              <ol>
+                {PROTOCOLE.map((p) => (
+                  <li key={p.titre}>
+                    <IconCheck size={14} /> {p.titre}
+                  </li>
                 ))}
-              </div>
-              {/* tracé ECG animé */}
-              <div className="ecg" aria-hidden>
-                <svg viewBox="0 0 300 34" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="ecg-grad" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#1577DB" />
-                      <stop offset="100%" stopColor="#0FB5C9" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M0 20 H70 L82 20 L90 6 L98 30 L106 20 H150 L162 20 L170 9 L178 28 L186 20 H300" />
-                </svg>
-              </div>
-            </div>
-            <div className="hero-float hero-float-2" data-parallax="0.18" data-depth="22">
-              <IconTeam size={17} /> Techniciens dans toute l&apos;{site.zone}
+              </ol>
             </div>
           </div>
-        </div>
-        <div className="scroll-cue" aria-hidden>
-          Découvrir
         </div>
       </section>
 
       <Reassurance />
 
-      {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
-      <section id="devis-express" style={{ overflow: "hidden" }}>
-        <div className="fx-layer" aria-hidden>
-          <span
-            className="deco-plus deco-plus-cyan"
-            data-parallax="0.4"
-            style={{ top: "14%", right: "8%", fontSize: 34 }}
-          >
-            +
-          </span>
-          <div
-            className="deco deco-ring"
-            data-parallax="0.25"
-            style={{ width: 260, height: 260, bottom: -90, left: "-5%" }}
-          />
+      {/* ===== TRIAGE : du symptôme au protocole ===== */}
+      <section className="cl-section">
+        <div className="container">
+          <div className="cl-head" data-reveal>
+            <span className="cl-kicker">Diagnostic</span>
+            <h2>Qu&apos;observez-vous ?</h2>
+            <p>
+              Partez de ce que vous voyez : chaque nuisible a son protocole,
+              son matériel et ses délais.
+            </p>
+          </div>
+          <div className="cl-triage" data-stagger>
+            {SYMPTOMES.map((s) => {
+              const Icon = NUISIBLE_ICONS[s.slug];
+              return (
+                <Link key={s.slug} href={`/${s.slug}`} className="cl-symptome" data-reveal>
+                  <span className={`cl-symptome-ico ${s.tile}`}>
+                    <Icon />
+                  </span>
+                  <span className="cl-symptome-txt">« {s.symptome} »</span>
+                  <span className="cl-symptome-diag">
+                    <small>Diagnostic probable</small>
+                    {s.diagnostic} <IconArrow size={14} />
+                  </span>
+                </Link>
+              );
+            })}
+            <a href={site.telephoneHref} className="cl-symptome cl-symptome-cta" data-reveal>
+              <span className="cl-symptome-ico">
+                <IconPhone />
+              </span>
+              <span className="cl-symptome-txt">Vous ne savez pas ce que c&apos;est ?</span>
+              <span className="cl-symptome-diag">
+                <small>Diagnostic gratuit par téléphone</small>
+                {site.telephone} <IconArrow size={14} />
+              </span>
+            </a>
+          </div>
+
+          {/* maillage fin : les espèces précises couvertes par nos
+              protocoles — capte « blatte germanique », « frelon asiatique »… */}
+          <div className="cl-especes" data-reveal>
+            <p>Espèces traitées :</p>
+            <div className="chip-list">
+              <Link href="/deratisation" className="chip">rat brun (surmulot)</Link>
+              <Link href="/deratisation" className="chip">rat noir</Link>
+              <Link href="/deratisation" className="chip">souris grise</Link>
+              <Link href="/punaises-de-lit" className="chip">punaises de lit</Link>
+              <Link href="/cafards" className="chip">blatte germanique</Link>
+              <Link href="/cafards" className="chip">blatte orientale</Link>
+              <Link href="/guepes-frelons" className="chip">guêpe commune</Link>
+              <Link href="/guepes-frelons" className="chip">frelon européen</Link>
+              <Link href="/guepes-frelons" className="chip">frelon asiatique</Link>
+              <Link href="/depigeonnage" className="chip">pigeons (dépigeonnage)</Link>
+            </div>
+          </div>
         </div>
+      </section>
+
+      {/* ===== PROTOCOLE : photo + 4 étapes numérotées ===== */}
+      <section className="cl-section cl-section-teinte">
+        <div className="container cl-protocole-grid">
+          <figure className="cl-photo cl-photo-carree" data-reveal="left">
+            <Image
+              src="/images/technicien-traitement-logement.jpg"
+              alt="Technicien en combinaison traitant les plinthes d'un logement"
+              width={554}
+              height={554}
+              sizes="(max-width: 900px) 100vw, 460px"
+            />
+            <figcaption>Traitement au plus près des passages : plinthes, gaines, recoins.</figcaption>
+          </figure>
+          <div data-reveal="right">
+            <span className="cl-kicker">Notre protocole</span>
+            <h2>Quatre étapes. Aucune improvisation.</h2>
+            <ol className="cl-protocole">
+              {PROTOCOLE.map((p, i) => (
+                <li key={p.titre}>
+                  <span className="cl-num">{String(i + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{p.titre}</h3>
+                    <p>{p.texte}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
+      <section id="devis-express" className="cl-section">
         <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
           <div data-reveal="left">
-            <span className="kicker">Devis express</span>
+            <span className="cl-kicker">Devis express</span>
             <h2>
               Décrivez. <span className="grad-text">On vous rappelle.</span>
             </h2>
@@ -262,130 +367,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SERVICES ===== */}
-      <section style={{ overflow: "hidden" }}>
-        <span className="giant" data-parallax="0.12" style={{ top: 30, right: -60 }} aria-hidden>
-          Interventions
-        </span>
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <div className="section-head" data-reveal>
-            <span className="kicker">Nos interventions</span>
-            <h2>
-              Un nuisible, <span className="grad-text">un protocole</span>
-            </h2>
-            <p>
-              On ne traite pas une colonie de blattes comme un nid de frelons.
-              Chaque espèce a son protocole et son matériel.
-            </p>
-          </div>
-          <div className="cards-grid" data-stagger>
-            {SERVICES.map((s) => {
-              const Icon = NUISIBLE_ICONS[s.slug];
-              return (
-                <Link key={s.slug} href={`/${s.slug}`} className="card" data-reveal>
-                  <span className={`card-icon ${s.tile}`}>
-                    <Icon />
-                  </span>
-                  <h3>{s.titre}</h3>
-                  <p>{s.desc}</p>
-                  {/* ancre descriptive (guide SEO Google : pas de « en
-                      savoir plus ») */}
-                  <span className="card-link">
-                    {s.titre} en {site.zone} <IconArrow size={14} />
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* maillage fin : les espèces précises que couvrent nos 4
-              protocoles — capte les recherches « blatte germanique »,
-              « frelon asiatique », etc. */}
-          <div style={{ marginTop: 30 }} data-reveal>
-            <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
-              Nous traitons notamment :
-            </p>
-            <div className="chip-list">
-              <Link href="/deratisation" className="chip">rat brun (surmulot)</Link>
-              <Link href="/deratisation" className="chip">rat noir</Link>
-              <Link href="/deratisation" className="chip">souris grise</Link>
-              <Link href="/punaises-de-lit" className="chip">punaises de lit</Link>
-              <Link href="/cafards" className="chip">blatte germanique</Link>
-              <Link href="/cafards" className="chip">blatte orientale</Link>
-              <Link href="/guepes-frelons" className="chip">guêpe commune</Link>
-              <Link href="/guepes-frelons" className="chip">frelon européen</Link>
-              <Link href="/guepes-frelons" className="chip">frelon asiatique</Link>
-              <Link href="/depigeonnage" className="chip">pigeons (dépigeonnage)</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ===== AVIS CLIENTS — placés haut : la preuve sociale juste
           après l'offre (rien ne s'affiche tant que avis.json est vide) ===== */}
       <Avis />
 
       {/* ===== PROFESSIONNELS ===== */}
-      <section className="section-azur">
-        <div className="container two-col">
+      <section className="cl-section">
+        <div className="container cl-pro-grid">
           <div data-reveal="left">
-            <span className="kicker">Professionnels</span>
-            <h2>
-              Vous êtes un <span className="grad-text">établissement ?</span>
-            </h2>
+            <span className="cl-kicker">Professionnels</span>
+            <h2>Établissements : discrétion et traçabilité.</h2>
             <p style={{ marginTop: 16 }}>
               Restaurants, hôtels, copropriétés, bureaux, écoles : nous
               intervenons hors horaires d&apos;ouverture, en discrétion, avec le
               registre sanitaire que vos contrôles exigent. Contrats annuels
               avec passages programmés pour les sites exposés.
             </p>
-            <div style={{ marginTop: 22 }}>
-              <Link href="/professionnels" className="btn btn-primary">
+            <div className="chip-list" style={{ marginTop: 22 }}>
+              {[
+                "Restaurants",
+                "Commerces de bouche",
+                "Hôtels",
+                "Locations saisonnières",
+                "Copropriétés & syndics",
+                "Bureaux",
+                "Crèches & écoles",
+                "Entrepôts",
+              ].map((s) => (
+                <Link key={s} href="/professionnels" className="chip">
+                  {s}
+                </Link>
+              ))}
+            </div>
+            <div style={{ marginTop: 26 }}>
+              <Link href="/professionnels" className="btn btn-marine">
                 Nos solutions pour les professionnels <IconArrow size={14} />
               </Link>
             </div>
           </div>
-          <div className="chip-list" data-reveal="right" style={{ alignContent: "center" }}>
-            {[
-              "Restaurants",
-              "Commerces de bouche",
-              "Hôtels",
-              "Locations saisonnières",
-              "Copropriétés & syndics",
-              "Bureaux",
-              "Crèches & écoles",
-              "Entrepôts",
-              "Chantiers",
-            ].map((s) => (
-              <Link key={s} href="/professionnels" className="chip">
-                {s}
-              </Link>
-            ))}
-          </div>
+          <figure className="cl-photo" data-reveal="right">
+            <Image
+              src="/images/techniciens-traitement-bureaux.jpg"
+              alt="Deux techniciens en combinaison traitant des bureaux"
+              width={678}
+              height={452}
+              sizes="(max-width: 900px) 100vw, 540px"
+            />
+            <figcaption>Bureaux, commerces, parties communes : interventions hors horaires.</figcaption>
+          </figure>
         </div>
       </section>
 
       {/* ===== BANDE CHIFFRES (parallax sombre + compteurs) ===== */}
-      <section className="stats-band">
-        <div className="fx-layer" aria-hidden>
-          <div data-parallax="0.08" style={{ position: "absolute", inset: 0 }}>
-            <div className="bg-dots bg-dots-invert" />
-          </div>
-          <div
-            className="deco deco-ring-light deco-ring"
-            data-parallax="0.28"
-            style={{ width: 560, height: 560, top: -200, right: -160 }}
-          />
-          <div
-            className="deco deco-ring-light deco-ring-dash"
-            style={{ width: 300, height: 300, bottom: -100, left: "10%" }}
-          />
-          <span className="giant giant-light" data-parallax="0.18" style={{ bottom: 20, right: -40 }}>
-            Deralib
-          </span>
-        </div>
+      <section className="stats-band cl-stats">
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <span className="kicker" style={{ color: "#8fd0b0" }}>
+          <span className="cl-kicker cl-kicker-clair">
             Une vraie entreprise, pas un annuaire
           </span>
           <h2 data-reveal style={{ color: "#fff" }}>
@@ -415,24 +451,10 @@ export default function Home() {
       </section>
 
       {/* ===== ZONE D'INTERVENTION (radar) ===== */}
-      <section className="section-azur" style={{ overflow: "hidden" }}>
-        <div className="fx-layer" aria-hidden>
-          <span
-            className="deco-plus"
-            data-parallax="0.4"
-            style={{ top: "12%", right: "12%", fontSize: 30 }}
-          >
-            +
-          </span>
-          <div
-            className="deco deco-ring"
-            data-parallax="0.25"
-            style={{ width: 220, height: 220, bottom: -80, right: "-4%" }}
-          />
-        </div>
+      <section className="cl-section">
         <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
           <div data-reveal="left">
-            <span className="kicker">Zone d&apos;intervention</span>
+            <span className="cl-kicker">Zone d&apos;intervention</span>
             <h2>
               Toute l&apos;<span className="grad-text">{site.zone}</span>
             </h2>
@@ -460,7 +482,7 @@ export default function Home() {
               ))}
             </div>
             <div style={{ marginTop: 26 }}>
-              <Link href="/deratisation/paris" className="btn btn-primary">
+              <Link href="/deratisation/paris" className="btn btn-marine">
                 <IconPin size={17} /> Dératisation à Paris
               </Link>
             </div>
@@ -491,13 +513,10 @@ export default function Home() {
       </section>
 
       {/* ===== À PROPOS TEASER ===== */}
-      <section style={{ overflow: "hidden" }}>
-        <span className="giant" data-parallax="0.14" style={{ bottom: 10, left: -40 }} aria-hidden>
-          Expertise
-        </span>
+      <section className="cl-section cl-section-teinte">
         <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
           <div data-reveal="left">
-            <span className="kicker">Qui sommes-nous</span>
+            <span className="cl-kicker">Qui sommes-nous</span>
             <h2>
               {site.anneesMetier} ans de métier.{" "}
               <span className="grad-text">Sur le terrain.</span>
@@ -544,10 +563,10 @@ export default function Home() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="section-azur">
+      <section className="cl-section">
         <div className="container">
           <div className="section-head" data-reveal>
-            <span className="kicker">FAQ</span>
+            <span className="cl-kicker">FAQ</span>
             <h2>Questions fréquentes</h2>
           </div>
           <Faq items={FAQ_HOME} />
@@ -555,6 +574,7 @@ export default function Home() {
       </section>
 
       <CtaBand />
+      <HomeFx />
     </>
   );
 }
