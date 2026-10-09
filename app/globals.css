@@ -2014,6 +2014,23 @@ a.card:hover .card-link { gap: 10px; }
 .two-col-top { align-items: start; }
 @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; gap: 40px; } }
 
+/* Devis express (accueil) : 2 colonnes sur ordinateur, et sur mobile
+   le formulaire passe avant la liste d'arguments */
+.devis-express-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "intro form" "liste form";
+  column-gap: 52px;
+}
+.devis-express-intro { grid-area: intro; align-self: end; }
+.devis-express-form { grid-area: form; align-self: center; }
+.devis-express-liste { grid-area: liste; align-self: start; margin-top: 22px; }
+@media (max-width: 900px) {
+  .devis-express-grid { grid-template-columns: 1fr; grid-template-areas: "intro" "form" "liste"; }
+  .devis-express-form { margin-top: 24px; }
+  .devis-express-liste { margin-top: 28px; }
+}
+
 .chip-list { display: flex; flex-wrap: wrap; gap: 9px; }
 .chip {
   background: var(--white);

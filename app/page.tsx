@@ -247,8 +247,10 @@ export default function Home() {
 
       {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
       <section id="devis-express" className="cl-section">
-        <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
-          <div data-reveal="left">
+        {/* sur mobile : titre → formulaire → arguments (le formulaire
+            n'attend plus derrière la liste) ; sur ordinateur : 2 colonnes */}
+        <div className="container devis-express-grid" style={{ position: "relative", zIndex: 2 }}>
+          <div className="devis-express-intro" data-reveal="left">
             <span className="cl-kicker">Devis express</span>
             <h2>
               Décrivez. <span className="grad-text">On vous rappelle.</span>
@@ -257,21 +259,21 @@ export default function Home() {
               4 questions, 30 secondes. Un technicien vous rappelle avec un
               premier diagnostic et un prix indicatif.
             </p>
-            <ul className="checklist" style={{ marginTop: 22 }} data-stagger>
-              <li data-reveal="left">
-                <IconCheck /> Réponse rapide d&apos;un technicien, pas d&apos;un robot
-              </li>
-              <li data-reveal="left">
-                <IconCheck /> Gratuit et sans engagement
-              </li>
-              <li data-reveal="left">
-                <IconCheck /> Vos coordonnées ne sont jamais revendues
-              </li>
-            </ul>
           </div>
-          <div data-reveal="right">
+          <div className="devis-express-form" data-reveal="right">
             <QuickQuote />
           </div>
+          <ul className="checklist devis-express-liste" data-stagger>
+            <li data-reveal="left">
+              <IconCheck /> Réponse rapide d&apos;un technicien, pas d&apos;un robot
+            </li>
+            <li data-reveal="left">
+              <IconCheck /> Gratuit et sans engagement
+            </li>
+            <li data-reveal="left">
+              <IconCheck /> Vos coordonnées ne sont jamais revendues
+            </li>
+          </ul>
         </div>
       </section>
 
