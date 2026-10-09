@@ -61,7 +61,7 @@ const VARIANTES: Record<
 > = {
   deratisation: { hero: "imageDroite", signes: "cartes", protocole: "timeline", prix: "table", reassurance: "bandeau" },
   "punaises-de-lit": { hero: "imageGauche", signes: "carrousel", protocole: "grille", prix: "cartes", reassurance: "badges" },
-  cafards: { hero: "banniere", signes: "liste", protocole: "timelineH", prix: "table", reassurance: "bandeau" },
+  cafards: { hero: "imageDroite", signes: "liste", protocole: "timelineH", prix: "table", reassurance: "bandeau" },
   "guepes-frelons": { hero: "flottant", signes: "cartes", protocole: "grille", prix: "cartes", reassurance: "badges", alerteSecurite: true },
   // TODO PHOTO : ajouter une vraie photo de chantier dépigeonnage
   // (pics/filets posés) dans HERO_IMAGES dès qu'elle existe

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,6 +13,15 @@ import { site, DEPARTEMENTS } from "@/lib/config";
  *  (rapides, bonnes pour le SEO) tout en reprenant automatiquement les
  *  balises de suivi modifiées depuis /admin, sans redéploiement. */
 export const revalidate = 600;
+
+// Titres : grotesque nette et précise (registre « clinique »), auto-hébergée
+// par next/font — aucune requête vers Google côté visiteur.
+const titres = Inter_Tight({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-titre",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -29,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" data-scroll-behavior="smooth">
+    <html lang="fr" data-scroll-behavior="smooth" className={titres.variable}>
       <body>
         {/* sans JavaScript, les éléments à apparition différée restent visibles */}
         <noscript>
