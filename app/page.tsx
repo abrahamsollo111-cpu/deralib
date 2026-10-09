@@ -165,6 +165,16 @@ export default function Home() {
     <>
       {/* ===== HERO « clinique » : texte + photo cadrée, fiche flottante ===== */}
       <section className="cl-hero">
+        {/* photo en fond + filtre vert foncé (plus dense côté texte) */}
+        <Image
+          src="/images/technicien-deralib-vehicule.webp"
+          alt="Technicien Deralib en combinaison de protection devant le véhicule de l'entreprise"
+          fill
+          priority
+          sizes="100vw"
+          className="cl-hero-fond"
+        />
+        <div className="cl-hero-filtre" aria-hidden />
         <div className="container cl-hero-grid">
           <div className="cl-hero-texte enter-left">
             <p className="cl-statut">
@@ -212,17 +222,7 @@ export default function Home() {
           </div>
 
           <div className="cl-visuel enter-right">
-            <figure className="cl-photo">
-              <Image
-                src="/images/technicien-deralib-vehicule.webp"
-                alt="Technicien Deralib en combinaison de protection devant le véhicule de l'entreprise"
-                width={1536}
-                height={1024}
-                priority
-                sizes="(max-width: 900px) 100vw, 560px"
-              />
-            </figure>
-            <div className="cl-badge" data-parallax="0.08">
+            <div className="cl-badge">
               <span className="cl-badge-ico">
                 <IconClock size={18} />
               </span>
@@ -231,7 +231,7 @@ export default function Home() {
                 <small>Partout en {site.zone}</small>
               </span>
             </div>
-            <div className="cl-fiche" data-parallax="0.04">
+            <div className="cl-fiche">
               <p className="cl-fiche-titre">Protocole d&apos;intervention</p>
               <ol>
                 {PROTOCOLE.map((p) => (

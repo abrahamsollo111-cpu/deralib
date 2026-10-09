@@ -3327,3 +3327,57 @@ body {
     linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 }
 
+
+/* ============================================================
+   HERO ACCUEIL — photo en fond + filtre vert foncé, texte clair.
+   Le filtre est plus dense à gauche (texte) et s'éclaircit à
+   droite pour laisser voir le véhicule ; badge et fiche restent
+   des cartes blanches opaques.
+   ============================================================ */
+.cl-hero {
+  background: var(--marine);
+  border-bottom: 0;
+  padding: 72px 0 84px;
+}
+.cl-hero-fond { object-fit: cover; object-position: 50% 30%; z-index: 0; }
+.cl-hero-filtre {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(15, 42, 31, 0.93) 0%, rgba(15, 42, 31, 0.84) 48%, rgba(15, 42, 31, 0.5) 100%),
+    linear-gradient(0deg, rgba(15, 42, 31, 0.35), transparent 40%);
+}
+.cl-hero-grid { z-index: 1; }
+.cl-hero h1 { color: #fff; }
+.cl-hero h1 em { color: #9fd9bf; }
+.cl-hero .cl-kicker { color: #9fd9bf; }
+.cl-hero .cl-kicker::before { background: #9fd9bf; }
+.cl-hero-sub { color: rgba(255, 255, 255, 0.9); }
+.cl-hero .cl-lien-devis { color: #fff; border-bottom-color: rgba(255, 255, 255, 0.45); }
+.cl-hero .cl-lien-devis:hover { color: #9fd9bf; border-bottom-color: #9fd9bf; }
+.cl-hero .cl-garanties { color: rgba(255, 255, 255, 0.88); border-top-color: rgba(255, 255, 255, 0.2); }
+.cl-hero .cl-garanties svg { color: #9fd9bf; }
+.cl-hero .cl-statut { border-color: transparent; }
+
+/* colonne droite : badge + fiche empilés en bas, sans photo cadrée */
+.cl-visuel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 14px;
+  align-self: end;
+}
+.cl-visuel .cl-badge,
+.cl-visuel .cl-fiche { position: static; }
+.cl-visuel .cl-badge { border-color: transparent; }
+.cl-visuel .cl-fiche { border-color: transparent; }
+
+@media (max-width: 900px) {
+  .cl-hero { padding: 40px 0 48px; }
+  .cl-hero-fond { object-position: 22% 30%; }
+  .cl-hero-filtre { background: rgba(15, 42, 31, 0.84); }
+  .cl-visuel { align-items: center; align-self: auto; }
+  .cl-visuel .cl-fiche { display: none; }
+}
