@@ -245,6 +245,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
+      <section id="devis-express" className="cl-section">
+        <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
+          <div data-reveal="left">
+            <span className="cl-kicker">Devis express</span>
+            <h2>
+              Décrivez. <span className="grad-text">On vous rappelle.</span>
+            </h2>
+            <p style={{ marginTop: 16 }}>
+              4 questions, 30 secondes. Un technicien vous rappelle avec un
+              premier diagnostic et un prix indicatif.
+            </p>
+            <ul className="checklist" style={{ marginTop: 22 }} data-stagger>
+              <li data-reveal="left">
+                <IconCheck /> Réponse rapide d&apos;un technicien, pas d&apos;un robot
+              </li>
+              <li data-reveal="left">
+                <IconCheck /> Gratuit et sans engagement
+              </li>
+              <li data-reveal="left">
+                <IconCheck /> Vos coordonnées ne sont jamais revendues
+              </li>
+            </ul>
+          </div>
+          <div data-reveal="right">
+            <QuickQuote />
+          </div>
+        </div>
+      </section>
+
       <Reassurance />
 
       {/* ===== TRIAGE : du symptôme au protocole ===== */}
@@ -333,36 +363,6 @@ export default function Home() {
                 </li>
               ))}
             </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
-      <section id="devis-express" className="cl-section">
-        <div className="container two-col" style={{ position: "relative", zIndex: 2 }}>
-          <div data-reveal="left">
-            <span className="cl-kicker">Devis express</span>
-            <h2>
-              Décrivez. <span className="grad-text">On vous rappelle.</span>
-            </h2>
-            <p style={{ marginTop: 16 }}>
-              4 questions, 30 secondes. Un technicien vous rappelle avec un
-              premier diagnostic et un prix indicatif.
-            </p>
-            <ul className="checklist" style={{ marginTop: 22 }} data-stagger>
-              <li data-reveal="left">
-                <IconCheck /> Réponse rapide d&apos;un technicien, pas d&apos;un robot
-              </li>
-              <li data-reveal="left">
-                <IconCheck /> Gratuit et sans engagement
-              </li>
-              <li data-reveal="left">
-                <IconCheck /> Vos coordonnées ne sont jamais revendues
-              </li>
-            </ul>
-          </div>
-          <div data-reveal="right">
-            <QuickQuote />
           </div>
         </div>
       </section>
