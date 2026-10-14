@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { signalerConversion } from "@/lib/conversions";
 import { site } from "@/lib/config";
 import { NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/nuisibles";
 
@@ -36,6 +37,7 @@ export default function DevisForm({ source = "formulaire-devis" }: { source?: st
       });
       const json = await res.json();
       if (!json.ok) throw new Error(json.erreur || "Envoi impossible");
+      signalerConversion("formulaire", { formulaire: source });
       setEtat("envoye");
     } catch (err) {
       setErreur(err instanceof Error ? err.message : "Envoi impossible");

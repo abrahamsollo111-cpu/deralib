@@ -32,3 +32,6 @@ yarn-error.log*
 
 # matériel de prospection (ne pas publier sur GitHub)
 /prospection
+
+# données locales de développement (leads et réglages de test)
+/.data

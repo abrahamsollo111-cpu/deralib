@@ -4,8 +4,25 @@
     {
       "name": "deralib-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000
+    },
+    {
+      "name": "deralib-test-suivi",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "BLOB_READ_WRITE_TOKEN=",
+        "UPSTASH_REDIS_REST_URL=",
+        "npx",
+        "next",
+        "dev",
+        "-p",
+        "3200"
+      ],
+      "port": 3200
     }
   ]
 }

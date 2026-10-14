@@ -21,6 +21,8 @@ export async function PUT(req: Request) {
     "gaId",
     "adsId",
     "adsLabel",
+    "adsLabelAppel",
+    "adsLabelWhatsapp",
     "metaPixel",
     "verifGoogle",
     "verifBing",

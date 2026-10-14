@@ -1,17 +1,20 @@
-import Script from "next/script";
 import { lireReglages } from "@/lib/store";
+import SuiviClient from "./SuiviClient";
 
 /**
- * Injecte les balises de suivi configurées depuis /admin (onglet
- * « Suivi & balises »). Aucune balise n'est chargée tant qu'aucun
- * identifiant n'est renseigné : par défaut, le site ne dépose aucun
- * cookie tiers.
+ * Balises de vérification + suivi configuré depuis /admin (onglet
+ * « Suivi & balises »). Tant qu'aucun identifiant n'est renseigné, rien
+ * n'est chargé et aucun bandeau n'apparaît. Dès qu'un identifiant existe,
+ * les scripts Google / Meta ne se chargent qu'après l'accord du visiteur
+ * (bandeau de consentement, voir SuiviClient).
  *
  * La lecture est mise en cache 5 minutes : les pages restent servies
  * statiquement, et une modification est visible en quelques minutes.
  */
 export default async function Tracking() {
   const r = await lireReglages(300);
+  const avecSuivi = Boolean(r.gaId || r.adsId || r.metaPixel);
+  const envoi = (libelle: string) => (r.adsId && libelle ? `${r.adsId}/${libelle}` : "");
 
   return (
     <>
@@ -20,37 +23,17 @@ export default async function Tracking() {
       )}
       {r.verifBing && <meta name="msvalidate.01" content={r.verifBing} />}
 
-      {(r.gaId || r.adsId) && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${r.gaId || r.adsId}`}
-            strategy="afterInteractive"
-          />
-          <Script id="gtag-init" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-${r.gaId ? `gtag('config','${r.gaId}');` : ""}
-${r.adsId ? `gtag('config','${r.adsId}');` : ""}`}
-          </Script>
-        </>
-      )}
-
-      {r.metaPixel && (
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','${r.metaPixel}');fbq('track','PageView');`}
-        </Script>
-      )}
-
-      {/* rendu accessible au navigateur pour la conversion Google Ads */}
-      {r.adsId && r.adsLabel && (
-        <Script id="ads-conv" strategy="afterInteractive">
-          {`window.__deralibAdsConversion='${r.adsId}/${r.adsLabel}';`}
-        </Script>
+      {avecSuivi && (
+        <SuiviClient
+          gaId={r.gaId}
+          adsId={r.adsId}
+          metaPixel={r.metaPixel}
+          conversions={{
+            formulaire: envoi(r.adsLabel),
+            appel: envoi(r.adsLabelAppel),
+            whatsapp: envoi(r.adsLabelWhatsapp || r.adsLabelAppel),
+          }}
+        />
       )}
     </>
   );

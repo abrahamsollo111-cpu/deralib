@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BoutonCookies from "./BoutonCookies";
 import Logo from "./Logo";
 import { IconPhone } from "./Icons";
 import { site, DEPARTEMENTS } from "@/lib/config";
@@ -106,7 +107,9 @@ export default function Footer() {
           <span>
             © {new Date().getFullYear()} {site.marque} — {site.slogan}
           </span>
-          <span>Intervention 7j/7 en {site.zone} — Devis gratuit</span>
+          <span>
+            Intervention 7j/7 en {site.zone} — Devis gratuit <BoutonCookies />
+          </span>
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { signalerConversion } from "@/lib/conversions";
 import { site } from "@/lib/config";
 import {
   IconPhone,
@@ -100,6 +101,7 @@ export default function QuickQuote() {
       });
       const json = await res.json();
       if (!json.ok) throw new Error(json.erreur || "Envoi impossible");
+      signalerConversion("formulaire", { formulaire: "devis-express", nuisible: answers.nuisible || "" });
       setSent(true);
     } catch (err) {
       setErreur(err instanceof Error ? err.message : "Envoi impossible");

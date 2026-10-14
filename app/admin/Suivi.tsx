@@ -19,13 +19,25 @@ const CHAMPS: {
     cle: "adsId",
     label: "Google Ads — identifiant de conversion",
     exemple: "AW-123456789",
-    aide: "Uniquement si vous lancez un jour des campagnes payantes. Laissez vide sinon.",
+    aide: "Google Ads → Objectifs → Conversions → une conversion → « Configurer la balise vous-même ». C'est la partie « AW-… » de send_to.",
+  },
+  {
+    cle: "adsLabelAppel",
+    label: "Google Ads — libellé de conversion « Clic sur Appeler »",
+    exemple: "AbC-D_efGh12",
+    aide: "La partie après la barre oblique dans send_to (AW-123456789/ICI). Envoyé à chaque clic sur un numéro de téléphone du site.",
+  },
+  {
+    cle: "adsLabelWhatsapp",
+    label: "Google Ads — libellé de conversion « Clic sur WhatsApp »",
+    exemple: "AbC-D_efGh12",
+    aide: "Envoyé à chaque clic sur un bouton WhatsApp. Laissez vide pour réutiliser le libellé « Appeler ».",
   },
   {
     cle: "adsLabel",
-    label: "Google Ads — libellé de conversion",
+    label: "Google Ads — libellé de conversion « Formulaire de devis »",
     exemple: "AbC-D_efGh12",
-    aide: "Envoyé automatiquement à chaque formulaire envoyé, pour mesurer le coût par demande.",
+    aide: "Envoyé à chaque demande de devis réussie (devis express, page devis, contact). Les candidatures de techniciens ne comptent pas.",
   },
   {
     cle: "metaPixel",

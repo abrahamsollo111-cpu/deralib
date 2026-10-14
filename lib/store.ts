@@ -33,7 +33,9 @@ export type Lead = {
 export type Reglages = {
   gaId: string; // G-XXXXXXX (Google Analytics 4)
   adsId: string; // AW-XXXXXXX (Google Ads)
-  adsLabel: string; // étiquette de conversion
+  adsLabel: string; // libellé de conversion « Formulaire de devis »
+  adsLabelAppel: string; // libellé de conversion « Clic sur Appeler »
+  adsLabelWhatsapp: string; // libellé de conversion « Clic sur WhatsApp »
   metaPixel: string; // Meta / Facebook Pixel
   verifGoogle: string; // contenu de la balise google-site-verification
   verifBing: string;
@@ -45,6 +47,8 @@ const REGLAGES_VIDE: Reglages = {
   gaId: "",
   adsId: "",
   adsLabel: "",
+  adsLabelAppel: "",
+  adsLabelWhatsapp: "",
   metaPixel: "",
   verifGoogle: "",
   verifBing: "",

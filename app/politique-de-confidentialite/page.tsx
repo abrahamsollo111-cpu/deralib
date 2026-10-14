@@ -48,10 +48,24 @@ export default function Page() {
 
           <h2>Cookies et mesure d&apos;audience</h2>
           <p>
-            Ce site n&apos;utilise ni cookies publicitaires ni traceurs
-            nécessitant un consentement.
-            {/* TODO : mettre à jour cette section si un outil de mesure
-                d'audience est ajouté plus tard */}
+            Ce site peut utiliser des outils de mesure fournis par Google
+            (Google Ads et Google Analytics) afin de savoir quelles annonces
+            et quelles pages amènent des demandes : clic sur notre numéro de
+            téléphone ou sur WhatsApp, envoi d&apos;un formulaire de devis. Ces
+            outils déposent des cookies : ils ne sont chargés{" "}
+            <strong>qu&apos;après votre accord</strong>, donné via le bandeau
+            affiché lors de votre première visite. Si vous refusez, aucun
+            cookie de mesure n&apos;est déposé et le site fonctionne
+            exactement de la même manière.
+          </p>
+          <p>
+            Votre choix est conservé 6 mois, puis vous est redemandé. Vous
+            pouvez le modifier ou retirer votre accord à tout moment grâce au
+            lien « Gestion des cookies » en bas de chaque page. Les données
+            de mesure sont traitées par Google, qui peut les transférer hors
+            de l&apos;Union européenne dans le cadre de ses garanties
+            contractuelles. Nous n&apos;utilisons aucun cookie à des fins de
+            revente de données.
           </p>
 
           <h2>Vos droits</h2>
