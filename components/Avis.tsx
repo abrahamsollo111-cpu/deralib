@@ -5,7 +5,7 @@ import { site } from "@/lib/config";
 
 type AvisClient = {
   prenom: string;
-  ville: string;
+  ville?: string; // seulement si l'avis Google la mentionne — jamais inventée
   date: string; // AAAA-MM
   note: number; // sur 5
   texte: string;
