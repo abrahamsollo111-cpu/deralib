@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reassurance from "@/components/Reassurance";
 import CtaRassure from "@/components/CtaRassure";
+import Avis from "@/components/Avis";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
+import DevisForm from "@/app/devis/DevisForm";
 import {
   IconPhone,
   IconWhatsApp,
@@ -26,11 +29,11 @@ export const metadata: Metadata = {
 };
 
 /*
- * Règle de rédaction de cette page : le sujet touche des personnes
- * vulnérables et des familles en détresse. Ton digne et factuel,
- * aucune photo choc, aucun chiffre inventé (pas de « X chantiers
- * réalisés »), discrétion mise en avant. Les prix restent sur devis :
- * chaque situation est unique, on n'affiche pas de grille fictive.
+ * Page d'atterrissage de campagne (Ads) : structure de homepage —
+ * hero avec formulaire de devis, photos, preuve sociale, protocole.
+ * Règles inchangées : sujet sensible → ton digne, aucune photo choc
+ * (les photos montrent nos équipes au travail, jamais un logement
+ * Diogène réel), prix uniquement sur devis, rien d'inventé.
  */
 
 const POUR_QUI = [
@@ -121,68 +124,90 @@ export default function Page() {
     <>
       <Breadcrumbs crumbs={[{ label: "Nettoyage syndrome de Diogène" }]} />
 
-      {/* ===== HERO ===== */}
+      {/* ===== HERO DE CAMPAGNE : argumentaire + formulaire ===== */}
       <section className="hero hero-page">
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <span className="kicker">Nouveau service — Île-de-France</span>
-          <h1 style={{ maxWidth: 880 }}>
-            Nettoyage syndrome de Diogène : rendre le logement à la vie
-          </h1>
-          <p className="lead" style={{ maxWidth: 760, margin: "20px 0 28px" }}>
-            Débarras, nettoyage en profondeur, désinfection et traitement des
-            nuisibles, en une seule prestation et en toute discrétion. Une
-            équipe dédiée, un interlocuteur unique, et un devis ferme avant
-            toute intervention.
-          </p>
-          <div className="hero-actions">
-            <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
-              <IconPhone /> {site.telephone}
-            </a>
-            <a
-              href={site.whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-wa btn-lg"
-            >
-              <IconWhatsApp /> WhatsApp
-            </a>
-            <Link href="/devis" className="btn btn-outline btn-lg">
-              Demander une visite gratuite
-            </Link>
+        <div
+          className="container two-col two-col-top"
+          style={{ position: "relative", zIndex: 2 }}
+        >
+          <div>
+            <span className="kicker">Nouveau service — Île-de-France</span>
+            <h1>Nettoyage syndrome de Diogène : rendre le logement à la vie</h1>
+            <p className="lead" style={{ margin: "20px 0 24px" }}>
+              Débarras, nettoyage en profondeur, désinfection et traitement des
+              nuisibles, en une seule prestation et en toute discrétion. Une
+              équipe dédiée, un interlocuteur unique, un devis ferme avant
+              toute intervention.
+            </p>
+            <div className="hero-actions">
+              <a href={site.telephoneHref} className="btn btn-primary btn-lg btn-call">
+                <IconPhone /> {site.telephone}
+              </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-wa btn-lg"
+              >
+                <IconWhatsApp /> WhatsApp
+              </a>
+            </div>
+            <p className="dispo">
+              <span className="dot" />
+              <span>
+                Nous répondons <em>{site.horaires}</em> — échange confidentiel,
+                sans engagement
+              </span>
+            </p>
+            <CtaRassure />
+            <div className="hero-points" style={{ marginTop: 20 }}>
+              <span className="hero-point">
+                <IconCheck size={14} /> Discrétion totale
+              </span>
+              <span className="hero-point">
+                <IconCheck size={14} /> Visite d&apos;évaluation gratuite
+              </span>
+              <span className="hero-point">
+                <IconCheck size={14} /> Nuisibles traités dans la même
+                prestation
+              </span>
+            </div>
           </div>
-          <p className="dispo">
-            <span className="dot" />
-            <span>
-              Nous répondons <em>{site.horaires}</em> — échange confidentiel,
-              sans engagement
-            </span>
-          </p>
-          <CtaRassure />
-          <div className="hero-points" style={{ marginTop: 20 }}>
-            <span className="hero-point">
-              <IconCheck size={14} /> Discrétion totale
-            </span>
-            <span className="hero-point">
-              <IconCheck size={14} /> Visite d&apos;évaluation gratuite
-            </span>
-            <span className="hero-point">
-              <IconCheck size={14} /> Nuisibles traités dans la même prestation
-            </span>
+          <div className="form-card">
+            <h2 style={{ fontSize: "1.25rem", marginBottom: 6 }}>
+              Décrivez la situation
+            </h2>
+            <p style={{ fontSize: "0.9rem", color: "var(--text-light)", marginBottom: 14 }}>
+              Réponse confidentielle et rapide d&apos;un responsable — pas un
+              centre d&apos;appels.
+            </p>
+            <DevisForm source="page-diogene" />
           </div>
         </div>
       </section>
 
       <Reassurance />
 
-      {/* ===== COMPRENDRE (ton digne) ===== */}
-      <section>
-        <div className="container two-col">
-          <div data-reveal="left">
+      {/* ===== COMPRENDRE (photo + ton digne) ===== */}
+      <section className="section-terrain">
+        <div className="container photo-split">
+          <figure className="photo-split-img" data-reveal>
+            <Image
+              src="/images/technicien-traitement-logement.jpg"
+              alt="Technicien Deralib en combinaison traitant l'intérieur d'un logement"
+              width={554}
+              height={554}
+              sizes="(max-width: 900px) 100vw, 480px"
+              data-parallax="0.05"
+            />
+            <figcaption>
+              Nos équipes interviennent en tenue adaptée, pièce par pièce.
+            </figcaption>
+          </figure>
+          <div className="photo-split-texte" data-reveal>
             <span className="kicker">Comprendre</span>
             <h2>Ce n&apos;est pas une question de ménage</h2>
-          </div>
-          <div data-reveal="right">
-            <p className="lead">
+            <p>
               Le syndrome de Diogène est un trouble : une personne accumule,
               n&apos;arrive plus à jeter, et le logement se referme peu à peu —
               souvent avec un déni complet de la situation. Les proches
@@ -194,6 +219,9 @@ export default function Page() {
               traite tout en une seule fois — c&apos;est notre métier depuis{" "}
               {site.anneesMetier} ans.
             </p>
+            <a href={site.telephoneHref} className="btn btn-primary btn-call">
+              <IconPhone size={16} /> {site.telephone}
+            </a>
           </div>
         </div>
       </section>
@@ -216,6 +244,29 @@ export default function Page() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ===== BANDE PHOTO IMMERSIVE ===== */}
+      <section className="photo-band-section">
+        <div className="container">
+          <figure className="photo-band" data-reveal>
+            <Image
+              src="/images/techniciens-deratisation-entrepot.jpg"
+              alt="Techniciens Deralib en tenue d'intervention préparant un chantier"
+              width={1400}
+              height={900}
+              sizes="(max-width: 900px) 100vw, 1160px"
+              data-parallax="0.07"
+            />
+            <figcaption className="photo-band-card">
+              <strong>Une équipe dédiée, formée aux chantiers difficiles</strong>
+              <p>
+                Tenue adaptée, matériel professionnel, évacuation organisée —
+                et la discrétion comme règle de travail.
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -250,7 +301,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ===== NOTRE DIFFÉRENCE ===== */}
+      {/* ===== NOTRE DIFFÉRENCE (photo + checklist) ===== */}
       <section className="section-azur">
         <div className="container two-col">
           <div data-reveal="left">
@@ -265,11 +316,15 @@ export default function Page() {
               {site.certification}. Un seul devis, un seul planning, un seul
               responsable.
             </p>
-            <div style={{ marginTop: 22 }}>
-              <a href={site.telephoneHref} className="btn btn-primary btn-call">
-                <IconPhone size={16} /> Parler à un responsable
-              </a>
-            </div>
+            <figure className="photo-cadre" style={{ marginTop: 20 }}>
+              <Image
+                src="/images/techniciens-traitement-bureaux.jpg"
+                alt="Techniciens Deralib traitant l'intérieur d'un local"
+                width={678}
+                height={452}
+                sizes="(max-width: 900px) 100vw, 520px"
+              />
+            </figure>
           </div>
           <ul className="checklist" data-stagger>
             <li data-reveal>
@@ -307,8 +362,11 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ===== AVIS GOOGLE (preuve sociale réelle) ===== */}
+      <Avis />
+
       {/* ===== FAQ ===== */}
-      <section>
+      <section className="section-azur">
         <div className="container">
           <div className="section-head" data-reveal>
             <span className="kicker">FAQ</span>
@@ -319,7 +377,7 @@ export default function Page() {
       </section>
 
       {/* ===== MAILLAGE ===== */}
-      <section className="section-azur">
+      <section>
         <div className="container" data-reveal>
           <p style={{ fontWeight: 700, color: "var(--marine)", marginBottom: 12 }}>
             <IconCheck size={15} /> Souvent associés à une intervention

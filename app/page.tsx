@@ -336,17 +336,43 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ===== NOUVEAU SERVICE : nettoyage syndrome de Diogène ===== */}
-          <div className="cta-inline" data-reveal style={{ marginTop: 34 }}>
+        </div>
+      </section>
+
+      {/* ===== NOUVEAU SERVICE : nettoyage syndrome de Diogène ===== */}
+      <section className="section-terrain">
+        <div className="container photo-split photo-split-inverse">
+          <figure className="photo-split-img" data-reveal>
+            <Image
+              src="/images/techniciens-traitement-bureaux.jpg"
+              alt="Techniciens Deralib traitant l'intérieur d'un local"
+              width={678}
+              height={452}
+              sizes="(max-width: 900px) 100vw, 480px"
+              data-parallax="0.05"
+            />
+            <figcaption>
+              Débarras, désinfection et nuisibles : une seule prestation.
+            </figcaption>
+          </figure>
+          <div className="photo-split-texte" data-reveal>
+            <span className="kicker">Nouveau service</span>
+            <h2>Nettoyage syndrome de Diogène</h2>
             <p>
-              <strong>Nouveau — Nettoyage syndrome de Diogène.</strong>{" "}
-              Débarras, désinfection et traitement des nuisibles d&apos;un
-              logement insalubre, en une seule prestation et en toute
-              discrétion. Visite d&apos;évaluation gratuite.
+              Un logement qui s&apos;est refermé sur son occupant — encombré,
+              insalubre, souvent infesté. Notre équipe dédiée le vide, le
+              nettoie, le désinfecte et traite les nuisibles en une seule
+              prestation, en toute discrétion et sans jugement. Visite
+              d&apos;évaluation gratuite, devis ferme avant intervention.
             </p>
-            <Link href="/nettoyage-syndrome-diogene" className="btn btn-primary">
-              Découvrir ce service
-            </Link>
+            <div className="hero-actions">
+              <Link href="/nettoyage-syndrome-diogene" className="btn btn-primary">
+                Découvrir ce service <IconArrow size={14} />
+              </Link>
+              <a href={site.telephoneHref} className="btn btn-outline btn-call">
+                <IconPhone size={15} /> {site.telephone}
+              </a>
+            </div>
           </div>
         </div>
       </section>
