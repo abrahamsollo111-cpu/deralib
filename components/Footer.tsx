@@ -34,6 +34,11 @@ export default function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/nettoyage-syndrome-diogene">
+                  Nettoyage syndrome de Diogène
+                </Link>
+              </li>
+              <li>
                 <Link href="/professionnels">Offre professionnels</Link>
               </li>
             </ul>

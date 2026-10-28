@@ -32,6 +32,9 @@ export default function Header() {
                       {NUISIBLES_LABELS[slug]}
                     </Link>
                   ))}
+                  <Link href="/nettoyage-syndrome-diogene">
+                    Nettoyage syndrome de Diogène
+                  </Link>
                 </div>
               </div>
             </div>

@@ -17,6 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Service nettoyage extrême (rubrique à part : pas un « nuisible »)
+  piliers.push({
+    url: `${site.url}/nettoyage-syndrome-diogene`,
+    lastModified: now,
+    priority: 0.9,
+  });
+
   // Pages départements (dératisation)
   const villes = getAllVilles().map((v) => ({
     url: `${site.url}/deratisation/${v.slug}`,

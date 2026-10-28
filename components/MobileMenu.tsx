@@ -70,6 +70,11 @@ export default function MobileMenu() {
             </li>
           ))}
           <li>
+            <Link href="/nettoyage-syndrome-diogene" onClick={close}>
+              Nettoyage syndrome de Diogène
+            </Link>
+          </li>
+          <li>
             <Link href="/professionnels" onClick={close}>
               Professionnels
             </Link>

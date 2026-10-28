@@ -335,6 +335,19 @@ export default function Home() {
               <Link href="/depigeonnage" className="chip">pigeons (dépigeonnage)</Link>
             </div>
           </div>
+
+          {/* ===== NOUVEAU SERVICE : nettoyage syndrome de Diogène ===== */}
+          <div className="cta-inline" data-reveal style={{ marginTop: 34 }}>
+            <p>
+              <strong>Nouveau — Nettoyage syndrome de Diogène.</strong>{" "}
+              Débarras, désinfection et traitement des nuisibles d&apos;un
+              logement insalubre, en une seule prestation et en toute
+              discrétion. Visite d&apos;évaluation gratuite.
+            </p>
+            <Link href="/nettoyage-syndrome-diogene" className="btn btn-primary">
+              Découvrir ce service
+            </Link>
+          </div>
         </div>
       </section>
 

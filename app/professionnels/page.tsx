@@ -242,6 +242,9 @@ export default function Page() {
             <Link href="/depigeonnage" className="chip">
               Dépigeonnage (façades, cours, enseignes)
             </Link>
+            <Link href="/nettoyage-syndrome-diogene" className="chip">
+              Nettoyage syndrome de Diogène (syndics, bailleurs)
+            </Link>
             <Link href="/deratisation/paris" className="chip">
               Dératisation Paris (75)
             </Link>
