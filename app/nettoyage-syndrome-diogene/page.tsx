@@ -193,15 +193,16 @@ export default function Page() {
         <div className="container photo-split">
           <figure className="photo-split-img" data-reveal>
             <Image
-              src="/images/technicien-traitement-logement.jpg"
-              alt="Technicien Deralib en combinaison traitant l'intérieur d'un logement"
-              width={554}
-              height={554}
+              src="/images/logement-assaini-lumineux.jpg"
+              alt="Cartons de tri rassemblés dans une pièce baignée de lumière"
+              width={933}
+              height={1400}
               sizes="(max-width: 900px) 100vw, 480px"
               data-parallax="0.05"
             />
             <figcaption>
-              Nos équipes interviennent en tenue adaptée, pièce par pièce.
+              Le tri d&apos;abord : ce qui compte est mis de côté, le reste
+              évacué.
             </figcaption>
           </figure>
           <div className="photo-split-texte" data-reveal>
@@ -252,18 +253,18 @@ export default function Page() {
         <div className="container">
           <figure className="photo-band" data-reveal>
             <Image
-              src="/images/techniciens-deratisation-entrepot.jpg"
-              alt="Techniciens Deralib en tenue d'intervention préparant un chantier"
-              width={1400}
-              height={900}
+              src="/images/desinfection-tenue-protection.jpg"
+              alt="Agent en tenue de protection intégrale désinfectant une surface"
+              width={1100}
+              height={734}
               sizes="(max-width: 900px) 100vw, 1160px"
               data-parallax="0.07"
             />
             <figcaption className="photo-band-card">
-              <strong>Une équipe dédiée, formée aux chantiers difficiles</strong>
+              <strong>Désinfection complète après le débarras</strong>
               <p>
-                Tenue adaptée, matériel professionnel, évacuation organisée —
-                et la discrétion comme règle de travail.
+                Surfaces, sols, odeurs : le logement est assaini pièce par
+                pièce, en tenue adaptée et avec du matériel professionnel.
               </p>
             </figcaption>
           </figure>
@@ -318,10 +319,10 @@ export default function Page() {
             </p>
             <figure className="photo-cadre" style={{ marginTop: 20 }}>
               <Image
-                src="/images/techniciens-traitement-bureaux.jpg"
-                alt="Techniciens Deralib traitant l'intérieur d'un local"
-                width={678}
-                height={452}
+                src="/images/nettoyage-profondeur-evier.jpg"
+                alt="Nettoyage en profondeur d'une salle d'eau, gants de protection"
+                width={900}
+                height={601}
                 sizes="(max-width: 900px) 100vw, 520px"
               />
             </figure>
