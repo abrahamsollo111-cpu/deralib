@@ -51,6 +51,20 @@
       ]
     },
     {
+      "titre": "Balcon, copropriété, location : qui organise et qui paie ?",
+      "paragraphes": [
+        "Un nid sur votre balcon, sous votre volet ou dans votre jardin privatif relève de l'occupant : c'est à vous de faire intervenir un professionnel, que vous soyez propriétaire ou locataire. Si le nid se trouve dans une partie commune, comme une toiture, une façade, un local poubelles ou une cage d'escalier, c'est le syndic qui doit organiser l'intervention, à la charge de la copropriété.",
+        "Le cas délicat est celui du nid installé chez un voisin mais qui vous gêne. Personne ne peut intervenir sur une propriété privée sans l'accord de son occupant : parlez-lui d'abord, beaucoup ignorent la présence du nid. En copropriété, prévenez le syndic. Si le nid est sur l'espace public, un arbre de rue ou un parc, signalez-le à la mairie, qui gère ses propres interventions."
+      ]
+    },
+    {
+      "titre": "Nid découvert en automne ou en hiver : faut-il encore agir ?",
+      "paragraphes": [
+        "Un nid de guêpes ou de frelons ne sert qu'une saison. À la fin de l'automne, la colonie meurt : seules les jeunes reines survivent, et elles quittent le nid pour hiverner ailleurs. Elles ne reviendront pas dans l'ancien nid au printemps. Un nid découvert en plein hiver, sans aucune allée et venue, est donc le plus souvent vide et ne présente plus de danger.",
+        "Avant de payer une destruction, observez quelques minutes par temps doux : aucune activité, aucun insecte ? Un nid vide peut simplement être retiré lorsqu'il est accessible. En revanche, à partir du printemps, toute activité autour d'un nid ou d'un trou doit faire réagir rapidement : une colonie qui démarre est bien plus simple à traiter qu'un nid de plusieurs milliers d'individus en août."
+      ]
+    },
+    {
       "titre": "En attendant l'intervention : les bons réflexes",
       "paragraphes": [
         "Une fois le nid repéré, quelques gestes simples suffisent à attendre l'intervention en sécurité. Ne vous approchez pas à moins de quelques mètres, et surtout ne touchez à rien : ni bâton, ni jet d'eau, ni bombe, ni obturation du trou d'entrée. Éloignez les enfants et les animaux de la zone, évitez les gestes brusques et les vibrations à proximité — tondeuse, taille-haie, claquements — qui peuvent déclencher une défense du nid. Fermez les fenêtres situées du côté du nid, en particulier le soir quand la lumière intérieure attire les insectes.",
@@ -74,7 +88,16 @@
     {
       "q": "L'intervention détruit-elle aussi les guêpes absentes du nid au moment du traitement ?",
       "r": "Oui, c'est l'intérêt de la poudre insecticide injectée au cœur du nid : les ouvrières en vol au moment du traitement rentrent au nid dans les heures qui suivent, se contaminent au contact et propagent le produit. C'est pourquoi le traitement neutralise la colonie entière, reine comprise, là où une bombe grand public ne touche que les individus présents en surface."
+    },
+    {
+      "q": "Le nid est sur une partie commune de mon immeuble : qui doit appeler ?",
+      "r": "Le syndic. Toiture, façade, local poubelles ou cage d'escalier relèvent des parties communes : prévenez-le par écrit, il organise l'intervention à la charge de la copropriété. Un nid sur votre balcon privatif reste en revanche à votre initiative."
+    },
+    {
+      "q": "J'ai trouvé un nid de frelons en décembre : faut-il le faire détruire ?",
+      "r": "Généralement non. En hiver, la colonie est morte et le nid n'est plus utilisé ; les reines hivernent ailleurs et ne le réoccuperont pas. Vérifiez par temps doux qu'il n'y a aucune activité : un nid vide peut simplement être retiré s'il est accessible."
     }
   ],
-  "cta_texte": "notre service de destruction de nids de guêpes et frelons en Île-de-France"
+  "cta_texte": "notre service de destruction de nids de guêpes et frelons en Île-de-France",
+  "date_modification": "2026-11-09"
 }

@@ -60,6 +60,7 @@ export type Article = {
   meta_description: string;
   h1: string;
   date: string; // AAAA-MM-JJ
+  date_modification?: string; // AAAA-MM-JJ, à renseigner à chaque mise à jour réelle du contenu
   extrait: string;
   service: string; // slug de la page service liée
   sections: Section[];

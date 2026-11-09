@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/conseils`, lastModified: now, priority: 0.6 },
     ...getAllArticles().map((a) => ({
       url: `${site.url}/conseils/${a.slug}`,
-      lastModified: new Date(a.date),
+      lastModified: new Date(a.date_modification ?? a.date),
       priority: 0.6,
     })),
   ];

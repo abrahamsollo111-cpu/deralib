@@ -44,10 +44,31 @@
       ]
     },
     {
+      "titre": "Capturer un insecte pour le faire identifier",
+      "paragraphes": [
+        "Vous avez vu un petit insecte brun courir sur le drap ou le long d'une plinthe ? Ne l'écrasez pas : c'est la meilleure pièce à conviction que vous aurez. Posez dessus un morceau de ruban adhésif large, repliez-le sur lui-même et glissez-le dans un sachet de congélation fermé. Si l'insecte a déjà été écrasé, photographiez-le de près, avec une pièce de monnaie à côté pour donner l'échelle.",
+        "Ce simple geste évite deux erreurs coûteuses. La première : traiter pour des punaises ce qui est en réalité un carpocapse, une puce ou un petit cafard, qui demandent une méthode toute différente. La seconde : laisser passer des semaines en attendant d'en être sûr. Envoyez la photo par WhatsApp ou montrez l'insecte au technicien : l'identification se fait en quelques secondes."
+      ]
+    },
+    {
       "titre": "L'erreur classique : la bombe insecticide qui aggrave tout",
       "paragraphes": [
         "Le réflexe le plus fréquent — et le plus contre-productif — est de pulvériser un insecticide grand public sur le lit et dans la chambre. Sur les punaises de lit, ces produits posent deux problèmes. D'abord, les œufs résistent à la plupart d'entre eux : vous tuez quelques adultes visibles, les éclosions reprennent une dizaine de jours plus tard, et vous avez l'impression trompeuse d'avoir réglé le problème. Ensuite, et c'est le plus grave, l'effet répulsif du produit disperse les survivantes : elles quittent le matelas pour les plinthes, les prises, les pièces voisines, parfois le logement d'à côté. Une infestation concentrée sur un lit, simple à traiter, devient une infestation diffuse sur tout l'appartement.",
         "Même logique pour le déménagement improvisé : dormir sur le canapé ou déplacer le matelas dans une autre pièce ne vous met pas à l'abri, cela déplace le problème. Les punaises suivent le dormeur, guidées par la chaleur et le CO2. En attendant le diagnostic, les seuls gestes utiles sont mécaniques : laver le linge de lit à 60 °C minimum et le stocker en sacs fermés, aspirer soigneusement coutures et plinthes puis jeter le sac fermé dans une poubelle extérieure."
+      ]
+    },
+    {
+      "titre": "Retour de voyage, hôtel, location : la routine qui évite de les ramener",
+      "paragraphes": [
+        "Une grande partie des infestations commence par une valise. En arrivant dans une chambre d'hôtel ou une location, posez les bagages sur le porte-valise ou dans la baignoire, jamais sur le lit ni sur la moquette, puis soulevez le drap housse au niveau des coins du matelas et regardez la tête de lit : quelques secondes suffisent pour repérer des points noirs ou des insectes.",
+        "Au retour, ouvrez la valise sur un sol carrelé, pas dans la chambre. Lavez tout le linge à 60 °C, y compris celui qui n'a pas été porté, ou passez-le 30 minutes au sèche-linge à température élevée. Inspectez les coutures et les poches de la valise avant de la ranger, idéalement loin de la chambre. Ces gestes coûtent dix minutes et évitent la grande majorité des infestations importées."
+      ]
+    },
+    {
+      "titre": "Locataire ou propriétaire : qui paie le traitement ?",
+      "paragraphes": [
+        "Depuis la loi ELAN de 2018, le bailleur doit remettre un logement exempt de toute infestation d'espèces nuisibles et parasites. Si les punaises sont présentes à votre entrée dans les lieux, ou si elles viennent des parties communes ou d'un logement voisin, le traitement incombe en principe au propriétaire ou au syndic. Si elles ont été rapportées par l'occupant, après un voyage par exemple, il reste généralement à sa charge.",
+        "Dans tous les cas, signalez la situation par écrit à votre bailleur dès la confirmation, photos à l'appui. Un rapport d'intervention établi par un professionnel décrit l'étendue de l'infestation et les zones touchées : c'est la pièce qui permet de discuter de la prise en charge sur des faits plutôt que sur des impressions."
       ]
     },
     {
@@ -74,7 +95,16 @@
     {
       "q": "Faut-il jeter le matelas si l'infestation est confirmée ?",
       "r": "Dans la plupart des cas, non. Le traitement (vapeur, insecticide ciblé, housse anti-punaises) permet de le conserver. Jeter un matelas non emballé est même contre-productif : vous disséminez des punaises dans les parties communes et sur le trajet, et le lit de remplacement sera recolonisé si le reste de la chambre n'est pas traité."
+    },
+    {
+      "q": "Je pars en voyage : comment éviter de rapporter des punaises de lit ?",
+      "r": "Inspectez le lit en arrivant, gardez les bagages sur un porte-valise ou dans la salle de bain, et au retour lavez tout le linge à 60 °C ou passez-le au sèche-linge. Ouvrez la valise sur un sol carrelé, loin des chambres."
+    },
+    {
+      "q": "Mon propriétaire doit-il payer le traitement contre les punaises de lit ?",
+      "r": "Si l'infestation était présente à votre entrée dans les lieux ou provient des parties communes ou d'un voisin, oui en principe : la loi ELAN impose un logement exempt d'espèces nuisibles. Si vous l'avez rapportée vous-même, elle reste généralement à votre charge. Signalez toujours par écrit."
     }
   ],
-  "cta_texte": "notre traitement des punaises de lit en Île-de-France"
+  "cta_texte": "notre traitement des punaises de lit en Île-de-France",
+  "date_modification": "2026-11-09"
 }

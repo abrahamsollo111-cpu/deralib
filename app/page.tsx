@@ -17,6 +17,7 @@ import {
   NUISIBLE_ICONS,
 } from "@/components/Icons";
 import { site, DEPARTEMENTS } from "@/lib/config";
+import { getAllArticles } from "@/lib/content";
 
 export const metadata: Metadata = {
   // ≤ 60 caractères, unique, service + zone (guide SEO Google)
@@ -599,6 +600,26 @@ export default function Home() {
                 <IconCheck /> Prix annoncé et confirmé avant chaque intervention
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GUIDES CONSEILS ===== */}
+      <section className="cl-section cl-section-teinte">
+        <div className="container">
+          <div className="section-head" data-reveal>
+            <span className="cl-kicker">Nos conseils</span>
+            <h2>Les guides de nos techniciens</h2>
+          </div>
+          <div className="cards-grid cards-grid-4" data-stagger>
+            {getAllArticles().map((a) => (
+              <Link key={a.slug} href={`/conseils/${a.slug}`} className="card" data-reveal>
+                <h3>{a.titre}</h3>
+                <span className="card-link">
+                  Lire le guide <IconArrow size={14} />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

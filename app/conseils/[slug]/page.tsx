@@ -73,8 +73,10 @@ export default async function Page({
           </span>
           <h1 style={{ maxWidth: 820 }}>{a.h1}</h1>
           <p className="article-meta">
-            Publié le {formatDate(a.date)} par l&apos;équipe {site.marque} —{" "}
-            {site.anneesMetier} ans de métier · Lecture : {minutes} min
+            Publié le {formatDate(a.date)}
+            {a.date_modification && <> · mis à jour le {formatDate(a.date_modification)}</>}{" "}
+            par l&apos;équipe {site.marque} — {site.anneesMetier} ans de métier ·
+            Lecture : {minutes} min
           </p>
         </div>
       </section>
@@ -177,6 +179,7 @@ export default async function Page({
           headline: a.titre,
           description: a.meta_description,
           datePublished: a.date,
+          dateModified: a.date_modification ?? a.date,
           inLanguage: "fr-FR",
           url: `${site.url}/conseils/${a.slug}`,
           author: {

@@ -10,7 +10,7 @@ import CtaRassure from "./CtaRassure";
 import JsonLd from "./JsonLd";
 import { IconPhone, IconSearch, IconAlert, IconCheck, IconArrow, NUISIBLE_ICONS } from "./Icons";
 import { site } from "@/lib/config";
-import { getNuisible, getDepartements, NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/content";
+import { getNuisible, getDepartements, getAllArticles, NUISIBLES_SLUGS, NUISIBLES_LABELS } from "@/lib/content";
 import { NUISIBLES_TILES } from "@/lib/nuisibles";
 
 // Illustration du hero par nuisible (fichiers dans /public/images/,
@@ -132,6 +132,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
   const v = VARIANTES[slug] ?? VARIANTES["deratisation"];
   const img = HERO_IMAGES[slug];
   const terrain = SECTIONS_TERRAIN[slug];
+  const articles = getAllArticles().filter((a) => a.service === slug);
   const autres = NUISIBLES_SLUGS.filter((s) => s !== slug);
   const villes = slug === "deratisation" ? getDepartements() : [];
 
@@ -408,6 +409,25 @@ export default function NuisiblePage({ slug }: { slug: string }) {
               </li>
             ))}
           </ul>
+
+          {/* Guides liés : sans ce lien, les articles /conseils restent
+              quasi orphelins et Google les sort de l'index */}
+          {articles.length > 0 && (
+            <div style={{ marginTop: 40 }}>
+              <p className="kicker" data-reveal>Pour aller plus loin</p>
+              <div className="cards-grid cards-grid-3" data-stagger style={{ marginTop: 14 }}>
+                {articles.map((a) => (
+                  <Link key={a.slug} href={`/conseils/${a.slug}`} className="card" data-reveal>
+                    <h3>{a.titre}</h3>
+                    <p style={{ marginTop: 8 }}>{a.extrait}</p>
+                    <span className="card-link">
+                      Lire le guide <IconArrow size={14} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
