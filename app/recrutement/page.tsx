@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RecrutementForm from "./RecrutementForm";
 import JsonLd from "@/components/JsonLd";
@@ -18,6 +19,8 @@ export default function Page() {
 
       <section style={{ paddingTop: 40 }}>
         <div className="container">
+          <div className="intro-split">
+          <div>
           <span className="kicker">Nous recrutons</span>
           <h1 style={{ maxWidth: 820 }}>
             Dératiseurs d&apos;{site.zone} : rejoignez le réseau {site.marque}
@@ -30,6 +33,18 @@ export default function Page() {
             demandes d&apos;intervention qualifiées dans vos zones, sans
             prospecter.
           </p>
+          </div>
+            <figure className="intro-photo">
+              <Image
+                src="/images/technicien-deralib-nid-guepes.jpg"
+                alt="Technicien Deralib en combinaison intégrale traitant un nid de guêpes"
+                width={900}
+                height={1130}
+                sizes="(max-width: 900px) 100vw, 460px"
+                priority
+              />
+            </figure>
+          </div>
 
           <div className="contact-grid" style={{ marginTop: 40 }}>
             <div>

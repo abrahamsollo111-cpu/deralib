@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reassurance from "@/components/Reassurance";
 import SectionsLocales from "@/components/SectionsLocales";
@@ -17,6 +18,25 @@ import { getVille, getAllVilles, NUISIBLES_LABELS } from "@/lib/content";
  * Combiné à l'alternance gauche/droite des sections et au numéro du
  * département en filigrane, aucune des 8 pages ne ressemble à sa sœur.
  */
+/**
+ * Photo de fond de l'en-tête : toujours différente de la bande photo de
+ * la page, choisie de façon stable d'après le slug (même ville = même
+ * photo à chaque visite).
+ */
+const PHOTOS_EN_TETE = [
+  "/images/technicien-deralib-inspection-entrepot.jpg",
+  "/images/techniciens-deratisation-entrepot.jpg",
+  "/images/desinfection-tenue-protection.jpg",
+  "/images/techniciens-traitement-bureaux.jpg",
+  "/images/technicien-traitement-logement.jpg",
+];
+
+function photoEnTete(slug: string, exclure: string) {
+  const candidates = PHOTOS_EN_TETE.filter((p) => p !== exclure);
+  const n = [...slug].reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  return candidates[n % candidates.length];
+}
+
 const VARIANTES_VILLE: Record<
   string,
   { photo: string; alt: string; legende: string; apres: number }
@@ -179,6 +199,15 @@ export default async function Page({
 
       {/* ===== HERO (numéro du département en filigrane parallax) ===== */}
       <section className="hero hero-page hero-ville">
+        <div className="hero-ville-media" aria-hidden>
+          <Image
+            src={photoEnTete(v.slug, variante.photo)}
+            alt=""
+            fill
+            sizes="40vw"
+            priority
+          />
+        </div>
         <span className="hero-watermark" data-parallax="0.12" aria-hidden>
           {v.filigrane ?? v.departement}
         </span>

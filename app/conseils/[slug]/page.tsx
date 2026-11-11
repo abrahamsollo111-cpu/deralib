@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import ArticleCard from "@/components/ArticleCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
-import { IconArrow, IconPhone } from "@/components/Icons";
+import { IconPhone } from "@/components/Icons";
 import { site } from "@/lib/config";
 import { getArticle, getAllArticles, NUISIBLES_LABELS } from "@/lib/content";
 
@@ -81,6 +83,22 @@ export default async function Page({
         </div>
       </section>
 
+      {/* ===== PHOTO DE COUVERTURE ===== */}
+      {a.image && (
+        <div className="container">
+          <figure className="article-cover" data-reveal>
+            <Image
+              src={a.image.src}
+              alt={a.image.alt}
+              width={a.image.w}
+              height={a.image.h}
+              sizes="(max-width: 1200px) 100vw, 1160px"
+              priority
+            />
+          </figure>
+        </div>
+      )}
+
       {/* ===== CORPS — sommaire collant + sections numérotées ===== */}
       <section>
         <div className="container article-layout">
@@ -155,13 +173,7 @@ export default async function Page({
           </div>
           <div className="cards-grid cards-grid-3" data-stagger>
             {autres.map((x) => (
-              <Link key={x.slug} href={`/conseils/${x.slug}`} className="card" data-reveal>
-                <span className="kicker">{NUISIBLES_LABELS[x.service]}</span>
-                <h3 style={{ marginTop: 8 }}>{x.titre}</h3>
-                <span className="card-link">
-                  Lire l&apos;article <IconArrow size={14} />
-                </span>
-              </Link>
+              <ArticleCard key={x.slug} article={x} />
             ))}
           </div>
         </div>

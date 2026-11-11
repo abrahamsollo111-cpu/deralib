@@ -76,5 +76,11 @@
       "r": "Cela dépend du devis, d'où l'importance de le lire : vérifiez ce qui est prévu si l'activité persiste après le traitement (passage supplémentaire inclus, conditions, durée). Un devis sérieux précise noir sur blanc les modalités de suivi et de contrôle plutôt que de promettre verbalement une « garantie totale »."
     }
   ],
-  "cta_texte": "notre service de dératisation en Île-de-France"
+  "cta_texte": "notre service de dératisation en Île-de-France",
+  "image": {
+    "src": "/images/devis-documents-bureau.jpg",
+    "alt": "Devis et documents posés sur un bureau",
+    "w": 1200,
+    "h": 800
+  }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import HeroDecor from "@/components/HeroDecor";
 import DevisForm from "./DevisForm";
@@ -35,6 +36,15 @@ export default function Page() {
                 <IconCheck /> Intervention possible en 30-45 min en {site.zone}
               </li>
             </ul>
+            <figure className="photo-cadre" style={{ marginBottom: 24 }}>
+              <Image
+                src="/images/techniciens-deratisation-entrepot.jpg"
+                alt="Techniciens Deralib en tenue d'intervention"
+                width={1200}
+                height={800}
+                sizes="(max-width: 900px) 100vw, 540px"
+              />
+            </figure>
             <p style={{ fontWeight: 700, color: "var(--marine)" }}>
               Vous préférez nous parler directement ?
             </p>

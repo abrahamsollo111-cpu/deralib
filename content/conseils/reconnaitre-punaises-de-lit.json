@@ -106,5 +106,11 @@
     }
   ],
   "cta_texte": "notre traitement des punaises de lit en Île-de-France",
-  "date_modification": "2026-11-09"
+  "date_modification": "2026-11-09",
+  "image": {
+    "src": "/images/valise-ouverte-lit.jpg",
+    "alt": "Valise ouverte posée sur un lit, au retour de voyage",
+    "w": 1200,
+    "h": 800
+  }
 }

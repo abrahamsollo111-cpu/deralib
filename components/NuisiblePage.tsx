@@ -7,6 +7,7 @@ import PriceTable from "./PriceTable";
 import Faq from "./Faq";
 import CtaBand from "./CtaBand";
 import CtaRassure from "./CtaRassure";
+import ArticleCard from "./ArticleCard";
 import JsonLd from "./JsonLd";
 import { IconPhone, IconSearch, IconAlert, IconCheck, IconArrow, NUISIBLE_ICONS } from "./Icons";
 import { site } from "@/lib/config";
@@ -39,6 +40,52 @@ const HERO_IMAGES: Record<string, { src: string; alt: string; w: number; h: numb
     alt: "Comparaison de taille entre guêpe commune, frelon asiatique et frelon européen",
     w: 554,
     h: 554,
+  },
+  depigeonnage: {
+    src: "/images/pigeons-rebord-facade.jpg",
+    alt: "Pigeons installés sur le rebord d'une façade en pierre",
+    w: 1200,
+    h: 900,
+  },
+};
+
+// Photo de la section « Comprendre » : différente du hero pour que chaque
+// page alterne vraiment texte et images
+const COMPRENDRE_IMAGES: Record<string, { src: string; alt: string; w: number; h: number; legende: string }> = {
+  deratisation: {
+    src: "/images/rongeur-trou-mur.jpg",
+    alt: "Rat sortant la tête d'un trou au ras du sol",
+    w: 1200,
+    h: 675,
+    legende: "Un trou de quelques centimètres suffit : c'est là que tout se joue.",
+  },
+  "punaises-de-lit": {
+    src: "/images/chambre-lit-propre.jpg",
+    alt: "Chambre lumineuse avec un lit aux draps blancs",
+    w: 1200,
+    h: 1800,
+    legende: "Une chambre propre n'immunise pas : la punaise de lit voyage.",
+  },
+  cafards: {
+    src: "/images/cuisine-propre-evier.jpg",
+    alt: "Cuisine propre et rangée avec évier et plan de travail",
+    w: 1200,
+    h: 1798,
+    legende: "Une cuisine impeccable n'empêche pas une colonie de s'installer.",
+  },
+  "guepes-frelons": {
+    src: "/images/nid-guepes-feuillage.jpg",
+    alt: "Nid de guêpes accroché dans le feuillage d'un arbre",
+    w: 1200,
+    h: 1500,
+    legende: "Un nid repéré tôt se traite plus simplement et plus sûrement.",
+  },
+  depigeonnage: {
+    src: "/images/pigeons-garde-corps-balcon.jpg",
+    alt: "Pigeons perchés sur le garde-corps d'un balcon en ville",
+    w: 1200,
+    h: 1800,
+    legende: "Balcons, rebords, gouttières : chaque point d'appui se protège.",
   },
 };
 
@@ -132,6 +179,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
   const v = VARIANTES[slug] ?? VARIANTES["deratisation"];
   const img = HERO_IMAGES[slug];
   const terrain = SECTIONS_TERRAIN[slug];
+  const comprendre = COMPRENDRE_IMAGES[slug];
   const articles = getAllArticles().filter((a) => a.service === slug);
   const autres = NUISIBLES_SLUGS.filter((s) => s !== slug);
   const villes = slug === "deratisation" ? getDepartements() : [];
@@ -280,17 +328,40 @@ export default function NuisiblePage({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* ===== COMPRENDRE ===== */}
-      <section className="section-azur">
-        <div className="container two-col">
-          <div data-reveal="left">
-            <span className="kicker">Comprendre</span>
-            <h2>Pourquoi un professionnel</h2>
+      {/* ===== COMPRENDRE (photo + texte) ===== */}
+      <section className="section-azur section-terrain">
+        {comprendre ? (
+          <div
+            className={`container photo-split${slug === "punaises-de-lit" || slug === "depigeonnage" ? " photo-split-inverse" : ""}`}
+          >
+            <figure className="photo-split-img" data-reveal>
+              <Image
+                src={comprendre.src}
+                alt={comprendre.alt}
+                width={comprendre.w}
+                height={comprendre.h}
+                sizes="(max-width: 900px) 100vw, 520px"
+                data-parallax="0.05"
+              />
+              <figcaption>{comprendre.legende}</figcaption>
+            </figure>
+            <div className="photo-split-texte" data-reveal>
+              <span className="kicker">Comprendre</span>
+              <h2>Pourquoi un professionnel</h2>
+              <p>{n.comprendre_espece}</p>
+            </div>
           </div>
-          <p className="lead" data-reveal="right">
-            {n.comprendre_espece}
-          </p>
-        </div>
+        ) : (
+          <div className="container two-col">
+            <div data-reveal="left">
+              <span className="kicker">Comprendre</span>
+              <h2>Pourquoi un professionnel</h2>
+            </div>
+            <p className="lead" data-reveal="right">
+              {n.comprendre_espece}
+            </p>
+          </div>
+        )}
       </section>
 
       {/* ===== PROTOCOLE — 3 variantes ===== */}
@@ -417,13 +488,7 @@ export default function NuisiblePage({ slug }: { slug: string }) {
               <p className="kicker" data-reveal>Pour aller plus loin</p>
               <div className="cards-grid cards-grid-3" data-stagger style={{ marginTop: 14 }}>
                 {articles.map((a) => (
-                  <Link key={a.slug} href={`/conseils/${a.slug}`} className="card" data-reveal>
-                    <h3>{a.titre}</h3>
-                    <p style={{ marginTop: 8 }}>{a.extrait}</p>
-                    <span className="card-link">
-                      Lire le guide <IconArrow size={14} />
-                    </span>
-                  </Link>
+                  <ArticleCard key={a.slug} article={a} extrait />
                 ))}
               </div>
             </div>
@@ -483,15 +548,29 @@ export default function NuisiblePage({ slug }: { slug: string }) {
           <div className="cards-grid cards-grid-3" data-stagger>
             {autres.map((s) => {
               const Icon = NUISIBLE_ICONS[s];
+              const vignette = HERO_IMAGES[s];
               return (
-                <Link key={s} href={`/${s}`} className="card" data-reveal>
-                  <span className={`card-icon ${NUISIBLES_TILES[s]}`}>
-                    <Icon />
-                  </span>
-                  <h3>{NUISIBLES_LABELS[s]}</h3>
-                  <span className="card-link">
-                    {NUISIBLES_LABELS[s]} en {site.zone} <IconArrow size={14} />
-                  </span>
+                <Link key={s} href={`/${s}`} className="card card-media" data-reveal>
+                  <div className="card-media-img">
+                    {vignette && (
+                      <Image
+                        src={vignette.src}
+                        alt=""
+                        width={vignette.w}
+                        height={vignette.h}
+                        sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 380px"
+                      />
+                    )}
+                  </div>
+                  <div className="card-body">
+                    <span className={`card-icon ${NUISIBLES_TILES[s]}`}>
+                      <Icon />
+                    </span>
+                    <h3>{NUISIBLES_LABELS[s]}</h3>
+                    <span className="card-link">
+                      {NUISIBLES_LABELS[s]} en {site.zone} <IconArrow size={14} />
+                    </span>
+                  </div>
                 </Link>
               );
             })}

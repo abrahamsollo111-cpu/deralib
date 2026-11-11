@@ -78,5 +78,11 @@
       "r": "Cela dépend de l'origine de l'infestation et du bail. Schématiquement, l'entretien courant peut incomber au locataire, mais une infestation liée à la vétusté du bâti ou aux parties communes relève le plus souvent du propriétaire ou du syndic. Le diagnostic, en identifiant l'origine, aide à établir les responsabilités."
     }
   ],
-  "cta_texte": "notre service de dératisation en Île-de-France"
+  "cta_texte": "notre service de dératisation en Île-de-France",
+  "image": {
+    "src": "/images/souris-grise.jpg",
+    "alt": "Souris grise à l'affût dans la paille",
+    "w": 1200,
+    "h": 1800
+  }
 }

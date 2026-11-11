@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import DevisForm from "@/app/devis/DevisForm";
 import JsonLd from "@/components/JsonLd";
@@ -20,14 +21,28 @@ export default function Page() {
 
       <section style={{ paddingTop: 40 }}>
         <div className="container">
-          <h1 style={{ maxWidth: 800 }}>
-            Contacter {site.marque} en {site.zone}
-          </h1>
-          <p className="lead" style={{ maxWidth: 720, marginTop: 16 }}>
-            Par téléphone pour une réponse immédiate, ou par le formulaire si
-            vous préférez décrire la situation par écrit — un technicien vous
-            rappelle.
-          </p>
+          <div className="intro-split">
+            <div>
+              <h1 style={{ maxWidth: 800 }}>
+                Contacter {site.marque} en {site.zone}
+              </h1>
+              <p className="lead" style={{ maxWidth: 720, marginTop: 16 }}>
+                Par téléphone pour une réponse immédiate, ou par le formulaire si
+                vous préférez décrire la situation par écrit — un technicien vous
+                rappelle.
+              </p>
+            </div>
+            <figure className="intro-photo">
+              <Image
+                src="/images/technicien-deralib-inspection-entrepot.jpg"
+                alt="Technicien Deralib inspectant une réserve à la recherche de traces de rongeurs"
+                width={1400}
+                height={787}
+                sizes="(max-width: 900px) 100vw, 460px"
+                priority
+              />
+            </figure>
+          </div>
 
           <div className="contact-grid" style={{ marginTop: 40 }}>
             {/* ===== NAP — doit rester identique au caractère près sur tout

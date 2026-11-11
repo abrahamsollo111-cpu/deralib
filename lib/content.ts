@@ -61,6 +61,7 @@ export type Article = {
   h1: string;
   date: string; // AAAA-MM-JJ
   date_modification?: string; // AAAA-MM-JJ, à renseigner à chaque mise à jour réelle du contenu
+  image?: { src: string; alt: string; w: number; h: number }; // photo de couverture
   extrait: string;
   service: string; // slug de la page service liée
   sections: Section[];

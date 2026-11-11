@@ -7,6 +7,7 @@ import QuickQuote from "@/components/QuickQuote";
 import HomeFx from "@/components/HomeFx";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
+import ArticleCard from "@/components/ArticleCard";
 import {
   IconWhatsApp,
   IconPhone,
@@ -613,12 +614,7 @@ export default function Home() {
           </div>
           <div className="cards-grid cards-grid-4" data-stagger>
             {getAllArticles().map((a) => (
-              <Link key={a.slug} href={`/conseils/${a.slug}`} className="card" data-reveal>
-                <h3>{a.titre}</h3>
-                <span className="card-link">
-                  Lire le guide <IconArrow size={14} />
-                </span>
-              </Link>
+              <ArticleCard key={a.slug} article={a} />
             ))}
           </div>
         </div>
