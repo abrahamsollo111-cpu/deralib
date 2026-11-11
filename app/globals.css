@@ -3556,3 +3556,148 @@ a.card-media:hover .card-media-img img { transform: scale(1.06); }
   a.card-media:hover .card-media-img img,
   .sign:hover, .step:hover, .prix-carte:hover { transform: none; }
 }
+
+/* =====================================================================
+   Refonte de l'accueil : preuves, héritage, diagnostic en photo
+   ===================================================================== */
+
+/* ---------- Barre de preuves du haut de page ---------- */
+.cl-preuves {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 250px));
+  justify-content: start;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+.cl-preuves li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cl-preuves li > span { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.cl-preuves strong, .cl-preuves small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cl-preuves strong { color: #fff; font-size: 0.98rem; font-weight: 800; }
+.cl-preuves small { color: rgba(255, 255, 255, 0.72); font-size: 0.74rem; font-weight: 600; }
+.cl-preuve-google { background: #fff !important; border-color: #fff !important; }
+.cl-preuve-google strong { color: var(--marine); }
+.cl-preuve-google small { color: var(--text-light); }
+.cl-etoiles { color: #f5b301; font-size: 0.82rem; letter-spacing: 1px; }
+@media (max-width: 560px) {
+  .cl-preuves { grid-template-columns: 1fr 1fr; justify-content: stretch; }
+  .cl-preuves strong, .cl-preuves small { white-space: normal; }
+  .cl-preuves li { padding: 9px 11px; }
+}
+
+/* ---------- Héritage : 20 ans de métier ---------- */
+.heritage { overflow: clip; }
+.heritage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.heritage-visuel { position: relative; }
+.heritage-photo {
+  margin: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  box-shadow: var(--shadow-lg);
+}
+.heritage-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* grand chiffre posé sur l'angle de la photo */
+.heritage-chiffre {
+  position: absolute;
+  right: -28px;
+  bottom: -32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  background: var(--marine);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(15, 42, 31, 0.35);
+  border: 6px solid var(--white);
+}
+.heritage-chiffre span {
+  font-family: var(--font-titre), sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #9fd9bf;
+}
+.heritage-chiffre small {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.heritage-texte h2 { font-size: clamp(1.9rem, 3.2vw, 2.7rem); line-height: 1.1; letter-spacing: -0.03em; }
+.heritage-texte h2 em { font-style: normal; color: var(--bleu); display: block; }
+.heritage-texte > p { margin-top: 18px; font-size: 1.06rem; color: var(--text); }
+.heritage-piliers {
+  margin: 26px 0 24px;
+  display: grid;
+  gap: 2px;
+  border-top: 1px solid var(--line);
+}
+.heritage-piliers li {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.heritage-piliers strong { color: var(--marine); font-size: 1rem; }
+.heritage-piliers span { color: var(--text-light); font-size: 0.95rem; }
+@media (max-width: 900px) {
+  .heritage-grid { grid-template-columns: 1fr; gap: 56px; }
+  .heritage-chiffre { right: 14px; bottom: -36px; width: 128px; height: 128px; }
+  .heritage-chiffre span { font-size: 3rem; }
+  .heritage-piliers li { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ---------- Diagnostic : cartes en photo ---------- */
+.cl-symptome-photo {
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 260px;
+  border: none;
+  color: #fff;
+  background: var(--marine);
+}
+.cl-symptome-photo .cl-symptome-fond {
+  z-index: -2;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* voile sombre en dégradé : le texte reste lisible quelle que soit la photo */
+.cl-symptome-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(15, 32, 24, 0.25) 0%, rgba(15, 32, 24, 0.55) 45%, rgba(15, 32, 24, 0.92) 100%);
+}
+.cl-symptome-photo:hover .cl-symptome-fond { transform: scale(1.07); }
+.cl-symptome-photo:hover { border: none; box-shadow: 0 20px 44px rgba(15, 42, 31, 0.28); }
+.cl-symptome-photo .cl-symptome-txt { color: #fff; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35); }
+.cl-symptome-photo .cl-symptome-diag { color: #fff; border-top-color: rgba(255, 255, 255, 0.28); }
+.cl-symptome-photo .cl-symptome-diag small { color: rgba(255, 255, 255, 0.72); }
+.cl-symptome-photo .cl-symptome-ico { border: 2px solid rgba(255, 255, 255, 0.85); }
+@media (prefers-reduced-motion: reduce) {
+  .cl-symptome-photo:hover .cl-symptome-fond { transform: none; }
+}

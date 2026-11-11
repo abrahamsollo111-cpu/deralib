@@ -8,6 +8,7 @@ import HomeFx from "@/components/HomeFx";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import ArticleCard from "@/components/ArticleCard";
+import { LogoGoogle } from "@/components/Avis";
 import {
   IconWhatsApp,
   IconPhone,
@@ -18,7 +19,7 @@ import {
   NUISIBLE_ICONS,
 } from "@/components/Icons";
 import { site, DEPARTEMENTS } from "@/lib/config";
-import { getAllArticles } from "@/lib/content";
+import { getAllArticles, getAvisResume } from "@/lib/content";
 
 export const metadata: Metadata = {
   // ≤ 60 caractères, unique, service + zone (guide SEO Google)
@@ -113,30 +114,35 @@ const FAQ_HOME = [
 const SYMPTOMES = [
   {
     slug: "punaises-de-lit",
+    photo: "/images/punaises-de-lit-matelas.jpg",
     symptome: "Piqûres alignées au réveil, points noirs sur le matelas",
     diagnostic: "Punaises de lit",
     tile: "tile-indigo",
   },
   {
     slug: "deratisation",
+    photo: "/images/rongeur-trou-mur.jpg",
     symptome: "Crottes, emballages rongés, grattements la nuit",
     diagnostic: "Rats & souris",
     tile: "tile-bleu",
   },
   {
     slug: "cafards",
+    photo: "/images/cafards-blattes-infestation.jpg",
     symptome: "Insectes qui fuient la lumière dans la cuisine",
     diagnostic: "Cafards & blattes",
     tile: "tile-cyan",
   },
   {
     slug: "guepes-frelons",
+    photo: "/images/nid-guepes-feuillage.jpg",
     symptome: "Va-et-vient sous le toit ou le coffre du volet",
     diagnostic: "Guêpes & frelons",
     tile: "tile-teal",
   },
   {
     slug: "depigeonnage",
+    photo: "/images/pigeons-garde-corps-balcon.jpg",
     symptome: "Fientes et nids sur le balcon ou les corniches",
     diagnostic: "Pigeons",
     tile: "tile-cyan",
@@ -163,6 +169,7 @@ const PROTOCOLE = [
 ];
 
 export default function Home() {
+  const avis = getAvisResume();
   return (
     <>
       {/* ===== HERO « clinique » : texte + photo cadrée, fiche flottante ===== */}
@@ -210,15 +217,38 @@ export default function Home() {
             <a href="#devis-express" className="cl-lien-devis">
               ou décrivez votre problème en 30 secondes <IconArrow size={14} />
             </a>
-            <ul className="cl-garanties">
+            {/* preuves réunies là où l'œil se pose : note Google réelle
+                (rien ne s'affiche sans avis), métier, certification */}
+            <ul className="cl-preuves">
+              {avis && (
+                <li className="cl-preuve-google">
+                  <LogoGoogle size={18} />
+                  <span>
+                    <strong>
+                      {avis.moyenne.toFixed(1).replace(".", ",")}/5{" "}
+                      <span className="cl-etoiles" aria-hidden>★★★★★</span>
+                    </strong>
+                    <small>{avis.nombre} avis Google</small>
+                  </span>
+                </li>
+              )}
               <li>
-                <IconCheck size={15} /> Certifiés {site.certification}
+                <span>
+                  <strong>{site.anneesMetier} ans</strong>
+                  <small>de métier</small>
+                </span>
               </li>
               <li>
-                <IconCheck size={15} /> Traitements garantis
+                <span>
+                  <strong>{site.certification}</strong>
+                  <small>techniciens certifiés</small>
+                </span>
               </li>
               <li>
-                <IconCheck size={15} /> Sans majoration soir & week-end
+                <span>
+                  <strong>Garantis</strong>
+                  <small>sans majoration soir & week-end</small>
+                </span>
               </li>
             </ul>
           </div>
@@ -281,6 +311,68 @@ export default function Home() {
 
       <Reassurance />
 
+      {/* ===== HÉRITAGE : 20 ans de métier, entreprise d'aujourd'hui =====
+          Ne jamais écrire que la SOCIÉTÉ a 20 ans : c'est l'expérience du
+          fondateur. La société, elle, est récente (« nouvelle génération »). */}
+      <section className="cl-section heritage">
+        <div className="container heritage-grid">
+          <div className="heritage-visuel" data-reveal="left">
+            <figure className="heritage-photo">
+              <Image
+                src="/images/technicien-deralib-inspection-entrepot.jpg"
+                alt="Technicien Deralib en polo de l'entreprise inspectant une réserve"
+                width={1400}
+                height={787}
+                sizes="(max-width: 900px) 100vw, 560px"
+              />
+            </figure>
+            <div className="heritage-chiffre" aria-hidden>
+              <span>{site.anneesMetier}</span>
+              <small>ans de métier</small>
+            </div>
+          </div>
+          <div className="heritage-texte" data-reveal="right">
+            <span className="cl-kicker">Notre histoire</span>
+            <h2>
+              {site.anneesMetier} ans de métier.{" "}
+              <em>Une entreprise de nouvelle génération.</em>
+            </h2>
+            <p>
+              Le métier, notre fondateur l&apos;exerce depuis vingt ans en{" "}
+              {site.zone} : caves et locaux poubelles, copropriétés, commerces
+              de bouche, nids sous les toits. {site.marque}, c&apos;est ce
+              savoir-faire porté par une entreprise pensée pour aujourd&apos;hui.
+            </p>
+            <ul className="heritage-piliers">
+              <li>
+                <strong>Le terrain</strong>
+                <span>
+                  Vingt ans d&apos;interventions : on sait où chercher, et
+                  pourquoi un traitement tient ou ne tient pas.
+                </span>
+              </li>
+              <li>
+                <strong>La méthode</strong>
+                <span>
+                  Diagnostic, traitement, prévention, contrôle. Prix confirmé
+                  avant de commencer, traitements garantis.
+                </span>
+              </li>
+              <li>
+                <strong>Les outils d&apos;aujourd&apos;hui</strong>
+                <span>
+                  Diagnostic sur photo par WhatsApp, devis en 30 secondes,
+                  rapport écrit après chaque intervention, 24h/24.
+                </span>
+              </li>
+            </ul>
+            <Link href="/a-propos" className="cl-lien-devis">
+              Découvrir qui nous sommes <IconArrow size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ===== TRIAGE : du symptôme au protocole ===== */}
       <section className="cl-section">
         <div className="container">
@@ -296,7 +388,14 @@ export default function Home() {
             {SYMPTOMES.map((s) => {
               const Icon = NUISIBLE_ICONS[s.slug];
               return (
-                <Link key={s.slug} href={`/${s.slug}`} className="cl-symptome" data-reveal>
+                <Link key={s.slug} href={`/${s.slug}`} className="cl-symptome cl-symptome-photo" data-reveal>
+                  <Image
+                    src={s.photo}
+                    alt=""
+                    fill
+                    sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 400px"
+                    className="cl-symptome-fond"
+                  />
                   <span className={`cl-symptome-ico ${s.tile}`}>
                     <Icon />
                   </span>

@@ -139,5 +139,15 @@ export function getAllArticles(): Article[] {
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
+// Résumé des vrais avis Google (content/avis.json) : null tant qu'il n'y
+// en a aucun — on n'affiche jamais de note qui n'existe pas
+export function getAvisResume(): { moyenne: number; nombre: number } | null {
+  const raw = fs.readFileSync(path.join(contentDir, "avis.json"), "utf-8");
+  const { avis } = JSON.parse(raw) as { avis: { note: number }[] };
+  if (!avis.length) return null;
+  const moyenne = avis.reduce((s, a) => s + a.note, 0) / avis.length;
+  return { moyenne, nombre: avis.length };
+}
+
 // Réexport des constantes partagées (voir lib/nuisibles.ts)
 export { NUISIBLES_SLUGS, NUISIBLES_LABELS } from "./nuisibles";
