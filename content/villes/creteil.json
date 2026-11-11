@@ -1,0 +1,80 @@
+{
+  "nom": "Créteil",
+  "slug": "creteil",
+  "departement": "94",
+  "parent": "val-de-marne",
+  "couverture_titre": "Quartiers couverts",
+  "couverture_suffixe": "… et toute la commune",
+  "meta_title": "Dératisation Créteil (94) — 24h/24 | Deralib",
+  "meta_description": "Rats, souris, punaises de lit à Créteil ? Techniciens Certibiocide sur place en 30-45 min, du lac au Vieux Créteil. Prix confirmé avant. Appelez 7j/7.",
+  "h1": "Dératisation à Créteil : du lac aux tours « choux », du Mont-Mesly au Vieux Créteil",
+  "intro": "Préfecture du Val-de-Marne, Créteil s'est construite en quelques décennies autour d'un plan d'urbanisme très lisible : un lac artificiel au centre, des dalles et des grands ensembles des années 1970, un pôle commercial régional, un hôpital universitaire et une université, le tout relié à Paris par la ligne 8 du métro. À côté subsiste le Vieux Créteil, avec ses maisons anciennes et ses jardins. Chacun de ces paysages produit ses propres nuisibles : rongeurs sur les berges, blattes dans les gaines des tours, punaises de lit qui voyagent avec les habitants, guêpes dans les arbres. Nos techniciens certifiés Certibiocide interviennent sur toute la commune, 24h/24 et 7j/7, prix confirmé avant toute intervention.",
+  "villes_principales": [
+    "Vieux Créteil",
+    "Mont-Mesly",
+    "Quartier du Palais",
+    "Les Choux",
+    "Créteil Lac – Front de Lac",
+    "L'Échat",
+    "Croix-des-Mèches",
+    "Pointe du Lac"
+  ],
+  "sections": [
+    {
+      "titre": "Le lac de Créteil : berges, rongeurs et nids dans les arbres",
+      "paragraphes": [
+        "Le lac, ancienne sablière devenue plan d'eau de loisirs, structure tout le centre de la ville. Ses berges aménagées attirent promeneurs, pique-niques et nourrissage d'oiseaux — autant de restes alimentaires qui fixent les rats bruns dans les talus et les massifs. Les résidences de Créteil Lac et du Front de Lac en sont les premières voisines : caves, parkings souterrains et locaux poubelles offrent aux rongeurs le refuge sec que les berges ne leur donnent pas.",
+        "Les arbres du parc et des résidences alentour posent un autre problème, de la fin du printemps à l'automne : nids de guêpes dans les haies et les cavités, nids de frelons asiatiques en hauteur dans les houppiers, souvent repérés tardivement, quand les feuilles tombent. Pour une copropriété, nous traitons les nids sur les parties privées avec perche télescopique et équipement de protection, et installons des postes d'appâtage sécurisés autour des accès aux sous-sols pour couper la route aux rongeurs venus des berges."
+      ]
+    },
+    {
+      "titre": "Dalles, tours « choux » et grands ensembles : traiter à l'échelle du bâtiment",
+      "paragraphes": [
+        "Les tours « choux » aux balcons arrondis, les ensembles du Mont-Mesly, du Palais ou de la Croix-des-Mèches, les dalles piétonnes et leurs parkings en sous-sol : l'urbanisme des années 1970 a créé des bâtiments où tout communique. Vide-ordures, gaines techniques, colonnes d'eaux usées et faux plafonds forment un réseau continu dans lequel blattes et souris circulent d'un étage à l'autre, et les niveaux inférieurs des dalles abritent souvent des rats que personne ne voit depuis la surface.",
+        "Dans ce contexte, un appartement traité seul se réinfeste par la gaine voisine. Nous proposons aux bailleurs et aux syndics un diagnostic par cage d'escalier, un traitement coordonné des logements touchés, des postes sécurisés dans les sous-sols et les locaux vide-ordures, puis un contrôle avec plan des dispositifs et rapport écrit. Le Vieux Créteil appelle une autre approche : maisons anciennes, caves voûtées et murs de pierre aux joints fatigués, où l'essentiel du travail consiste à repérer puis obturer les passages des souris et des rats."
+      ]
+    },
+    {
+      "titre": "Punaises de lit : métro, université et rotation des logements",
+      "paragraphes": [
+        "La ligne 8, de l'Échat à la Pointe du Lac, relie chaque jour Créteil à Paris ; l'université et le pôle hospitalier font venir étudiants, soignants et visiteurs de toute l'Île-de-France. Ces flux, ajoutés à la forte rotation des locations étudiantes et des petits logements, favorisent l'arrivée de punaises de lit — dans un sac, une valise ou un meuble d'occasion, bien plus souvent que par manque d'hygiène.",
+        "Notre protocole se déroule en deux passages espacés de 15 jours, pour atteindre les œufs éclos après le premier traitement. Nous remettons une liste de préparation (linge lavé à 60 °C, sacs fermés, accès aux plinthes et sommiers) et vérifions les logements mitoyens quand l'immeuble le permet. Évitez les fumigènes du commerce : ils font fuir les punaises vers les pièces et les appartements voisins sans éliminer le foyer."
+      ]
+    },
+    {
+      "titre": "Commerces et restauration : du centre régional aux rues du Vieux Créteil",
+      "paragraphes": [
+        "Avec son grand centre commercial régional desservi par le métro, ses galeries de quartier et ses restaurants du Vieux Créteil, la ville concentre une activité alimentaire importante. Les points sensibles sont toujours les mêmes : réserves, chambres froides, locaux à déchets mutualisés et quais de livraison, où blattes et rongeurs trouvent nourriture et chaleur. Une boutique ou un restaurant peut être contaminé par le local voisin, même avec une hygiène irréprochable.",
+        "Nous intervenons en dehors des heures d'ouverture, avec des dispositifs discrets, numérotés et sans biocide au contact des denrées. Chaque passage est consigné dans un registre sanitaire, le document que demandent les services de contrôle. Pour les établissements exposés, un suivi programmé à intervalles réguliers coûte moins cher qu'une fermeture administrative ou qu'un avis client publié en ligne."
+      ]
+    }
+  ],
+  "signalement": {
+    "espace_public": "Rats sur les berges du lac, dans un parc, un square ou sur la voirie : signalez-le à la mairie de Créteil, qui gère l'espace public. Les parcelles privées et les parties communes restent à la charge de leurs propriétaires.",
+    "logement_insalubre": "Si l'infestation est liée à un logement dégradé que le propriétaire n'entretient pas, saisissez le service communal d'hygiène et de santé de Créteil ; l'Agence régionale de santé intervient en second recours.",
+    "prive": "Appartement, maison du Vieux Créteil, cave, commerce ou copropriété : le traitement revient à l'occupant, au propriétaire, au bailleur ou au syndic selon l'origine. C'est là que nous intervenons, avec un prix confirmé avant le début du traitement."
+  },
+  "delais": "Nous répondons 24h/24 et 7j/7, et un technicien peut être sur place en 30 à 45 minutes, des quartiers du lac au Vieux Créteil.",
+  "faq_locale": [
+    {
+      "q": "J'habite une tour près du lac et je vois des rats au parking : qui doit traiter ?",
+      "r": "Le parking et les sous-sols sont des parties communes : c'est au syndic ou au bailleur d'organiser le traitement. Signalez-le par écrit ; nous pouvons établir un diagnostic et un devis à lui transmettre, avec postes sécurisés aux accès."
+    },
+    {
+      "q": "Quel est le prix d'une dératisation à Créteil ?",
+      "r": "Fourchettes 2026 : 120 à 250 € pour un appartement ou une maison, sur devis pour les copropriétés et les commerces. Le prix est confirmé avant l'intervention, sans aucune majoration le soir ni le week-end."
+    },
+    {
+      "q": "Pourquoi les blattes reviennent-elles après avoir traité mon appartement ?",
+      "r": "Dans les immeubles collectifs, elles circulent par les gaines et les vide-ordures depuis les logements voisins. Un traitement durable passe par une action coordonnée sur la cage d'escalier, que nous organisons avec le gestionnaire."
+    },
+    {
+      "q": "Un nid de frelons dans un arbre de ma résidence : pouvez-vous l'enlever ?",
+      "r": "Oui, sur les terrains privés et les espaces verts de copropriété, avec perche télescopique et équipement de protection. Pour un arbre situé sur l'espace public, le signalement se fait auprès de la mairie."
+    },
+    {
+      "q": "Étudiant à Créteil, je pense avoir des punaises de lit : que faire en attendant ?",
+      "r": "Ne déplacez pas votre literie dans une autre pièce, lavez le linge à 60 °C et enfermez-le dans des sacs fermés. Puis appelez-nous : deux passages à 15 jours d'intervalle, liste de préparation fournie."
+    }
+  ]
+}

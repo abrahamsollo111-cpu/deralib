@@ -69,6 +69,50 @@ const VARIANTES_VILLE: Record<
     legende: "Du bâti ancien aux plateformes de Roissy : le 95 sous protection.",
     apres: 0,
   },
+  // Vague 3 : une photo propre à chaque ville (banque libre de droits,
+  // jamais présentée comme une photo d'intervention Deralib)
+  "paris-16": {
+    photo: "/images/paris-16-immeuble-bourgeois.jpg",
+    alt: "Façade d'immeuble bourgeois parisien en automne",
+    legende: "Caves profondes en bas, anciennes chambres de bonne sous les toits.",
+    apres: 1,
+  },
+  cachan: {
+    photo: "/images/cachan-cave-voutee.jpg",
+    alt: "Cave voûtée en pierre, typique du bâti ancien de la vallée de la Bièvre",
+    legende: "Sous la ville, la Bièvre et les vieilles caves : là où passent les rats.",
+    apres: 0,
+  },
+  "evry-courcouronnes": {
+    photo: "/images/evry-parking-souterrain-dalle.jpg",
+    alt: "Parking souterrain en béton sous une dalle urbaine",
+    legende: "Sous les dalles : parkings, galeries et locaux poubelles à surveiller.",
+    apres: 1,
+  },
+  bobigny: {
+    photo: "/images/bobigny-immeubles-collectifs.jpg",
+    alt: "Immeubles collectifs avec balcons dans un quartier résidentiel",
+    legende: "Démolitions, relogements, rénovation : les colonies se déplacent aussi.",
+    apres: 0,
+  },
+  creteil: {
+    photo: "/images/creteil-berges-lac.jpg",
+    alt: "Berges d'un lac urbain arboré en automne",
+    legende: "Autour du lac : rongeurs sur les berges, nids dans les arbres.",
+    apres: 1,
+  },
+  "ballancourt-sur-essonne": {
+    photo: "/images/ballancourt-marais-essonne.jpg",
+    alt: "Marais et roseaux en bord d'étang, paysage de la vallée de l'Essonne",
+    legende: "Étangs et marais protégés : on traite côté maison, sans nuire à la faune.",
+    apres: 0,
+  },
+  louvres: {
+    photo: "/images/louvres-champs-moissonnes.jpg",
+    alt: "Champ de blé moissonné en plaine, fin d'été",
+    legende: "Après la moisson, les mulots quittent les champs pour les maisons.",
+    apres: 1,
+  },
 };
 
 // Une page département n'existe que si une vraie fiche locale existe
