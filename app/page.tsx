@@ -277,6 +277,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== BANDEAU DÉFILANT : zones et engagements (décoratif, le
+          contenu est doublé pour boucler sans saut ; lu une seule fois
+          par les lecteurs d'écran grâce à aria-hidden sur la copie) ===== */}
+      <div className="defilant">
+        <div className="defilant-piste">
+          {[0, 1].map((copie) => (
+            <ul key={copie} aria-hidden={copie === 1 || undefined}>
+              {DEPARTEMENTS.map((d) => (
+                <li key={d.slug}>
+                  {d.nom} <span>{d.code}</span>
+                </li>
+              ))}
+              <li className="defilant-fort">24h/24 — 7j/7</li>
+              <li className="defilant-fort">Sur place en 30-45 min</li>
+              <li className="defilant-fort">Sans majoration soir & week-end</li>
+            </ul>
+          ))}
+        </div>
+      </div>
+
       {/* ===== DEVIS EXPRESS (formulaire pas-à-pas) ===== */}
       <section id="devis-express" className="cl-section">
         {/* sur mobile : titre → formulaire → arguments (le formulaire
@@ -324,10 +344,11 @@ export default function Home() {
                 width={1400}
                 height={787}
                 sizes="(max-width: 900px) 100vw, 560px"
+                data-parallax="0.06"
               />
             </figure>
             <div className="heritage-chiffre" aria-hidden>
-              <span>{site.anneesMetier}</span>
+              <span data-count={site.anneesMetier}>{site.anneesMetier}</span>
               <small>ans de métier</small>
             </div>
           </div>
@@ -343,22 +364,22 @@ export default function Home() {
               de bouche, nids sous les toits. {site.marque}, c&apos;est ce
               savoir-faire porté par une entreprise pensée pour aujourd&apos;hui.
             </p>
-            <ul className="heritage-piliers">
-              <li>
+            <ul className="heritage-piliers" data-stagger>
+              <li data-reveal>
                 <strong>Le terrain</strong>
                 <span>
                   Vingt ans d&apos;interventions : on sait où chercher, et
                   pourquoi un traitement tient ou ne tient pas.
                 </span>
               </li>
-              <li>
+              <li data-reveal>
                 <strong>La méthode</strong>
                 <span>
                   Diagnostic, traitement, prévention, contrôle. Prix confirmé
                   avant de commencer, traitements garantis.
                 </span>
               </li>
-              <li>
+              <li data-reveal>
                 <strong>Les outils d&apos;aujourd&apos;hui</strong>
                 <span>
                   Diagnostic sur photo par WhatsApp, devis en 30 secondes,
