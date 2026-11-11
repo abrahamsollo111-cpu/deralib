@@ -8,6 +8,7 @@ import HomeFx from "@/components/HomeFx";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import ArticleCard from "@/components/ArticleCard";
+import References from "@/components/References";
 import { LogoGoogle } from "@/components/Avis";
 import {
   IconWhatsApp,
@@ -393,6 +394,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ===== RÉFÉRENCES : enseignes clientes (content/references.json) ===== */}
+      <References />
 
       {/* ===== TRIAGE : du symptôme au protocole ===== */}
       <section className="cl-section">

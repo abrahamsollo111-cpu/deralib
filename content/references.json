@@ -1,0 +1,12 @@
+{
+  "_regle": "UNIQUEMENT des enseignes pour lesquelles Deralib est réellement intervenu (confirmé par le dirigeant). Noms en texte, jamais de logo sans accord écrit de la marque. Liste vide = la section ne s'affiche pas.",
+  "mention": "Interventions réalisées dans des établissements de ces enseignes en Île-de-France. Marques citées à titre de références ; elles restent la propriété de leurs titulaires.",
+  "enseignes": [
+    "Carrefour",
+    "McDonald’s",
+    "Lidl",
+    "Accor",
+    "Amazon",
+    "E.Leclerc"
+  ]
+}
